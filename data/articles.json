@@ -34,7 +34,19 @@
         "From a product-design perspective, Intelligent UI suggests a shift from fixed application screens toward interfaces assembled around a user's immediate question or goal. The usability and accuracy of generated interfaces will still need to be evaluated in real-world contexts.",
         "TECH CURRENT will continue to follow how advances in AI affect the experiences people actually have at work and in everyday life, not just benchmark performance."
       ]
-    }
+    },
+    "media": [
+      {
+        "src": "/images/articles/tc-0001-ui-flow.svg",
+        "alt": "Original diagram of Intelligent UI, created by TECH CURRENT based on the official announcement.",
+        "caption": "Intelligent UIの仕組みを示す概念図。公式発表を基にTECH CURRENTが独自作成。",
+        "captionEn": "Original diagram of Intelligent UI, created by TECH CURRENT based on the official announcement.",
+        "credit": "TECH CURRENT（独自図解）",
+        "creditEn": "TECH CURRENT (original illustration)",
+        "sourceUrl": "https://openai.com/index/gpt-6-for-everyone/",
+        "afterParagraph": 1
+      }
+    ]
   },
   {
     "articleId": "TC-0002",
@@ -576,7 +588,19 @@
         "The practical impact depends on the use case. Organizations should assess data quality, permissions, costs and the ability to verify outputs rather than treating a product announcement as proof of results.",
         "Read the linked primary source for the full announcement and any subsequent availability updates."
       ]
-    }
+    },
+    "media": [
+      {
+        "src": "/images/articles/tc-0019-google-beam.svg",
+        "alt": "Original diagram of Google Beam, created by TECH CURRENT based on Google's announcement.",
+        "caption": "Google Beamの遠隔コミュニケーションを示す概念図。Google公式発表を基にTECH CURRENTが独自作成。",
+        "captionEn": "Original diagram of Google Beam, created by TECH CURRENT based on Google's announcement.",
+        "credit": "TECH CURRENT（独自図解）",
+        "creditEn": "TECH CURRENT (original illustration)",
+        "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+        "afterParagraph": 1
+      }
+    ]
   },
   {
     "articleId": "TC-0020",
