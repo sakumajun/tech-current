@@ -1659,6 +1659,8 @@
     "body": [
       "OpenAIは2026年9月23日、メンタルヘルスに関する会話でAIの応答を評価する公開ベンチマーク「MentalHealthBench」を発表しました。22か国の80人を超える有資格の心理・精神医療専門家と共同開発したと説明しています。",
       "従来の安全性評価は緊急事態への対応に重点を置きがちでした。一方、実際の相談には日常的なストレス、人間関係の悩み、深刻な苦痛、緊急の支援が必要な状況まで幅があります。MentalHealthBenchは、こうした状況ごとに適切な応答を評価する設計です。",
+      "【評価の設計で重要なこと】メンタルヘルスに関する応答では、共感的な文章に見えることと、安全で適切な支援につながることを分けて評価する必要があります。危機的な状況を見逃さないか、診断を断定しないか、専門家への相談を適切に促せるかなど、失敗時の影響を考慮した評価項目が求められます。",
+      "【ベンチマークの限界】専門家による評価は品質改善に役立ちますが、短いテスト会話で良い結果を出すことが、長期的な利用での安全性を保証するわけではありません。文化や言語、年齢、状況によって望ましい応答も変わるため、利用場面を限定した検証と継続的な監視が重要です。",
       "【仕組みと背景】メンタルヘルスに関する応答では、共感的な表現だけでなく、相手の状況を決めつけず適切に質問することが重要です。必要な場合に専門家への相談を促す判断も評価対象になります。",
       "【導入時の課題】合成会話を使うことで実在の相談内容のプライバシーを守りやすくなりますが、現実の会話に含まれる複雑な背景をすべて再現できるとは限りません。評価データの多様性が重要です。",
       "【検証と今後】専門家が複数人で採点基準を確認する方法は、単一の評価者への依存を減らす工夫です。それでも文化や言語によって適切な対応が異なる可能性は残ります。",
@@ -1678,6 +1680,8 @@
       "body": [
         "On September 23, 2026, OpenAI introduced MentalHealthBench, an open benchmark for evaluating AI responses in realistic mental health conversations. It was co-developed with more than 80 licensed mental health professionals from 22 countries.",
         "Existing evaluations have often focused on emergencies. Real conversations also include everyday stress, relationships and more serious distress. MentalHealthBench spans these different levels of urgency to examine how a model responds in context.",
+        "EVALUATING SAFETY, NOT JUST TONE: Mental-health responses need assessment beyond whether they sound empathetic. Evaluators should consider whether the model recognizes urgent situations, avoids unsupported diagnoses and appropriately encourages professional support when warranted.",
+        "LIMITS OF A BENCHMARK: Expert review can improve quality, but strong results on short test conversations do not establish long-term safety. Language, culture, age and circumstances affect appropriate responses, so deployment requires context-specific evaluation and ongoing monitoring.",
         "TECHNICAL CONTEXT: The announced approach needs to be understood in its specific technical and operational context. A useful evaluation begins by identifying the exact task, the information available to the system and the expected outcome.",
         "IMPLEMENTATION CONSIDERATIONS: The practical value depends on how the system is integrated with existing processes and controls. Teams should identify which actions are permitted, how failures are detected and who can review consequential results.",
         "EVALUATION AND LIMITS: The stated capabilities and figures should be evaluated under their reported conditions. Independent tests and representative real-world tasks help establish whether the approach is suitable beyond a demonstration.",
@@ -1916,6 +1920,8 @@
     "body": [
       "GitHubは2026年9月22日、GitHub CopilotアプリがOpenTelemetryの設定に対応したと発表しました。OpenTelemetryはシステムの動作状況を計測するためのオープンソースの仕組みです。",
       "企業の管理者はエージェントのセッション、モデルへのリクエスト、ツールの利用などの実行情報を、既存の監視ツールへ送信できます。予期しない動作を調べたり、運用状況を横断的に確認したりする用途が想定されます。",
+      "【可観測性が必要な理由】コード生成エージェントが複数のファイルを調べ、テストを実行し、変更を提案する場合、最終結果だけでは失敗の原因を追跡しにくくなります。OpenTelemetryを通じて処理の区間や所要時間を把握できれば、遅い工程やエラーが発生した箇所を調べる手がかりになります。",
+      "【ログに残す情報の選別】トレースを詳しく収集するほど、ソースコードやプロンプト、認証情報が記録へ混入する危険も増えます。開発チームは必要な属性と保持期間を定義し、機密情報のマスキングや閲覧権限の制御を検討する必要があります。",
       "【実行過程の可視化】AIエージェントは複数のモデル呼び出しとツール操作を行うため、最終結果だけでは遅延や失敗の原因が分からない場合があります。OpenTelemetry対応により、セッション単位で実行状況を調べやすくなります。",
       "【OpenTelemetryの役割】OpenTelemetryはアプリケーションの動作状況を収集するオープンソースの仕組みです。既存の監視基盤と接続することで、AIエージェントの運用を他のシステムと合わせて確認できる可能性があります。",
       "【セッションの追跡】一つの仕事に含まれる複数の要求や操作を関連付けることは、障害調査に役立ちます。どの段階で作業が止まったかを確認できれば、モデル側と外部ツール側の問題を切り分けやすくなります。",
@@ -1938,6 +1944,8 @@
       "body": [
         "On September 22, 2026, GitHub announced OpenTelemetry support in the GitHub Copilot app. OpenTelemetry is an open-source framework for collecting observability data.",
         "Enterprise administrators can export information about agent sessions, model requests and tool interactions to compatible monitoring systems. This can help teams investigate unexpected behavior and manage operations centrally.",
+        "WHY AGENT OBSERVABILITY MATTERS: Coding agents may inspect files, run tests and propose edits across several steps. The final output alone rarely explains where time was spent or why a task failed. OpenTelemetry traces can help locate slow operations and error points.",
+        "CONTROL WHAT TELEMETRY RECORDS: Rich traces can inadvertently contain source code, prompts or credentials. Teams should define required attributes, retention periods, redaction rules and access controls before collecting production telemetry.",
         "OBSERVING AGENT EXECUTION: AI agents may make several model requests and tool calls before completing a task. The final output does not always explain delays or failures. OpenTelemetry support helps operators inspect the sequence of work.",
         "WHAT OPENTELEMETRY PROVIDES: OpenTelemetry is an open-source approach to collecting observability information. Exporting agent activity to existing monitoring platforms may let teams investigate AI workflows alongside other applications.",
         "SESSION-LEVEL CONTEXT: Related operations within one task are easier to understand when they can be viewed together. This can help distinguish a failed tool invocation from a model response problem.",
@@ -2329,6 +2337,8 @@
     "body": [
       "GitHubは2026年10月8日、IssueやPull Requestの履歴をスクリーンリーダーで読みやすくする改善を公開しました。タイムラインをリストとして認識できるようになり、項目数や現在位置、項目間の移動方法が音声で伝えられます。",
       "長い議論の途中で「もっと読み込む」を選択した場合も、追加されたイベントの件数をスクリーンリーダーが通知します。以前は新しい履歴が読み込まれても、読み上げによる通知がありませんでした。",
+      "【リストとして移動できる意義】長いプルリクエストやIssueの履歴には、コメント、レビュー、ステータス変更など異なる種類の出来事が続きます。スクリーンリーダーの利用者が項目を順番に把握できる構造は、画面を視覚的に追わなくても議論の流れを理解する助けになります。",
+      "【アクセシビリティ評価の視点】読み上げ対応はラベルを付けるだけでは完結しません。見出しと履歴項目の移動順序、更新された情報の通知、キーボード操作、モバイルでの利用などを実際の支援技術で検証することが重要です。",
       "【何が変わったのか】従来のタイムラインでは、視覚的にはコメントやイベントが連続して表示されていても、支援技術が全体のまとまりを把握しにくい場合がありました。今回の改善では、リストとしての構造が伝わることで、利用者は何件の項目があり、そのうち何件目を読んでいるかを把握しやすくなります。",
       "【長いPull Requestでの具体例】レビューのやり取りが数十件に及ぶ場合、変更履歴やコメントを一つずつ確認する必要があります。リストの項目数と位置が読み上げられれば、全体の分量を見積もりながら移動できます。途中で追加の履歴を読み込んだ際に追加件数が通知される点も、操作の結果を確認するうえで重要です。",
       "【意味構造がアクセシビリティを左右する】画面上のカードや区切り線だけでは、スクリーンリーダーに情報の関係が十分伝わるとは限りません。リストなどの適切な意味構造と、コンテンツ更新時の通知を組み合わせることが、視覚に依存しない理解を助けます。ただし実際の読み上げ方は支援技術とブラウザーの組み合わせでも変わり得ます。",
@@ -2350,6 +2360,8 @@
       "body": [
         "On October 8, 2026, GitHub improved the accessibility of issue and pull request timelines. Screen readers can now treat timelines as lists and announce the number of items and the user's position.",
         "When users load additional events, assistive technology announces how many items were added. Previously, the content could appear without an audible update.",
+        "WHY LIST NAVIGATION HELPS: Long pull-request and issue timelines combine comments, reviews and status changes. A structure that screen readers can navigate item by item makes the discussion easier to follow without relying on visual scanning.",
+        "TESTING ACCESSIBILITY IN PRACTICE: Labels alone are insufficient. Teams should check reading order, navigation between entries, announcements of updates and keyboard behavior with real assistive technologies and representative workflows.",
         "WHAT CHANGED: A visual timeline can show a clear sequence of events without conveying that sequence equally well to assistive technology. Exposing list structure helps screen reader users understand the total number of entries and their position in the sequence.",
         "LONG REVIEW THREADS: A pull request with many comments and status events can be difficult to navigate. Announcing position and list length helps readers estimate how much material remains. When more history loads, an announcement of the added entries provides feedback that the action worked.",
         "SEMANTICS AND DYNAMIC UPDATES: Visual separators alone do not necessarily communicate relationships to screen readers. Appropriate list semantics and feedback when content changes can make the interface easier to understand without relying on sight. Actual announcements may vary by browser and assistive technology.",
@@ -2378,6 +2390,8 @@
     "body": [
       "GitHubは2026年10月7日、Anthropicの軽量モデル「Claude Haiku 5.5」がGitHub Copilotで一般提供になったと発表しました。サブエージェント、短時間の修正、ターミナル操作など、大量の処理を素早く実行する用途を想定しています。",
       "GitHubによると、初期の評価では多くのコーディング作業でClaude Sonnet 5に匹敵する結果を示しながら、必要なトークンやステップを抑えたとされています。これはGitHubによる評価であり、すべてのタスクで同等の性能を保証するものではありません。",
+      "【高速モデルの適した仕事】開発支援では、短いコードの説明、テストケースの下書き、変更点の要約など、短い応答を何度も求める作業があります。応答の速いモデルはこうした反復を支援できますが、複雑な設計変更や広範囲の修正では品質と速度を比較する必要があります。",
+      "【モデル選択の評価方法】実際のリポジトリから代表的なタスクを選び、正しい変更ができた割合、テストの通過率、修正のやり直し回数、待ち時間を比較します。モデルが選択できることと、組織のポリシーで利用が許可されることは別の確認事項です。",
       "【軽量モデルを使い分ける理由】開発支援AIのすべての仕事に同じ規模のモデルが必要とは限りません。小さな修正案の作成、ログの要約、定型的なコードの説明など、短い往復で終わる作業では、応答速度や処理量が重要になる場合があります。一方、複数ファイルをまたぐ設計変更や難しい不具合の原因究明では、より慎重な検証が必要です。",
       "【サブエージェントとの関係】大きな開発課題を複数の小さな調査・修正タスクに分ける構成では、個々の処理が速くても全体の結果が正しいとは限りません。担当範囲を明確にし、各タスクの出力を統合するときに矛盾や重複を検査する設計が重要です。",
       "【導入前の比較方法】同じリポジトリと同じ指示で、単純な修正、テスト作成、コード説明、複雑なリファクタリングをそれぞれ複数回試します。回答時間だけでなく、テスト通過率、手戻り、レビューに要した時間、トークン消費や請求上の単位を記録すると、モデル選択の根拠を作れます。",
@@ -2399,6 +2413,8 @@
       "body": [
         "On October 7, 2026, GitHub announced general availability of Anthropic's Claude Haiku 5.5 in GitHub Copilot. The lightweight model is intended for fast, high-volume work such as subagents, quick edits and terminal tasks.",
         "GitHub says early tests showed results comparable to Claude Sonnet 5 on many coding tasks while using fewer tokens and steps. These are vendor-reported findings, not guarantees for every workload.",
+        "WHERE A FAST MODEL FITS: Developers repeatedly request short explanations, test drafts and change summaries. Low latency can improve these loops, but complex architectural work still requires comparisons of correctness and speed.",
+        "EVALUATING MODEL CHOICE: Use representative repository tasks to measure correct edits, passing tests, rework and latency. A model appearing in a product selector does not necessarily mean every organization permits its use.",
         "WHY SMALLER MODELS MATTER: Not every development task requires the same level of reasoning. Short code explanations, routine edits and log summaries can benefit from fast responses, while cross-file architecture changes and difficult debugging still demand careful verification.",
         "SUBAGENT WORKFLOWS: A larger task can be split into smaller investigations or edits. Fast execution of each step does not guarantee a correct combined result. Clear boundaries and checks for conflicting or duplicated changes remain essential.",
         "A PRACTICAL COMPARISON: Run representative tasks against the same repository and prompts: a small fix, a test, an explanation and a more complex refactor. Track latency, test results, reviewer time, rework and the relevant usage or billing units rather than comparing speed alone.",
@@ -2427,6 +2443,8 @@
     "body": [
       "GitHubは2026年10月7日、ソースコード内の認証情報を見つけるために調整した専用AIモデルを発表しました。従来の定型的な文字列検出だけでなく、周囲のコードを読み取り、決まった形式を持たないパスワードなども検出対象にします。",
       "既存のAI検出アラートを利用する顧客は新モデルへ自動的に移行します。GitHub Secret ProtectionとGitHub Advanced Securityに含まれる既存アラートは、追加料金なしで継続すると案内されています。",
+      "【形式に頼らない検出の難しさ】認証情報には一定の文字列パターンを持つものと、独自の形式で保存されるものがあります。固定的な正規表現では見つけにくい情報を検出できれば保護範囲が広がる一方、通常の文字列を秘密情報と誤判定する可能性もあります。",
+      "【検出後の対応が重要】漏洩の疑いがある文字列を見つけても、リポジトリから削除するだけでは不十分な場合があります。資格情報の失効・再発行、利用履歴の確認、影響範囲の調査を行い、誤検出を確認できる運用手順を整える必要があります。",
       "【なぜ従来の検出だけでは不十分なのか】APIキーのように決まった接頭辞や長さを持つ情報は、パターン照合で候補を見つけやすい一方、開発者が独自に設定したパスワードや内部サービスの認証文字列には共通の形式がない場合があります。文字列そのものに加えて変数名、代入先、呼び出し方などの周辺情報を考慮することが、今回の技術的な焦点です。",
       "【検出の流れを考える】例えば設定ファイルに接続先、ユーザー名、パスワードらしい値が並んでいる場合、単独の文字列では秘密情報と断定できなくても、周囲の文脈から調査対象を絞れる可能性があります。ただし、これは仕組みを理解するための例であり、特定のコードを必ず検出できるという意味ではありません。",
       "【発見後に必要な対応】認証情報をコードから削除するだけでは不十分な場合があります。既にリポジトリの履歴、ビルドログ、配布物などに残っていれば第三者が利用できる可能性があるため、対象の資格情報を失効させて再発行し、利用先と影響範囲を調査します。対応手順を事前に決めておくことが重要です。",
@@ -2448,6 +2466,8 @@
       "body": [
         "On October 7, 2026, GitHub announced a purpose-built AI model for detecting exposed credentials in code. The model examines surrounding context to identify secrets such as passwords without recognizable token formats.",
         "Existing AI-detected alerts are upgraded to the new model and remain included in GitHub Secret Protection and Advanced Security without additional charges.",
+        "THE CHALLENGE OF UNSTRUCTURED SECRETS: Some credentials follow recognizable patterns while others use custom formats. Model-based detection may catch secrets missed by regular expressions, but can also mistake ordinary strings for credentials.",
+        "RESPONSE AFTER DETECTION: Removing a suspected secret from a repository may not be enough. Teams should consider revocation, rotation, access-log review and impact assessment, with a process for resolving false positives.",
         "WHY PATTERN MATCHING HAS LIMITS: Tokens with recognizable prefixes or lengths are easier to identify using rules. Custom passwords and internal credentials may not share a consistent format. Looking at variable names, assignments and nearby code can provide additional signals.",
         "A CONTEXTUAL EXAMPLE: A configuration file might contain a service endpoint, username and password-like value. The surrounding fields can help flag a candidate even if the string alone has no recognizable token structure. This example does not guarantee detection in any particular repository.",
         "RESPONSE AFTER DETECTION: Removing a credential from the latest code is not always enough. It may remain in commit history, logs or artifacts. Teams should revoke or rotate the credential and investigate its possible exposure and downstream use.",
@@ -2476,6 +2496,8 @@
     "body": [
       "GitHubは2026年10月7日、Copilot CLI、Copilotアプリ、VS CodeのAgent Hostセッションでローカルサンドボックス機能を一般提供したと発表しました。AIエージェントが実行するコマンドを、開発者の端末内で制限された環境に置く仕組みです。",
       "サンドボックスでは、エージェントが読み書きできるファイル、ネットワークへの接続、GitやGitHub CLIの認証情報へのアクセスなどを制御できます。企業の管理者は、利用者が弱められないポリシーを適用することもできます。",
+      "【サンドボックスが防ぐ操作】コード開発エージェントはテストやビルドのためにコマンドを実行することがあります。実行範囲を制限することで、意図しないファイル変更や外部への通信などのリスクを減らせます。ただし隔離の強さは設定や実行環境に依存します。",
+      "【導入時に確認する境界】作業ディレクトリの書き込み範囲、ネットワークアクセス、環境変数、資格情報の扱いを確認します。安全な実行環境を使っても、生成されたコードの正しさやライセンス上の問題まで自動的に解決するわけではありません。",
       "【AIエージェントに実行権限が必要な理由】コードの修正だけでなく、テスト実行、依存関係の確認、ファイル操作まで任せる開発支援AIでは、モデルが提案したコマンドを実際に動かす場面が増えます。便利になる一方、意図しないファイル変更や外部通信が起きた場合の影響も大きくなります。",
       "【サンドボックスの基本的な役割】サンドボックスは、実行する処理が触れられる資源を制限する境界です。例えば作業対象のディレクトリだけを許可し、機密情報を含む別フォルダーへのアクセスを抑える、といった権限設計が考えられます。具体的に何を制御できるかは利用環境と設定によります。",
       "【ネットワーク制御が重要な理由】エージェントが外部へ接続できる場合、必要なパッケージ取得と、意図しないデータ送信を区別する必要があります。通信を一律に遮断すれば作業が失敗する場合もあるため、必要な宛先や操作だけを許可する方針を検討します。",
@@ -2497,6 +2519,8 @@
       "body": [
         "On October 7, 2026, GitHub made local sandboxing generally available in Copilot CLI, the Copilot app and VS Code Agent Host sessions. Agent-run tools and commands can be confined within a local execution boundary.",
         "Policies can restrict file and directory access, network connections, Git credentials and other system capabilities. Enterprise administrators may enforce settings that developers cannot weaken.",
+        "WHAT SANDBOXING CONSTRAINS: Coding agents may execute builds and tests. Limiting their execution environment can reduce unintended file changes or outbound connections, although protection depends on configuration and runtime boundaries.",
+        "BOUNDARIES TO VERIFY: Review writable directories, network access, environment variables and credential exposure. A sandbox does not independently guarantee correct generated code or resolve licensing concerns.",
         "WHY AGENTS NEED EXECUTION CONTROLS: Coding agents increasingly run tests, inspect dependencies and modify files instead of only suggesting code. This expands their usefulness but also increases the impact of unexpected commands or network activity.",
         "THE SANDBOX BOUNDARY: A sandbox restricts which resources a process can access. For example, a team might permit work inside a project directory while limiting access to unrelated sensitive files. The exact controls depend on the platform and configuration.",
         "NETWORK ACCESS: Agents may need connectivity to retrieve dependencies or use approved services. Teams should distinguish necessary traffic from unwanted data transfer and consider narrow allowances rather than assuming unrestricted connectivity is safe.",
@@ -2525,6 +2549,8 @@
     "body": [
       "GitHubは2026年10月7日、Copilot CLIからローカルのOllamaモデルを見つけて選択できる機能を案内しました。CLIバージョン1.0.94-0以降では、/modelコマンドから稼働中のOllamaの対応モデルを確認できます。",
       "一覧からモデルを選択し、提供元や接続先を確認したうえでセッションへ追加できます。Ollama本体やモデルのインストールは別途必要で、選択操作だけでモデルが自動ダウンロードされるわけではありません。",
+      "【ローカルモデルとオフライン利用の違い】モデルの推論処理がPC内で行われても、認証、更新確認、外部ツール、リポジトリへのアクセスがネットワークを使う場合があります。ローカルモデルを選択できることだけで、開発フロー全体がオフラインになるとは限りません。",
+      "【品質と端末性能の確認】Ollama経由で使うモデルは、PCのメモリやGPU、モデルのサイズによって応答速度が変わります。補完、説明、修正などの作業別に品質を確かめ、コードがどの処理で端末外へ送られるかを確認する必要があります。",
       "【利用までの基本的な流れ】まず開発端末にOllamaを導入し、利用したいモデルを取得して起動します。その後、対応バージョンのCopilot CLIでモデル選択メニューを開き、検出された接続先とモデルを確認します。モデルが表示されない場合は、Ollamaの稼働状況、CLIのバージョン、モデルの互換性を順に点検すると原因を切り分けやすくなります。",
       "【ローカル推論とオフライン動作の違い】ローカル推論とはモデルの計算処理を手元の端末で行うことです。一方、オフライン動作はアプリケーション全体の外部通信を制限する考え方です。モデルがローカルで動いていても、認証、更新確認、テレメトリー、外部ツールの利用など別の通信経路が残る場合があります。",
       "【プライバシー評価の観点】機密コードを扱う組織では、モデルの実行場所だけでなく、CLIが取得するファイル範囲、プロンプトに含まれる内容、接続先、ログの保存場所を確認する必要があります。ネットワーク監視やテスト用データを用いた動作確認を実施し、通信の有無を実際の構成で検証することが重要です。",
@@ -2546,6 +2572,8 @@
       "body": [
         "On October 7, 2026, GitHub announced that Copilot CLI can discover compatible models from a running local Ollama instance through the /model command, starting with CLI version 1.0.94-0.",
         "Users can review a model's provider and endpoint before adding it to a session. Ollama and the model must already be installed; discovery does not download either one.",
+        "LOCAL INFERENCE IS NOT THE SAME AS OFFLINE OPERATION: A model may run on a developer's machine while authentication, updates, tools or repository services still use the network. Selecting a local model does not automatically make the entire workflow offline.",
+        "HARDWARE AND QUALITY TRADE-OFFS: Performance through Ollama depends on model size, memory and available GPU capacity. Test completion, explanation and editing tasks separately, and verify which workflow components transmit code off-device.",
         "GETTING STARTED: Install Ollama, obtain a compatible model and start its local service. Then open the model selector in a supported Copilot CLI version and inspect the detected model and endpoint. If discovery fails, check the Ollama process, CLI version and model compatibility.",
         "LOCAL INFERENCE IS NOT OFFLINE OPERATION: Local inference means the model computation runs on the user's machine. Offline operation concerns the network behavior of the wider application. Authentication, updates, telemetry or connected tools may still use network services.",
         "PRIVACY CHECKS: Organizations handling sensitive source code should review which files enter prompts, where the CLI connects and where logs are stored. Tests with non-sensitive sample data and observation of network traffic can help validate the actual configuration.",
@@ -2574,6 +2602,8 @@
     "body": [
       "GitHubは2026年10月6日、複数のPull Requestを依存関係のあるまとまりとして扱う「Stacked Pull Requests」を一般提供しました。大きな開発変更を小さな単位に分け、個別にレビューしながら統合できる機能です。",
       "GitHubによると、プレビュー期間にStackを使ったリポジトリでは、比較対象よりマージされたコードが9％多かったと報告されています。ただし、この数字は観測された相関であり、機能の利用だけで生産性が必ず9％上がることを示すものではありません。",
+      "【変更を小さく分ける効果】大規模なプルリクエストでは、レビュー担当者が変更意図を追いにくくなります。依存関係を持つ小さな変更へ分割すれば、各段階の目的と影響を確認しやすくなり、議論の焦点を絞れる可能性があります。",
+      "【積み重ねた変更の運用課題】先行するプルリクエストが修正されると、後続の変更にも影響が及ぶ場合があります。レビュー順序、差分の見え方、リベースや競合の扱いをチームで統一しないと、分割したこと自体が管理負担になる可能性があります。",
       "【Stacked Pull Requestsとは】一般的なPull Requestでは一つのブランチから基準ブランチへの差分をレビューします。Stacked Pull Requestsでは、ある変更を土台に次の変更を積み重ね、それぞれを別のPull Requestとして確認できます。レビュー対象を小さくしながら、関連する開発を段階的に進める考え方です。",
       "【具体的な開発例】新しい画面を実装する場合、まず共通のデータ型を追加し、次にAPI呼び出し、最後にUIを追加するといった分割が考えられます。各段階を別のPull Requestにすると、レビュアーは変更の目的を把握しやすくなります。ただし後続の変更は先行する変更に依存するため、順序の管理が欠かせません。",
       "【レビューの負担をどう減らすか】一度に大量の差分を読むと、設計判断や不具合の原因を見落としやすくなることがあります。小さなPull Requestなら論点を限定し、担当分野に応じてレビューを割り当てやすくなります。一方で細かく分けすぎると、依存関係の追跡や通知の負担が増えるため、分割の粒度には工夫が必要です。",
@@ -2595,6 +2625,8 @@
       "body": [
         "On October 6, 2026, GitHub made Stacked Pull Requests generally available. Developers can split a large change into smaller dependent pull requests that are reviewed independently.",
         "GitHub reports that repositories using stacks saw 9% more merged code than peers during the preview. This is an observed comparison, not proof that the feature alone causes a 9% productivity gain.",
+        "WHY SMALLER CHANGES HELP: Large pull requests are difficult to review because intent and impact become harder to track. Splitting dependent changes into focused steps can make each review more manageable.",
+        "MANAGING DEPENDENT REQUESTS: Updates to an earlier pull request can affect later ones. Teams need conventions for review order, diffs, rebasing and conflicts or the stack may introduce additional coordination overhead.",
         "WHAT STACKED PULL REQUESTS DO: A conventional pull request presents changes against a base branch. A stack allows one change to build on another while each dependent change remains a separate review unit. This can support incremental development without presenting the entire feature as one large diff.",
         "A PRACTICAL EXAMPLE: A new interface might require shared data types, API integration and UI components. These can be separated into dependent pull requests so reviewers focus on one concern at a time. The team must still understand and maintain the merge order.",
         "REVIEW TRADE-OFFS: Smaller diffs can help reviewers concentrate on a specific design decision or defect. Excessively granular stacks, however, can increase notifications and dependency management. The goal is a coherent review unit, not the maximum number of pull requests.",
