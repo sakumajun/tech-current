@@ -3488,5 +3488,56 @@
         "WHAT COMES NEXT: AWS's September announcements illustrate a shift from evaluating isolated models toward evaluating complete agent systems. Organizations can benefit by starting with narrowly defined workflows, measuring real outcomes and choosing components based on operational needs rather than announcement volume."
       ]
     }
+  },
+  {
+    "articleId": "TC-0067",
+    "slug": "cornerstone-orion-ai-database-diagnosis-78-percent-bedrock-strands",
+    "title": "データベース障害の診断時間を78％短縮｜AWSとStrandsによる13のAIエージェント活用事例",
+    "description": "Cornerstone OnDemandはAmazon BedrockとStrands Agentsで構築したOrion AIにより、データベース障害の診断を45分から10分へ短縮。13の専門エージェント、MCP、記憶管理、承認制御まで技術構成を詳しく解説します。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T17:55:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-cornerstone-ondemand-cut-database-diagnosis-by-78-with-amazon-bedrock/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月7日、Cornerstone OnDemandがAmazon BedrockとStrands Agentsを使って構築したデータベース運用AI「Orion AI」の事例を公開しました。従来は障害の診断に約45分かかっていたところ、導入後は約10分となり、78％短縮したと報告しています。注目したいのは、単一の巨大なAIに任せるのではなく、専門分野を分担する複数のエージェントを組み合わせた点です。",
+      "【Cornerstoneが抱えていた課題】同社のEnterprise DataOpsチームでは、SQL Serverの状態を調べるために複数のシステムビューやログを行き来する必要がありました。データベースのライフサイクル操作には10以上の手作業があり、SREチームとデータ担当の報告にも約15分の遅れが発生していました。重複するアラートが多く、本当に重要な障害を見つけにくいことも問題でした。",
+      "【成果の数字を整理する】AWSの事例では、診断時間は45分から10分へ短縮、ライフサイクル操作の手作業は70％削減、重複アラートは中央値で65％削減したとしています。SREからデータ担当への報告も15分遅れの状態からリアルタイムへ改善したと報告しています。ただし、いずれもCornerstoneの運用環境で測定された成果であり、別の企業で同じ改善率が得られることを保証するものではありません。",
+      "【13の専門エージェントを組み合わせる】Orion AIは、全体を調整するメタオーケストレーターと、専門領域を担当する13のエージェントで構成されます。データベース診断、セッションのブロッキング分析、リアルタイムSQL診断、インフラ監視、運用分析、ナレッジ検索などを分担します。専門領域ごとに使えるツールを絞ることで、すべての操作を一つのAIに与える場合より役割と責任を整理しやすくなります。",
+      "【中央のエージェントは何をするのか】メタオーケストレーターは、質問を解釈して担当エージェントを選び、結果を統合します。AWSの説明では、中央側には業務領域の操作ツールを直接持たせず、エージェントの検索や呼び出し、処理計画、確認ゲートなどの制御機能を集約しています。これにより、専門エージェントのツールや指示を個別に管理できます。",
+      "【キーワード優先の振り分け】すべての質問を高価な意味検索にかけるのではなく、まずキーワードで処理先を判定します。AWSによると約80％の質問がメモリ内のキーワード判定で1ミリ秒未満に振り分けられ、曖昧な質問だけAmazon Titan Text Embeddings V2による意味検索へ進みます。速度を重視する処理と、柔軟な解釈が必要な処理を分ける設計です。",
+      "【障害診断を3段階に分担する】SQL Serverの障害調査では、最初のエージェントが待機状態や長時間クエリなどの現象を調べ、別のエージェントがブロッキングの連鎖から原因を分析し、リアルタイム診断エージェントが現在の状態を直接照会します。状況の把握、原因の推定、最新状態の確認を分けることで、過去の会話内容だけを根拠に判断するリスクを抑えています。",
+      "【MCPで既存の業務ツールと接続】複数のエージェントが共有するSQL診断などの機能は、Model Context Protocol（MCP）を通じて外部ツールサーバーへ接続します。一方、監視メトリクスや一部のAPIはSDKやREST APIで直接呼び出します。すべての接続を同じ方式へ統一するのではなく、共通化が必要なツールと単独で使うツールを使い分けている点が実装上の特徴です。",
+      "【会話の記憶と最新データは別物】Orion AIは同一セッションの文脈をDynamoDBで保持し、セッションをまたぐ情報にはAgentCore Memoryを利用します。エージェント間の一時的な情報共有にも別の記憶領域を使います。ただし、現在のCPU使用率やブロッキング状態を聞かれた場合には、過去の記憶を参照せず、ライブデータを取得する設計です。履歴とリアルタイムの事実を混同しないための重要な工夫といえます。",
+      "【記憶の取得にも制限を設ける】AWSの説明では、複数の記憶層を並列に検索し、合計4,000トークンの予算と500ミリ秒の制限時間を設定しています。記憶を増やし続ければ必ず回答品質が上がるわけではありません。古い情報や関係の薄い履歴を持ち込まないよう、取り込む情報量と応答時間を制御する必要があります。",
+      "【危険な操作には人の確認を要求】データベース運用では、問題のあるセッションを停止する操作が別の業務へ影響する可能性があります。Orion AIは破壊的な操作を実行する前に人の承認を求め、5分以内に確認されなければ拒否する仕組みを備えています。入力検証、SQLインジェクション対策、秘密情報の伏せ字処理、権限管理、リクエスト単位の費用追跡も組み合わせています。",
+      "【運用監視と障害調査】システムはAmazon ECS上のコンテナとして稼働し、Amazon CloudWatchでログやメトリクスを収集し、AWS X-Rayでエージェント間の処理経路を追跡します。AIが判断した結果だけでなく、どのツールを呼び出し、どこで時間がかかり、どの段階で失敗したのかを確認できることが、本番運用では重要です。",
+      "【3人・6か月で構築した意味】AWSによると、Orion AIは3人のチームが6か月で構築しました。この人数と期間は導入の再現性を考える参考になりますが、既存システムの成熟度、接続先API、組織の協力体制によって必要な工数は変わります。完成までの期間だけでなく、運用後の保守負担や改善サイクルも含めて評価すべきです。",
+      "【企業が参考にできる設計原則】この事例から学べるのは、専門分野でエージェントを分けること、簡単な振り分けを先に試すこと、最新の運用指標を記憶から推測しないことの3点です。導入時はまず読み取り専用の障害調査から始め、誤診断率、調査時間、アラート削減率を測定し、操作権限を段階的に拡張する方法が考えられます。",
+      "【AIによる自律運用の今後】Orion AIは、AIが障害報告を要約するだけでなく、調査、根拠の整理、修復案の提示、担当者への引き継ぎまでを支援できることを示しています。ただし、改善効果を継続するにはデータの鮮度、権限、監査、人的承認の設計が不可欠です。AIの自律性と運用者の統制を両立できるかが、企業向けエージェントの重要な評価軸になるでしょう。"
+    ],
+    "en": {
+      "title": "Cornerstone Cuts Database Diagnosis Time by 78% With 13 AI Agents on AWS",
+      "description": "Cornerstone OnDemand's Orion AI cut database diagnosis from 45 to 10 minutes. Explore its 13 specialized agents, hybrid routing, MCP integrations, memory safeguards and human approvals.",
+      "category": "Business & DX",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 7, 2026, AWS published a case study describing Orion AI, a database operations system built by Cornerstone OnDemand with Amazon Bedrock and Strands Agents. The company reports that average diagnosis time fell from about 45 minutes to 10 minutes, a 78 percent reduction. The architecture uses multiple specialized agents rather than assigning every operational task to one general-purpose model.",
+        "THE OPERATIONAL PROBLEM: Cornerstone's Enterprise DataOps team previously investigated SQL Server incidents by checking system views and logs across tools. Database lifecycle processes involved more than ten manual steps, reports between SRE and data teams lagged by about 15 minutes, and redundant alerts made urgent signals harder to spot.",
+        "REPORTED OUTCOMES: AWS describes a 78 percent reduction in diagnosis time, a 70 percent reduction in manual lifecycle steps, a median 65 percent reduction in redundant alerts, and the removal of a 15-minute reporting delay. These are results reported for Cornerstone's environment, not guaranteed outcomes for other organizations.",
+        "THIRTEEN DOMAIN-SPECIFIC AGENTS: Orion AI combines a coordinating meta-orchestrator with 13 specialist agents covering database diagnostics, session blocking, live SQL state, infrastructure monitoring, operational analytics, knowledge retrieval and related tasks. Narrow tool access keeps each agent focused on its domain.",
+        "THE ROLE OF THE ORCHESTRATOR: The central agent interprets a request, selects specialists and assembles their findings. According to AWS, it holds routing and control-flow tools rather than the operational tools belonging to the specialists. This makes responsibilities and tool access easier to separate.",
+        "KEYWORD-FIRST ROUTING: Roughly 80 percent of requests take an in-memory keyword route that resolves in under a millisecond, according to the case study. Ambiguous requests fall back to semantic search using Amazon Titan Text Embeddings V2. This hybrid design reserves more flexible retrieval for questions that need it.",
+        "THREE STAGES OF SQL DIAGNOSIS: One agent inspects wait types, long-running queries and blocking chains. Another investigates root blockers and potential remediation. A third queries live SQL Server state directly. Separating observation, root-cause reasoning and current-state checks helps avoid treating old context as live evidence.",
+        "CONNECTING EXISTING TOOLS WITH MCP: Shared capabilities such as SQL diagnostics use Model Context Protocol connections to external tool servers. Other sources are accessed through SDKs or REST APIs. Orion AI does not force every integration through the same abstraction; it chooses shared interfaces where reuse matters.",
+        "MEMORY IS NOT LIVE TELEMETRY: DynamoDB holds same-session context, AgentCore Memory supports cross-session recall, and an ephemeral scratchpad shares findings between agents. Requests about current operational metrics bypass memory and query live systems instead. This is an important safeguard against stale diagnostic conclusions.",
+        "LIMITING MEMORY RETRIEVAL: AWS describes parallel retrieval across memory tiers with a 4,000-token budget and a 500-millisecond timeout. More retained context is not automatically better. Relevance, freshness and latency must be controlled.",
+        "HUMAN APPROVAL FOR DISRUPTIVE ACTIONS: Destructive operations require explicit confirmation within a five-minute window and default to denial on timeout. Orion AI also uses input validation, SQL-injection protections, output redaction, role-based permissions and per-request cost tracking.",
+        "OBSERVABILITY IN PRODUCTION: Orion AI runs as containerized services on Amazon ECS. CloudWatch collects operational logs and metrics, while AWS X-Ray traces calls across agent executions. Operators need visibility into routing, tool usage, latency and failures, not just the final AI response.",
+        "THREE PEOPLE AND SIX MONTHS: AWS says a three-person team built Orion AI in six months. That is a useful case-study detail, but implementation effort will depend on existing infrastructure, APIs and organizational support. Ongoing maintenance should be included in any business assessment.",
+        "DESIGN LESSONS FOR OTHER TEAMS: The reusable principles are domain-scoped agents, keyword routing before semantic fallback, and live-system checks for real-time questions. A cautious rollout can begin with read-only diagnostics, measure accuracy and investigation time, then expand permissions only after controls are validated.",
+        "WHAT THIS MEANS FOR AUTONOMOUS OPERATIONS: Orion AI demonstrates how agents can assist with investigation, evidence gathering, remediation recommendations and handoffs. Sustainable results still depend on data freshness, permissions, auditability and human oversight. Operational control matters as much as agent autonomy."
+      ]
+    }
   }
 ]
