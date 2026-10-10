@@ -1,0 +1,48 @@
+---
+import articles from '../../../../data/articles.json';
+const topics = [["generative-ai","生成AI","Generative AI"],["ai-tools","AIツール","AI Tools"],["business-dx","ビジネス・DX","Business & DX"],["technology","テクノロジー","Technology"]];
+export function getStaticPaths() {
+  return [["generative-ai","生成AI","Generative AI"],["ai-tools","AIツール","AI Tools"],["business-dx","ビジネス・DX","Business & DX"],["technology","テクノロジー","Technology"]].map(([slug, ja, en]) => ({ params: { topic: slug }, props: { slug, ja, en } }));
+}
+const { slug, ja, en } = Astro.props;
+const isEnglish = true;
+const heading = isEnglish ? en : ja;
+const items = articles.filter(a => a.status === 'published' && (isEnglish ? a.en?.category === en : a.category === ja)).sort((a,b) => String(b.publishedAt ?? '').localeCompare(String(a.publishedAt ?? '')));
+const base = isEnglish ? '/en' : '';
+const canonical = `https://tech-current.net${base}/topics/${slug}/`;
+const alternate = `https://tech-current.net${isEnglish ? '' : '/en'}/topics/${slug}/`;
+const description = isEnglish ? `Latest ${heading} stories and analysis from TECH CURRENT.` : `TECH CURRENTの「${heading}」に関するニュース・解説記事一覧。`;
+---
+<!doctype html>
+<html lang={isEnglish ? 'en' : 'ja'}>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<link rel="alternate" hreflang="ja" href={isEnglish ? alternate : canonical} />
+<link rel="alternate" hreflang="en" href={isEnglish ? canonical : alternate} />
+<link rel="alternate" hreflang="x-default" href={isEnglish ? alternate : canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={`${heading} | TECH CURRENT`} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<title>{heading} | TECH CURRENT</title>
+</head>
+<body>
+<header><a class="brand" href={base + '/'}>TECH<span>CURRENT</span></a><nav><a href={base + '/'}>{isEnglish ? 'Home' : 'トップ'}</a><a href={isEnglish ? alternate : alternate} lang={isEnglish ? 'ja' : 'en'}>{isEnglish ? '日本語' : 'EN'}</a></nav></header>
+<main>
+<div class="eyebrow">{isEnglish ? 'TOPICS' : 'テーマ別記事一覧'}</div>
+<h1>{heading}</h1>
+<p class="intro">{description}</p>
+<div class="topics">{topics.map(([id,j,e]) => <a class:list={['topic-link',{active:id===slug}]} href={`${base}/topics/${id}/`}>{isEnglish ? e : j}</a>)}</div>
+{items.length ? <div class="articles">{items.map(a => <article><div class="meta"><span>{isEnglish ? a.en.category : a.category}</span><time datetime={a.publishedAt}>{a.publishedAt.slice(0,10)}</time></div><h2><a href={`${base}/articles/${a.slug}/`}>{isEnglish ? a.en.title : a.title}</a></h2><p>{isEnglish ? a.en.description : a.description}</p><a class="read" href={`${base}/articles/${a.slug}/`}>{isEnglish ? 'Read article →' : '記事を読む →'}</a></article>)}</div> : <div class="empty">{isEnglish ? 'There are no articles in this topic yet.' : '現在、このテーマの記事はありません。'}</div>}
+</main>
+<footer>© {new Date().getFullYear()} TECH CURRENT</footer>
+</body>
+</html>
+<style>
+:global(*){box-sizing:border-box}:global(body){margin:0;background:#f5f7fb;color:#12243c;font-family:Arial,"Noto Sans JP",Meiryo,sans-serif}:global(a){text-decoration:none;color:inherit}
+header{background:#fff;border-bottom:1px solid #e0e7f1;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px max(22px,calc((100% - 1100px)/2))}.brand{font-size:23px;font-weight:900;letter-spacing:-1px;color:#071b36;white-space:nowrap}.brand span{color:#1260e8}nav{display:flex;gap:20px;font-size:13px;font-weight:700}nav a:hover,.read:hover,h2 a:hover{color:#1260e8}
+main{max-width:1100px;margin:38px auto 72px;padding:0 22px}.eyebrow{font-size:12px;letter-spacing:.14em;font-weight:800;color:#1260e8}h1{font-size:clamp(30px,4vw,43px);margin:10px 0 8px}.intro{color:#64738a;font-size:15px;line-height:1.8}.topics{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0}.topic-link{border:1px solid #dce4ef;border-radius:30px;padding:10px 17px;background:#fff;font-size:13px;font-weight:700}.topic-link:hover,.topic-link.active{background:#0c3b83;color:#fff;border-color:#0c3b83}.articles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}article,.empty{background:#fff;border:1px solid #e0e7f1;border-radius:10px;padding:26px}.meta{display:flex;align-items:center;gap:15px;font-size:12px;color:#738299}.meta span{color:#1260e8;font-weight:800}h2{font-size:20px;line-height:1.55;margin:14px 0 10px}article p{font-size:14px;line-height:1.8;color:#596a80}.read{display:inline-block;margin-top:12px;font-size:13px;color:#1260e8;font-weight:700}.empty{color:#66758b;line-height:1.8}footer{text-align:center;padding:28px;color:#738299;font-size:12px;border-top:1px solid #e0e7f1}@media(max-width:680px){header{padding:16px}main{margin-top:25px;padding:0 16px}.articles{grid-template-columns:1fr}article{padding:20px}}
+</style>
