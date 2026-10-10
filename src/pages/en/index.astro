@@ -4,10 +4,10 @@ const published = articles.filter((a) => a.status === 'published' && a.en).map(a
 const lead = published[0];
 const latest = published.slice(0, 6);
 const topics = [
-  { name: 'Generative AI', label: 'GENERATIVE AI', className: 'ai', desc: 'The latest developments in generative AI' },
-  { name: 'AI Tools', label: 'AI TOOLS', className: 'tools', desc: 'Useful tools for work and daily life' },
-  { name: 'Business & DX', label: 'BUSINESS & DX', className: 'business', desc: 'How technology transforms organizations' },
-  { name: 'Technology', label: 'TECHNOLOGY', className: 'tech', desc: 'Innovations shaping the future' }
+  { name: 'Generative AI', label: 'GENERATIVE AI', className: 'ai', desc: 'The latest developments in generative AI', slug: 'generative-ai' },
+  { name: 'AI Tools', label: 'AI TOOLS', className: 'tools', desc: 'Useful tools for work and daily life', slug: 'ai-tools' },
+  { name: 'Business & DX', label: 'BUSINESS & DX', className: 'business', desc: 'How technology transforms organizations', slug: 'business-dx' },
+  { name: 'Technology', label: 'TECHNOLOGY', className: 'tech', desc: 'Innovations shaping the future', slug: 'technology' }
 ];
 const categories = ['News','Generative AI','AI Tools','Business & DX','Technology','Explainers','Reviews'];
 ---
@@ -63,7 +63,7 @@ const categories = ['News','Generative AI','AI Tools','Business & DX','Technolog
       </section>
 
       <section class="topic-grid" id="topics" aria-label="Featured categories">
-        {topics.map(topic => <a class="topic-card" href="#latest">
+        {topics.map(topic => <a class="topic-card" href={`/en/topics/${topic.slug}/`}>
           <div class={`topic-image ${topic.className}`}><span class="topic-symbol">{topic.className === 'ai' ? '✳' : topic.className === 'tools' ? '◇' : topic.className === 'business' ? '▥' : '⬡'}</span><span class="topic-en">{topic.label}</span></div>
           <div class="topic-text"><strong>{topic.name}</strong><small>{topic.desc}</small></div>
         </a>)}
@@ -86,7 +86,7 @@ const categories = ['News','Generative AI','AI Tools','Business & DX','Technolog
     </main>
     <aside class="right-sidebar">
       <section class="sidebar-panel"><h2>About TECH CURRENT</h2><div class="about-logo"><span class="mini-mark">▰</span> TECH<span>CURRENT</span></div><p>Making Sense of Technology Today.</p><p>AI and digital technology are changing the way we live and work every day. At TECH CURRENT, we follow what's happening around the world and explore what is changing, why it matters, and what might come next—in a way that's easy to understand.</p></section>
-      <section class="sidebar-panel"><h2>Topics We Cover</h2><div class="side-topics">{topics.map(t=><a href="#topics"><span class={`side-dot ${t.className}`}></span><div><strong>{t.name}</strong><small>{t.desc}</small></div><span>›</span></a>)}</div></section>
+      <section class="sidebar-panel"><h2>Topics We Cover</h2><div class="side-topics">{topics.map(t=><a href={`/en/topics/${t.slug}/`}><span class={`side-dot ${t.className}`}></span><div><strong>{t.name}</strong><small>{t.desc}</small></div><span>›</span></a>)}</div></section>
     </aside>
   </div>
   <footer><div class="footer-inner"><strong>TECH<span>CURRENT</span></strong><p>テクノロジーの今を、読み解く。</p><small>© {new Date().getFullYear()} TECH CURRENT</small></div></footer>
