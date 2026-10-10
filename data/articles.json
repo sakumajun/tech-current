@@ -3539,5 +3539,56 @@
         "WHAT THIS MEANS FOR AUTONOMOUS OPERATIONS: Orion AI demonstrates how agents can assist with investigation, evidence gathering, remediation recommendations and handoffs. Sustainable results still depend on data freshness, permissions, auditability and human oversight. Operational control matters as much as agent autonomy."
       ]
     }
+  },
+  {
+    "articleId": "TC-0068",
+    "slug": "aws-agentcore-multi-agent-evaluation-explainability-three-layers",
+    "title": "AIエージェントの「正しさ」と「説明力」をどう測る？｜AWSが示す3層の評価設計",
+    "description": "AWSが公開したAmazon Bedrock AgentCore Evaluationsの実装例を解説。複数AIエージェントのツール選択、業務制約、判断根拠を3層で検証し、開発時と本番運用で品質を継続評価する方法を整理します。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T17:55:00+09:00",
+    "sourceName": "AWS Artificial Intelligence Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/evaluating-multi-agent-systems-for-explainability-and-helpfulness-with-amazon-bedrock-agentcore/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月5日、複数のAIエージェントが協力するシステムを、回答の正確さだけでなく説明可能性まで含めて評価する技術記事を公開しました。Amazon Bedrock AgentCore Evaluationsを用い、架空の小売企業のサプライチェーンを題材に、標準評価、業務ルールの評価、判断根拠の評価を三層に分ける構成を示しています。これは企業がAIエージェントを本番運用する際に重要な考え方です。",
+      "【なぜ文章の自然さだけでは不十分なのか】AIが滑らかに回答しても、間違ったツールを呼び出したり、在庫や予算の制約を無視したりすれば、業務上の意思決定には使えません。例えば配送計画で、納期内に到着すると説明していても、運送会社の容量を超えていれば実行できない計画です。評価の対象を回答文から作業全体へ広げる必要があります。",
+      "【検証に使う架空の小売企業】AWSのサンプルはAnyCompany Retailという架空の企業を設定しています。EC、店舗、物流拠点の在庫を調整し、配送費とサービス水準を両立させる想定です。これは実在企業の改善成果を報告した事例ではなく、評価方法を再現するための参照実装です。記事の数値やルールも、まずはこの例の条件として理解する必要があります。",
+      "【5つのエージェントの役割】システムは全体を調整するオーケストレーターと、在庫最適化、拠点間配分、配送ルート、分析を担当する4つの専門エージェントで構成されます。Strands Agents SDKを使って構築し、各エージェントをAgentCore Runtime上で実行します。担当を分けることで、どの工程に誤りがあったかを個別に調べやすくなります。",
+      "【第1層：標準評価で基礎品質を確認】AgentCore Evaluationsの組み込み評価では、回答の有用性に加え、ツール選択の正確さ、関連性、指示への追従、根拠との整合性などを確認します。オーケストレーターなら正しい専門エージェントを選んだか、分析エージェントなら取得したデータに忠実か、といった役割ごとの失敗パターンに合わせて指標を選びます。",
+      "【第2層：業務ルールを独自に検証】企業固有の判断を確かめるため、カスタム評価器を追加します。在庫最適化では予算、需要予測、倉庫容量を同時に満たすかを確認します。配送では納期、コスト、運送会社の容量、地域条件を評価します。自然な文章を書けるかではなく、業務上実行可能な提案になっているかを測る段階です。",
+      "【在庫量の具体的な判定例】AWSのサンプルでは、推奨在庫量が予測需要以上かつ需要の2倍以下という範囲に収まるかを確認します。さらに追加保管費用が残予算内か、倉庫に収容できるかも判定します。これらの閾値は説明用のサンプル条件であり、あらゆる小売企業に共通する適正在庫の基準ではありません。",
+      "【第3層：説明可能性を独立して評価】正しい提案を出したとしても、利用者が理由を理解できなければ承認しにくくなります。AWSは判断理由、証拠の参照、制約条件の説明、費用とサービス水準のトレードオフ、ツールを使った理由、不足情報に関する前提の開示という6つの評価を提示しています。正確さと説明の質を別々に測るのが特徴です。",
+      "【正しいが説明できない場合】例えば在庫1,500個という推奨が予算や倉庫の条件を満たしていても、なぜその数量を選んだかを示せなければ、業務担当者は妥当性を判断しづらくなります。逆に、根拠を丁寧に説明していても容量制約を破っていれば提案は不適切です。二つの問題は原因も改善策も異なるため、同じ総合点にまとめないことが重要です。",
+      "【開発時と本番運用で評価を分ける】AgentCore Evaluationsはオンデマンド評価とオンライン評価を提供します。前者は開発中の比較、回帰テスト、CI/CDの品質ゲートに適しています。後者は本番の実行トレースをサンプリングして継続監視する用途です。AWSの例では本番トレースの1〜10％を評価する設定例が紹介されていますが、適切な割合は負荷やリスクによって異なります。",
+      "【実行履歴と評価結果を結び付ける】オンライン評価ではAgentCore Observabilityから取得したトレースを使い、CloudWatchのダッシュボードやアラームへ評価結果を送ります。単に平均スコアを見るだけでなく、どのエージェントがどのツールを使った時に問題が起きたかを追跡できることが重要です。個人情報や機密データを含むログの取り扱いにも注意が必要です。",
+      "【再現可能な検証手順】AWSはTerraformによる参照環境のデプロイ、20件のサンプル質問の実行、セッションIDを指定した評価の呼び出しを説明しています。テストは4つの専門分野ごとに5件の質問を使う構成です。評価結果は非同期に処理され、Amazon S3へ保存されます。実際に試す際はリージョン、権限、利用料金、後片付けまで確認する必要があります。",
+      "【安全対策と品質評価は別の役割】AgentCore Evaluationsは実行結果を評価する仕組みであり、危険な操作をその場で確実に阻止するアクセス制御そのものではありません。AWSはBedrock Guardrailsによるコンテンツフィルタリングや根拠確認も補完策として紹介しています。重要な操作にはIAMなどの権限管理と人による承認を組み合わせる必要があります。",
+      "【企業で導入する際の進め方】まず業務の成功条件を定義し、実際の失敗事例を含む評価データを用意します。次に標準指標で基礎品質を測り、業務ルールをコード化したカスタム評価器を追加し、最後に説明可能性を独立して確認します。モデルやプロンプトを更新するたびに同じ評価を繰り返せば、改善による副作用も検出しやすくなります。",
+      "【今後の注目点】AIエージェントの価値は、どれほど自然な文章を返すかから、正しいツールを選び、業務制約を守り、判断の理由を説明できるかへ移っています。評価を開発時の一度きりのテストにせず、本番の運用データへ接続することが、企業の信頼性向上につながります。今回のAWSの提案は、そのための具体的な評価設計を示すものです。"
+    ],
+    "en": {
+      "title": "How Do You Measure AI Agent Accuracy and Explainability? AWS's Three-Layer Evaluation Framework",
+      "description": "AWS demonstrates a three-layer approach to multi-agent evaluation with Amazon Bedrock AgentCore: built-in quality checks, business constraints, and independent explainability scoring.",
+      "category": "Generative AI",
+      "sourceName": "AWS Artificial Intelligence Blog",
+      "body": [
+        "On October 5, 2026, AWS published a technical guide to evaluating multi-agent systems for both business correctness and explainability. Using Amazon Bedrock AgentCore Evaluations, it demonstrates a three-layer assessment framework in a fictional retail supply-chain scenario: built-in quality metrics, custom business-rule checks, and independent explanation checks.",
+        "WHY FLUENT ANSWERS ARE NOT ENOUGH: An agent can sound convincing while choosing the wrong tool or violating inventory, budget, or delivery constraints. A routing recommendation is not operationally valid if it exceeds carrier capacity, even when the explanation reads well. Evaluation must cover the full workflow.",
+        "A FICTIONAL RETAIL TESTBED: AWS uses AnyCompany Retail, an invented multinational retailer with ecommerce channels, stores, and fulfillment centers. The scenario involves inventory allocation and logistics decisions. It is a reference implementation for evaluation, not a claim that a real retailer achieved measured improvements.",
+        "FIVE AGENT ROLES: A central orchestrator delegates to four specialists for optimization, distribution, routing, and analytics. The example uses Strands Agents SDK and Amazon Bedrock AgentCore Runtime. Separating responsibilities makes it easier to investigate whether an error came from routing, data retrieval, optimization, or explanation.",
+        "LAYER ONE — BUILT-IN EVALUATORS: AgentCore's built-in evaluators establish baseline quality through helpfulness and agent-specific checks such as tool-selection accuracy, response relevance, instruction following, and faithfulness. The right metric depends on each agent's primary failure mode.",
+        "LAYER TWO — BUSINESS-SPECIFIC VALIDITY: Custom evaluators check constraints that generic language metrics miss. Inventory recommendations must respect budgets, forecast demand, and warehouse capacity. Routing recommendations must satisfy delivery windows, carrier capacity, regional restrictions, and cost limits.",
+        "AN INVENTORY RULE EXAMPLE: The reference evaluator checks whether recommended stock is at least forecast demand but no more than twice that demand. It also verifies remaining budget and warehouse capacity. These thresholds belong to the demonstration and are not universal inventory-planning rules.",
+        "LAYER THREE — EXPLAINABILITY: AWS defines six separate explanation checks: decision rationale, evidence attribution, constraint reasoning, trade-off explanation, tool-use explanation, and disclosure of assumptions. Measuring explanation independently from correctness helps identify whether an agent needs better decisions or clearer communication.",
+        "CORRECT BUT OPAQUE, OR CLEAR BUT WRONG: A 1,500-unit inventory recommendation might satisfy all constraints yet fail to explain the choice. Another recommendation might offer a polished rationale while exceeding warehouse capacity. These are different failure modes and require different remedies.",
+        "ON-DEMAND VERSUS ONLINE EVALUATION: On-demand evaluations support development benchmarks, regression testing, and CI/CD gates. Online evaluations sample production traces and continuously score behavior. AWS illustrates sampling rates such as 1–10 percent; appropriate rates depend on operational risk and cost.",
+        "LINKING SCORES TO EXECUTION TRACES: Online evaluation reads AgentCore Observability traces and streams results to Amazon CloudWatch dashboards and alarms. Teams need to identify which agent and tool call caused a failure, while limiting sensitive information recorded in traces.",
+        "A REPRODUCIBLE TEST FLOW: The sample provides Terraform deployment, a test client with 20 questions across four specialist categories, and evaluation scripts that use generated session IDs. Results are processed asynchronously and written to Amazon S3. Testing requires attention to permissions, regional support, costs, and resource cleanup.",
+        "EVALUATION IS NOT ENFORCEMENT: AgentCore Evaluations measures behavior; it does not replace access controls that block unauthorized actions. AWS discusses Bedrock Guardrails as complementary runtime safeguards. Consequential operations still require permission enforcement and, where appropriate, human approval.",
+        "A PRACTICAL ROLLOUT: Define business success and failure cases, create representative test data, establish built-in baselines, add deterministic or model-assisted business checks, and score explanations separately. Repeat the same evaluations when models, prompts, tools, or workflows change.",
+        "WHAT TO WATCH: The competitive question for enterprise agents is moving beyond fluent responses toward correct tool use, business-rule compliance, and defensible explanations. Continuous evaluation tied to real execution traces can help teams improve reliability after deployment."
+      ]
+    }
   }
 ]
