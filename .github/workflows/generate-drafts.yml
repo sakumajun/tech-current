@@ -1,0 +1,30 @@
+name: Generate Japanese editorial drafts
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Collect fresh candidates
+        run: npm run collect
+      - name: Generate review-only Japanese drafts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DRAFT_LIMIT: '3'
+          DRAFT_MODEL: 'gpt-4.1-mini'
+        run: npm run draft
+      - name: Upload editorial drafts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: japanese-drafts
+          path: data/generated-drafts.json
+          if-no-files-found: warn
+          retention-days: 7
