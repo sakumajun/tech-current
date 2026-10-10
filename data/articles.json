@@ -134,5 +134,137 @@
         "For engineering teams considering automated review, the most relevant results may be those matching their own languages, change sizes and security requirements. ReviewBench represents a move toward measuring AI review tools by reproducible quality signals rather than impressions alone."
       ]
     }
+  },
+  {
+    "articleId": "TC-0005",
+    "slug": "google-cloud-gemini-agent-work-2026",
+    "title": "Google Cloud「Gemini agent」発表｜仕事を依頼から完了まで進めるAIへ",
+    "description": "Google Cloudが2026年10月8日に発表したGemini agent。社内情報や業務システムと連携し、調査・資料作成・開発まで進める構想と導入時の注意点を整理。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog（2026年10月8日）",
+    "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/",
+    "status": "published",
+    "body": [
+      "Google Cloudは2026年10月8日の「Gemini at Work 2026」で、仕事のための汎用AIエージェント「Gemini agent」を発表しました。質問への回答だけでなく、複数の手順を必要とする業務を計画し、ツールを使い、成果物を返すことを目指しています。",
+      "従来のチャット型AIでは、人が調べた内容を別のツールに貼り付けたり、作成した文章を資料に整えたりする必要がありました。今回の発表でGoogleが強調するのは、業務の開始地点を一つのプロンプトに集約し、情報収集からコンテンツ作成、コーディングまでをつなぐ体験です。",
+      "Googleによると、Gemini agentは組織の業務文脈を利用し、社内システムに接続しながら作業を進めます。必要に応じてスキルやツールを選び、仕事に適したモデルを使い分ける仕組みも掲げています。完成した成果物は、利用者が普段使う文書、メール、開発環境などに戻す想定です。",
+      "企業利用で重要なのは、自律性と統制を両立できるかという点です。Googleはコスト管理に加え、セキュリティ、管理機能、ガバナンスを特徴として挙げています。ただし、実際にどこまでの業務を任せられるかは、接続するシステムや権限設計、提供状況によって変わります。",
+      "例えば会議の準備なら、社内資料を確認して論点を整理し、たたき台を作る流れが考えられます。一方、顧客データの閲覧や外部への送信を伴う場合は、実行前の承認、操作履歴、誤操作からの復旧手段が欠かせません。これらは一般的な導入上の検討事項であり、個々の機能の提供を保証するものではありません。",
+      "注目したいのは、AIの価値が『回答のうまさ』から『仕事をどこまで安全に完了できるか』へ移りつつあることです。導入を検討する企業は、デモの印象だけでなく、権限管理、成果物の品質、処理コストを実際の業務で確かめる必要があります。"
+    ],
+    "en": {
+      "title": "Google Cloud Introduces Gemini Agent to Carry Work From Prompt to Result",
+      "description": "Google Cloud announced Gemini agent at Gemini at Work 2026, positioning it as a work agent that can plan tasks, connect to enterprise systems, and return completed outputs.",
+      "category": "Business & DX",
+      "sourceName": "Google Blog (2026年10月8日)",
+      "body": [
+        "At Gemini at Work 2026 on October 8, Google Cloud announced Gemini agent, a general-purpose agent designed to move beyond answering questions and toward completing multi-step work.",
+        "Traditional chat workflows often require people to transfer research into documents, presentations or development tools. Google's pitch is to start with a single prompt and let an agent coordinate the steps needed to produce a useful result.",
+        "According to Google, the agent can draw on organizational context, connect to business systems, select skills and tools, and choose a suitable model for a task. Results are intended to appear in the documents, inboxes and developer environments people already use.",
+        "Enterprise adoption depends on more than task completion. Google highlights cost controls, security, administration and governance. Actual capabilities will depend on integrations, permissions and product availability.",
+        "A team preparing for a meeting might want an agent to gather background material and prepare a draft. But workflows involving customer data or external actions also need approval checkpoints, audit trails and recovery procedures. These are implementation considerations, not promises about every available feature.",
+        "The larger shift is from evaluating how well AI responds to evaluating whether it can complete work reliably and safely. Organizations should test output quality, permissions and operating costs in their own workflows."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0006",
+    "slug": "google-ml-drift-on-device-gpu-ai",
+    "title": "Google「ML Drift」公開｜スマホやPCのAI処理をGPUで高速化する新基盤",
+    "description": "GoogleがオープンソースのGPU推論エンジンML Driftを発表。LiteRTとの関係、対応API、写真編集や生成AIへの効果を一次情報から解説。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Developers Blog（2026年10月8日）",
+    "sourceUrl": "https://developers.googleblog.com/ml-drift-next-gen-gpu-aiml-inference-at-the-edge/",
+    "status": "published",
+    "body": [
+      "GoogleのAI Edgeチームは2026年10月8日、端末上でAIモデルを動かすためのGPU計算エンジン「ML Drift」をオープンソースで公開しました。ライセンスはApache 2.0で、GoogleのLiteRTにおけるGPU高速化の中核としても利用されます。",
+      "端末上のAIは、スマートフォンやPCに搭載されたGPUを活用できれば、通信を待たずに処理を進められます。しかし端末ごとにGPUやドライバー、計算APIが異なるため、開発者は互換性と性能の両立に苦労してきました。",
+      "ML DriftはOpenGL ES、OpenCL、Metal、WebGPUなどの違いを吸収する設計です。Googleはテンソルの論理表現とGPU上の実際の配置を切り離す仕組みを導入し、異なる環境向けのシェーダーを個別に保守する負担の軽減を狙っています。",
+      "従来の画像認識に加え、生成AIのような負荷の大きい処理にも対応します。大規模言語モデルでは、入力を読み込む段階と文字を順に生成する段階で異なる最適化を使い分けると説明しています。複雑なモデル向けには5次元テンソルにも対応します。",
+      "Googleが示した事例では、YouTube Shortsの一部エフェクトで平均フレーム遅延が最大40％減少し、Googleフォトの一部処理では従来のGPUデリゲートと比べて最大2秒短縮したとしています。これらは特定の処理条件での事例であり、すべての端末で同じ改善が得られるわけではありません。",
+      "ML Driftは単体ライブラリとしても利用でき、既存のLiteRT利用者向けには移行経路が用意されています。Googleは旧TensorFlow Lite GPUデリゲートに新機能を追加しない方針も示しており、端末内AIの開発基盤が新世代へ移る節目となりそうです。"
+    ],
+    "en": {
+      "title": "Google Open-Sources ML Drift for Faster On-Device GPU AI",
+      "description": "ML Drift is Google's open-source GPU inference engine for edge AI, supporting multiple graphics APIs and accelerating workloads in products including Photos and YouTube Shorts.",
+      "category": "Technology",
+      "sourceName": "Google Developers Blog (2026年10月8日)",
+      "body": [
+        "On October 8, 2026, Google's AI Edge team released ML Drift, an open-source GPU compute engine for running AI models on devices. It is licensed under Apache 2.0 and also powers GPU acceleration in LiteRT.",
+        "On-device AI can benefit from local GPU processing, but developers face a fragmented landscape of hardware, drivers and low-level APIs. Delivering both portability and high performance is difficult.",
+        "ML Drift is designed to abstract differences among OpenGL ES, OpenCL, Metal and WebGPU. Its tensor virtualization approach separates a tensor's logical representation from its physical GPU allocation, reducing the need to maintain separate shaders for each backend.",
+        "The engine targets both traditional machine-learning workloads and generative models. Google describes optimizations that adapt to the prefill and token-generation stages of language-model inference, alongside support for five-dimensional tensors.",
+        "Google reports up to a 40% reduction in average frame latency for certain YouTube Shorts effects and up to two seconds saved in selected Google Photos processing compared with the legacy GPU delegate. These are workload-specific examples, not universal performance guarantees.",
+        "ML Drift can also be used as a standalone library. Google says the older TensorFlow Lite GPU delegate will no longer receive new feature updates, making this a significant transition for developers building local AI experiences."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0007",
+    "slug": "microsoft-execution-containers-ai-agent-security",
+    "title": "Microsoft「Execution Containers」一般提供｜AIエージェントの操作範囲を制限する仕組み",
+    "description": "MicrosoftがAIエージェント向け実行隔離技術MXCの一般提供を発表。ファイル・ネットワーク権限を外側から制御する考え方と企業導入への意味を整理。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Windows Developer Blog（2026年10月7日）",
+    "sourceUrl": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+    "status": "published",
+    "body": [
+      "Microsoftは2026年10月7日、AIエージェントなどの処理をポリシーに基づいて隔離する「Microsoft Execution Containers（MXC）」の一般提供を発表しました。AIがPC上でファイルを読み書きし、ツールを操作する場面が増えるなか、許可した範囲を超えた操作を防ぐための基盤です。",
+      "AIエージェントは、人の指示を実行する過程で複数のファイルやサービスにアクセスします。便利な反面、誤った判断や悪意ある入力によって、必要のない設定変更やデータ送信を行うリスクもあります。AIに『触ってはいけない』と指示するだけでは、十分な安全対策とはいえません。",
+      "MXCでは開発者や管理者が、利用できるファイルやネットワークの接続先などをポリシーとして指定します。その境界はエージェント自身では変更できず、実行環境側で制限を適用する仕組みです。",
+      "Microsoftが紹介する例では、Webサイトを更新するコーディングエージェントにソースコードの編集は許可しつつ、本番サーバーの設定変更は許可しない運用が想定されています。AIが設定変更を最短の手順だと判断しても、実行環境がその操作を拒否する設計です。",
+      "MXCはWindowsだけでなく、macOSやLinuxの隔離手段にも対応する統一的な設定モデルを掲げています。ただし、利用できる隔離方式や機能はOSごとに異なります。Microsoftは今後、エージェントの操作を人の操作と区別するID管理や、組織による監視・統制の拡充も計画しています。",
+      "企業がAIエージェントを本格導入するには、モデルの精度だけでなく『どこまで操作できるか』を技術的に制御する必要があります。MXCは、AIの判断を信用することと、操作権限を無制限に渡すことを切り離すための仕組みとして注目されます。"
+    ],
+    "en": {
+      "title": "Microsoft Makes Execution Containers Generally Available for AI Agent Isolation",
+      "description": "Microsoft Execution Containers (MXC) applies externally enforced policies to limit what AI agents can access, helping developers separate useful automation from unrestricted permissions.",
+      "category": "Technology",
+      "sourceName": "Windows Developer Blog (2026年10月7日)",
+      "body": [
+        "Microsoft announced general availability of Microsoft Execution Containers (MXC) on October 7, 2026. The policy-driven execution layer is intended to limit what AI agents and other workloads can access and do.",
+        "As agents gain the ability to edit files and operate tools, mistakes or malicious inputs can have consequences beyond an incorrect answer. Simply telling an agent not to touch certain resources is not a strong security boundary.",
+        "MXC lets developers and administrators define allowed files, network destinations and other resources. Those limits are enforced by the execution environment rather than the agent, so the workload cannot grant itself extra permissions.",
+        "Microsoft describes a coding agent that may edit a website repository and read deployment configuration but must not change production server settings. Even if the agent decides a configuration change would be convenient, the containment layer is intended to block it.",
+        "MXC offers a unified configuration model across different platform isolation mechanisms, although the available containment options vary by operating system. Microsoft also outlines future work to distinguish agent identities from human activity and improve enterprise monitoring.",
+        "Secure agent deployment requires more than model accuracy. Organizations need enforceable boundaries for what automated systems can change, and MXC is one approach to separating useful autonomy from unrestricted access."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0008",
+    "slug": "openai-text-watermark-eu-provenance-2026",
+    "title": "OpenAIが文章の電子透かし方針を発表｜AI生成文はどこまで見分けられる？",
+    "description": "OpenAIがEUのAI規制に対応する文章透かし技術textGrainを説明。導入範囲、検出の限界、編集による精度低下を整理。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "OpenAI（2026年10月5日）",
+    "sourceUrl": "https://openai.com/index/eu-text-provenance/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年10月5日、AIが生成した文章の出所を判断する手がかりとして、電子透かし技術「textGrain」の導入方針を発表しました。EUのAI規制を背景に、文章へ目に見えない統計的な特徴を埋め込み、専用の検出器でその信号を調べる仕組みです。",
+      "画像に付ける透かしとは異なり、文章には文字選択の傾向として信号を残します。人が読んだだけで透かしが見えるわけではありません。OpenAIは、対象となるAPIモデルでは世界中の顧客が任意で有効化できる一方、APIでは初期設定をオフとしています。",
+      "ChatGPTとCodexについては、EU内の対象となる文章出力に今後数週間で透かしを追加する方針です。世界中のすべての出力へ一律に適用するという発表ではありません。検出器の利用も当初は承認された研究者や専門組織に限定する計画です。",
+      "重要なのは、透かしが万能な鑑定方法ではないことです。OpenAIの評価では、400トークンの文章で単語の10％を類義語に置き換えると、検出率が約92％から66％に低下し、25％を置き換えると17％まで下がったとしています。短い文章や表現の自由度が低い内容も検出が難しくなります。",
+      "透かしが見つかったとしても、その文章の正確さや著作権、どれほど人が編集したかまでは判断できません。逆に透かしが検出されないことも、人間が書いた証明にはなりません。別のAI製品で作られた文章や、編集・翻訳された文章は検出できない場合があります。",
+      "生成AIによる情報発信が増えるなか、文章の来歴を示す仕組みは重要です。ただし現時点では、透かしの有無だけで真偽や責任を判断せず、情報源の確認や編集過程の透明性と組み合わせて考える必要があります。"
+    ],
+    "en": {
+      "title": "OpenAI Outlines Text Watermarking Plan and Its Detection Limits",
+      "description": "OpenAI has detailed textGrain watermarking for AI-generated text in response to EU rules, while acknowledging detection failures after editing and other limitations.",
+      "category": "Generative AI",
+      "sourceName": "OpenAI (2026年10月5日)",
+      "body": [
+        "On October 5, 2026, OpenAI described its text watermarking approach, called textGrain, in response to EU AI rules. The technique adds an invisible statistical signal to word choices that a dedicated detector can look for.",
+        "Unlike a visible mark on an image, a text watermark is not apparent to readers. OpenAI says eligible API customers worldwide can opt in for select models, with watermarking off by default in the API.",
+        "For eligible ChatGPT and Codex text output in the EU, OpenAI plans to introduce watermarks over the following weeks. This is not a global default for every output. Initial access to the detector will be limited to approved researchers and expert organizations.",
+        "Detection is far from foolproof. In one OpenAI evaluation of 400-token passages, replacing 10% of words with synonyms reduced detection from about 92% to 66%; replacing 25% reduced it to 17%. Shorter passages and more constrained writing are also harder to identify.",
+        "A detected watermark does not establish factual accuracy, ownership or the amount of human editing involved. Likewise, a missing watermark does not prove human authorship: text may have been edited, translated or generated by a different system.",
+        "Provenance signals may become useful as AI-generated content grows, but they should be combined with source checks and transparent editorial processes rather than treated as definitive proof."
+      ]
+    }
   }
 ]
