@@ -27,6 +27,9 @@ const categories = ['ニュース','生成AI','AIツール','ビジネス・DX',
   <meta name="theme-color" content="#071a38" />
   <meta name="description" content="AI・デジタルのニュースと深い解説を、海外の一次情報をもとに日本語で届けるTECH CURRENT。" />
   <link rel="canonical" href="https://tech-current.net/" />
+  <link rel="alternate" hreflang="ja" href="https://tech-current.net/" />
+  <link rel="alternate" hreflang="en" href="https://tech-current.net/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://tech-current.net/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="TECH CURRENT" />
   <meta property="og:title" content="TECH CURRENT | テクノロジーの今を、読み解く。" />
@@ -40,6 +43,7 @@ const categories = ['ニュース','生成AI','AIツール','ビジネス・DX',
     <div class="header-inner">
       <a class="brand" href="/" aria-label="TECH CURRENT ホーム"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>TECH<span class="brand-blue">CURRENT</span></span></a>
       <nav class="main-nav" aria-label="カテゴリ">{categories.map(c => <a href={`/#${c === 'ニュース' ? 'latest' : 'topics'}`}>{c}</a>)}</nav>
+      <a class="header-pill" href="/en/" lang="en" aria-label="Switch to English">EN ↗</a>
       <a class="header-pill" href="#latest">新着情報 <span aria-hidden="true">↗</span></a>
     </div>
   </header>
