@@ -1601,5 +1601,284 @@
         "Policy-based sandboxes reduce risk but do not eliminate misconfiguration or excessive privileges in external systems. Audit logs, least-privilege access and approval processes remain important."
       ]
     }
+  },
+  {
+    "articleId": "TC-0056",
+    "slug": "postman-agent-mode-amazon-bedrock-production-design",
+    "title": "PostmanのAIエージェント設計に学ぶ｜170超のツールを絞り込み、40以上で起きた選択ミスを改善",
+    "description": "PostmanとAWSは2026年10月9日、API開発プラットフォームの「Agent Mode」を本番運用する際に得られた設計上の知見を公開しました。Postmanは4,000万人の開発者を抱えるサービスですが、この数字はAgent Mo",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-postman-runs-agent-mode-for-40-million-developers-on-amazon-bedrock/",
+    "status": "published",
+    "body": [
+      "PostmanとAWSは2026年10月9日、API開発プラットフォームの「Agent Mode」を本番運用する際に得られた設計上の知見を公開しました。Postmanは4,000万人の開発者を抱えるサービスですが、この数字はAgent Modeの利用者数ではなく、製品全体の開発者コミュニティの規模です。",
+      "当初の課題はAIモデルの性能よりも、既存アプリケーションの複雑な操作をAIへどう伝えるかでした。小さな操作を個別のツールにすると呼び出し回数が増え、処理が遅くなります。Postmanの検証では、モデルへ見せるツールが約40を超えると、存在しないツールの呼び出しや引数の間違いが増えたと報告されています。",
+      "現在の構成では170を超えるツールの候補から、依頼に関係する約15個へ動的に絞り込みます。さらに、画面のタブが開いているかどうかに依存する操作を減らし、データを直接扱う仕組みへ移行しています。AIエージェントに人間用UIの操作手順をそのまま模倣させないことがポイントです。",
+      "もう一つの教訓は、コンテキストの質です。Postmanは表示用のデータ構造を丸ごと渡すのではなく、エージェントの判断に必要な情報を抽出する専用処理を設計しました。Amazon Bedrockのモデル切り替え、地域を限定した推論、プロンプトキャッシュも活用しています。",
+      "重要な変更操作には利用者の承認を求め、個人情報の保護にはBedrock Guardrailsを利用します。製品にAIを組み込む企業にとって、モデル選定だけでなく、操作権限、コンテキスト、確認導線を一体で設計する必要があることを示す事例です。"
+    ],
+    "en": {
+      "title": "How Postman Scales Agent Mode on Amazon Bedrock: Tools, Context and Controls",
+      "description": "On October 9, 2026, Postman and AWS shared architectural lessons from running Agent Mode in a mature API-development platform. Postman serves a community of 40 million developers; that figure is not a claim that all of t",
+      "category": "Business & DX",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 9, 2026, Postman and AWS shared architectural lessons from running Agent Mode in a mature API-development platform. Postman serves a community of 40 million developers; that figure is not a claim that all of them use Agent Mode.",
+        "The central challenge was not simply model quality. Early designs exposed many small tools, forcing long chains of calls. Postman reported more tool-selection errors once the visible set exceeded roughly 40, including incorrect arguments and nonexistent tool calls.",
+        "Its architecture now narrows more than 170 candidate tools to about 15 relevant ones per task. It also reduces dependencies on open tabs and interface state so an agent can work with application data rather than imitate a human navigating screens.",
+        "Context quality proved equally important. Instead of passing UI-oriented data structures directly to the model, Postman built handlers that distill the information needed for each task. Amazon Bedrock supplies model flexibility, geographic inference controls and prompt caching.",
+        "State-changing actions require user approval, and Bedrock Guardrails can redact personal information. The case shows that dependable agents depend on permissions, context engineering and interaction design—not model choice alone."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0057",
+    "slug": "aws-agentcore-payments-x402-blockrun-incarna",
+    "title": "AIエージェントが推論APIを都度決済｜AWS AgentCore paymentsとx402の実装事例",
+    "description": "AWSは2026年10月8日、AIエージェントが外部のモデル推論サービスへリクエスト単位で支払う実装事例を公開しました。IncarnaのエージェントがBlockRunの推論APIを利用する際、Amazon Bedrock AgentCore",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月8日、AIエージェントが外部のモデル推論サービスへリクエスト単位で支払う実装事例を公開しました。IncarnaのエージェントがBlockRunの推論APIを利用する際、Amazon Bedrock AgentCore paymentsとx402プロトコルで決済する仕組みです。",
+      "x402はHTTPの「402 Payment Required」を利用し、APIの利用料金を提示して決済する仕組みです。エージェントは価格を受け取り、決済セッションの上限内で支払いを承認し、署名付きの証明を返してサービスを利用します。",
+      "重要なのは、利用上限をAIモデルの指示ではなく基盤側で強制することです。プロンプトが誤っていたり外部から誘導されたりしても、モデル自身が予算上限を書き換えられない構成を目指しています。支払いにはウォレットを使用し、事例ではUSDCによるオンチェーン決済が行われます。",
+      "AWSによると、Incarnaは決済連携を約3日で実装し、ベータ期間には1,000件以上の支払いを処理しました。1件当たり0.001〜0.05ドルという数字は、この事例で報告された取引額であり、あらゆる推論APIの一般的な価格ではありません。",
+      "AIが自律的に支払う設計では、予算のほかに取引先の信頼性、ウォレットの管理、取消手順、監査証跡が欠かせません。自動決済の便利さと、金銭を扱うシステムの安全性を分けて評価する必要があります。"
+    ],
+    "en": {
+      "title": "AWS AgentCore Payments Lets AI Agents Pay Per Inference Through x402",
+      "description": "On October 8, 2026, AWS described a production integration in which Incarna agents pay BlockRun for individual model-inference requests using Amazon Bedrock AgentCore payments and the x402 protocol.",
+      "category": "Technology",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 8, 2026, AWS described a production integration in which Incarna agents pay BlockRun for individual model-inference requests using Amazon Bedrock AgentCore payments and the x402 protocol.",
+        "With x402, a paid API can respond using HTTP 402 Payment Required. The agent receives a quote, obtains payment authorization within a session limit and returns signed proof before accessing the service.",
+        "The important control is that spending ceilings are enforced by infrastructure rather than the language model. The model cannot raise the cap by changing its prompt. The case uses wallets and USDC settlement on a blockchain.",
+        "AWS says Incarna completed the integration in about three days and processed more than 1,000 payments during beta, with individual charges from $0.001 to $0.05. These are reported results from one integration, not universal API prices.",
+        "Autonomous payments still require trusted counterparties, secure wallet management, revocation procedures and auditable transaction records. Convenience should not replace financial controls."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0058",
+    "slug": "aws-bedrock-rag-realtime-acl-google-drive-sharepoint",
+    "title": "社内AI検索の情報漏洩を防ぐには｜AWSがRAGのアクセス権をリアルタイム照合",
+    "description": "AWSは2026年10月7日、Amazon QuickとAmazon Bedrock Knowledge Basesで、文書のアクセス権を検索時に確認する仕組みを解説しました。SharePoint、Google Drive、Confluen",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/rethinking-access-control-for-rag-with-amazon-quick-and-amazon-bedrock/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月7日、Amazon QuickとAmazon Bedrock Knowledge Basesで、文書のアクセス権を検索時に確認する仕組みを解説しました。SharePoint、Google Drive、Confluenceなどの社内情報をAIに検索させるRAGでは、回答の正確さと同じくらい権限管理が重要です。",
+      "一般的なRAGでは、文書の内容とアクセス制御リスト（ACL）を定期的に検索インデックスへ同期します。しかし、社員の異動や共有設定の変更が起きると、インデックス側の権限が古くなり、すでに閲覧権限を失った文書が検索候補に残るおそれがあります。",
+      "AWSの方式は2段階です。まず保存済みACLで検索候補を絞り込み、その後、Google Driveなど元のデータソースへ問い合わせて、利用者が現在その文書を閲覧できるか確認します。許可された文章だけをモデルの参照情報として渡します。",
+      "この設計は、AIの回答を生成した後に機密情報を消すのではなく、生成前の情報取得段階で制限するものです。組織のデータ管理では、権限の正本をどこに置くかという設計判断が重要になります。",
+      "ただし、実際の適用範囲はコネクターや設定に依存します。検索権限の確認だけで、プロンプトインジェクション、誤回答、過剰な権限付与まで解消できるわけではありません。"
+    ],
+    "en": {
+      "title": "AWS Adds Real-Time Permission Checks to Enterprise RAG Retrieval",
+      "description": "On October 7, 2026, AWS explained real-time document permission checks in Amazon Quick and Amazon Bedrock Knowledge Bases. Enterprise retrieval-augmented generation (RAG) must respect the permissions attached to sources ",
+      "category": "Technology",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 7, 2026, AWS explained real-time document permission checks in Amazon Quick and Amazon Bedrock Knowledge Bases. Enterprise retrieval-augmented generation (RAG) must respect the permissions attached to sources such as SharePoint, Google Drive and Confluence.",
+        "A conventional RAG pipeline periodically copies documents and access control lists into a search index. When group membership or sharing permissions change, that snapshot can become stale, creating a risk that revoked content remains retrievable.",
+        "AWS describes a two-stage approach: filter candidate passages using indexed permissions, then verify access against the authoritative source at query time. Only passages that pass the current access check are provided to the language model.",
+        "The architectural principle is to enforce authorization before generation, rather than trying to remove sensitive details from an answer afterward. The original document system remains the source of truth.",
+        "Coverage depends on connectors and configuration. Real-time ACL checks do not by themselves prevent prompt injection, incorrect answers or overly broad permissions in the source system."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0059",
+    "slug": "aws-sagemaker-hyperpod-gpu-multitenancy",
+    "title": "高価なGPUを部署間で安全に共有｜AWS SageMaker HyperPodの設計指針",
+    "description": "AWSは2026年10月8日、Amazon SageMaker HyperPodのGPUクラスターを複数のチームで共有するための参考構成を公開しました。大規模AIモデルの学習や推論ではGPUの費用が大きく、部署ごとに設備を分離すると稼働率が",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/share-gpu-clusters-across-teams-with-isolation-and-fairness-using-amazon-sagemaker-hyperpod/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月8日、Amazon SageMaker HyperPodのGPUクラスターを複数のチームで共有するための参考構成を公開しました。大規模AIモデルの学習や推論ではGPUの費用が大きく、部署ごとに設備を分離すると稼働率が下がる場合があります。",
+      "参考構成では、AWS IAM Identity Centerで利用者を認証し、チーム別のSageMakerドメインとKubernetesの名前空間で作業環境を分けます。HyperPod Task Governanceを使い、GPUの割り当て上限やジョブの優先順位を設定します。",
+      "同じクラスターを共有しても、チームごとの利用量や費用を追跡できることが重要です。名前空間単位のコスト配賦によって、共通基盤の費用を部門へ説明しやすくなります。",
+      "ただし、Kubernetesの名前空間は強固なセキュリティ境界ではありません。異なるチームのコンテナーがノードやカーネルを共有するため、互いに信頼できない顧客同士の隔離には別のクラスターやアカウントなどが必要です。",
+      "GPUを共有する運用では、計算資源の公平性だけでなく、データの保存先、ネットワーク通信、認証情報、監視権限まで含めて設計する必要があります。"
+    ],
+    "en": {
+      "title": "AWS Shows How Teams Can Share SageMaker HyperPod GPU Clusters",
+      "description": "On October 8, 2026, AWS published a reference architecture for sharing SageMaker HyperPod GPU clusters across teams. Dedicated clusters can be expensive and underutilized when workloads vary across departments.",
+      "category": "Technology",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 8, 2026, AWS published a reference architecture for sharing SageMaker HyperPod GPU clusters across teams. Dedicated clusters can be expensive and underutilized when workloads vary across departments.",
+        "The design combines AWS IAM Identity Center, separate SageMaker domains and Kubernetes namespaces. HyperPod Task Governance sets quotas and scheduling priorities so one team cannot monopolize shared compute.",
+        "Namespace-level cost allocation can help organizations attribute GPU consumption to the teams using it. This is important when infrastructure is funded centrally but consumed by several business units.",
+        "AWS cautions that Kubernetes namespaces are logical isolation boundaries, not strong security barriers against hostile tenants. Separate clusters, accounts or stronger runtime isolation may be required for untrusted parties.",
+        "Shared GPU platforms need coordinated decisions about data storage, network policy, identity, monitoring and cost governance—not just a scheduler."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0060",
+    "slug": "aws-devops-agent-human-approved-remediation",
+    "title": "AWS DevOps Agentの障害調査から修復まで自動化｜変更前に人が承認する構成",
+    "description": "AWSは2026年10月7日、AWS DevOps Agentが調査した障害について、Amazon BedrockとAWS Lambda Durable Functionsを組み合わせて修復案を作成する実装例を公開しました。障害の検知と原因",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/automate-remediation-post-aws-devops-agent-investigation/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月7日、AWS DevOps Agentが調査した障害について、Amazon BedrockとAWS Lambda Durable Functionsを組み合わせて修復案を作成する実装例を公開しました。障害の検知と原因調査から、具体的な変更提案までをつなぐ構成です。",
+      "処理はAWS DevOps Agentの調査完了イベントから始まります。Amazon EventBridgeが処理を起動し、Bedrockが原因情報を分析します。エージェントが実行できる操作は、あらかじめ許可されたLambda関数の一覧に制限されます。",
+      "ログの確認など読み取り専用の操作は自動実行できますが、設定変更などインフラに影響する操作では処理を一時停止し、担当者の承認を待ちます。Lambda Durable Functionsは承認待ちの間も処理状態を保持できます。",
+      "記事のデモでは、タイムアウトが短すぎるLambda関数について、3秒から30秒への設定変更を提案します。担当者が変更対象と値を確認し、承認した後に実行される流れです。",
+      "この例は自動修復の実装パターンであり、すべての障害を安全に直せる完成済みサービスではありません。誤った原因分析や修復案も考えられるため、変更権限の制限、監査ログ、ロールバック設計が欠かせません。"
+    ],
+    "en": {
+      "title": "AWS Demonstrates Human-Approved Incident Remediation After DevOps Agent Investigation",
+      "description": "On October 7, 2026, AWS published an implementation pattern that connects AWS DevOps Agent investigations to proposed remediation using Amazon Bedrock and AWS Lambda Durable Functions.",
+      "category": "AI Tools",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 7, 2026, AWS published an implementation pattern that connects AWS DevOps Agent investigations to proposed remediation using Amazon Bedrock and AWS Lambda Durable Functions.",
+        "When an investigation completes, Amazon EventBridge triggers a workflow. Bedrock examines the findings and selects from a curated allowlist of Lambda tools, limiting which actions the agent can request.",
+        "Read-only diagnostics can run automatically. Changes to infrastructure cause the durable workflow to pause for human approval, preserving state while an operator reviews the proposal.",
+        "The demonstration identifies a Lambda function with an insufficient three-second timeout and proposes increasing it to 30 seconds. The operator reviews the exact target and value before execution.",
+        "This is a reference implementation, not proof that every incident can be repaired safely. Faulty diagnoses remain possible, so least privilege, audit trails and rollback plans are essential."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0061",
+    "slug": "nvidia-omniverse-ai-agents-simulation-2026",
+    "title": "NVIDIAがAIエージェントによるシミュレーション制作事例を公開｜ロボット・自動運転・デジタルツイン",
+    "description": "NVIDIAは2026年10月8日、AIエージェントとOmniverseライブラリを組み合わせて、物理シミュレーションを構築する複数の開発事例を紹介しました。自然言語で指示しながら、シーン構築、物理演算、レンダリング、センサーの検証を進める",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "NVIDIA Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
+    "status": "published",
+    "body": [
+      "NVIDIAは2026年10月8日、AIエージェントとOmniverseライブラリを組み合わせて、物理シミュレーションを構築する複数の開発事例を紹介しました。自然言語で指示しながら、シーン構築、物理演算、レンダリング、センサーの検証を進める試みです。",
+      "倉庫内の人型ロボットのシミュレーターでは、開発者がAIエージェントへ指示し、Omniverseの物理演算、画面表示、操作インターフェースを組み合わせたアプリを作成しました。別の事例では、自動運転の評価環境を構築し、天候や照明の変化による挙動の違いを調べています。",
+      "実際のセンサー映像と仮想環境のカメラ・LiDARの出力を比較する事例もあります。開発者は差分を測りながら、デジタルツインの物体配置や形状を調整しました。仮想空間が現実をどの程度再現しているかを数値で確認する考え方です。",
+      "スポーツ動作を試す人型ロボットの実験では、ハードルを越えられた回数がシミュレーション100回中64回だったと報告されています。これは特定の実験条件での結果であり、実機の成功率を示すものではありません。",
+      "AIエージェントは試作の速度を高める可能性がありますが、物理的な正確さや安全性の保証にはなりません。実機との差分評価、人による設計確認、失敗条件の検証が不可欠です。"
+    ],
+    "en": {
+      "title": "NVIDIA Shows AI Agents Building Omniverse Simulations for Robots and Digital Twins",
+      "description": "On October 8, 2026, NVIDIA shared examples of developers using frontier AI agents with Omniverse libraries to build physical simulations. The workflows combine natural-language instructions with physics, rendering and se",
+      "category": "Technology",
+      "sourceName": "NVIDIA Blog",
+      "body": [
+        "On October 8, 2026, NVIDIA shared examples of developers using frontier AI agents with Omniverse libraries to build physical simulations. The workflows combine natural-language instructions with physics, rendering and sensor tools.",
+        "One project created an interactive humanoid warehouse simulator. Another connected components of an autonomous-driving test environment and explored how lighting and weather changes affected driving behavior.",
+        "A digital-twin example compared simulated camera and LiDAR outputs with recorded sensor data, using measurable differences to refine scene geometry and materials. This helps developers evaluate whether a virtual scene resembles reality.",
+        "In a simulated humanoid sports experiment, a robot cleared a hurdle in 64 of 100 trials. That figure describes a particular simulation, not a verified real-world success rate.",
+        "AI agents may speed up prototyping, but physical accuracy and safety still require measurement, expert review and validation against real equipment."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0062",
+    "slug": "aws-qlik-answers-grounded-enterprise-ai",
+    "title": "Qlikが4万社超の顧客向けAIを構築｜出典付き回答を支える多層エージェント設計",
+    "description": "AWSは2026年10月7日、分析ソフトウェア企業Qlikが「Qlik Answers」をAmazon Bedrock上で構築した事例を公開しました。Qlikは世界で4万社を超える顧客を持ち、社内文書と分析データから根拠付きの回答を返す仕組",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/how-qlik-built-grounded-enterprise-scale-ai-with-amazon-bedrock/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月7日、分析ソフトウェア企業Qlikが「Qlik Answers」をAmazon Bedrock上で構築した事例を公開しました。Qlikは世界で4万社を超える顧客を持ち、社内文書と分析データから根拠付きの回答を返す仕組みを開発しています。",
+      "設計の特徴は、すべての質問を一つの大きなエージェントへ任せない点です。入口で質問を受け取り、軽量なルーティング層が内容を判断します。その後、構造化データの分析、文書検索、専門エージェントなど適切な処理へ振り分けます。",
+      "回答の信頼性を高めるため、文書から検索した情報を出典として提示し、Amazon Bedrock Guardrailsによる根拠との整合性確認を実施します。データを検索できることと、生成された回答が根拠に忠実であることは別の問題として扱っています。",
+      "Qlikはモデルの選択をアプリケーション本体から切り離し、地域ごとのデータ処理要件にも対応する構成を採用しています。モデルが新しくなっても、周辺システムを全面的に作り直さずに済むことを重視しています。",
+      "AWSが紹介した顧客事例では、文書調査時間の短縮などの成果が報告されています。ただし、これらは導入企業が報告した個別の結果であり、すべての利用企業で同じ効果が出ることを意味しません。"
+    ],
+    "en": {
+      "title": "How Qlik Built Source-Grounded Enterprise AI With Amazon Bedrock",
+      "description": "On October 7, 2026, AWS described how analytics company Qlik built Qlik Answers with Amazon Bedrock. Qlik serves more than 40,000 customers and aims to provide answers grounded in documents and business analytics.",
+      "category": "Business & DX",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 7, 2026, AWS described how analytics company Qlik built Qlik Answers with Amazon Bedrock. Qlik serves more than 40,000 customers and aims to provide answers grounded in documents and business analytics.",
+        "Instead of sending every request to one large agent, the architecture uses an entry point, a lightweight routing layer and specialized paths for structured analytics, document retrieval and other tasks.",
+        "For document questions, retrieved passages support citations. Amazon Bedrock Guardrails also checks whether generated answers are grounded in their sources. Retrieving information and verifying a generated claim are treated as separate concerns.",
+        "Qlik decouples model access from application logic and considers regional data-processing requirements. This makes it easier to adapt model choices without rebuilding the surrounding system.",
+        "AWS describes positive customer outcomes, including faster research. These are reported results from specific deployments and should not be treated as guaranteed benefits for every organization."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0063",
+    "slug": "aws-agentic-automation-roi-beyond-time-savings",
+    "title": "AIエージェント導入効果は時短だけでは測れない｜AWSが示すROIの4つの視点",
+    "description": "AWSは2026年10月7日、AIエージェントによる業務自動化の投資対効果を評価する考え方を公開しました。従来のRPAで使われてきた『削減時間×人件費』だけでは、AIエージェントの価値や費用を十分に説明できないとしています。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/beyond-hours-saved-building-the-business-case-for-agentic-automation/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月7日、AIエージェントによる業務自動化の投資対効果を評価する考え方を公開しました。従来のRPAで使われてきた『削減時間×人件費』だけでは、AIエージェントの価値や費用を十分に説明できないとしています。",
+      "提案されているのは、作業時間の削減、例外対応の改善、意思決定の質、業務変更への対応力という4つの観点です。例えばAIが例外案件の分類を助ければ、単純な処理時間の短縮以上の価値が生まれる可能性があります。",
+      "一方、削減された作業時間がそのまま利益になるとは限りません。空いた時間を別の成果につなげるか、残業や外注費の削減に結び付けるなど、効果が財務数値へ反映される仕組みが必要です。",
+      "AIエージェントの運用には、モデル利用料、評価、監視、人による確認、業務変更への対応などの継続費用も発生します。既存の定型業務では、AIよりも従来型のRPAが安く確実な場合があります。",
+      "導入を判断する際は、業務の複雑さと判断ミスのリスクを分けて評価し、成果指標と中止基準を事前に決めることが重要です。AIを導入すること自体ではなく、業務の成果をどう改善するかが投資判断の中心になります。"
+    ],
+    "en": {
+      "title": "Measuring Agentic AI ROI Beyond Hours Saved: Four Dimensions From AWS",
+      "description": "On October 7, 2026, AWS proposed a framework for evaluating the return on investment of agentic automation. The traditional formula of labor hours saved multiplied by labor cost misses important benefits and expenses.",
+      "category": "Business & DX",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 7, 2026, AWS proposed a framework for evaluating the return on investment of agentic automation. The traditional formula of labor hours saved multiplied by labor cost misses important benefits and expenses.",
+        "The framework examines four dimensions: time savings, exception handling, decision quality and resilience to process changes. An agent that reduces costly exceptions may create value beyond the time it saves.",
+        "However, freed employee time is not automatically a financial saving. Organizations need a measurable path from available capacity to reduced spending or better business outcomes.",
+        "Agent operations also carry recurring costs for inference, evaluation, monitoring, oversight and workflow maintenance. For stable, deterministic tasks, conventional RPA may remain more economical.",
+        "Teams should evaluate task complexity alongside the risk of wrong decisions, establish measurable outcomes and define stop rules before scaling an agentic automation program."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0064",
+    "slug": "strands-decider-2b-local-decision-model",
+    "title": "文章を生成しない小型AI「Strands Decider 2B」公開｜選択と判定に特化",
+    "description": "Strands Agentsの開発チームは2026年10月1日、20億パラメータのオープンソースモデル「Strands Decider 2B」を公開しました。一般的な文章生成AIとは異なり、あらかじめ与えられた候補から回答を選ぶ判断処理に特",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T19:45:00+09:00",
+    "sourceName": "Strands Agents Blog",
+    "sourceUrl": "https://strandsagents.com/blog/introducing-strands-decider/",
+    "status": "published",
+    "body": [
+      "Strands Agentsの開発チームは2026年10月1日、20億パラメータのオープンソースモデル「Strands Decider 2B」を公開しました。一般的な文章生成AIとは異なり、あらかじめ与えられた候補から回答を選ぶ判断処理に特化しています。",
+      "例えば問い合わせを営業・請求・サポートのどの部署へ振り分けるか、AIエージェントのツール呼び出しを許可するか、といった用途が想定されています。候補を限定することで、自由な文章を生成するモデルよりも短時間で処理できる設計です。",
+      "開発チームによると、ローカルのNVIDIA RTX 3090を使った計測では中央値約115ミリ秒で判断しました。数値は検証環境に依存し、すべてのPCで同じ速度になるわけではありません。",
+      "モデルのコード、重み、学習データ、スクリプトは公開されています。通常の大規模言語モデルを難しい推論に使い、簡単な分類や判定を小型モデルへ任せるハイブリッド構成も考えられます。",
+      "ただし、候補の中から選ぶ仕組みは、候補そのものが不適切でも正しい選択肢を新たに作り出せません。分類の精度と信頼度を実際のデータで検証することが重要です。"
+    ],
+    "en": {
+      "title": "Strands Decider 2B: An Open Decision Model That Selects Instead of Generating Text",
+      "description": "On October 1, 2026, the Strands Agents team released Strands Decider 2B, an open-source two-billion-parameter model designed to choose among predefined options rather than generate free-form text.",
+      "category": "Generative AI",
+      "sourceName": "Strands Agents Blog",
+      "body": [
+        "On October 1, 2026, the Strands Agents team released Strands Decider 2B, an open-source two-billion-parameter model designed to choose among predefined options rather than generate free-form text.",
+        "Potential uses include routing a customer request to the right department, choosing an agent tool or checking whether an action should proceed. Restricting outputs to supplied choices supports low-latency decisions.",
+        "The team reports a median decision time of roughly 115 milliseconds on an NVIDIA RTX 3090 in its tests. Performance will vary with hardware and task size.",
+        "The project publishes code, weights, training data and scripts. A hybrid architecture could use a large reasoning model for difficult work and a smaller decision model for repetitive classification.",
+        "A model restricted to supplied choices cannot invent a missing correct option. Accuracy and confidence calibration still need evaluation on representative production data."
+      ]
+    }
   }
 ]
