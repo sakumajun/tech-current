@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "node scripts/validate-articles.mjs && astro build",
     "preview": "astro preview",
-    "collect": "node scripts/collect-news.mjs"
+    "collect": "node scripts/collect-news.mjs",
+    "draft": "node scripts/generate-drafts.mjs"
   },
   "dependencies": {
     "astro": "^5.0.0"
