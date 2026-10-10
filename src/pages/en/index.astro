@@ -1,5 +1,5 @@
 ---
-import articles from '../../../data/articles.json';
+import articles from '../../data/articles.json';
 const published = articles.filter((a) => a.status === 'published' && a.en).map(a => ({...a, title:a.en.title, description:a.en.description, category:a.en.category})).sort((a,b)=>String(b.publishedAt??'').localeCompare(String(a.publishedAt??'')));
 const lead = published[0];
 const latest = published.slice(0, 6);
