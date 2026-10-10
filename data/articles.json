@@ -880,5 +880,129 @@
         "These tools may reduce routine work, but users should verify permissions and data handling before using generated mini apps or automated workflows with sensitive information."
       ]
     }
+  },
+  {
+    "articleId": "TC-0031",
+    "slug": "google-gemini-live-guided-vision-accessibility",
+    "title": "Gemini Live「Guided Vision」登場｜視覚障害者とともに開発したリアルタイム視覚支援",
+    "description": "Googleが2026年10月1日に公開したGuided Vision。Androidのカメラ映像を音声で説明するアクセシビリティ機能と利用時の注意点を解説。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T18:00:00+09:00",
+    "sourceName": "Google Blog（2026年10月1日）",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+    "status": "published",
+    "body": [
+      "Googleは2026年10月1日、Gemini Liveに視覚支援機能「Guided Vision」を導入したと発表しました。対応するAndroid端末でカメラ映像を共有すると、周囲の状況についてリアルタイムの音声説明を受けられます。視覚に障害のある人や弱視の人との協働を通じて開発された機能です。",
+      "特徴は、一方的に映像の説明を読み上げるだけではない点です。利用者は音声で質問し、何を確認したいかを伝えながら、説明や視点の調整に関する案内を受けられます。視覚情報を対話によって得られることが、従来の静的な画像説明との違いです。",
+      "こうした仕組みは、目の前の物の位置や特徴を把握する場面で役立つ可能性があります。ただし、AIによる画像理解には誤認識や説明漏れが起こり得ます。道路の横断や危険物の確認など、安全に直結する判断をAIの説明だけに委ねるべきではありません。",
+      "Googleはアクセシビリティの当事者と開発を進めたことを強調しています。機能の性能だけでなく、利用者が自分のペースで情報を確認できるかという体験設計も重要です。",
+      "提供対象は対応するAndroid端末です。利用できる地域や言語、端末要件などは変わる可能性があるため、導入前に公式の案内を確認してください。"
+    ],
+    "en": {
+      "title": "Google Launches Guided Vision in Gemini Live for Real-Time Visual Assistance",
+      "description": "Guided Vision brings conversational visual assistance to compatible Android devices, developed with blind and low-vision users.",
+      "category": "AI Tools",
+      "sourceName": "Google Blog (October 1, 2026)",
+      "body": [
+        "On October 1, 2026, Google introduced Guided Vision in Gemini Live on compatible Android devices. Users can share their camera view and receive spoken descriptions of their surroundings. The feature was developed in collaboration with blind and low-vision communities.",
+        "Unlike a static image caption, Guided Vision is conversational. A user can ask follow-up questions and receive verbal cues while exploring an environment. This makes the interaction itself part of the accessibility experience.",
+        "The potential benefits are meaningful, but computer vision can misidentify objects or omit important details. AI descriptions should not be the sole basis for safety-critical decisions such as crossing a road or identifying hazards.",
+        "Google emphasizes its collaboration with people who have direct experience of visual accessibility needs. This approach highlights why inclusive design requires more than simply adding a technical feature.",
+        "Availability depends on device compatibility and rollout conditions. Readers should check Google's announcement for current requirements and supported experiences."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0032",
+    "slug": "openai-mentalhealthbench-ai-safety-evaluation",
+    "title": "OpenAI「MentalHealthBench」公開｜80人超の専門家がAIの相談応答を評価",
+    "description": "OpenAIがメンタルヘルス相談におけるAIの応答を測る公開ベンチマークを発表。22か国の専門家が作成した評価基準と限界を解説。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T18:00:00+09:00",
+    "sourceName": "OpenAI（2026年9月23日）",
+    "sourceUrl": "https://openai.com/index/introducing-mentalhealthbench/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年9月23日、メンタルヘルスに関する会話でAIの応答を評価する公開ベンチマーク「MentalHealthBench」を発表しました。22か国の80人を超える有資格の心理・精神医療専門家と共同開発したと説明しています。",
+      "従来の安全性評価は緊急事態への対応に重点を置きがちでした。一方、実際の相談には日常的なストレス、人間関係の悩み、深刻な苦痛、緊急の支援が必要な状況まで幅があります。MentalHealthBenchは、こうした状況ごとに適切な応答を評価する設計です。",
+      "評価用の会話はプライバシーに配慮した合成データを用い、成人、13〜17歳の若者、養育者、臨床家など複数の立場を想定しています。専門家は、適切な質問、利用者の主体性の尊重、安全確保などについて細かな採点基準を作成しました。",
+      "OpenAIによると、各会話は少なくとも3人の専門家が確認し、基準は複数人の合意をもとに採用されています。総合点だけでなく、どのような行動に強みや弱みがあるかを分析できる点も特徴です。",
+      "ただし、ベンチマークで高得点を得たAIが、実際の相談で常に適切に対応できることを保証するものではありません。OpenAI自身もChatGPTは治療や専門的ケアの代わりではないと明記しています。"
+    ],
+    "en": {
+      "title": "OpenAI Releases MentalHealthBench to Evaluate AI Responses to Sensitive Conversations",
+      "description": "MentalHealthBench uses expert-written criteria from more than 80 licensed professionals in 22 countries to evaluate AI responses.",
+      "category": "Generative AI",
+      "sourceName": "OpenAI (September 23, 2026)",
+      "body": [
+        "On September 23, 2026, OpenAI introduced MentalHealthBench, an open benchmark for evaluating AI responses in realistic mental health conversations. It was co-developed with more than 80 licensed mental health professionals from 22 countries.",
+        "Existing evaluations have often focused on emergencies. Real conversations also include everyday stress, relationships and more serious distress. MentalHealthBench spans these different levels of urgency to examine how a model responds in context.",
+        "The benchmark uses privacy-preserving synthetic conversations involving adults, teenagers, caregivers and clinicians. Experts developed detailed criteria covering safety, appropriate questions, respect for user agency and actionable guidance when warranted.",
+        "According to OpenAI, at least three experts reviewed each conversation, and evaluation criteria were retained based on agreement among reviewers. Results can be broken down into specific dimensions rather than relying only on an overall score.",
+        "A benchmark score does not guarantee appropriate performance in every real-life situation. OpenAI explicitly notes that ChatGPT is not a replacement for therapy or professional care."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0033",
+    "slug": "google-gemini-38-live-35-transcribe-voice-api",
+    "title": "Google「Gemini 3.8 Live」「3.5 Transcribe」発表｜音声AI開発の選択肢が拡大",
+    "description": "Googleが2026年9月に公開した音声AIモデル。対話中のタスク処理、拡張推論、85以上の言語での文字起こしを整理。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T18:00:00+09:00",
+    "sourceName": "Google Developers Blog（2026年9月15日）",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月15日、Gemini APIとGoogle AI Studio向けに新しい音声モデルを発表しました。中心となるのは「Gemini 3.8 Live」「Gemini 3.8 Live Extended Thinking」と、文字起こし専用の「Gemini 3.5 Transcribe」です。",
+      "Gemini 3.8 Liveは、音声で会話を続けながらタスクを実行する音声対音声モデルです。利用者が話し終えるたびに別のテキスト処理へ切り替えるのではなく、音声を中心にした対話体験の構築を目指しています。",
+      "より複雑な依頼向けのExtended Thinkingは推論能力を重視した構成です。Googleは音声対音声モデルの評価指標で高い結果を示したとしていますが、評価結果と実際のアプリの使いやすさは必ずしも一致しません。",
+      "Gemini 3.5 Transcribeは85以上の言語で音声をテキスト化する専用モデルです。会議記録、字幕作成、音声入力などへの応用が考えられます。",
+      "音声アプリを実装する場合は、認識精度だけでなく、応答遅延、雑音への強さ、個人情報を含む録音の扱い、誤変換の確認方法まで含めた設計が重要です。"
+    ],
+    "en": {
+      "title": "Google Releases Gemini 3.8 Live and 3.5 Transcribe for Voice Applications",
+      "description": "Google's new Gemini audio models support live speech interactions and transcription in more than 85 languages.",
+      "category": "AI Tools",
+      "sourceName": "Google Developers Blog (September 15, 2026)",
+      "body": [
+        "On September 15, 2026, Google introduced new audio models through the Gemini API and Google AI Studio: Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking and Gemini 3.5 Transcribe.",
+        "Gemini 3.8 Live is designed for speech-to-speech interaction while carrying out tasks. This supports voice-first applications where dialogue and actions can occur within the same experience.",
+        "Extended Thinking targets requests requiring more complex reasoning. Google cites strong benchmark results, but a leaderboard position is not a guarantee of performance in every deployed application.",
+        "Gemini 3.5 Transcribe is a dedicated speech-to-text model supporting more than 85 languages. Potential uses include meeting notes, captions and voice interfaces.",
+        "Developers should evaluate latency, background noise, transcription errors, user consent and handling of sensitive audio rather than focusing on model accuracy alone."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0034",
+    "slug": "google-ai-scientists-research-productivity-atlas",
+    "title": "科学者の約半数がAIを毎日利用｜Google・MIT調査が示す研究現場の変化",
+    "description": "GoogleとMIT FutureTechなどの研究で科学者のAI利用を分析。週約7時間の時間短縮と、実験・検証の新たなボトルネックを解説。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T18:00:00+09:00",
+    "sourceName": "Google Blog（2026年9月15日）",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月15日、Google DeepMindやMIT FutureTechと協力したAI利用研究の結果を紹介しました。600人を超える米英の科学者への調査と、2,600の専門AIモデルの分析などを通じて、研究現場でのAI活用を調べています。",
+      "調査では、科学者の約半数が何らかのAIを毎日利用していると回答しました。利用者は週あたり7時間弱の時間を節約できたと報告しています。ただし、これは自己申告に基づく時間短縮であり、研究成果が同じ割合で増えたという意味ではありません。",
+      "大規模言語モデルは幅広い研究分野や業務で使われる一方、専門AIモデルは生命科学などの特定領域での予測、生成、シミュレーションに利用される傾向が示されました。",
+      "興味深いのは、AIで仮説を作りやすくなるほど、実験や臨床的な検証が追いつかない可能性がある点です。調査では、AIの出力確認に時間がかかることや、検証待ちの仮説が増えることも指摘されています。",
+      "AIの導入を研究の成果につなげるには、文章作成や分析の高速化だけでなく、実験設備、評価工程、共同研究の進め方まで含めた見直しが必要です。"
+    ],
+    "en": {
+      "title": "Google and MIT Research Finds Scientists Save Time With AI but Face New Bottlenecks",
+      "description": "A Google and MIT FutureTech study reports daily AI use among nearly half of surveyed scientists and almost seven hours saved per week.",
+      "category": "Business & DX",
+      "sourceName": "Google Blog (September 15, 2026)",
+      "body": [
+        "On September 15, 2026, Google highlighted research with Google DeepMind and MIT FutureTech examining AI use in scientific work. The study analyzed 2,600 specialized models and surveyed more than 600 scientists in the United States and United Kingdom.",
+        "Nearly half of the surveyed scientists reported using some form of AI every day. Respondents reported saving just under seven hours a week, though self-reported time savings do not automatically translate into more discoveries.",
+        "Large language models were used across many research tasks, while specialized models were relatively more common in domain-specific prediction, generation and simulation, particularly in health and life sciences.",
+        "The study also identifies bottlenecks: researchers spend time validating AI outputs, and faster hypothesis generation can create a backlog for physical experiments and clinical validation.",
+        "The lesson for research organizations is to redesign the entire workflow, not merely speed up individual steps. Better experimentation and verification capacity may be needed to realize the benefits of AI-assisted research."
+      ]
+    }
   }
 ]
