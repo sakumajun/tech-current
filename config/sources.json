@@ -1,0 +1,34 @@
+{
+  "sources": [
+    {
+      "id": "openai",
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "language": "en"
+    },
+    {
+      "id": "google-developers",
+      "name": "Google Developers",
+      "url": "https://developers.googleblog.com/feeds/posts/default",
+      "language": "en"
+    },
+    {
+      "id": "github",
+      "name": "GitHub Blog",
+      "url": "https://github.blog/feed/",
+      "language": "en"
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "language": "en"
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv cs.AI",
+      "url": "https://export.arxiv.org/rss/cs.AI",
+      "language": "en"
+    }
+  ]
+}
