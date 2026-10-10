@@ -1,5 +1,5 @@
 ---
-import articles from '../../../data/articles.json';
+import articles from '../../../../data/articles.json';
 export function getStaticPaths() {
   return articles.filter(a => a.status === 'published' && a.slug && a.en?.title && Array.isArray(a.en?.body)).map(a => ({ params: { slug: a.slug }, props: { article: a } }));
 }
