@@ -3439,5 +3439,54 @@
         "THE BIGGER PICTURE: These changes focus on the operating environment around AI-assisted coding: identity management, execution boundaries, local model choice and concurrent agent workflows. The value is not merely more automation, but better visibility and control over how that automation is used."
       ]
     }
+  },
+  {
+    "articleId": "TC-0066",
+    "slug": "aws-bedrock-agentcore-strands-september-2026-ai-agent-updates",
+    "title": "AWSのAIエージェント基盤が進化｜Bedrock・AgentCore・Strands最新機能を徹底解説",
+    "description": "AWSが2026年10月9日に公開したAI開発基盤の総括を解説。OpenAI対応のBedrock Managed Agents、AgentCoreの高速化、Strands、モデル選択、社内データ同期、安全性と費用を詳しく整理します。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T17:55:00+09:00",
+    "sourceName": "AWS Machine Learning Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-september-2026/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月9日、9月に発表したAI開発者向け機能をまとめた記事を公開しました。Amazon Bedrock、Amazon Bedrock AgentCore、オープンソースのStrandsを中心に、モデルの選択肢、エージェントの実行環境、企業データへの接続が拡充されています。注目点は、モデルの性能競争だけでなく、AIが業務の中で安全に動き続けるための基盤が整備されていることです。",
+      "【3つの技術の役割】Amazon Bedrockはさまざまな基盤モデルを使ってAIアプリケーションを構築するためのサービスです。AgentCoreはエージェントの実行、接続、運用を支える管理基盤であり、Strandsはエージェントを開発するためのオープンソースツール群です。似た名前の機能が並んでいても、モデル、実行環境、開発ツールという異なる層を担っています。",
+      "【なぜAIエージェントには周辺基盤が必要なのか】一般的なチャットAIは質問に答えれば処理が終わることが多い一方、業務エージェントは文書検索、外部APIの呼び出し、承認待ち、途中結果の保存を繰り返します。モデルの推論能力が高くても、処理が途中で止まったり、許可されていないデータにアクセスしたりすれば実務には使えません。今回の更新は、そうした運用上の問題へ対応する方向性を示しています。",
+      "【OpenAIモデル向けManaged Agents】AWSはOpenAIと共同開発したAmazon Bedrock Managed Agentsのパブリックプレビューを紹介しています。AWS向けに調整したAgents APIを基盤とし、複数段階の作業、ツール選択、コード実行、状態の保持を管理する仕組みです。OpenAIのモデルを利用しながら、AWS側の権限管理や監査機能と組み合わせることを想定しています。",
+      "【人による承認と監査】Managed Agentsでは、エージェントごとのIAMロール、重要な操作前の人による承認、AWS CloudTrailによる対応API操作の記録が案内されています。例えば社内情報を検索する工程と、外部システムの設定を書き換える工程では必要な権限が異なります。作業を自動化するほど、誰が何を許可したのかを後から確認できることが重要です。",
+      "【プレビューの利用条件】AWSの発表によると、Managed Agentsは2026年9月29日時点で米国東部（バージニア北部）、米国西部（オレゴン）、米国東部（オハイオ）の3リージョンでプレビュー提供されています。プレビュー期間中は基盤となるAWSリソースの利用料金以外にManaged Agentsの追加料金はかからないと説明していますが、一般提供後の価格や対応地域は変更される可能性があります。",
+      "【AgentCore Runtimeの改善】AWSはエージェントの実行基盤であるAgentCore Runtimeについて、メモリの回収と起動時間の安定化を紹介しています。処理中に一時的に大量のメモリを使った後も最大使用量を保持し続けるのではなく、不要になったメモリを回収する設計です。長時間動作するエージェントでは、ピーク使用量だけで料金が決まる構成との差が重要になります。",
+      "【起動時間の数値を正しく読む】AWSが別途公開した検証では、200MBから2GBまでのコンテナイメージに対し、新しいRuntimeのコールドスタートはP75で約2秒だったと報告しています。従来版は条件に応じて約5.4秒から30秒近くかかりました。ただし、これはモデルや外部ツールを呼び出さないテスト用エージェントの測定であり、実際の業務処理全体が2秒で終わることを意味しません。",
+      "【モデルを用途別に選ぶ】AWSはOpenAIのAstra、Sol、Luna、AnthropicのClaudeシリーズ、Moonshot AIのKimi K3、xAIのGrokなど、Bedrock上の選択肢を紹介しています。複雑な調査やコーディングには高度な推論モデル、分類や要約の大量処理には費用と応答速度を重視したモデルというように、作業ごとに使い分けることが考えられます。モデルが増えるほど、品質と総費用を同じ条件で比較する必要があります。",
+      "【Strandsの軽量化と小型判断モデル】AWSはStrands harnessについて、比較対象とした一般的なハーネスに対して精度を維持しながらトークン使用量を28％削減したと紹介しています。またStrands Decider 2Bは、自由な文章生成ではなく候補からの選択に特化した20億パラメータのモデルです。いずれの性能値も特定条件に基づくため、業務に導入する際は対象タスクで検証する必要があります。",
+      "【社内データを最新状態に保つ】Amazon Bedrock Managed Knowledge Baseでは、ネイティブコネクターに対する日次・週次・月次の自動同期設定が紹介されています。ServiceNow、Confluence Data Center、Salesforce、Zendeskなどへの接続も拡充されました。社内文書の検索では、モデルの能力だけでなく、元データの更新頻度と利用者の閲覧権限が回答品質を左右します。",
+      "【導入時のリスク】接続先が増えると、古い文書の参照、アクセス権限の不整合、誤ったツール実行などの問題も増えます。エージェントには必要最小限の権限を与え、重要な変更では承認を挟み、処理履歴を追跡できるようにすることが基本です。プレビュー機能を本番へ組み込む場合は、提供地域、障害時の復旧、契約条件も確認する必要があります。",
+      "【企業が評価すべき指標】AIエージェントの効果は、モデルのベンチマーク点数だけでは測れません。業務完了率、誤操作率、承認待ち時間、利用者による修正回数、実行1件あたりの総費用などを確認したいところです。長時間の処理では、途中で失敗した際に再開できるか、同じ操作を二重実行しないかも重要な評価項目になります。",
+      "【今後の注目点】9月のAWS関連発表を通じて見えるのは、AI開発の競争軸が単一モデルの性能から、実行環境、データ接続、権限、運用費用を含むシステム全体へ広がっていることです。企業は新機能を一度に導入するより、対象業務と成功条件を絞り、既存手法との比較を通じて適切な構成を選ぶことが重要になります。"
+    ],
+    "en": {
+      "title": "AWS AI Agent Infrastructure Evolves: Bedrock, AgentCore and Strands Updates Explained",
+      "description": "AWS's October 9 recap covers Bedrock Managed Agents powered by OpenAI, AgentCore runtime efficiency, Strands tools, model choice, enterprise connectors, security and costs.",
+      "category": "Generative AI",
+      "sourceName": "AWS Machine Learning Blog",
+      "body": [
+        "On October 9, 2026, AWS published a recap of its September updates for AI builders. The announcements span Amazon Bedrock, Amazon Bedrock AgentCore and the open-source Strands ecosystem. Together they broaden model choice, improve agent runtime operations and make enterprise information easier to connect. The central story is the infrastructure around models, not just model benchmarks.",
+        "THREE DIFFERENT LAYERS: Amazon Bedrock provides access to foundation models for AI applications. AgentCore supplies managed capabilities for running and operating agents. Strands offers open-source tools for developing agents. These layers can complement one another, but they solve different problems.",
+        "WHY AGENTS NEED MORE THAN A MODEL: A chatbot may finish after one response. A business agent may search documents, invoke APIs, wait for approval and resume later. Even a capable model is not sufficient if a workflow loses state, acts without authorization or cannot be audited.",
+        "MANAGED AGENTS POWERED BY OPENAI: AWS highlighted the public preview of Amazon Bedrock Managed Agents, developed with OpenAI and based on an AWS-adapted Agents API. The service manages state, tool selection, code execution and multistep workflows while integrating with AWS identities and governance controls.",
+        "HUMAN APPROVAL AND AUDITING: The Managed Agents announcement describes per-agent IAM roles, human approval before consequential actions and logging of supported API activity through AWS CloudTrail. Reading internal documents and changing production systems should not automatically carry the same permissions.",
+        "PREVIEW CONDITIONS: AWS announced preview availability in US East (N. Virginia), US West (Oregon) and US East (Ohio). During preview, AWS says there is no additional Managed Agents charge beyond underlying resources consumed. Regional availability and pricing may change after general availability.",
+        "AGENTCORE RUNTIME CHANGES: AWS also described improved memory management and more consistent startup behavior in AgentCore Runtime. Rather than retaining a session's peak memory footprint for its entire life, the new runtime can reclaim memory that is no longer needed. This matters for long-running agents with uneven workloads.",
+        "INTERPRETING COLD-START RESULTS: In a separate AWS test, the new runtime recorded roughly two seconds of P75 cold-start latency across container images from 200 MB to 2 GB. The older version ranged from about 5.4 seconds to nearly 30 seconds. The benchmark used a simple echo agent without model or tool calls, so it does not measure full task completion time.",
+        "CHOOSING MODELS BY WORKLOAD: AWS lists models from OpenAI, Anthropic, Moonshot AI and xAI among its Bedrock options. Complex research and coding may justify stronger reasoning models, while high-volume classification and summarization can prioritize latency and cost. Comparisons should include output quality and the total cost of finishing a task.",
+        "STRANDS AND SMALL DECISION MODELS: AWS reports that the Strands harness used 28 percent fewer tokens than compared harnesses while maintaining accuracy in its evaluation. Strands Decider 2B focuses on choosing among predefined options instead of generating free-form responses. Both claims need testing under representative workloads.",
+        "KEEPING ENTERPRISE KNOWLEDGE FRESH: Amazon Bedrock Managed Knowledge Base now supports scheduled daily, weekly and monthly synchronization for native connectors. AWS also highlighted connectors for ServiceNow, Confluence Data Center, Salesforce and Zendesk. Retrieval quality depends on document freshness and permission enforcement as well as model performance.",
+        "OPERATIONAL RISKS: More connected systems create more opportunities for stale answers, permission mistakes and unintended tool actions. Least-privilege access, approval gates, audit records and recovery procedures remain necessary. Preview features require additional checks on region, availability and contractual conditions.",
+        "MEASURING BUSINESS VALUE: Model scores alone cannot determine whether an agent is useful. Teams should track task completion, error rates, human correction time, approval latency and total cost per completed job. Long-running workflows also need tests for recovery and duplicate-action prevention.",
+        "WHAT COMES NEXT: AWS's September announcements illustrate a shift from evaluating isolated models toward evaluating complete agent systems. Organizations can benefit by starting with narrowly defined workflows, measuring real outcomes and choosing components based on operational needs rather than announcement volume."
+      ]
+    }
   }
 ]
