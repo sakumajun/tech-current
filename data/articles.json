@@ -776,6 +776,18 @@
     "body": [
       "GoogleはI/O 2026で、Google AI Studioを使ったアプリ開発体験の進化を紹介しました。自然言語で作りたいものを伝え、試作へつなげる『誰もが作り手になれる』方向性を打ち出しています。",
       "この種のツールは、画面のたたき台や簡単な動作確認を短時間で進めたいときに役立ちます。専門家でなくてもアイデアを形にしやすくなる点が魅力です。",
+      "【発表内容を整理する】Google I/O 2026では、AI Studioでのアプリ開発について複数の更新が紹介されました。移動中にアイデアを入力し、デスクに着く頃には動く試作品を用意する新しいAI Studioアプリは『近日提供』の構想です。一方、Androidアプリの生成やGoogle Workspaceとの連携などは、発表時点ですでに利用できる機能として案内されています。これらを混同しないことが重要です。",
+      "【自然言語から試作品へ】AIを使ったアプリ開発では、画面や機能を文章で説明し、生成されたものを見ながら修正する進め方が広がっています。例えば、入力フォームと一覧表示を備えた小さな業務ツールなら、最初のたたき台を短時間で作れる可能性があります。ただし、生成されたコードが要求仕様をすべて満たしているかは、利用者や開発者が確認する必要があります。",
+      "【Google Workspaceとの接続】Googleは、AI Studioで作成したアプリからGoogle Workspaceへ直接アクセスできるようになったと説明しています。Sheetsのデータを使ったダッシュボード、Drive内の情報整理、既存の文書を活用するツールなどが例として挙げられています。外部の業務データを扱えることは便利ですが、接続したアカウントの権限やデータの共有範囲を確認する必要があります。",
+      "【Sheetsダッシュボードを作る場合】スプレッドシートのデータを画面に表示するだけなら簡単に見えても、実際には列名の変更、空欄、日付形式の違い、更新の遅れなどを考慮する必要があります。AIが生成した画面で数値を集計する場合、元データと表示結果が一致するかを検証することが重要です。試作品を実際の業務で使う前には、想定外のデータでの動作確認が欠かせません。",
+      "【Androidアプリの生成】I/O 2026の発表では、AI StudioのBuildタブから『Build an Android app』を選び、自然言語の指示でネイティブAndroidアプリを作成できると案内されています。Webページの試作とは異なり、端末固有の画面や操作を考慮する必要があります。アプリの完成度を評価する際は、実機での表示、画面遷移、権限要求などを確認したいところです。",
+      "【ブラウザー上での動作確認】Googleは、AI Studioからブラウザー内のAndroid Emulatorでアプリをプレビューできると説明しています。Android Debug Bridgeを使ってテスト端末へインストールする方法も紹介されています。エミュレーターで動くことと、異なる画面サイズやOSバージョンの実機で問題なく動くことは別なので、複数環境での検証が必要です。",
+      "【Google Playへの公開手順】Google Play Consoleとの連携では、開発者アカウントを接続し、内部テストトラックへアプリを送る機能が紹介されています。内部テストへの配布は、一般公開とは異なります。正式公開に向けては、アプリの品質やポリシーへの適合、必要な説明表示などを別途確認する必要があります。",
+      "【最初の2アプリのクラウド配置】Googleは、AI Studioを使い始める開発者が最初の2アプリをGoogle Cloudへクレジットカードなしで無料配置できると案内しています。ただし、この発表だけで無制限の無料利用や恒久的な費用ゼロを保証するものではありません。公開後の利用量や追加サービスに伴う条件は、利用前に公式の料金案内で確認する必要があります。",
+      "【画面を見ながら修正する体験】AI Studioには、プレビュー画面へ直接注釈を加えて修正を指示する編集機能が紹介されています。文章だけで『ボタンを少し右へ』と説明するより、画面上の位置を示す方が意図を伝えやすい場合があります。生成AIと視覚的な編集操作を組み合わせることは、デザインと実装の試行錯誤を短縮する可能性があります。",
+      "【画像生成とUIデザイン】Googleは、AI Studio BuildエージェントがNano Bananaを使ってカスタム画像を生成できると説明しています。仮の画像を探す手間を減らせる一方、実在の商品や人物を扱う場合には正確性や権利への配慮が必要です。アプリの品質は画像の見栄えだけでは決まらず、文字の読みやすさ、操作の分かりやすさ、アクセシビリティも重要になります。",
+      "【Antigravityへの引き継ぎ】AI StudioからGoogle Antigravityへプロジェクトをエクスポートする機能も紹介されました。Googleは会話履歴、プロジェクトファイル、シークレットを引き継げると説明しています。試作から本格開発へ移行しやすくなる可能性がありますが、秘密情報の扱い、アクセス権、バージョン管理などは移行時に確認する必要があります。",
+      "【本番公開前のチェック】生成されたアプリには、認証の不備、入力値の検証不足、エラー表示の欠落などが残る可能性があります。実際の公開前には、個人情報の扱い、権限管理、障害時の復旧、バックアップ、画面読み上げへの対応を検証する必要があります。AI Studioの進化は開発の入口を広げるものですが、公開後の責任まで自動化するものではありません。",
       "ただし、試作品が動くことと、安全に公開できることは別です。認証、データ保護、アクセシビリティ、保守性などは、実際の利用環境に合わせた確認が必要です。"
     ],
     "en": {
@@ -786,6 +798,18 @@
       "body": [
         "Google highlighted AI Studio updates intended to help more people turn ideas into working applications.",
         "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "SEPARATING AVAILABLE FEATURES FROM PLANS: Google I/O 2026 included several AI Studio announcements. A new mobile app that turns ideas captured on the go into prototypes was described as coming soon. Other capabilities, including native Android app building and Workspace integrations, were announced as available. The distinction matters when planning a project.",
+        "FROM A PROMPT TO A PROTOTYPE: Natural-language app building lets people describe an interface and iterate on generated code. A small internal tool with a form and list view may be quick to prototype. But generated software still needs to be checked against requirements, including cases that the initial prompt did not cover.",
+        "WORKSPACE INTEGRATION: Google says apps built in AI Studio can access Workspace data. Examples include dashboards based on Sheets, tools for organizing Drive files and apps working with team documents. These integrations make account permissions and data-sharing rules central to safe deployment.",
+        "BUILDING A SHEETS DASHBOARD: Even a straightforward dashboard needs to handle empty values, changing column names, inconsistent dates and delayed updates. AI-generated charts and totals should be checked against the source spreadsheet before the tool is used for business decisions.",
+        "NATIVE ANDROID APPS: Developers can choose 'Build an Android app' in the Build tab and begin prompting. Unlike a web-only prototype, a native app needs testing for device-specific behavior, navigation and permission requests. A generated interface is only the beginning of that work.",
+        "TESTING IN THE BROWSER AND ON DEVICES: Google describes an Android Emulator running in the browser and installation on a test device through Android Debug Bridge. Emulator success does not guarantee consistent behavior across physical devices, screen sizes and OS versions.",
+        "GOOGLE PLAY INTEGRATION: AI Studio can connect to a Google Play Developer account and publish an app to the Internal Test Track. Internal testing is not the same as a public launch. Quality checks, store requirements and applicable policies still need attention.",
+        "THE FIRST TWO CLOUD DEPLOYMENTS: Google says new builders can deploy their first two apps to Google Cloud at no cost and without a credit card. This should not be interpreted as unlimited free hosting. Teams should verify current usage limits and pricing before expanding a service.",
+        "VISUAL ITERATION: AI Studio's editing tools let builders annotate the preview directly. Pointing to a component can communicate an intended change more clearly than a purely verbal description. This combination of generated code and visual feedback may shorten the design iteration loop.",
+        "GENERATED ASSETS AND DESIGN QUALITY: The Build agent can create custom imagery with Nano Banana. That reduces the need for placeholder assets but does not remove questions about accuracy, rights or the depiction of real people and products. Accessibility and understandable interaction patterns remain essential.",
+        "HANDOFF TO ANTIGRAVITY: Google describes exporting a project to Antigravity along with conversation history, project files and secrets. This can help teams move from experimentation toward a larger development workflow, but permissions, secret handling and version control still require review.",
+        "BEFORE PRODUCTION: Generated apps may have weaknesses in authentication, input validation and error recovery. Teams should test data protection, backups, accessibility and maintenance procedures. AI Studio lowers the barrier to building; it does not eliminate responsibility for software released to users.",
         "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
         "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
       ]
@@ -804,6 +828,18 @@
     "body": [
       "GoogleはI/O 2026で、検索のAI Modeにおける『Personal Intelligence』の対象を拡大すると発表しました。利用者が許可したアプリの情報を使い、より個人の状況に沿った回答を目指す仕組みです。",
       "Googleの説明では、GmailやGoogleフォトなどの接続を利用者が選べるようにしています。一般的な検索結果だけではわからない、自分の予定や記録に関する質問に対応する方向です。",
+      "【Personal Intelligenceとは何か】GoogleがI/O 2026で発表したPersonal Intelligenceの拡大は、一般的なWeb検索だけでなく、利用者が接続を許可した個人向けサービスの情報を検索体験へ取り込む取り組みです。例えば、公開情報だけでは答えられない個人の記録に関する質問へ対応することを目指します。検索結果が個人の状況に合いやすくなる一方、参照する情報の範囲を理解することが重要です。",
+      "【対象地域と言語の拡大】Googleは、AI ModeのPersonal Intelligenceを約200の国と地域、98言語へ拡大し、利用に有料サブスクリプションは不要と発表しています。ただし、地域や言語が対象に含まれていても、すべての接続機能が同時に利用できるとは限りません。実際の画面に表示される設定や提供条件を確認する必要があります。",
+      "【接続できるサービス】公式発表では、GmailとGoogleフォトなどのアプリを利用者が任意で接続できると説明しています。Googleカレンダーは今後の対応予定として挙げられています。すでに接続できるサービスと、追加予定のサービスを区別することが重要です。接続の可否や利用条件は、アカウントと提供状況によって変わる可能性があります。",
+      "【通常の検索との違い】一般的な検索では、公開されたページをもとに答えを探します。しかし『以前受け取った案内に書かれた日付を知りたい』といった質問には、利用者のメールなどの個人情報が必要になる場合があります。Personal Intelligenceは、利用者が接続した情報を検索の文脈として使う方向を示しています。ただし、AIが内容を誤って読み取る可能性は残ります。",
+      "【接続は利用者が選ぶ】Googleは、透明性、選択、制御をPersonal Intelligenceの設計原則として掲げています。利用者自身がGmailやGoogleフォトを接続するかどうかを選ぶという説明です。便利な機能であっても、すべてのアプリを接続する必要はありません。どの情報が回答に必要かを考え、目的に合った範囲で利用することが望まれます。",
+      "【メール情報を使う際の注意】メールには予約、購入、仕事上の連絡など多様な情報が含まれます。AIが複数のメールをまとめて回答する場合、古い連絡と最新の変更通知を取り違える可能性があります。重要な日付や金額については、元のメールを開いて確認する必要があります。検索結果が読みやすいことと、情報が確実であることは同じではありません。",
+      "【写真の情報とプライバシー】Googleフォトには、人物、場所、生活の記録などが保存されている場合があります。検索と連携すると便利になる可能性がありますが、個人的な情報をどの範囲で参照するかが重要です。写真に写る第三者への配慮も必要です。接続前には、利用するアカウントや共有設定を確認しておくとよいでしょう。",
+      "【出典を確認できることの重要性】個人データを使った回答では、AIがどのメールや写真を根拠にしたのかが分かることが望まれます。例えば予定の日時を尋ねたとき、元の案内へ戻れれば誤りを見つけやすくなります。回答の根拠を確認できることは、個人情報を使うAI検索の信頼性を支える重要な要素です。",
+      "【情報の古さと矛盾】同じ予定について、最初の案内と変更後の案内が存在する場合があります。AIが古い情報だけを参照すると、誤った結論になる可能性があります。更新日時や送信者、関連する会話の流れを確認することが必要です。個人データの検索では、単純に一致する文書を見つけるだけでなく、時系列を理解することが課題になります。",
+      "【仕事用アカウントとの区別】個人のGmailと組織が管理するメールでは、利用規約や情報管理の条件が異なる場合があります。会社の機密情報や顧客データを含むアカウントを接続する際は、組織の方針に従う必要があります。個人向け機能として便利であっても、業務データへの適用が無条件に認められるわけではありません。",
+      "【利用者が持つべきコントロール】Personal Intelligenceのような仕組みでは、接続したサービスを把握し、必要に応じて解除できることが重要です。どの情報を参照するか、どの回答に個人データが使われたかを理解できれば、利用者は自分の判断で機能を使えます。AIの利便性が高まるほど、設定の分かりやすさがUXを左右します。",
+      "【今後の注目点】Googleの発表は、AI検索を一般的な情報探索から、利用者の文脈を踏まえた支援へ広げる方向を示しています。今後はカレンダーなどの連携拡大に加え、回答の正確さ、情報源の確認方法、接続設定の分かりやすさが評価のポイントになります。個人データを扱う以上、便利さだけでなく、利用者が制御できることが不可欠です。",
       "利便性と引き換えに、どの情報を接続するかという判断が重要になります。利用前には接続先、共有される情報の範囲、解除方法を確認しておくと安心です。"
     ],
     "en": {
@@ -814,6 +850,18 @@
       "body": [
         "Google is extending Personal Intelligence in AI Mode, with optional connections to services such as Gmail and Google Photos.",
         "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "WHAT PERSONAL INTELLIGENCE MEANS: Google's expansion brings information from user-authorized personal services into AI Mode. Public search results alone cannot answer questions about an individual's records. Connected information may make answers more relevant, but users need to understand which data is being consulted.",
+        "LANGUAGES AND REGIONS: Google announced an expansion to nearly 200 countries and territories across 98 languages, with no paid subscription required. Broad geographic availability does not necessarily mean every connection is available to every account at the same time. Users should check the settings shown in their own product.",
+        "CONNECTED SERVICES: The announcement names Gmail and Google Photos as optional connections. Google Calendar is described as coming soon. Available integrations should be distinguished from planned additions, and account-specific conditions may apply.",
+        "HOW THIS DIFFERS FROM PUBLIC SEARCH: A public web search can find information published online. A question about a date mentioned in an earlier personal email may require access to private messages. Personal Intelligence aims to use connected data as context, although AI can still misunderstand what it reads.",
+        "USER CHOICE: Google emphasizes transparency, choice and control, saying people decide whether and when to connect services. Not every integration is necessary for every task. Limiting connections to information that serves a clear purpose can help users manage exposure.",
+        "EMAIL ACCURACY: Inboxes contain reservations, receipts and conversations with changing details. An AI answer may confuse an original confirmation with a later update. Dates, amounts and other consequential details should be checked against the underlying message.",
+        "PHOTO PRIVACY: A photo library may contain images of people, places and everyday activities. Search integration could make that information more useful, but it also raises questions about scope and the privacy of people depicted. Account and sharing settings deserve attention.",
+        "WHY SOURCE VISIBILITY MATTERS: Personal answers are more trustworthy when users can inspect the email or photo behind a claim. If an assistant provides an appointment time, opening the original confirmation can reveal mistakes. Provenance is particularly important when private data influences a decision.",
+        "OUTDATED AND CONFLICTING RECORDS: A meeting may have an original invitation and several later changes. Finding a matching document is not enough; the system needs to consider chronology and context. Users should verify that an answer reflects the latest authoritative information.",
+        "PERSONAL VERSUS WORK ACCOUNTS: Consumer accounts and employer-managed systems may have different data-handling rules. Connecting an account containing customer or company information should follow organizational policies. Consumer convenience does not automatically authorize enterprise use.",
+        "CONTROL OVER CONNECTIONS: Users benefit from clear ways to see which services are connected and to revoke access when it is no longer needed. Understanding when personal data contributes to an answer can make the experience more predictable and trustworthy.",
+        "WHAT TO WATCH: Personal Intelligence points toward search tailored to an individual's context. Future evaluation should consider the accuracy of answers, source visibility, ease of managing connections and the rollout of additional services. Useful personalization depends on meaningful user control.",
         "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
         "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
       ]
