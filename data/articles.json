@@ -3643,5 +3643,58 @@
         "THE BROADER IMPLICATION: As generative AI spreads, organizations need employees who can evaluate feasibility and trade-offs, not merely discuss AI products. AWS's program suggests that hands-on building can improve collaboration between business and engineering teams, provided the organization supports experimentation and follows through after the course."
       ]
     }
+  },
+  {
+    "articleId": "TC-0070",
+    "slug": "aws-nova-2-5-sonic-voice-travel-concierge-agentcore-mcp",
+    "title": "声で航空券の座席変更も｜AWSが公開したNova 2.5 Sonic音声AIコンシェルジュの仕組み",
+    "description": "AWSが2026年10月6日に公開した音声旅行コンシェルジュの技術構成を詳説。Nova 2.5 Sonic、AgentCore、MCP、Knowledge Basesによる予約確認・座席変更・規定検索・有人対応の仕組みと安全対策を解説します。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T17:55:00+09:00",
+    "sourceName": "AWS Artificial Intelligence Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/build-a-voice-travel-concierge-with-amazon-bedrock-agentcore-managed-knowledge-base-and-nova-sonic/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月6日、航空会社のアプリにリアルタイム音声AIを組み込む技術構成を公開しました。Amazon Nova 2.5 Sonic、Amazon Bedrock AgentCore、Knowledge Basesを組み合わせ、搭乗便の確認、座席変更、機内食の希望、手荷物規定の照会、人間の担当者への引き継ぎまでを一つの会話で扱います。これは特定航空会社の商用導入発表ではなく、合成データを使った参照実装です。",
+      "【音声が新しい操作手段になる】旅行者は従来、予約番号を入力し、複数の画面を移動して座席や便の状態を確認していました。音声インターフェースを追加すると、「窓側の席は空いている？」「遅延している？」と話しかけて情報を取得できます。ただし画面を廃止するのではなく、タップ操作と会話を同じセッションで使い分ける設計です。",
+      "【中核は3つのAWSサービス】Amazon Nova 2.5 Sonicは音声入力の理解と音声出力をリアルタイムに処理します。AgentCore Runtimeはエージェントを実行し、Gatewayは業務システムの機能をMCPツールとして公開します。Knowledge Basesは手荷物、変更手数料、ペット同伴などの規定文書を検索し、根拠のある回答を支えます。",
+      "【アプリから業務データまでの経路】フロントエンドはAWS Amplify上のReactアプリです。利用者がログインするとAmazon Cognitoが認証し、署名付きWebSocket接続をAgentCore Runtimeへ開きます。音声から必要な操作を判断したエージェントはGateway経由でAPI GatewayとLambdaを呼び出し、DynamoDBに保存された予約、座席、搭乗者、便の情報を取得します。",
+      "【MCPを採用する理由】Model Context Protocol（MCP）は、AIアプリケーションと外部ツールをつなぐ標準化された方法です。航空会社が既に持つ予約APIや顧客情報APIを、AI専用に全面改修するのではなく、名前付きのツールとして公開できます。ツールの追加と音声モデルの更新を分離できるため、保守しやすい構成になります。",
+      "【双方向ストリーミングの仕組み】ブラウザーは16kHzのPCM音声をWebSocketで送信し、モデルから返る音声も同じ接続で受け取ります。Nova 2.5 Sonicは利用者の発話を理解し、必要なツールを呼び出し、取得した情報を自然な音声で返します。音声を一度すべて録音してから処理する方式と異なり、会話を継続しながら処理できる点が特徴です。",
+      "【待ち時間を会話で吸収する】業務APIの応答には時間がかかることがあります。Nova 2.5 Sonicは非同期でツールを呼び出し、結果を待つ間も途中の音声応答を返せます。利用者が途中で話を遮った場合にも対応する設計です。ただし実際の応答速度はネットワーク、外部API、同時利用者数に左右され、あらゆる操作が瞬時に終わることを保証するものではありません。",
+      "【変更前に必ず確認する】このサンプルの重要な安全設計は「confirm-before-write」です。座席や機内食などの情報を書き換える前に、利用者へ変更内容を確認します。質問への回答と予約内容の更新では影響が異なるため、閲覧操作と変更操作を区別する必要があります。音声認識の誤りがそのまま予約変更へつながらないようにする考え方です。",
+      "【認証は音声だけに依存しない】利用者はCognitoでログインし、JWTと一時的なAWS認証情報を受け取ります。フロントエンドはSigV4署名付き接続を利用し、API側にもIAM認可を適用します。声が似ていることや予約番号を知っていることだけを本人確認の根拠とする構成ではありません。実サービスでは追加認証の必要性も操作のリスクに応じて検討すべきです。",
+      "【規定への回答には検索を使う】手荷物や払い戻しのルールは運賃種別や時期によって変わります。Knowledge Basesは航空会社の規定文書から関連箇所を検索し、引用情報をエージェントへ渡します。PDFの表なども取り込める構成で、文書更新後はナレッジベースを同期します。モデルが記憶している一般論だけで案内しないための仕組みです。",
+      "【有人対応への引き継ぎ】AIが対応できない内容や、利用者が担当者との会話を希望した場合には、人への引き継ぎを行います。確認後にLambdaが引き継ぎ記録をDynamoDBへ保存し、問い合わせ番号と推定待ち時間を返します。画面側からサポート窓口へ発信する構成ですが、サンプルにはコンタクトセンターシステム自体は含まれません。",
+      "【利用者体験の設計上の課題】便名や確認番号は、聞き間違いを防ぐため一文字ずつ読み上げる工夫が紹介されています。一方、空港の騒音、通信状態、言語、アクセシビリティなどへの対応は、実際の利用者テストで確認する必要があります。音声を使いたくない人のために画面操作を残すことも重要です。",
+      "【運用・セキュリティの基盤】AgentCore RuntimeはセッションごとにmicroVMによる分離を提供します。CloudWatchでログやメトリクスを収集し、KMSで保存データを暗号化します。AWSは本番利用時にBedrock Guardrailsを追加し、プロンプトインジェクションや根拠のない回答への対策を強化することも勧めています。個人情報や音声ログの保存期間と閲覧権限も検討が必要です。",
+      "【導入前に評価したい指標】技術デモが動くことと、顧客対応の品質が上がることは同じではありません。座席変更の完了率、誤認識率、確認のやり直し回数、有人引き継ぎ率、平均対応時間、利用者満足度を測定したいところです。特に予約変更などの重要操作では、速さよりも正確性と取り消し可能性を優先すべき場面があります。",
+      "【開発と費用の注意点】AWSの参照実装はCDKで展開でき、フロントエンド、Gateway、Runtime、バックエンドを個別に構築します。利用にはNova 2.5 Sonicが利用可能なリージョン、適切なAWS権限、Node.jsやPythonなどの開発環境が必要です。試用後にリソースを削除しなければ料金が発生し続ける可能性があるため、費用監視とクリーンアップも作業計画に含めます。",
+      "【今後の展望】今回の構成が示すのは、音声AIを独立したチャット機能として追加するのではなく、既存の業務API、認証、規定文書、有人窓口とつなぐ設計です。旅行者が画面と会話を自然に行き来でき、重要な変更は本人が承認する。こうした統合と安全設計が、航空会社に限らず金融、小売、公共サービスの音声AIにも応用できるでしょう。"
+    ],
+    "en": {
+      "title": "Change Airline Seats by Voice: AWS Nova 2.5 Sonic Travel Concierge Explained",
+      "description": "A detailed look at AWS's voice travel concierge reference architecture, including Nova 2.5 Sonic, AgentCore, MCP, Knowledge Bases, booking confirmations, and human escalation.",
+      "category": "Generative AI",
+      "sourceName": "AWS Artificial Intelligence Blog",
+      "body": [
+        "On October 6, 2026, AWS published a reference architecture for a real-time voice concierge in airline applications. Amazon Nova 2.5 Sonic, Amazon Bedrock AgentCore, and Knowledge Bases enable spoken itinerary checks, seat changes, meal preferences, policy questions, and escalation to a human. The sample uses synthetic airline data rather than reporting a commercial deployment.",
+        "VOICE AS AN ADDITIONAL INTERFACE: Travelers traditionally navigate several screens to inspect reservations or select seats. A voice layer lets them ask whether a window seat is available or whether a flight is delayed. AWS deliberately keeps the existing screens, allowing people to switch between tapping and talking in one session.",
+        "THREE CORE COMPONENTS: Nova 2.5 Sonic processes incoming and outgoing speech. AgentCore Runtime hosts the agent, while AgentCore Gateway exposes airline operations as MCP tools. Amazon Bedrock Knowledge Bases retrieves relevant policy documents so the agent can answer baggage, cancellation, pet-travel, and loyalty questions using source material.",
+        "FROM THE APP TO THE BACKEND: A React front end hosted on AWS Amplify authenticates users with Amazon Cognito. It opens a signed WebSocket connection to AgentCore Runtime. When the agent needs business data, Gateway translates MCP tool calls into API Gateway requests, Lambda executes business logic, and DynamoDB supplies booking and flight records.",
+        "WHY MCP MATTERS: Model Context Protocol standardizes how an AI application discovers and invokes external tools. Airlines can expose existing booking and customer-service endpoints without rebuilding them around the voice model. Separating tool definitions from conversational logic improves maintainability.",
+        "BIDIRECTIONAL AUDIO STREAMING: The browser sends 16 kHz PCM audio over WebSocket and receives spoken responses through the same connection. Nova 2.5 Sonic can interpret speech, request data, and respond while the session remains active. This supports a conversational experience rather than a sequence of disconnected voice recordings.",
+        "HANDLING LATENCY AND INTERRUPTIONS: Asynchronous tool calls let the model keep a conversation moving while backend requests execute. Interim speech can mask some waiting time, and barge-in handling allows travelers to interrupt. Actual responsiveness still depends on network conditions, backend APIs, and load.",
+        "CONFIRM BEFORE WRITING: The sample follows a confirm-before-write pattern. Before changing a seat or meal preference, the concierge asks the traveler to approve the intended change. Reading a reservation and modifying it carry different risks, so speech-recognition mistakes must not silently become transactions.",
+        "AUTHENTICATION IS NOT VOICE RECOGNITION: The traveler signs in through Cognito, obtains tokens and temporary AWS credentials, and uses SigV4-signed connections. Backend APIs enforce IAM authorization. The design does not treat a matching voice or knowledge of a booking number as sufficient identity proof.",
+        "GROUNDING POLICY ANSWERS: Baggage and refund policies vary by fare and can change over time. Knowledge Bases retrieves relevant passages from airline documents and provides citations to the agent. Updated source documents can be synchronized without redeploying the entire conversational application.",
+        "ESCALATION TO A PERSON: When the concierge cannot resolve a request or the traveler asks for a human, it records an escalation and returns a reference number and estimated wait time. The front end can place a call to a configured support number. The sample does not include a complete contact-center platform.",
+        "USER-EXPERIENCE CONSIDERATIONS: The demonstration reads flight numbers and confirmation codes character by character to improve clarity. Real deployments must test airport noise, connectivity, language support, accessibility, and user preferences. Keeping screen controls available is an important part of inclusive design.",
+        "SECURITY AND OPERATIONS: AgentCore Runtime provides per-session microVM isolation. CloudWatch supports monitoring, while KMS encrypts data at rest. AWS recommends adding Bedrock Guardrails for production use. Organizations must also decide how long voice transcripts and personal information are retained and who can access them.",
+        "METRICS FOR REAL DEPLOYMENTS: A working demo does not prove customer-service improvement. Airlines should measure task completion, recognition errors, repeated confirmations, human handoff rates, handling time, and satisfaction. For consequential booking changes, correctness and recoverability may matter more than raw speed.",
+        "IMPLEMENTATION AND COST: AWS provides CDK-based deployment for the front end, Gateway, Runtime, and backend. Developers need a supported Nova 2.5 Sonic Region, AWS permissions, and the required development tools. Cloud resources may continue generating charges after testing unless they are cleaned up.",
+        "THE BIGGER PICTURE: The architecture treats voice as a layer over existing APIs, identity systems, policy documents, and human support rather than a disconnected chatbot. The same principles—multimodal choice, verified identity, grounded answers, and explicit confirmation—could inform voice experiences in other service industries."
+      ]
+    }
   }
 ]
