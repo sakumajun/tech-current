@@ -11,6 +11,14 @@ const canonicalUrl = `https://tech-current.net/articles/${article.slug}/`;
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
+  <!-- Google Analytics 4 -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-75LX4FKQDL"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-75LX4FKQDL');
+  </script>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="description" content={article.description} />
 <link rel="canonical" href={canonicalUrl} />
