@@ -266,5 +266,229 @@
         "Provenance signals may become useful as AI-generated content grows, but they should be combined with source checks and transparent editorial processes rather than treated as definitive proof."
       ]
     }
+  },
+  {
+    "articleId": "TC-0009",
+    "slug": "gemini-35-flash-io-2026",
+    "title": "Gemini 3.5 Flash、Google I/Oで一般提供｜AIが「答える」から「動く」へ",
+    "description": "Google I/O 2026でGemini 3.5 Flashが発表され、Gemini API、AI Studio、Android Studioなどで一般提供。開発者と利用者にとっての変化を解説。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "Google I/O 2026でGoogleはGemini 3.5 Flashを発表しました。最新モデル群の最初の製品として、高度な推論だけでなく、実際の操作やタスク遂行を重視しています。",
+      "開発者はGemini APIやGoogle AI Studio、Android Studio、Google Antigravityなどから利用できると案内されています。AIをアプリに組み込む際、文章生成だけでなく、作業手順を組み立てる用途が注目されます。",
+      "一方で、モデルが作業を進められることと、すべての判断を任せられることは別です。業務利用では権限の範囲、結果の確認、失敗した際の対応をあらかじめ設計する必要があります。"
+    ],
+    "en": {
+      "title": "Google announced Gemini 3.5 Flash at I/O 2026",
+      "description": "Google introduced Gemini 3.5 Flash at I/O 2026 and made it generally available through developer tools including the Gemini API.",
+      "category": "Generative AI",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Google introduced Gemini 3.5 Flash at I/O 2026 and made it generally available through developer tools including the Gemini API.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0010",
+    "slug": "google-ai-mode-billion-users",
+    "title": "Google検索のAI Modeが10億人規模に｜検索体験の変化とは",
+    "description": "Google I/O 2026でAI Modeの月間利用者数が10億人を超えたと発表。AIによる検索結果の要約と情報源への導線の変化を考察。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "GoogleはI/O 2026で、検索のAI Modeが月間10億人を超える利用規模になったと発表しました。AIが質問の意図を読み取り、関連情報をまとめる検索体験が広がっています。",
+      "GoogleはAI Modeの標準モデルをGemini 3.5 Flashへ更新すると説明しました。テキストに加えて画像やファイルなどを使う検索も進化しており、利用者は従来より複雑な質問を一度に投げかけられます。",
+      "情報を発信するサイトにとっては、検索結果での要約だけで満足される可能性と、根拠として記事が参照される可能性の両方があります。独自の検証や具体的な説明が、引き続き重要になります。"
+    ],
+    "en": {
+      "title": "Google says AI Mode passed one billion monthly users",
+      "description": "Google said AI Mode exceeded one billion monthly users as it expanded AI-powered Search experiences.",
+      "category": "Technology",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Google said AI Mode exceeded one billion monthly users as it expanded AI-powered Search experiences.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0011",
+    "slug": "google-search-information-agents",
+    "title": "Google検索に情報エージェント｜気になる話題を継続監視する仕組み",
+    "description": "Google I/O 2026で発表されたSearchの情報エージェント。ウェブやニュースの変化を継続的に追う機能と利用上の注意点を解説。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "GoogleはI/O 2026で、検索に『情報エージェント』を導入する構想を発表しました。利用者が関心のある話題を登録すると、エージェントがウェブ上の情報を継続的に確認する仕組みです。",
+      "Googleの説明では、ブログ、ニュースサイト、SNSなどに加え、対象に応じて最新のデータを参照し、変化をまとめて通知します。情報収集を一度きりの検索から継続的な調査へ変える試みです。",
+      "ただし、集約された情報が正確かどうかは元の資料で確認する必要があります。通知が便利になるほど、一次情報へのリンクや更新時刻の確認が大切になります。"
+    ],
+    "en": {
+      "title": "Google introduces information agents in Search",
+      "description": "Google's Search information agents aim to track topics across the web and provide synthesized updates over time.",
+      "category": "AI Tools",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Google's Search information agents aim to track topics across the web and provide synthesized updates over time.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0012",
+    "slug": "google-universal-cart-shopping",
+    "title": "Google「Universal Cart」発表｜AIが買い物を横断支援",
+    "description": "Google I/O 2026で発表されたUniversal Cart。複数サービスをまたいだ価格・在庫の確認や購入支援の構想を紹介。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "GoogleはI/O 2026で、AIを活用した買い物支援機能『Universal Cart』を発表しました。検索やGeminiなど、複数のGoogleサービスで見つけた商品をまとめて管理する構想です。",
+      "価格の変化や在庫状況を調べたり、商品同士の互換性について注意を促したりする機能が紹介されています。購入の判断に必要な情報を、サービスを行き来せずに確認できる体験を目指しています。",
+      "企業にとっては商品データの正確さがより重要になります。一方、購入前には価格、販売条件、返品規定を販売店の表示で確認する姿勢が欠かせません。"
+    ],
+    "en": {
+      "title": "Google introduces Universal Cart for AI-assisted shopping",
+      "description": "Universal Cart aims to help shoppers track products, prices and availability across Google's services.",
+      "category": "Business & DX",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Universal Cart aims to help shoppers track products, prices and availability across Google's services.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0013",
+    "slug": "google-gemini-omni-video",
+    "title": "Gemini Omni発表｜動画を含む多様な入力からコンテンツ生成",
+    "description": "Google I/O 2026で披露されたGemini Omni。動画を含むマルチモーダルな入力と生成・編集の方向性を整理。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "GoogleはI/O 2026で、新しいマルチモーダルモデル『Gemini Omni』を発表しました。動画を起点に、さまざまな形式の入力からコンテンツを作成・編集する方向性を示しています。",
+      "マルチモーダルAIは、文章だけでなく画像、音声、映像などの情報を組み合わせて扱います。制作現場では、素材の理解と編集指示を同じワークフローで扱える可能性があります。",
+      "ただし、発表時のデモで可能な操作と、一般利用者がすぐ使える機能は必ずしも同じではありません。利用条件や提供地域を確認したうえで評価する必要があります。"
+    ],
+    "en": {
+      "title": "Google unveils Gemini Omni at I/O 2026",
+      "description": "Gemini Omni was introduced as a multimodal model that can create and edit content from different kinds of inputs, beginning with video.",
+      "category": "Generative AI",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Gemini Omni was introduced as a multimodal model that can create and edit content from different kinds of inputs, beginning with video.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0014",
+    "slug": "google-gemini-spark-agent",
+    "title": "Google「Gemini Spark」構想｜アプリをまたぐ作業をAIが支援",
+    "description": "Google I/O 2026で紹介されたGemini Spark。複数アプリをまたぐ操作を支援するエージェント型体験を解説。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "GoogleはI/O 2026で、Geminiアプリをより自律的に使えるようにする取り組みの一つとして『Gemini Spark』を紹介しました。AIが情報を返すだけでなく、利用者に代わって作業を進める方向です。",
+      "こうした機能では、アプリ間の連携と操作権限が体験の質を左右します。予定の確認や情報整理などの場面では便利になる一方、誤操作を防ぐ仕組みが欠かせません。",
+      "AIが操作を代行する場合でも、重要な送信や購入などは人が確認できる設計が望まれます。実際の対応機能や利用可能なプランは、提供時点の公式案内で確認する必要があります。"
+    ],
+    "en": {
+      "title": "Google previews Gemini Spark for cross-app tasks",
+      "description": "Gemini Spark is part of Google's effort to make AI assistants act across services rather than only answer questions.",
+      "category": "AI Tools",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Gemini Spark is part of Google's effort to make AI assistants act across services rather than only answer questions.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0015",
+    "slug": "google-ai-studio-app-building",
+    "title": "Google AI Studioが進化｜アイデアからアプリ開発までを支援",
+    "description": "Google I/O 2026で紹介されたAI Studioの進化。開発者以外にも広がるアプリ試作の可能性と限界を解説。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "GoogleはI/O 2026で、Google AI Studioを使ったアプリ開発体験の進化を紹介しました。自然言語で作りたいものを伝え、試作へつなげる『誰もが作り手になれる』方向性を打ち出しています。",
+      "この種のツールは、画面のたたき台や簡単な動作確認を短時間で進めたいときに役立ちます。専門家でなくてもアイデアを形にしやすくなる点が魅力です。",
+      "ただし、試作品が動くことと、安全に公開できることは別です。認証、データ保護、アクセシビリティ、保守性などは、実際の利用環境に合わせた確認が必要です。"
+    ],
+    "en": {
+      "title": "Google AI Studio expands app-building tools at I/O 2026",
+      "description": "Google highlighted AI Studio updates intended to help more people turn ideas into working applications.",
+      "category": "AI Tools",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Google highlighted AI Studio updates intended to help more people turn ideas into working applications.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0016",
+    "slug": "google-personal-intelligence-search",
+    "title": "Google「Personal Intelligence」拡大｜AI検索と個人データの連携",
+    "description": "Google I/O 2026で発表されたPersonal Intelligenceの対象拡大。GmailやGoogleフォトとの連携とプライバシーの論点を整理。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T10:00:00+09:00",
+    "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/",
+    "status": "published",
+    "body": [
+      "GoogleはI/O 2026で、検索のAI Modeにおける『Personal Intelligence』の対象を拡大すると発表しました。利用者が許可したアプリの情報を使い、より個人の状況に沿った回答を目指す仕組みです。",
+      "Googleの説明では、GmailやGoogleフォトなどの接続を利用者が選べるようにしています。一般的な検索結果だけではわからない、自分の予定や記録に関する質問に対応する方向です。",
+      "利便性と引き換えに、どの情報を接続するかという判断が重要になります。利用前には接続先、共有される情報の範囲、解除方法を確認しておくと安心です。"
+    ],
+    "en": {
+      "title": "Google expands Personal Intelligence in AI Search",
+      "description": "Google is extending Personal Intelligence in AI Mode, with optional connections to services such as Gmail and Google Photos.",
+      "category": "Technology",
+      "sourceName": "Google Blog — Google I/O 2026 (May 20, 2026)",
+      "body": [
+        "Google is extending Personal Intelligence in AI Mode, with optional connections to services such as Gmail and Google Photos.",
+        "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
+        "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
+      ]
+    }
   }
 ]
