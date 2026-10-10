@@ -3741,5 +3741,62 @@
         "WHAT TO WATCH: Competition in AI coding now includes integration, workflow continuity, cost controls and security as well as model capability. Teams should verify current official specifications and benchmark models against their own development work."
       ]
     }
+  },
+  {
+    "articleId": "TC-0072",
+    "slug": "iso-iec-42005-2025-ai-impact-assessment-aws-governance",
+    "title": "AI導入前に何を評価すべき？｜国際規格ISO/IEC 42005:2025と企業のAIガバナンス",
+    "description": "AWSが解説したISO/IEC 42005:2025を基に、AIシステムの影響評価、プライバシー・公平性・安全性、既存審査との統合、再評価の条件、ISO/IEC 42001との違いを詳しく解説します。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T18:00:00+09:00",
+    "sourceName": "AWS Artificial Intelligence Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/responsible-ai-governance-how-aws-positions-customers-to-align-with-iso-iec-420052025/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月6日、AIシステムの影響評価に関する国際規格「ISO/IEC 42005:2025」を解説しました。生成AIやAIエージェントの導入が広がる中で、モデルの正確さやコストだけでなく、個人、組織、地域社会へどのような影響を与えるかを事前に確認する必要があります。AWSは、影響評価を一度きりの書類作成ではなく、企業のリスク管理と継続的に結び付けることを重視しています。",
+      "【AIシステムの影響評価とは】AIシステム影響評価は、開発・提供・利用するAIがもたらす利益と不利益を体系的に特定し、記録するプロセスです。利用者への利便性だけでなく、個人情報の扱い、差別的な結果、信頼性の不足、誤った意思決定などを検討します。評価結果を、権限設定や監視、利用制限といった具体的な対策につなげることが目的です。",
+      "【ISO/IEC 42001との違い】ISO/IEC 42001:2023は、組織としてAIを管理するマネジメントシステムの要求事項を定める規格です。一方、ISO/IEC 42005:2025は、個別のAIシステムが及ぼす影響をどのように評価するかについての指針を示します。42005に沿って評価しただけで42001の認証を取得できるわけではなく、両者は目的の異なる補完的な規格です。",
+      "【評価対象を最初に明確にする】企業はまず、AIが何をするのか、誰が利用するのか、どの判断に関与するのかを定義します。例えば社内文書の検索支援と、融資審査の判断支援では、誤りが及ぼす影響の大きさが異なります。対象業務、利用者、想定される操作範囲を明確にしなければ、必要な評価の深さも決められません。",
+      "【想定外の使い方も検討する】設計上の目的が安全でも、利用者が別の用途へ転用したり、誤った入力を与えたりすることがあります。AWSの解説では、意図した用途に加え、合理的に予見できる誤用も文書化することが求められます。機能の説明だけでなく、禁止すべき使い方や、人による確認が必要な場面を整理することが重要です。",
+      "【どのデータと技術を使っているか】影響評価では、学習や処理に利用するデータ、基盤モデル、外部サービス、主要なアルゴリズムや構成要素を把握します。外部APIを使う場合、入力した情報がどこで処理され、誰がアクセスできるかも確認します。すべての内部仕様を知ることが難しい場合には、不明点とその影響を明記する必要があります。",
+      "【影響を受ける人を特定する】AIを直接操作する従業員だけが影響を受けるとは限りません。顧客、応募者、取引先、地域社会など、AIの出力によって扱いが変わる人も対象です。AWSは関係者の特定と意見収集を重視し、多様な立場から影響を検討することを勧めています。",
+      "【利益と不利益を両方評価する】影響評価は問題点を探すだけではありません。対応時間の短縮、情報へのアクセス改善、業務負担の軽減などの利益も整理します。同時に、誤回答による損失、利用者間の不公平、監視の過剰化などの不利益を比較し、どの条件で導入する価値があるかを判断します。",
+      "【既存の審査と重複させない】企業にはすでに、個人情報保護、サイバーセキュリティ、法務、調達、システム構成などの審査が存在することがあります。ISO/IEC 42005の附属書Dは、こうした既存の影響評価とAI評価を統合し、重複を減らすための考え方を示します。新しい審査書類を増やすだけでなく、既存の承認プロセスに必要な視点を追加する方法が考えられます。",
+      "【単独の評価プロセスも選べる】既存の審査体制が十分でない組織向けに、附属書Eは独立した影響評価を進めるためのテンプレートを示します。組織の規模や成熟度によって適切な運用方法は異なります。最初から複雑な管理体制を作るより、担当者、記録方法、判断基準を明確にした小さなプロセスから始めることもできます。",
+      "【リスクに応じて評価の深さを変える】すべてのAI利用に同じ量の審査を課すと、低リスクの用途まで過剰な負担が生じます。AWSは、最初に簡易的な分類を行い、より詳細な評価が必要かを判断するトリアージを紹介しています。個人の権利や安全に影響する用途ほど、評価範囲を広げる考え方です。",
+      "【開発のどの時点で実施するか】評価は公開直前だけでは遅い場合があります。企画時に利用目的と関係者を整理し、設計時にデータや制御を検証し、運用開始後には実際の影響を確認します。ISO/IEC 42005は、こうしたライフサイクルの各段階へ影響評価を組み込むことを重視しています。",
+      "【再評価が必要になる条件】モデルの更新、利用対象の拡大、データの変更、外部環境の変化などにより、導入当初の評価が適切でなくなる可能性があります。AWSは法令、契約、社内方針、顧客の期待、システムや運用環境の変化を再評価のきっかけとして挙げています。変更管理の中に評価のやり直しを組み込むことが重要です。",
+      "【評価結果を対策へつなげる】影響を洗い出しても、対応責任者が決まっていなければ改善は進みません。例えば誤回答のリスクには人による確認、情報漏洩にはアクセス制御、差別的な結果には評価データの見直しなど、リスクごとに対策を設定します。対策の実施状況と残るリスクも記録することが望まれます。",
+      "【AWSが提供する関連資料】AWSは、AIシステムの設計・運用時に確認すべき観点を整理したWell-Architected Responsible AI Lensや、ISO/IEC 42001の導入ガイドを提供しています。これらは組織の検討を支援する資料であり、利用するだけで規格や法律への適合が保証されるわけではありません。",
+      "【認証の範囲を正しく理解する】AWSはAmazon Bedrock、Amazon Q Business、Amazon Textract、Amazon TranscribeについてISO/IEC 42001認証を取得していると説明しています。ただしAWSのサービスが認証されていることと、そのサービスを使って企業が構築したAIシステム全体が認証されていることは別です。利用者側にも用途に応じた評価責任が残ります。",
+      "【企業が始めるための手順】最初に社内のAI利用事例を一覧化し、影響が大きい用途から対象を選びます。利用目的、データ、関係者、想定される利益と不利益を記録し、既存の法務・セキュリティ審査と結び付けます。対策と担当者を決め、モデル変更や運用上の問題が起きたときの再評価条件も明確にします。",
+      "【今回の発表が示す方向性】AIの導入を急ぐほど、機能や生産性だけに注目しがちです。しかし継続的に利用される仕組みにするには、誰にどのような影響があるかを説明できることが重要です。ISO/IEC 42005:2025は、抽象的な責任あるAIの理念を、具体的な評価と記録のプロセスへ落とし込むための指針として位置付けられます。"
+    ],
+    "en": {
+      "title": "What Should Companies Assess Before Deploying AI? ISO/IEC 42005:2025 Explained",
+      "description": "A guide to ISO/IEC 42005:2025, AI system impact assessments, privacy, fairness, risk-based review, integration with existing governance and the distinction from ISO/IEC 42001.",
+      "category": "Business & DX",
+      "sourceName": "AWS Artificial Intelligence Blog",
+      "body": [
+        "On October 6, 2026, AWS published guidance on ISO/IEC 42005:2025, an international standard for AI system impact assessments. As generative AI and autonomous agents become more common, organizations need to examine effects on people, communities and institutions—not merely model accuracy and cost. AWS emphasizes making impact assessment part of ongoing risk management.",
+        "WHAT AN AI IMPACT ASSESSMENT DOES: The process identifies and documents foreseeable benefits and harms from developing, providing or using an AI system. It considers privacy, discriminatory outcomes, reliability, safety and other consequences. The goal is to turn findings into decisions about controls, monitoring and appropriate uses.",
+        "HOW IT DIFFERS FROM ISO/IEC 42001: ISO/IEC 42001:2023 specifies requirements for an organizational AI management system. ISO/IEC 42005:2025 offers guidance on assessing impacts from particular AI systems. Conducting a 42005-aligned assessment does not automatically confer ISO/IEC 42001 certification; the standards serve complementary roles.",
+        "DEFINE THE SYSTEM AND ITS CONTEXT: Assessment starts with the intended purpose, users and decisions affected. An internal document assistant and a system supporting lending decisions pose different risks. Teams need to specify scope, operating conditions and the extent of automated authority before choosing the depth of review.",
+        "CONSIDER FORESEEABLE MISUSE: A system can create harm when people use it outside its intended purpose or provide misleading inputs. AWS highlights documenting reasonably foreseeable misuse as well as intended uses. That helps organizations define prohibited uses, safeguards and human-review requirements.",
+        "DOCUMENT DATA AND COMPONENTS: The assessment should describe data used to develop or operate the system, underlying models, algorithms and third-party services. When external APIs are involved, data processing locations and access arrangements matter. Unknowns should be documented rather than silently treated as resolved.",
+        "IDENTIFY AFFECTED STAKEHOLDERS: The people operating an AI tool are not necessarily the only people affected. Customers, job applicants, business partners and communities may experience consequences from its outputs. AWS stresses stakeholder identification and consultation, including perspectives that might otherwise be overlooked.",
+        "ASSESS BENEFITS AS WELL AS HARMS: Potential benefits include faster service, better information access and reduced administrative burden. Potential harms include erroneous decisions, unequal outcomes and excessive surveillance. A useful assessment compares these consequences and explains under what conditions deployment is justified.",
+        "INTEGRATE WITH EXISTING REVIEWS: Organizations often already perform privacy, cybersecurity, legal, procurement and architecture assessments. Annex D of ISO/IEC 42005 describes an approach for coordinating AI impact assessment with those processes. The aim is to reduce duplication while ensuring AI-specific risks receive attention.",
+        "A STANDALONE OPTION: Annex E provides a template for a self-contained assessment process. Organizations without mature review structures can establish clear responsibilities, documentation and decision criteria before integrating the process into broader governance.",
+        "USE RISK-BASED TRIAGE: Not every AI use case needs the same review effort. AWS describes a lightweight triage stage to determine whether a full assessment is warranted. Systems with greater potential effects on rights, safety or livelihoods generally call for deeper examination.",
+        "ASSESS THROUGHOUT THE LIFECYCLE: A final pre-launch checklist may miss important design decisions. Assessment can begin with use-case selection, continue through development and testing, and be revisited during operation. ISO/IEC 42005 emphasizes linking assessment activities to the AI system lifecycle.",
+        "WHEN TO REASSESS: Model updates, new users, different data and changed operating conditions can invalidate earlier assumptions. AWS identifies legal obligations, contracts, internal policies, customer expectations and system changes as potential reassessment triggers. Change management should include a decision on whether a fresh review is required.",
+        "TURN FINDINGS INTO CONTROLS: An assessment is useful only when identified risks lead to actions. Examples include human verification for consequential answers, access controls for sensitive information and evaluation-data reviews for unfair outcomes. Owners, mitigation status and residual risk should be recorded.",
+        "RELATED AWS GUIDANCE: AWS points to the Well-Architected Responsible AI Lens and its ISO/IEC 42001 implementation guidance. These resources can help structure internal reviews, but using them does not by itself guarantee compliance with standards or laws.",
+        "UNDERSTAND CERTIFICATION SCOPE: AWS states that Amazon Bedrock, Amazon Q Business, Amazon Textract and Amazon Transcribe have ISO/IEC 42001 certification. That does not automatically certify a customer's application built on those services. Organizations remain responsible for assessing their own systems and use cases.",
+        "A PRACTICAL STARTING POINT: Inventory AI use cases, prioritize those with significant impacts, document purpose, data and stakeholders, and assess benefits and harms. Connect findings to existing legal and security reviews, assign mitigation owners and define reassessment triggers.",
+        "THE BROADER SIGNIFICANCE: Fast AI adoption can push organizations to prioritize features and productivity over consequences. ISO/IEC 42005:2025 offers a structured way to turn responsible AI principles into documented, repeatable decisions about benefits, harms and safeguards."
+      ]
+    }
   }
 ]
