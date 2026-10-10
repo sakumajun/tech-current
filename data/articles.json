@@ -3394,5 +3394,50 @@
         "A model restricted to supplied choices cannot invent a missing correct option. Accuracy and confidence calibration still need evaluation on representative production data."
       ]
     }
+  },
+  {
+    "articleId": "TC-0065",
+    "slug": "github-copilot-separate-license-repository-accounts-weekly-october-2026",
+    "title": "GitHub Copilotでライセンスとリポジトリのアカウントを分離可能に｜10月最新アップデート解説",
+    "description": "GitHubは2026年10月9日、Copilotアプリでライセンス用とリポジトリ用のGitHubアカウントを分けられる新機能を発表。ローカルサンドボックス、Ollamaモデル選択、VS Code 1.141のエージェント管理まで詳しく解説します。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T17:55:00+09:00",
+    "sourceName": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月9日、GitHub Copilotの週次アップデートを公開しました。今回の注目点は、Copilotアプリでライセンスに使うGitHubアカウントと、リポジトリにアクセスするGitHubアカウントを分けられるようになったことです。企業の契約と個人・別組織の開発環境を使い分ける際の運用を見直すきっかけになります。",
+      "【今回の更新の要点】公式発表では、アカウントの分離に加え、Claude Haiku 5.5の提供、ローカルサンドボックスの一般提供、Copilot CLIでのOllamaモデル発見、VS Code 1.141でのエージェントセッション表示とworktree整理が案内されています。これらは別々の機能更新であり、一つの設定で一括して有効になるものではありません。",
+      "【ライセンス用とリポジトリ用のアカウントを分ける】従来、開発支援ツールの認証を一つのアカウントにまとめると、Copilotの利用権とコードへのアクセス権を同じIDで管理する必要が生じやすくなります。今回のCopilotアプリの更新では、例えば企業が提供するCopilotライセンスを使いながら、リポジトリは別のGitHubアカウントで参照する構成が可能と説明されています。",
+      "【開発者にとっての具体的な場面】仕事で企業のCopilotライセンスを使い、別のGitHubアカウントで管理する開発リポジトリへアクセスする場合、アカウントの役割を分けられることは利便性につながります。ただし、組織の情報管理規程が個人リポジトリや外部アカウントへのアクセスを認めるかは別問題です。機能の存在を理由に業務データの持ち出しを許可されたと解釈してはいけません。",
+      "【何が分離され、何が分離されないのか】ライセンスの認証先とリポジトリのアクセス先が別になることは、データの保存場所やモデルへの送信経路が自動的に切り離されることを意味しません。Copilotが扱うコード、プロンプト、ログの処理条件は、契約プランや管理者設定、接続する機能に依存します。導入時にはそれぞれのアカウントが担う権限を明確にする必要があります。",
+      "【組織管理者が確認したい項目】ライセンスの割り当て元、利用者の本人確認、リポジトリへのアクセス権、監査ログ、退職・異動時の権限削除を整理します。アカウントを分けられるようになると便利な一方、どのIDがどのコードにアクセスしたのかを追跡する運用は複雑になる可能性があります。既存のSSOや社内ポリシーとの整合性を確認したいところです。",
+      "【同時に発表されたローカルサンドボックス】GitHubはCopilot CLI、Copilotアプリ、VS CodeのAgent Hostを利用するセッションで、ローカルサンドボックスを一般提供したと説明しています。AIエージェントがアクセスできるファイル、ネットワーク、認証情報を制限するための機能です。公式発表では追加料金なしとされていますが、利用可能な構成や管理設定は個別に確認が必要です。",
+      "【ローカルモデルの選択も改善】Copilot CLIでは「/model」から、起動中のOllamaインスタンスが提供する対応モデルを発見できます。クラウドモデルとローカルモデルを選び分ける操作が簡単になる一方、ローカル推論を使うだけでCLIの認証や周辺ツールまで完全にオフラインになるわけではありません。モデルごとのコード修正精度と処理速度を実際の作業で比較することが重要です。",
+      "【VS Code 1.141のエージェント管理】VS CodeのAgentsウィンドウでは、複数のエージェントセッションを横並びに配置して結果を比較したり、並行して進む作業を確認したりできます。また、チャットから利用していないworktreeのディスク使用量を確認し、整理するための操作が追加されています。複数の作業を同時に進めるほど、作業場所と変更内容の取り違えを防ぐ工夫が必要になります。",
+      "【小型モデルの追加と選択基準】週次更新ではClaude Haiku 5.5がCopilot Pro、Pro+、Max、Business、Enterprise向けに提供されると案内されています。高速な処理が適した短い修正や補助タスクと、複雑な設計・検証を伴う作業では、必要なモデル性能が異なります。モデルの選択肢が増えても、正確さ、実行時間、料金、組織ポリシーを比較して使い分けることが大切です。",
+      "【導入前の確認手順】まずCopilotアプリでアカウントの設定項目を確認し、ライセンスを持つIDとリポジトリを利用するIDを整理します。次に、閲覧できるリポジトリや変更権限をテスト用の環境で確認します。業務利用では管理者の許可を得たうえで、操作履歴や権限の取り消し手順まで検証するのが安全です。",
+      "【今回の変更が示す方向性】今回の週次更新は、新しいAIモデルの追加だけではありません。アカウントの役割分担、エージェントの実行制限、ローカルモデルの選択、複数セッションの管理など、AIコーディングを継続的な開発業務へ組み込むための運用面が強化されています。開発者にとっては便利さだけでなく、権限と作業状態を把握できるかが重要な評価軸になります。"
+    ],
+    "en": {
+      "title": "GitHub Copilot Now Separates License and Repository Accounts: October 2026 Update",
+      "description": "GitHub's October 9 Copilot update allows separate accounts for licensing and repository access. Explore local sandboxing, Ollama model discovery, and VS Code 1.141 agent management.",
+      "category": "AI Tools",
+      "sourceName": "GitHub Changelog",
+      "body": [
+        "On October 9, 2026, GitHub published its weekly Copilot release summary. One notable change lets users of the GitHub Copilot app use different GitHub accounts for their Copilot license and repository access. This can simplify workflows where a company provides the license while code is accessed through another account.",
+        "WHAT CHANGED THIS WEEK: The release also covers Claude Haiku 5.5 availability, general availability of local sandboxing, Ollama model discovery in Copilot CLI, and agent-session and worktree improvements in VS Code 1.141. These are separate capabilities with their own environments and configuration requirements.",
+        "SEPARATING LICENSE AND REPOSITORY IDENTITIES: Licensing and repository authorization serve different purposes. GitHub says the Copilot app can now use an enterprise-provided Copilot license while connecting to repositories through a different GitHub account. This reduces the need to treat one identity as the only entry point for both activities.",
+        "A PRACTICAL DEVELOPER SCENARIO: A developer may receive Copilot access through an employer while working with repositories managed by another account. The new option can make that arrangement easier to configure. It does not override an employer's restrictions on personal accounts, external repositories or handling company code.",
+        "WHAT ACCOUNT SEPARATION DOES NOT MEAN: Using different accounts does not automatically isolate model requests, telemetry or data storage. Data handling still depends on the Copilot plan, administrative settings and features in use. Teams should distinguish which identity pays for Copilot from which identity authorizes repository operations.",
+        "QUESTIONS FOR ENTERPRISE ADMINISTRATORS: Review license assignment, identity verification, repository permissions, auditability and offboarding. Multiple identities may improve flexibility but can complicate investigations into which user accessed a particular repository. Existing single sign-on and internal access policies remain relevant.",
+        "LOCAL SANDBOXING REACHES GENERAL AVAILABILITY: GitHub says local sandboxing is generally available in Copilot CLI, the Copilot app and VS Code sessions using Agent Host, with no additional Copilot charge. The feature is intended to constrain agents' access to files, networks and credentials. Actual protection depends on the environment and configuration.",
+        "DISCOVERING LOCAL MODELS THROUGH OLLAMA: Copilot CLI users can use the /model command to discover supported models from a running local Ollama instance alongside configured and cloud models. Local inference does not necessarily make authentication or other parts of the workflow fully offline. Teams should benchmark speed and code quality on representative tasks.",
+        "MANAGING AGENT SESSIONS IN VS CODE 1.141: The Agents window can display sessions side by side, helping developers compare results or follow concurrent tasks. An Open worktree cleanup action in chat shows disk space used by inactive session worktrees and helps remove them. Parallel work increases the need to track which files and branches belong to each task.",
+        "CLAUDE HAIKU 5.5 AVAILABILITY: The weekly summary lists Claude Haiku 5.5 for Copilot Pro, Pro+, Max, Business and Enterprise users. Faster lightweight models can suit frequent short edits, while broader architectural changes may need different capabilities. Accuracy, latency, cost and organizational policies should guide model choice.",
+        "HOW TO VALIDATE THE NEW ACCOUNT OPTION: Check the Copilot app's account settings, identify the license-bearing and repository-access identities, and test permissions against a non-sensitive repository. Organizations should confirm administrator approval, audit visibility and revocation procedures before using the setup for production work.",
+        "THE BIGGER PICTURE: These changes focus on the operating environment around AI-assisted coding: identity management, execution boundaries, local model choice and concurrent agent workflows. The value is not merely more automation, but better visibility and control over how that automation is used."
+      ]
+    }
   }
 ]
