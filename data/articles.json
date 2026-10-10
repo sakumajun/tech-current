@@ -18,6 +18,22 @@
       "提供について、OpenAIは10月7日からChatGPT Plus、Pro、Business、Enterprise向けに世界展開を開始し、翌8日からFreeとGoにも対象を広げると発表しました。Enterpriseでは管理者の設定によって利用可否が変わる場合があります。今回の変更対象はChatGPTのチャット体験で、WorkやCodexのモデルを切り替える発表ではありません。",
       "デザインや業務ツールの観点でも注目されます。従来はユーザーが固定されたアプリの画面に合わせて操作していましたが、Intelligent UIは質問や目的に応じて画面そのものを組み立てる方向を示しています。一方、生成されたUIのわかりやすさや正確性は利用場面ごとに検証が必要であり、OpenAIも設計判断の改善を続けるとしています。",
       "TECH CURRENTでは、今後もAIモデルの性能だけでなく、実際の仕事や生活でどのように使えるようになるのかという視点から、新しいユーザー体験を追っていきます。"
-    ]
+    ],
+    "en": {
+      "title": "OpenAI Introduces GPT-6 Intelligent UI: ChatGPT Answers Become Interactive",
+      "description": "OpenAI introduced Intelligent UI for GPT-6 on October 7, 2026, bringing interactive charts, controls and tools into ChatGPT conversations.",
+      "category": "Generative AI",
+      "sourceName": "OpenAI official announcement (October 7, 2026)",
+      "body": [
+        "On October 7, 2026, OpenAI introduced Intelligent UI, a new ChatGPT experience powered by GPT-6. Instead of relying exclusively on text responses, ChatGPT can incorporate charts, buttons, forms and interactive tools directly into conversations.",
+        "The central idea is to adapt the format of an answer to the user's task. Comparisons can appear side by side, explanations can include interactive diagrams, and calculations can use tools with adjustable inputs. Straightforward questions can still receive ordinary text answers.",
+        "OpenAI's examples include viewing travel routes on maps, organizing cooking steps on timelines and estimating savings with an in-chat calculator. The goal is to make information actionable without requiring users to switch to another app.",
+        "Technically, the approach combines a library of user-interface components with a system that progressively displays generated content. Users can begin interacting with parts of a response before the entire answer has finished rendering.",
+        "OpenAI also reports improvements in how quickly GPT-6 begins responding. In its internal evaluation of questions requiring web search, GPT-6 Instant started responses an average of 44% faster than GPT-5.6 Instant. This is a company-reported result and should not be taken as a guarantee for every use case.",
+        "According to OpenAI, the rollout began on October 7 for ChatGPT Plus, Pro, Business and Enterprise users worldwide, expanding to Free and Go users the following day. Enterprise availability may depend on administrator settings. The announcement concerns the ChatGPT conversation experience rather than changes to models used in Work or Codex.",
+        "From a product-design perspective, Intelligent UI suggests a shift from fixed application screens toward interfaces assembled around a user's immediate question or goal. The usability and accuracy of generated interfaces will still need to be evaluated in real-world contexts.",
+        "TECH CURRENT will continue to follow how advances in AI affect the experiences people actually have at work and in everyday life, not just benchmark performance."
+      ]
+    }
   }
 ]
