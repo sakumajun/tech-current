@@ -35,5 +35,104 @@
         "TECH CURRENT will continue to follow how advances in AI affect the experiences people actually have at work and in everyday life, not just benchmark performance."
       ]
     }
+  },
+  {
+    "articleId": "TC-0002",
+    "slug": "google-embeddinggemma-2-multimodal-on-device-search",
+    "title": "Google「EmbeddingGemma 2」発表｜画像・音声も横断検索する軽量AIの仕組み",
+    "description": "Googleが2026年10月6日に発表したEmbeddingGemma 2を解説。テキスト、画像、動画、音声を共通のベクトル空間で扱う軽量モデルの特徴と端末内AIへの可能性を紹介。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T14:00:00+09:00",
+    "sourceName": "Google Developers Blog（2026年10月6日）",
+    "sourceUrl": "https://developers.googleblog.com/embeddinggemma-2-the-developer-guide/",
+    "status": "published",
+    "body": [
+      "Googleは2026年10月6日、テキストやコードに加えて画像、動画、音声を横断的に検索できる埋め込みモデル「EmbeddingGemma 2」を開発者向けに紹介しました。異なる形式のデータを共通の数値表現に変換することで、キーワードの一致だけに頼らない検索を可能にします。",
+      "埋め込み（embedding）とは、文章や画像などの意味的な特徴を数値の並びで表す技術です。EmbeddingGemma 2では複数の種類のデータを768次元の共通空間に写像します。例えば、文章で説明した場面に近い写真や動画を探すといった、形式をまたぐ検索への応用が考えられます。",
+      "Googleの開発者向け説明によると、モデルはGemma 4を基盤とし、Apache 2.0ライセンスで公開されています。テキストとコードのみを扱う構成は約2億7,000万パラメータ、すべてのモダリティを扱う構成は約7億4,000万パラメータで、必要なエンコーダーだけを読み込めるモジュール構成が特徴です。",
+      "端末上での利用も重要な狙いです。Google AI Edgeチームは、Pixel 11 Proでの動作例として、テキストのみの重みで約191MB、全モダリティで約567MBのアクティブRAMを使用すると説明しています。これは特定条件での実測例であり、あらゆる端末で同じメモリ使用量になるわけではありません。",
+      "用途としては、写真・音声・文書をまとめて検索するローカルライブラリ、社内資料の意味検索、検索拡張生成（RAG）の検索部分などが挙げられます。データを端末内で処理できれば、クラウドへの送信を減らせる可能性がありますが、実際のプライバシー保護はアプリ全体の設計にも左右されます。",
+      "EmbeddingGemma 2は会話を生成する汎用チャットAIではなく、情報を検索・照合しやすい形に変換するモデルです。生成AIの活用が広がるほど、必要な情報を正確に見つける基盤技術として、こうした小型のマルチモーダルモデルの重要性が高まりそうです。"
+    ],
+    "en": {
+      "title": "Google Unveils EmbeddingGemma 2 for Lightweight Multimodal Search",
+      "description": "A look at Google's EmbeddingGemma 2, a compact model that embeds text, code, images, video and audio for local search and retrieval.",
+      "category": "Generative AI",
+      "sourceName": "Google Developers Blog (October 6, 2026)",
+      "body": [
+        "On October 6, 2026, Google introduced EmbeddingGemma 2 to developers as a compact embedding model that supports search across text, code, images, video and audio. Rather than matching only keywords, it converts different kinds of content into numerical representations that can be compared by meaning.",
+        "An embedding represents the semantic characteristics of content as a vector. EmbeddingGemma 2 maps multiple modalities into a shared 768-dimensional space. This can support use cases such as finding images or video clips that match a natural-language description.",
+        "According to Google's developer guide, the model is based on Gemma 4 and released under the Apache 2.0 license. Its modular architecture ranges from roughly 270 million parameters for text and code to 740 million for all supported modalities, allowing developers to load the encoders they need.",
+        "On-device deployment is another focus. Google's AI Edge team reports example active-memory figures on a Pixel 11 Pro of approximately 191MB for text-only weights and 567MB for the full multimodal model. These figures describe specific test conditions rather than guaranteed requirements for every device.",
+        "Potential applications include searching local photo, audio and document collections, semantic enterprise search and retrieval for retrieval-augmented generation. Local processing may reduce the need to send data to cloud services, although privacy still depends on the overall application design.",
+        "EmbeddingGemma 2 is not a general-purpose conversational model. It is a retrieval building block that helps software find and compare relevant information. As AI applications expand beyond text, compact multimodal retrieval models could become an increasingly useful part of the stack."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0003",
+    "slug": "google-gemini-4-argon-coding-enterprise-cybersecurity",
+    "title": "Google「Gemini 4 Argon」発表｜コーディング・企業業務・サイバー防御に注力",
+    "description": "Googleが2026年9月30日に発表したGemini 4 Argonの特徴を解説。長時間の推論、開発・法務・財務・サイバー防御での活用と段階的な提供方針を整理。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T14:05:00+09:00",
+    "sourceName": "Google公式ブログ（2026年9月30日）",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月30日、新たなAIモデル「Gemini 4 Argon」を発表しました。複雑な課題に対して長時間にわたり推論を続ける設計を掲げ、ソフトウェア開発、法務・財務などの企業業務、サイバーセキュリティ防御を重点領域に位置付けています。",
+      "特徴の一つは、単発の質問への回答だけでなく、複数の工程をまたぐ作業への対応です。大規模なコードベースの変更や、資料を横断した調査のように、途中の判断と検証を積み重ねる業務での利用を想定しています。",
+      "Googleは社内での活用例として、C/C++のコードをRustへ移行する取り組みを紹介しています。動画デコードライブラリlibgav1の移植・最適化では、同社によると既存のRust移植版に対して2.7倍の処理速度を実現した例があるとしています。ただし、特定の事例での結果であり、一般的な性能向上率を示すものではありません。",
+      "サイバーセキュリティでは、脆弱性の発見や修正など防御目的の作業を重視しています。一方で高性能モデルの悪用リスクにも配慮し、GoogleはFairwind Programを通じて信頼できるサイバー防御関係者に段階的に提供すると説明しています。",
+      "発表時点で一般ユーザーへの全面提供が始まったわけではありません。Googleは安全対策を検証しながら開発者、企業、消費者へアクセスを拡大する方針です。導入価格として100万入力トークンあたり2ドル、100万出力トークンあたり10ドルを案内していますが、実際の利用可能時期や条件は今後の提供状況を確認する必要があります。",
+      "企業が注目すべきなのはモデルの性能指標だけではありません。長い工程をAIに任せるほど、権限管理、成果物の検証、機密情報の扱い、人による承認が重要になります。Gemini 4 Argonは、高度なAIを実業務に組み込む際の可能性と統制の両方を考える材料になりそうです。"
+    ],
+    "en": {
+      "title": "Google Announces Gemini 4 Argon for Coding, Enterprise Work and Cyber Defense",
+      "description": "Google's Gemini 4 Argon targets long-horizon reasoning in software engineering, enterprise workflows and defensive cybersecurity, with a phased rollout.",
+      "category": "Generative AI",
+      "sourceName": "Google Official Blog (September 30, 2026)",
+      "body": [
+        "Google announced Gemini 4 Argon on September 30, 2026. The new model is designed to sustain reasoning across complex, long-running tasks, with an emphasis on software engineering, enterprise knowledge work in areas such as legal and finance, and defensive cybersecurity.",
+        "Rather than focusing only on answering individual prompts, Google describes workflows that require a sequence of decisions, actions and checks. Examples include large codebase changes and research tasks spanning multiple sources and steps.",
+        "Google highlighted internal work to migrate C and C++ code to Rust. In one optimization example involving the libgav1 video decoder, the company reports a result 2.7 times faster than an existing Rust port. That is a specific company-reported case, not a universal performance improvement.",
+        "Cyber defense is a major focus, including identifying and patching vulnerabilities. Given the potential risks of advanced capabilities, Google says it is initially rolling out Argon to trusted cyber defenders through its Fairwind Program.",
+        "The announcement did not mark unrestricted public availability. Google plans to expand access to developers, businesses and consumers as safeguards are evaluated. It announced introductory pricing of $2 per million input tokens and $10 per million output tokens, while practical availability and terms will depend on the rollout.",
+        "For organizations, the implications extend beyond model benchmarks. As AI handles longer workflows, access controls, output verification, confidential-data handling and human approval become increasingly important. Gemini 4 Argon highlights both the opportunities and governance challenges of deploying advanced AI at work."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0004",
+    "slug": "github-reviewbench-ai-code-review-benchmark",
+    "title": "GitHub「ReviewBench」公開｜AIコードレビューの実力をどう測る？",
+    "description": "GitHubが2026年10月5日に公開したReviewBenchを解説。実際のプルリクエストに基づく評価データと、AIコードレビューの検出力・誤検出の測り方を紹介。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T14:10:00+09:00",
+    "sourceName": "The GitHub Blog（2026年10月5日）",
+    "sourceUrl": "https://github.blog/ai-and-ml/reviewbench-an-open-benchmark-for-ai-code-review/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月5日、AIによるコードレビューの品質を評価するオープンなベンチマーク「ReviewBench」を発表しました。AIがプルリクエストの問題を見つける能力を、開発現場に近い条件で比較できるようにする取り組みです。",
+      "コードレビューAIの評価が難しい理由は、単に指摘数が多ければ良いわけではない点にあります。重要な不具合を見逃さないことに加え、問題のないコードに大量の誤った指摘を出さないことも、開発チームの生産性に直結します。",
+      "ReviewBenchは、GitHub上の1億件を超える実際のプルリクエストの傾向を参考に、言語、リポジトリ規模、変更規模などの分布を反映するよう設計されています。代表性のある題材を使うことで、限られたテスト問題だけに最適化された評価からの脱却を目指しています。",
+      "正解データの作成には複数の情報源を組み合わせ、統一された評価基準を用います。GitHubによると、シニアエンジニアによる独立した検証も実施しています。評価では検出した問題の重要度や分類に加え、見逃しと誤検出のバランスを確認できることが重視されています。",
+      "GitHubは、ReviewBenchを使うことでCopilot code reviewのオフライン評価が実際の製品実験の方向性をより適切に予測できるようになったと説明しています。ただし、特定のAIレビュー製品が常に最良であると証明するものではありません。",
+      "開発チームがAIレビューを導入する際は、ベンチマークの総合点だけでなく、自社の言語、変更規模、セキュリティ要件に近い条件での結果を見ることが重要です。ReviewBenchは、AIによるレビューを『便利そう』という印象から、検証可能な品質指標で評価する方向への一歩といえます。"
+    ],
+    "en": {
+      "title": "GitHub Releases ReviewBench to Measure AI Code Review Quality",
+      "description": "GitHub's ReviewBench evaluates AI code reviewers using representative pull requests, multi-source ground truth and metrics aligned with real development workflows.",
+      "category": "AI Tools",
+      "sourceName": "The GitHub Blog (October 5, 2026)",
+      "body": [
+        "On October 5, 2026, GitHub announced ReviewBench, an open benchmark for evaluating AI code review agents. Its goal is to compare how effectively automated reviewers identify issues in pull requests under conditions that resemble real development work.",
+        "Assessing code review quality is not as simple as counting comments. A useful reviewer must catch meaningful defects without overwhelming developers with false positives. Both missed issues and unnecessary alerts affect the team's workflow.",
+        "ReviewBench is designed around the distributions of programming languages, repository sizes and pull request sizes observed across more than 100 million real GitHub pull requests. This representative approach aims to reduce the gap between narrow test sets and production use.",
+        "The benchmark combines multiple sources of ground truth with a consistent evaluation rubric. GitHub says senior engineers independently validated its methodology. It emphasizes breakdowns by severity and issue category, as well as tradeoffs between precision and recall.",
+        "GitHub reports that ReviewBench has improved the ability of its offline Copilot code review evaluations to anticipate the direction of production experiments. This does not establish that any single AI reviewer will be the best choice in every setting.",
+        "For engineering teams considering automated review, the most relevant results may be those matching their own languages, change sizes and security requirements. ReviewBench represents a move toward measuring AI review tools by reproducible quality signals rather than impressions alone."
+      ]
+    }
   }
 ]
