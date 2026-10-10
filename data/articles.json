@@ -3798,5 +3798,335 @@
         "THE BROADER SIGNIFICANCE: Fast AI adoption can push organizations to prioritize features and productivity over consequences. ISO/IEC 42005:2025 offers a structured way to turn responsible AI principles into documented, repeatable decisions about benefits, harms and safeguards."
       ]
     }
+  },
+  {
+    "articleId": "TC-0073",
+    "slug": "gemini-code-assist-subscription-sales-end-antigravity",
+    "title": "Gemini Code Assistの新規販売が終了｜既存契約の更新期限とAntigravityへの移行を解説",
+    "description": "Googleは2026年10月9日からGemini Code Assist StandardとEnterpriseの新規販売を終了。既存契約の更新期限とAntigravityへの移行を整理します。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "Google Cloud",
+    "sourceUrl": "https://docs.cloud.google.com/gemini/docs/codeassist/sunset",
+    "status": "published",
+    "body": [
+      "Googleは2026年10月9日、Gemini Code Assist StandardとEnterpriseの新規サブスクリプション販売を終了しました。すでに契約している利用者のサービスが同日停止するわけではなく、契約終了までサポートされます。企業の開発チームにとっては、更新期限と代替製品の確認が必要です。",
+      "【既存契約の期限】追加ライセンスを購入できるのは2027年1月31日までです。年額契約の自動更新も同日までで、月額契約は2027年12月31日まで自動更新が可能です。契約種別によって移行準備の期限が異なる点に注意が必要です。",
+      "【代替はAntigravity】GoogleはAI開発支援の代替としてAntigravityを案内しています。対象となるGemini Enterpriseの契約で利用できる開発支援環境で、IDE拡張やCLIの選択肢があります。従来のCode Assistと同じ機能・契約条件がそのまま引き継がれると考えず、公式の対応表を確認する必要があります。",
+      "【移行で確認する項目】管理者は利用者数、契約期間、IDE、CLI、権限設定、社内ポリシーを棚卸しします。試験利用ではコード補完、チャット、エージェント操作、ログ管理、費用を比較し、業務が止まらない移行時期を決めます。",
+      "【個人向け製品との違い】今回の発表はStandardとEnterpriseのサブスクリプションに関するものです。個人向けGemini Code AssistやGemini CLIについては別の移行案内が存在します。製品名が似ていても、利用プランごとに適用条件を区別することが重要です。",
+      "【今後の見通し】AI開発支援は補完機能から複数エージェントによる作業実行へ重点が移っています。企業は製品変更を単なる契約更新ではなく、開発フローとガバナンスを見直す機会として捉えられます。"
+    ],
+    "en": {
+      "title": "Gemini Code Assist Sales End: Renewal Deadlines and Antigravity Migration",
+      "description": "Googleは2026年10月9日からGemini Code Assist StandardとEnterpriseの新規販売を終了。既存契約の更新期限とAntigravityへの移行を整理します。",
+      "category": "AI Tools",
+      "sourceName": "Google Cloud",
+      "body": [
+        "Google ended sales of new Gemini Code Assist Standard and Enterprise subscriptions on October 9, 2026. Existing subscriptions remain supported through their contractual terms; the announcement does not mean an immediate shutdown.",
+        "Existing customers can add licenses through January 31, 2027. Annual auto-renewal also ends on that date, while monthly subscriptions can auto-renew through December 31, 2027. Organizations should check which contract type applies.",
+        "Google recommends Antigravity as the alternative agentic development environment, available through eligible Gemini Enterprise subscriptions. Administrators should confirm licensing, IDE compatibility, CLI support and security controls rather than assuming a one-to-one replacement.",
+        "A practical migration begins with an inventory of users and workflows. Test code completion, agent tasks, permissions, auditability and costs before changing production development environments.",
+        "These dates concern the specified Standard and Enterprise subscriptions. Individual products and earlier Gemini CLI changes have separate guidance.",
+        "The transition illustrates how developer AI products are moving from assistance inside an editor toward more coordinated agent workflows."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0074",
+    "slug": "anthropic-cyber-mission-critical-infrastructure-oss-scanner",
+    "title": "Anthropicが「Cyber Mission」を始動｜重要インフラ防御とOSSの無料脆弱性検査",
+    "description": "Anthropicは電力・水道・交通などの重要インフラ防御と、オープンソース向け無料セキュリティ検査の取り組みを発表しました。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/anthropic-cyber-mission",
+    "status": "published",
+    "body": [
+      "Anthropicは2026年10月8日、重要インフラとオープンソースソフトウェアの安全性向上を目指す「Anthropic Cyber Mission」を発表しました。AIモデルを防御側の専門家に提供し、脆弱性の発見と修正を支援する長期的な取り組みです。",
+      "【重要インフラを対象に】Critical Infrastructure Defense Programは電力網、水道、交通、政府システムなどを支える運用技術の防御を想定しています。工場や設備制御のシステムは停止して更新しにくく、古いソフトウェアが長く使われることもあります。",
+      "【OSS Scannerを開始】もう一つの柱は、重要なオープンソースプロジェクト向けの無料スキャンです。多くの製品が共通のライブラリに依存しているため、一つの欠陥が幅広いサービスへ影響する可能性があります。維持管理者が問題を発見し、修正を検討するための支援を提供します。",
+      "【AIは防御担当者の補助】AIが発見した問題は必ず正しいとは限りません。脆弱性の再現性、実際の影響、修正による設備停止の危険性を、専門家が判断する必要があります。重要インフラでは安全な運転を最優先することが不可欠です。",
+      "【提供範囲と今後】Anthropicは協力先を増やし、取り組みで得られた知見を共有する方針です。すべての組織が直ちに無条件で利用できるサービスではなく、参加条件や対象分野は公式案内の確認が必要です。",
+      "【社会的な意味】AIの能力向上が攻撃と防御の双方に影響する中で、防御側へ先端技術を届ける試みです。長期的な成果は、検出数だけでなく実際の修正と被害低減で測る必要があります。"
+    ],
+    "en": {
+      "title": "Anthropic Launches Cyber Mission for Critical Infrastructure and Open Source",
+      "description": "Anthropicは電力・水道・交通などの重要インフラ防御と、オープンソース向け無料セキュリティ検査の取り組みを発表しました。",
+      "category": "Technology",
+      "sourceName": "Anthropic",
+      "body": [
+        "Anthropic launched the Cyber Mission on October 8, 2026, to strengthen defenses for critical infrastructure and open-source software. It combines frontier AI models with engineering support and security research.",
+        "The Critical Infrastructure Defense Program focuses on operational technology used by power grids, water utilities, transport and government systems. Many such systems cannot be easily taken offline for patching, making risk management unusually difficult.",
+        "OSS Scanner offers qualifying open-source maintainers free recurring security scans. Shared software components can affect many downstream products, so helping maintainers identify and remediate issues can have broad benefits.",
+        "AI-generated findings require expert verification. In industrial environments, an unsafe patch or unnecessary shutdown can create consequences of its own.",
+        "Anthropic plans to expand participation and share lessons over time. Eligibility and service scope should be checked against official program information.",
+        "The meaningful outcome will be fewer exploitable weaknesses and more resilient systems, not simply a larger count of automated findings."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0075",
+    "slug": "openai-false-front-ai-influence-operations-report",
+    "title": "OpenAIがAIを使った偽装情報工作を報告｜架空記者の記事がニュース媒体へ",
+    "description": "OpenAIはロシアとイランに関連する偽装情報工作を調査。AIで作成した記事や架空の記者プロフィールを利用する手口を解説します。",
+    "category": "ニュース",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/disrupting-ai-enabled-false-front-operations/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年10月8日、ロシアとイランに関連する二つの偽装情報工作を調査し、関連する利用を停止したと報告しました。AIで文章を作るだけでなく、実在する報道機関や研究組織のように見せかけ、情報の発信者を隠す手口が確認されています。",
+      "【架空の記者を利用】イラン関連の工作では、七つの架空の記者プロフィールが使われました。SNSや投稿サイトで経歴を補強し、オンライン媒体に長文記事を売り込む仕組みです。OpenAIは関連する筆名で公開された約100本の記事を、十数の媒体にわたって確認したと説明しています。",
+      "【別の偽装組織】ロシア関連の活動では、中南米の人々を関与させたシンクタンク風の組織や、偽の流出文書、音声用の原稿などが利用されました。内部向け報告書の作成にもAIが使われていたとされています。",
+      "【従来の手口をAIで効率化】報告は、AIによって全く新しい種類の情報工作が生まれたというより、以前から存在する偽装や拡散の作業が効率化された点を指摘しています。生成文章が自然であることは、その発信元が信頼できる証拠にはなりません。",
+      "【メディア側の確認】寄稿を受け付ける媒体では、筆者の実在性、所属、連絡先、一次資料、利益相反を確認することが重要です。AIの利用自体を一律に疑うのではなく、情報源と検証可能性を重視する必要があります。",
+      "【読者への影響】記事が本物の媒体に掲載されると、SNSで再拡散されて信頼性が高く見える場合があります。複数媒体で同じ情報が掲載されていても、独立した裏付けがあるかを確認する姿勢が求められます。"
+    ],
+    "en": {
+      "title": "OpenAI Reports AI-Assisted False-Front Influence Operations",
+      "description": "OpenAIはロシアとイランに関連する偽装情報工作を調査。AIで作成した記事や架空の記者プロフィールを利用する手口を解説します。",
+      "category": "News",
+      "sourceName": "OpenAI",
+      "body": [
+        "OpenAI reported on October 8, 2026 that it had disrupted two AI-assisted false-front influence operations associated with Russia and Iran. The campaigns concealed their origins through apparently legitimate media and organizational identities.",
+        "The Iranian-linked operation used seven fabricated journalist personas to pitch articles to online publications. OpenAI identified almost 100 published articles under related bylines across more than a dozen outlets.",
+        "The Russian-linked operation involved a think-tank-style organization in Latin America as well as fabricated leaked documents and audio scripts. AI also helped prepare internal reporting.",
+        "OpenAI's central observation is that these operations resembled older influence campaigns but used AI to make established workflows easier and faster.",
+        "Publishers can reduce exposure by verifying contributors, checking source material, examining conflicts of interest and requiring independently corroborated evidence.",
+        "Readers should not assume that publication by multiple outlets establishes independence. A single misleading narrative can be repeated across many channels."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0076",
+    "slug": "google-data-agent-kit-ga-mcp-coding-agents",
+    "title": "Google「Data Agent Kit」が一般提供｜AI開発ツールからクラウドデータを操作",
+    "description": "Google CloudのData Agent Kitが一般提供。MCPを通じて15以上のデータサービスをコーディングエージェントへ接続する仕組みを解説します。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "Google Cloud",
+    "sourceUrl": "https://cloud.google.com/blog/products/data-analytics/whats-new-with-google-data-cloud",
+    "status": "published",
+    "body": [
+      "Google Cloudは2026年10月9日の製品週報で、Data Agent Kitの一般提供を案内しました。Model Context Protocol（MCP）を用い、15以上のGoogle Data CloudサービスをAIコーディングエージェントと接続するツール群です。",
+      "【対応する開発環境】VS Code、Antigravity、Cursor、Claude Code、Codexなどの環境から利用できると説明されています。開発者はIDEやCLIで自然言語を使い、データベースの構造を確認したり、SQLを書いたり、データ処理の流れを組み立てたりできます。",
+      "【MCPの役割】MCPはAIモデルが外部ツールを発見し、呼び出すための共通の仕組みです。モデルそのものにデータベースの全機能を覚え込ませるのではなく、必要な操作を明示的なツールとして提供します。",
+      "【導入メリット】既存の開発環境からデータ作業へ移れるため、画面の行き来や定型操作を減らせる可能性があります。特にデータ分析とアプリケーション開発を並行するチームにとって、作業の連続性が利点になります。",
+      "【権限と安全性】AIがSQLを生成できても、実行してよい範囲は別途管理する必要があります。読み取りと更新の権限を分け、重要な変更は人が確認するなど、データ保護の仕組みが不可欠です。",
+      "【今後の焦点】導入効果はツール数だけでなく、接続の安定性、エラー処理、アクセス監査、作業の再現性で判断することになります。"
+    ],
+    "en": {
+      "title": "Google Data Agent Kit Goes GA for MCP-Based Coding Agents",
+      "description": "Google CloudのData Agent Kitが一般提供。MCPを通じて15以上のデータサービスをコーディングエージェントへ接続する仕組みを解説します。",
+      "category": "Technology",
+      "sourceName": "Google Cloud",
+      "body": [
+        "Google Cloud announced general availability of Data Agent Kit in its October 9, 2026 product roundup. The toolkit connects more than 15 Google Data Cloud services to coding agents through Model Context Protocol.",
+        "Supported development environments include VS Code, Antigravity, Cursor, Claude Code and Codex. Users can inspect schemas, author queries and work on data pipelines from an IDE or command-line workflow.",
+        "MCP provides a standardized way for agents to discover and invoke tools. The model does not need to embed every database operation in its own weights.",
+        "Keeping data tasks inside a familiar development environment may reduce context switching and repetitive work.",
+        "Organizations must distinguish the ability to generate SQL from permission to execute it. Read and write privileges, approval workflows and audit logs remain essential.",
+        "The practical test is whether these integrations are reliable, observable and secure across real projects."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0077",
+    "slug": "bigquery-data-engineering-agent-tokyo-region-gemini",
+    "title": "BigQueryのデータエンジニアリングAIが東京リージョンに対応｜国内企業への影響",
+    "description": "Google CloudはBigQuery Data Engineering Agentの東京リージョン対応とGemini 3.5 Flashへの対応を案内。導入時の確認点を解説します。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "Google Cloud",
+    "sourceUrl": "https://docs.cloud.google.com/release-notes/",
+    "status": "published",
+    "body": [
+      "Google Cloudは2026年10月のリリース情報で、BigQuery Data Engineering Agentの東京リージョンのエンドポイントへの対応を案内しました。Gemini 3.5 Flashも利用できるようになり、国内のデータ分析基盤でAI支援を検討する企業にとって注目される更新です。",
+      "【データエンジニアリング支援】AIエージェントは、データ処理の構成やSQL作成などを支援するための仕組みです。従来は専門知識が必要だった作業を自然言語で補助できる可能性がありますが、生成した処理の正確性は検証が必要です。",
+      "【東京リージョンの意味】国内エンドポイントが使えることは、ネットワーク構成や利用可能地域を検討する際の選択肢になります。ただしエンドポイントの場所だけで、関連するすべてのデータが日本国内で処理・保存されると断定してはいけません。",
+      "【モデル対応の変化】Gemini 3.5 Flashへの対応は、利用するAIモデルの選択肢を広げます。応答品質、速度、費用の評価は実際のデータ処理タスクを用いて行う必要があります。",
+      "【導入時の確認】利用権限、BigQueryのアクセス制御、監査ログ、機密データの扱い、リージョン制約を確認します。AIが作成したSQLを本番環境へ適用する前に、検証環境で動作を確認することが重要です。",
+      "【企業への示唆】データ処理をAIに支援させる場合、利便性とガバナンスを同時に設計する必要があります。東京リージョンへの対応は、その検討を進める一つの材料になります。"
+    ],
+    "en": {
+      "title": "BigQuery Data Engineering Agent Adds Tokyo Region Support",
+      "description": "Google CloudはBigQuery Data Engineering Agentの東京リージョン対応とGemini 3.5 Flashへの対応を案内。導入時の確認点を解説します。",
+      "category": "Business & DX",
+      "sourceName": "Google Cloud",
+      "body": [
+        "Google Cloud release information in October 2026 describes support for a Tokyo-region endpoint for BigQuery Data Engineering Agent, alongside Gemini 3.5 Flash support.",
+        "The agent can assist data engineering tasks, including query authoring and pipeline-related work. Generated operations still need technical validation.",
+        "A Tokyo endpoint adds a regional option, but it should not be interpreted as proof that every associated data flow remains in Japan. Organizations must examine service-specific data residency documentation.",
+        "Gemini 3.5 Flash support broadens model options. Teams should compare task quality, speed and cost with representative workloads.",
+        "Before deployment, review IAM permissions, BigQuery access controls, audit logging and handling of sensitive data. Test generated SQL in a controlled environment.",
+        "The update is relevant to Japanese enterprises planning AI-assisted data operations, provided governance remains central to adoption."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0078",
+    "slug": "anthropic-claude-usage-policy-2026-update",
+    "title": "Claudeの利用ポリシーが11月12日改定｜自律AIと高リスク用途の条件を明確化",
+    "description": "Anthropicは2026年11月12日適用の利用ポリシー改定を発表。偽装行為、金融・医療、自律的な物理操作の要件を整理します。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/2026-usage-policy-update",
+    "status": "published",
+    "body": [
+      "Anthropicは2026年10月8日、Claudeの利用ポリシーを改定すると発表しました。新しい規定は11月12日に適用される予定です。AIが長時間の作業や外部ツールの操作を担うようになったことを受け、既存の制限をより明確にする内容です。",
+      "【偽装行為を整理】架空アカウントを大量に作る行為や、発信者を隠して情報を拡散する行為を禁止する規定がまとめられました。政治目的だけでなく商業目的の欺瞞的な活動も対象です。",
+      "【高リスク用途】健康、法的権利、金融、生活基盤などに影響する用途では、適格な人間がAIの提案を確認し、必要に応じて変更できることが求められます。影響を受ける本人にAIの利用を知らせることも要件に含まれます。",
+      "【物理的な動作】AIを機械や設備の自律操作に接続する場合には、適格な担当者が監視し、必要に応じて停止できる仕組みが必要です。接続が切れた際にも機器が安全な状態を維持できる設計が求められます。",
+      "【監視と個人情報】本人の同意のない追跡や、法執行の判断をAIへ委ねる使い方についても制限が明確化されました。一方、同意のある不正検知やジャーナリズムなど、許容される用途も区別されています。",
+      "【企業が確認すること】開発部門は11月12日までに利用用途を棚卸しし、承認フロー、監視、停止手段、利用者への説明を確認する必要があります。今回の改定は新たな禁止事項の追加だけでなく、既存ルールの適用範囲の明確化でもあります。"
+    ],
+    "en": {
+      "title": "Claude Usage Policy Update Takes Effect November 12",
+      "description": "Anthropicは2026年11月12日適用の利用ポリシー改定を発表。偽装行為、金融・医療、自律的な物理操作の要件を整理します。",
+      "category": "Business & DX",
+      "sourceName": "Anthropic",
+      "body": [
+        "Anthropic announced an updated Claude Usage Policy on October 8, 2026, with the revised policy taking effect on November 12. The changes clarify how existing restrictions apply to increasingly autonomous AI systems.",
+        "Rules on deceptive campaigns now explicitly cover fake accounts and concealed-origin messaging for political or commercial purposes.",
+        "For high-risk uses affecting health, legal rights, finances or essential services, Anthropic requires a qualified human reviewer and notice to the person affected.",
+        "When Claude controls physical hardware capable of causing harm, an operator must be able to observe and stop the equipment, and the equipment must maintain a safe state if disconnected.",
+        "The update clarifies restrictions on non-consensual surveillance and certain law-enforcement decisions while distinguishing permitted uses such as consensual fraud monitoring and journalism.",
+        "Enterprise users should inventory their workflows, document approvals and test emergency stop procedures before the effective date. Much of the revision clarifies existing enforcement rather than introducing wholly new restrictions."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0079",
+    "slug": "anthropic-genesis-mission-150-million-science",
+    "title": "Anthropicが科学研究に1億5,000万ドル拠出｜Genesis MissionでAI活用を拡大",
+    "description": "Anthropicは米国のGenesis Missionに3年間で1億5,000万ドルを拠出。NASAやNIHなど研究機関でClaudeの活用を支援します。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/genesis-mission-commitment",
+    "status": "published",
+    "body": [
+      "Anthropicは2026年10月8日、米国の科学研究を支援するGenesis Missionへ、3年間で1億5,000万ドルを拠出すると発表しました。AIを研究現場へ広げ、科学技術の発見を加速させることが狙いです。",
+      "【支援の対象】NASA、米国立衛生研究所（NIH）、米国科学財団（NSF）など、Genesis Missionに参加する15以上の機関でClaudeを利用しやすくするための支援が予定されています。",
+      "【既存の協力関係】Anthropicは2025年12月に米国エネルギー省との協力を発表しており、今回の拠出はその取り組みを拡大するものです。研究所の科学者がAIを使って情報整理や仮説検討を進める環境を支援します。",
+      "【研究分野への可能性】AIは文献調査、実験データの整理、コード作成、シミュレーションの補助などに活用できます。ただし、モデルが示した仮説や分析結果は科学的な検証に代わるものではありません。",
+      "【評価すべき成果】資金提供の規模だけで研究成果を判断することはできません。実際にどの機関が利用し、どのような研究時間の短縮や発見につながったかを継続して見る必要があります。",
+      "【今後の焦点】AI企業が研究機関へ計算能力と専門支援を提供する動きは、科学研究の進め方に影響を与える可能性があります。同時に、研究データの機密性や再現性の確保も重要になります。"
+    ],
+    "en": {
+      "title": "Anthropic Commits $150 Million to US Scientific Research",
+      "description": "Anthropicは米国のGenesis Missionに3年間で1億5,000万ドルを拠出。NASAやNIHなど研究機関でClaudeの活用を支援します。",
+      "category": "Technology",
+      "sourceName": "Anthropic",
+      "body": [
+        "Anthropic announced on October 8, 2026 that it would commit $150 million over three years to the US Genesis Mission, an initiative intended to accelerate scientific discovery with AI.",
+        "The funding is aimed at expanding access to Claude across more than 15 participating agencies, including NASA, the National Institutes of Health and the National Science Foundation.",
+        "The commitment builds on Anthropic's earlier collaboration with the US Department of Energy and national laboratories announced in December 2025.",
+        "AI may help scientists review literature, organize data, write analysis code and explore hypotheses. Its outputs still require independent scientific validation.",
+        "The size of the commitment is not itself evidence of faster discoveries. Meaningful evaluation will require information about actual use and measurable research outcomes.",
+        "AI support for research also raises questions about reproducibility, data confidentiality and equitable access to advanced tools."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0080",
+    "slug": "openai-chatgpt-teens-college-planner-coming",
+    "title": "ChatGPTに10代向け「College Planner」登場予定｜進学準備をAIで支援",
+    "description": "OpenAIはChatGPT for Teens向けCollege Plannerを発表。大学進学の準備や締切管理を支援する予定の機能を解説します。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/teens-learn-and-plan/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年10月7日、10代向けChatGPTに大学進学準備を支援する「College Planner」を追加する計画を発表しました。米国の進学準備を主な対象とする予定の機能であり、すべての利用者に提供済みという意味ではありません。",
+      "【何を支援するか】大学への出願に必要な条件、締切、準備する作業、学費援助などの情報を整理し、進学までの計画を立てることを想定しています。複数の情報源を確認する負担を減らすことが狙いです。",
+      "【10代向けの体験】ChatGPT for Teensは、18歳未満と判定されたアカウントに適用される専用の体験です。OpenAIは学習用のフラッシュカードやクイズなども紹介し、教育支援を拡充する方針を示しました。",
+      "【情報の確認は不可欠】大学の募集要項、奨学金、出願期限は変更されることがあります。AIが作成した計画は便利でも、最終的には学校や大学の公式情報で確認する必要があります。",
+      "【保護者と教育者の役割】進学先や費用に関する重要な判断をAIだけに委ねるべきではありません。生徒の希望、家庭の事情、学校の助言を組み合わせて利用することが望まれます。",
+      "【日本の利用者への注意】今回の発表は米国の大学進学準備を中心とするため、日本の入試制度へそのまま当てはめることはできません。提供地域や機能の詳細は今後の公式案内を確認する必要があります。"
+    ],
+    "en": {
+      "title": "OpenAI Plans College Planner for ChatGPT for Teens",
+      "description": "OpenAIはChatGPT for Teens向けCollege Plannerを発表。大学進学の準備や締切管理を支援する予定の機能を解説します。",
+      "category": "AI Tools",
+      "sourceName": "OpenAI",
+      "body": [
+        "OpenAI announced College Planner for ChatGPT for Teens on October 7, 2026. The feature is planned to help teenagers prepare for college, primarily in the United States. It should not be described as already available to everyone.",
+        "College Planner is intended to organize application requirements, deadlines, tasks and financial-aid information into a more manageable preparation process.",
+        "The announcement is part of a broader effort around ChatGPT for Teens, which provides an age-appropriate experience for accounts identified as belonging to users under 18. OpenAI also highlighted study tools such as flashcards and quizzes.",
+        "Admission requirements and scholarship deadlines can change. Students should verify consequential information with official university and school sources.",
+        "AI planning tools should supplement rather than replace discussion with parents, counselors and educators.",
+        "The initial focus is US college preparation. Users in other countries should not assume the same admissions systems or availability."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0081",
+    "slug": "google-spanner-omni-ga-deploy-anywhere-database",
+    "title": "Google「Spanner Omni」が一般提供｜分散データベースをオンプレミスや他社クラウドでも利用",
+    "description": "Google CloudのSpanner Omniが一般提供。分散SQL・グラフ・ベクトル検索などを複数環境で運用する仕組みと注意点を解説します。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "Google Cloud",
+    "sourceUrl": "https://cloud.google.com/blog/products/data-analytics/whats-new-with-google-data-cloud",
+    "status": "published",
+    "body": [
+      "Google Cloudは2026年10月9日の製品週報で、Spanner Omniの一般提供を発表しました。従来Google Cloud上で提供されてきたSpannerの機能を、オンプレミス、他社クラウド、開発者のPCなどへ広げる取り組みです。",
+      "【複数のデータ形式に対応】Spanner Omniは分散SQL、グラフ、ベクトル、キーバリューなどの処理を一つのデータベース基盤で扱うことを目指しています。AIアプリケーションで必要な構造化データと検索処理を統合しやすくする構成です。",
+      "【設置場所の自由度】Kubernetesや仮想マシンを使い、複数のクラウドや自社データセンターで運用できます。開発者のローカル環境でも試せるため、開発と本番の構成を近づけられる可能性があります。",
+      "【ハイブリッドクラウドへの意味】企業がデータを一か所へ集約できない場合でも、既存の設置環境を維持しながら共通のAPIやクエリの考え方を採用しやすくなります。ただし運用環境による機能差や制約は確認が必要です。",
+      "【運用負担も考える】設置場所の自由度が増える一方、可用性、バックアップ、更新、監視、セキュリティの責任範囲は構成によって変わります。マネージドサービスと同じ運用負担だと考えるべきではありません。",
+      "【導入判断】既存データベースからの移行費用、SQL互換性、性能、障害復旧、運用人員を比較します。複数環境での一貫した開発体験が本当に必要かを見極めることが重要です。"
+    ],
+    "en": {
+      "title": "Google Spanner Omni Goes GA for Deploy-Anywhere Databases",
+      "description": "Google CloudのSpanner Omniが一般提供。分散SQL・グラフ・ベクトル検索などを複数環境で運用する仕組みと注意点を解説します。",
+      "category": "Technology",
+      "sourceName": "Google Cloud",
+      "body": [
+        "Google Cloud announced general availability of Spanner Omni in its October 9, 2026 data-cloud roundup. The product extends Spanner-related capabilities beyond the managed Google Cloud environment.",
+        "Spanner Omni combines distributed SQL with graph, vector and key-value capabilities for applications that need multiple data access patterns.",
+        "Deployment options include on-premises infrastructure, other public clouds using Kubernetes or virtual machines, and local developer environments.",
+        "Organizations with hybrid or multi-cloud requirements may benefit from common APIs and query concepts across environments. Specific capabilities and limitations should be verified for each deployment.",
+        "Flexibility also changes operational responsibilities. Backups, patching, monitoring, availability and security need clear ownership.",
+        "Adoption decisions should consider migration effort, compatibility, performance and recovery requirements rather than assuming every workload needs a deploy-anywhere database."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0082",
+    "slug": "radisson-chatgpt-hotel-discovery-booking-conversion",
+    "title": "RadissonがChatGPTでホテル検索・比較を提供｜予約転換率は自然検索の約1.5倍",
+    "description": "RadissonとAccentureがChatGPTプラグインを開発。ホテル比較から公式予約サイトへの導線と初期の成果を解説します。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-11T07:44:00+09:00",
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/radisson/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年10月7日、Radisson Hotel GroupによるChatGPTプラグインの導入事例を公開しました。RadissonはAccentureと協力し、旅行者が会話を通じてホテルを探し、料金や設備を比較できる体験を提供しています。",
+      "【予約までの流れ】利用者はChatGPT内でホテル候補を地図上に表示し、料金や設備を比較できます。その後、Radissonの公式サイトへ移動して予約を完了します。予約決済までChatGPT内で完結すると説明するのは正確ではありません。",
+      "【初期の成果】OpenAIの事例によると、2026年7〜8月のプラグイン経由の訪問から予約への転換率は、Radissonの自然検索経由と比べて約1.5倍でした。初期の比較であり、すべてのホテルや時期で同じ結果が出るとは限りません。",
+      "【開発期間は6週間】同社はプラグインを6週間で開発・公開したと説明しています。会話で候補を絞り込み、比較した後に公式の予約経路へ進む設計は、既存のECサイトにも参考になります。",
+      "【検索の入口が変わる】従来は検索エンジンから宿泊施設のサイトへ移動していました。AIとの会話が検討の入口になると、ホテル側は検索順位だけでなく、比較に必要な情報の整備や予約導線の使いやすさを重視する必要があります。",
+      "【広告と自然流入を区別】RadissonはChatGPT内の広告も活用しています。広告閲覧と予約の関係を示す数字は、広告が予約を直接引き起こしたことの証明ではありません。利用者体験と成果を評価する際には、流入経路ごとの違いを確認することが重要です。"
+    ],
+    "en": {
+      "title": "Radisson Brings Hotel Discovery to ChatGPT, Reports Higher Conversion",
+      "description": "RadissonとAccentureがChatGPTプラグインを開発。ホテル比較から公式予約サイトへの導線と初期の成果を解説します。",
+      "category": "Business & DX",
+      "sourceName": "OpenAI",
+      "body": [
+        "OpenAI published a Radisson Hotel Group customer story on October 7, 2026. Radisson worked with Accenture to build a ChatGPT plugin that helps travelers discover and compare hotel options through conversation.",
+        "Users can inspect hotels on a map and compare rates and amenities inside ChatGPT. They then continue to Radisson's own website to complete a booking. It would be inaccurate to say checkout takes place entirely inside ChatGPT.",
+        "According to the case study, the plugin's visit-to-booking conversion rate during July and August 2026 was approximately 1.5 times that of Radisson's organic-search traffic. This is an early comparison, not a guarantee for every market or season.",
+        "Radisson says the plugin was built and launched in six weeks. The experience illustrates a conversational discovery path linked to an existing direct-booking channel.",
+        "Travel planning may increasingly begin in an AI conversation rather than a traditional search results page. Hotels may need to make pricing, amenities and booking paths easier for conversational tools to interpret.",
+        "Radisson also uses sponsored placements. Attribution to an ad view does not, by itself, establish that the ad caused a booking. Results should be evaluated by channel and user behavior."
+      ]
+    }
   }
 ]
