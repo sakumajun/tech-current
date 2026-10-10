@@ -1195,5 +1195,237 @@
         "Enterprise administrators may need to enable replacement models depending on their policies. Teams using fixed model names in workflows or documentation should review their settings before the scheduled retirement."
       ]
     }
+  },
+  {
+    "articleId": "TC-0042",
+    "slug": "github-codeql-2272-security-analysis",
+    "title": "GitHub「CodeQL 2.27.2」公開｜C++・Rust・JavaScriptのセキュリティ解析を強化",
+    "description": "GitHubは2026年10月9日、コードの静的解析エンジン「CodeQL 2.27.2」を公開しました。GitHub code scanningの基盤として使われるツールで、今回の更新ではC++、Go、Rust、Jav",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月9日、コードの静的解析エンジン「CodeQL 2.27.2」を公開しました。GitHub code scanningの基盤として使われるツールで、今回の更新ではC++、Go、Rust、JavaScriptなど複数の言語の解析が改善されています。",
+      "C++ではstd::regexのECMAScript形式の正規表現を解析できるようになり、Comdb2のC APIに対するSQLインジェクションのモデルも追加されました。Rustではawaitを使う非同期ブロックのデータフロー解析が改善され、JavaScriptではWorkflow SDKのディレクティブを認識するようになりました。",
+      "CodeQLの標準的なセキュリティクエリ群は多数の弱点分類に対応していますが、解析範囲が広がることはすべての脆弱性が検出できることを意味しません。コードレビューや動的テストと組み合わせる必要があります。",
+      "macOS 27とXcode 27の組み合わせでは、コンパイル言語向けの一部ビルドモードが利用できないという互換性上の注意点も案内されています。更新前にCI環境を確認したいところです。"
+    ],
+    "en": {
+      "title": "CodeQL 2.27.2 Improves Security Analysis Across Languages",
+      "description": "GitHub released CodeQL 2.27.2 on October 9, 2026. The static analysis engine behind GitHub code scanning adds improvements for C++, Go, Rust and JavaScript.",
+      "category": "Technology",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "GitHub released CodeQL 2.27.2 on October 9, 2026. The static analysis engine behind GitHub code scanning adds improvements for C++, Go, Rust and JavaScript.",
+        "For C++, the update adds support for ECMAScript-style regular expressions in std::regex and new SQL injection models. Rust analysis improves data flow through async blocks, while JavaScript analysis recognizes Workflow SDK directives.",
+        "Static analysis can uncover weaknesses, but broader language support does not mean every vulnerability will be detected. Teams should combine CodeQL with review, testing and dependency management.",
+        "GitHub also notes compatibility limitations for certain compiled-language build modes on macOS 27 and Xcode 27. CI environments should be checked before upgrading."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0043",
+    "slug": "github-copilot-code-review-billing-controls",
+    "title": "GitHub Copilotコードレビューの課金先を組織単位に変更可能に｜管理者向け設定",
+    "description": "GitHubは2026年10月8日、Copilot code reviewの課金と利用権限を管理する新しい設定を発表しました。組織の管理者は、メンバー個人のCopilot利用枠を使う代わりに、リポジトリを所有する組織へレ",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月8日、Copilot code reviewの課金と利用権限を管理する新しい設定を発表しました。組織の管理者は、メンバー個人のCopilot利用枠を使う代わりに、リポジトリを所有する組織へレビュー費用を請求できるようになりました。",
+      "標準設定では、レビューの費用はCopilotライセンスを持つメンバー側の利用枠に計上されます。組織課金へ切り替える場合は、組織でAI Creditsの有料利用を有効にする必要があり、必要に応じて予算も設定できます。",
+      "もう一つの変更はレビューを依頼できる利用者の制限です。外部の個人ライセンスでレビューを実行できないよう、組織またはリポジトリの管理者が設定できます。",
+      "AIコードレビューをチーム全体で利用する場合、費用負担と利用権限を別々に設計することが重要です。予算管理だけでなく、誰がどのリポジトリでAIレビューを実行できるかも確認する必要があります。"
+    ],
+    "en": {
+      "title": "GitHub Adds Organization Billing and Access Controls for Copilot Reviews",
+      "description": "On October 8, 2026, GitHub introduced new billing and license controls for Copilot code review. Organization owners can charge reviews to the organization rather than consuming a licensed member's individual qu",
+      "category": "Business & DX",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "On October 8, 2026, GitHub introduced new billing and license controls for Copilot code review. Organization owners can charge reviews to the organization rather than consuming a licensed member's individual quota.",
+        "The default remains member billing. Switching to organization billing requires paid AI Credits usage, and administrators may set a budget.",
+        "Administrators can also restrict review requests to people whose Copilot licenses are provided by the organization or enterprise, preventing external personal licenses from triggering reviews when the policy is enabled.",
+        "For engineering leaders, the update makes AI review costs and permissions more explicit. Organizations should decide who can request reviews and how consumption will be monitored."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0044",
+    "slug": "github-timeline-screen-reader-accessibility",
+    "title": "GitHubの履歴表示がスクリーンリーダー対応を強化｜長い議論をリストで移動",
+    "description": "GitHubは2026年10月8日、IssueやPull Requestの履歴をスクリーンリーダーで読みやすくする改善を公開しました。タイムラインをリストとして認識できるようになり、項目数や現在位置、項目間の移動方法が音",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-08-screen-readers-can-navigate-timelines-as-lists/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月8日、IssueやPull Requestの履歴をスクリーンリーダーで読みやすくする改善を公開しました。タイムラインをリストとして認識できるようになり、項目数や現在位置、項目間の移動方法が音声で伝えられます。",
+      "長い議論の途中で「もっと読み込む」を選択した場合も、追加されたイベントの件数をスクリーンリーダーが通知します。以前は新しい履歴が読み込まれても、読み上げによる通知がありませんでした。",
+      "対象はIssue、Pull Request、コミット、シークレットスキャン警告、ライセンス準拠警告などのタイムラインです。github.comとGitHub Enterprise Server 3.23で利用できます。",
+      "今回の改善は見た目を大きく変えず、支援技術に伝える情報の構造を改善した点が特徴です。アクセシビリティでは画面の視覚的な完成度だけでなく、操作時の状態変化を適切に伝える設計が重要になります。"
+    ],
+    "en": {
+      "title": "GitHub Improves Screen Reader Navigation in Issue Timelines",
+      "description": "On October 8, 2026, GitHub improved the accessibility of issue and pull request timelines. Screen readers can now treat timelines as lists and announce the number of items and the user's position.",
+      "category": "Technology",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "On October 8, 2026, GitHub improved the accessibility of issue and pull request timelines. Screen readers can now treat timelines as lists and announce the number of items and the user's position.",
+        "When users load additional events, assistive technology announces how many items were added. Previously, the content could appear without an audible update.",
+        "The improvement applies to timelines for issues, pull requests, commits, secret scanning alerts and license compliance alerts. It is available on github.com and GitHub Enterprise Server 3.23.",
+        "The visual layout remains largely unchanged. This is an example of accessibility work that improves semantic structure and feedback rather than simply changing appearance."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0045",
+    "slug": "github-copilot-claude-haiku-55",
+    "title": "Claude Haiku 5.5がGitHub Copilotに登場｜高速な開発タスク向けモデル",
+    "description": "GitHubは2026年10月7日、Anthropicの軽量モデル「Claude Haiku 5.5」がGitHub Copilotで一般提供になったと発表しました。サブエージェント、短時間の修正、ターミナル操作など、大",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月7日、Anthropicの軽量モデル「Claude Haiku 5.5」がGitHub Copilotで一般提供になったと発表しました。サブエージェント、短時間の修正、ターミナル操作など、大量の処理を素早く実行する用途を想定しています。",
+      "GitHubによると、初期の評価では多くのコーディング作業でClaude Sonnet 5に匹敵する結果を示しながら、必要なトークンやステップを抑えたとされています。これはGitHubによる評価であり、すべてのタスクで同等の性能を保証するものではありません。",
+      "利用対象はCopilot Pro、Pro+、Max、Business、Enterpriseです。VS Code、Copilot CLI、GitHub.com、モバイルアプリなどでモデル選択が可能になりますが、展開は段階的です。",
+      "企業プランでは管理者がモデルの利用可否を制御できます。モデル選択の際は、回答品質だけでなく、応答速度、料金体系、組織の利用ポリシーを合わせて判断する必要があります。"
+    ],
+    "en": {
+      "title": "Claude Haiku 5.5 Arrives in GitHub Copilot",
+      "description": "On October 7, 2026, GitHub announced general availability of Anthropic's Claude Haiku 5.5 in GitHub Copilot. The lightweight model is intended for fast, high-volume work such as subagents, quick edits and termi",
+      "category": "AI Tools",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "On October 7, 2026, GitHub announced general availability of Anthropic's Claude Haiku 5.5 in GitHub Copilot. The lightweight model is intended for fast, high-volume work such as subagents, quick edits and terminal tasks.",
+        "GitHub says early tests showed results comparable to Claude Sonnet 5 on many coding tasks while using fewer tokens and steps. These are vendor-reported findings, not guarantees for every workload.",
+        "The model is available to Copilot Pro, Pro+, Max, Business and Enterprise customers through supported IDEs, the CLI, github.com and mobile apps, with gradual rollout.",
+        "Business and Enterprise administrators can manage model access through Copilot settings. Teams should consider latency, cost, quality and policy requirements when choosing a model."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0046",
+    "slug": "github-ai-secret-detection-specialized-model",
+    "title": "GitHubが漏洩シークレット検出専用AIを導入｜形式のない認証情報も発見",
+    "description": "GitHubは2026年10月7日、ソースコード内の認証情報を見つけるために調整した専用AIモデルを発表しました。従来の定型的な文字列検出だけでなく、周囲のコードを読み取り、決まった形式を持たないパスワードなども検出対象",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月7日、ソースコード内の認証情報を見つけるために調整した専用AIモデルを発表しました。従来の定型的な文字列検出だけでなく、周囲のコードを読み取り、決まった形式を持たないパスワードなども検出対象にします。",
+      "既存のAI検出アラートを利用する顧客は新モデルへ自動的に移行します。GitHub Secret ProtectionとGitHub Advanced Securityに含まれる既存アラートは、追加料金なしで継続すると案内されています。",
+      "コードのプッシュ時にAIが認証情報を確認する機能はプライベートプレビューです。Copilotのsecurity-reviewコマンドへの対応もプライベートプレビューで提供予定とされ、追加のAI Creditsを消費する仕組みが案内されています。",
+      "AIによる検出は、定型パターンに一致しない秘密情報を見つける補助になります。ただし、誤検知や見逃しがあり得るため、認証情報のローテーション、最小権限、シークレット管理サービスと併用する必要があります。"
+    ],
+    "en": {
+      "title": "GitHub Introduces a Specialized AI Model for Secret Detection",
+      "description": "On October 7, 2026, GitHub announced a purpose-built AI model for detecting exposed credentials in code. The model examines surrounding context to identify secrets such as passwords without recognizable token f",
+      "category": "Technology",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "On October 7, 2026, GitHub announced a purpose-built AI model for detecting exposed credentials in code. The model examines surrounding context to identify secrets such as passwords without recognizable token formats.",
+        "Existing AI-detected alerts are upgraded to the new model and remain included in GitHub Secret Protection and Advanced Security without additional charges.",
+        "AI checks in push protection are in private preview, while Copilot's security-review integration is planned for private preview. GitHub has outlined AI Credits usage for optional checks.",
+        "Context-aware detection may catch credentials that pattern matching misses, but false positives and missed secrets remain possible. Rotation, least privilege and dedicated secret management are still necessary."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0047",
+    "slug": "github-copilot-local-sandbox-general-availability",
+    "title": "GitHub Copilotのローカルサンドボックスが一般提供｜AIエージェントの操作を制限",
+    "description": "GitHubは2026年10月7日、Copilot CLI、Copilotアプリ、VS CodeのAgent Hostセッションでローカルサンドボックス機能を一般提供したと発表しました。AIエージェントが実行するコマンド",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月7日、Copilot CLI、Copilotアプリ、VS CodeのAgent Hostセッションでローカルサンドボックス機能を一般提供したと発表しました。AIエージェントが実行するコマンドを、開発者の端末内で制限された環境に置く仕組みです。",
+      "サンドボックスでは、エージェントが読み書きできるファイル、ネットワークへの接続、GitやGitHub CLIの認証情報へのアクセスなどを制御できます。企業の管理者は、利用者が弱められないポリシーを適用することもできます。",
+      "技術基盤にはMicrosoft eXecution Containerが使われ、Windows、macOS、Linuxの各OSの制御機構を利用します。GitHubはこの機能をCopilotの追加料金なしで提供すると説明しています。",
+      "AIモデルが正しいコードを生成するかという問題と、生成したコマンドが何を操作できるかという問題は別です。サンドボックスは後者に対する対策ですが、権限設計と人による確認は引き続き重要です。"
+    ],
+    "en": {
+      "title": "GitHub Copilot Local Sandboxing Reaches General Availability",
+      "description": "On October 7, 2026, GitHub made local sandboxing generally available in Copilot CLI, the Copilot app and VS Code Agent Host sessions. Agent-run tools and commands can be confined within a local execution bounda",
+      "category": "AI Tools",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "On October 7, 2026, GitHub made local sandboxing generally available in Copilot CLI, the Copilot app and VS Code Agent Host sessions. Agent-run tools and commands can be confined within a local execution boundary.",
+        "Policies can restrict file and directory access, network connections, Git credentials and other system capabilities. Enterprise administrators may enforce settings that developers cannot weaken.",
+        "The feature uses Microsoft eXecution Container to apply native controls across Windows, macOS and Linux. GitHub says local sandboxing is included with Copilot at no extra charge.",
+        "Model behavior and tool permissions are separate concerns. Sandboxing limits what agent-executed commands can access, but it does not remove the need for sound policies and human review."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0048",
+    "slug": "github-copilot-cli-ollama-local-models",
+    "title": "GitHub Copilot CLIでOllamaのローカルモデルを選択可能に｜オフラインとの違い",
+    "description": "GitHubは2026年10月7日、Copilot CLIからローカルのOllamaモデルを見つけて選択できる機能を案内しました。CLIバージョン1.0.94-0以降では、/modelコマンドから稼働中のOllamaの対",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月7日、Copilot CLIからローカルのOllamaモデルを見つけて選択できる機能を案内しました。CLIバージョン1.0.94-0以降では、/modelコマンドから稼働中のOllamaの対応モデルを確認できます。",
+      "一覧からモデルを選択し、提供元や接続先を確認したうえでセッションへ追加できます。Ollama本体やモデルのインストールは別途必要で、選択操作だけでモデルが自動ダウンロードされるわけではありません。",
+      "重要なのは、ローカルモデルの選択とオフラインモードが別の設定だという点です。GitHubは、ローカルモデルを選んでもテレメトリーが自動的に停止するわけではないと説明しています。",
+      "機密性を重視する開発では、モデルの実行場所に加えて、プロンプトやコードがどの接続先へ送信されるかを確認する必要があります。ローカル実行という言葉だけで通信が完全に遮断されると考えないことが大切です。"
+    ],
+    "en": {
+      "title": "GitHub Copilot CLI Can Discover Local Ollama Models",
+      "description": "On October 7, 2026, GitHub announced that Copilot CLI can discover compatible models from a running local Ollama instance through the /model command, starting with CLI version 1.0.94-0.",
+      "category": "AI Tools",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "On October 7, 2026, GitHub announced that Copilot CLI can discover compatible models from a running local Ollama instance through the /model command, starting with CLI version 1.0.94-0.",
+        "Users can review a model's provider and endpoint before adding it to a session. Ollama and the model must already be installed; discovery does not download either one.",
+        "Selecting a local model does not automatically enable offline mode or disable GitHub telemetry. GitHub documents a separate COPILOT_OFFLINE=true setting.",
+        "For sensitive development work, teams should verify where prompts and code context are sent. Running a local model and operating entirely offline are not the same thing."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0049",
+    "slug": "github-stacked-pull-requests-ga",
+    "title": "GitHub「Stacked Pull Requests」一般提供｜大きな変更を小さくレビュー",
+    "description": "GitHubは2026年10月6日、複数のPull Requestを依存関係のあるまとまりとして扱う「Stacked Pull Requests」を一般提供しました。大きな開発変更を小さな単位に分け、個別にレビューしなが",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T19:00:00+09:00",
+    "sourceName": "GitHub Changelog（2026年10月）",
+    "sourceUrl": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年10月6日、複数のPull Requestを依存関係のあるまとまりとして扱う「Stacked Pull Requests」を一般提供しました。大きな開発変更を小さな単位に分け、個別にレビューしながら統合できる機能です。",
+      "GitHubによると、プレビュー期間にStackを使ったリポジトリでは、比較対象よりマージされたコードが9％多かったと報告されています。ただし、この数字は観測された相関であり、機能の利用だけで生産性が必ず9％上がることを示すものではありません。",
+      "今回の更新では、ベースブランチの変更に伴うリベース時の承認維持、署名付きコミットの保持、Stack全体のマージキュー処理などが改善されました。",
+      "複数の変更を一度に確認する負担を減らせる一方、Pull Request間の依存関係を理解しやすく保つ必要があります。GitHub.comの全プランで利用でき、GitHub Enterprise Serverにも今後対応予定です。"
+    ],
+    "en": {
+      "title": "GitHub Stacked Pull Requests Reach General Availability",
+      "description": "On October 6, 2026, GitHub made Stacked Pull Requests generally available. Developers can split a large change into smaller dependent pull requests that are reviewed independently.",
+      "category": "Business & DX",
+      "sourceName": "GitHub Changelog (October 2026)",
+      "body": [
+        "On October 6, 2026, GitHub made Stacked Pull Requests generally available. Developers can split a large change into smaller dependent pull requests that are reviewed independently.",
+        "GitHub reports that repositories using stacks saw 9% more merged code than peers during the preview. This is an observed comparison, not proof that the feature alone causes a 9% productivity gain.",
+        "The general availability release improves approval preservation during rebases, signed replacement commits and merge-queue handling for stacks.",
+        "The approach can make reviews more focused, but teams still need to manage dependencies carefully. The feature is available across github.com plans, with Enterprise Server support planned for a future release."
+      ]
+    }
   }
 ]
