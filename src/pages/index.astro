@@ -4,10 +4,10 @@ const published = articles.filter((a) => a.status === 'published').sort((a,b)=>S
 const lead = published[0];
 const latest = published.slice(0, 6);
 const topics = [
-  { name: '生成AI', label: 'GENERATIVE AI', className: 'ai', desc: '進化する生成AIの現在地' },
-  { name: 'AIツール', label: 'AI TOOLS', className: 'tools', desc: '仕事と暮らしに役立つツール' },
-  { name: 'ビジネス・DX', label: 'BUSINESS & DX', className: 'business', desc: '企業と社会の変化を読む' },
-  { name: 'テクノロジー', label: 'TECHNOLOGY', className: 'tech', desc: '未来をつくる新しい技術' }
+  { name: '生成AI', label: 'GENERATIVE AI', className: 'ai', desc: '進化する生成AIの現在地', slug: 'generative-ai' },
+  { name: 'AIツール', label: 'AI TOOLS', className: 'tools', desc: '仕事と暮らしに役立つツール', slug: 'ai-tools' },
+  { name: 'ビジネス・DX', label: 'BUSINESS & DX', className: 'business', desc: '企業と社会の変化を読む', slug: 'business-dx' },
+  { name: 'テクノロジー', label: 'TECHNOLOGY', className: 'tech', desc: '未来をつくる新しい技術', slug: 'technology' }
 ];
 const categories = ['ニュース','生成AI','AIツール','ビジネス・DX','テクノロジー','解説・ガイド','比較・レビュー'];
 ---
@@ -63,7 +63,7 @@ const categories = ['ニュース','生成AI','AIツール','ビジネス・DX',
       </section>
 
       <section class="topic-grid" id="topics" aria-label="注目カテゴリ">
-        {topics.map(topic => <a class="topic-card" href="#latest">
+        {topics.map(topic => <a class="topic-card" href={`/topics/${topic.slug}/`}>
           <div class={`topic-image ${topic.className}`}><span class="topic-symbol">{topic.className === 'ai' ? '✳' : topic.className === 'tools' ? '◇' : topic.className === 'business' ? '▥' : '⬡'}</span><span class="topic-en">{topic.label}</span></div>
           <div class="topic-text"><strong>{topic.name}</strong><small>{topic.desc}</small></div>
         </a>)}
@@ -86,7 +86,7 @@ const categories = ['ニュース','生成AI','AIツール','ビジネス・DX',
     </main>
     <aside class="right-sidebar">
       <section class="sidebar-panel"><h2>TECH CURRENTについて</h2><div class="about-logo"><span class="mini-mark">▰</span> TECH<span>CURRENT</span></div><p>テクノロジーの今を、読み解く。</p><p>AIやデジタル技術の進化によって、私たちの暮らしや仕事は日々変わっています。TECH CURRENTでは、世界で起きている新しい動きを追いながら、何が変わり、これからどうなっていくのかを、できるだけわかりやすくお伝えします。</p></section>
-      <section class="sidebar-panel"><h2>取り扱うテーマ</h2><div class="side-topics">{topics.map(t=><a href="#topics"><span class={`side-dot ${t.className}`}></span><div><strong>{t.name}</strong><small>{t.desc}</small></div><span>›</span></a>)}</div></section>
+      <section class="sidebar-panel"><h2>取り扱うテーマ</h2><div class="side-topics">{topics.map(t=><a href={`/topics/${t.slug}/`}><span class={`side-dot ${t.className}`}></span><div><strong>{t.name}</strong><small>{t.desc}</small></div><span>›</span></a>)}</div></section>
     </aside>
   </div>
   <footer><div class="footer-inner"><strong>TECH<span>CURRENT</span></strong><p>テクノロジーの今を、読み解く。</p><small>© {new Date().getFullYear()} TECH CURRENT</small></div></footer>
