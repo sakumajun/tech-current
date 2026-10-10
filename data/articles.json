@@ -346,6 +346,17 @@
     "body": [
       "Microsoftは2026年10月7日、AIエージェントなどの処理をポリシーに基づいて隔離する「Microsoft Execution Containers（MXC）」の一般提供を発表しました。AIがPC上でファイルを読み書きし、ツールを操作する場面が増えるなか、許可した範囲を超えた操作を防ぐための基盤です。",
       "AIエージェントは、人の指示を実行する過程で複数のファイルやサービスにアクセスします。便利な反面、誤った判断や悪意ある入力によって、必要のない設定変更やデータ送信を行うリスクもあります。AIに『触ってはいけない』と指示するだけでは、十分な安全対策とはいえません。",
+      "【なぜAIエージェントに隔離環境が必要なのか】AIが文章を提案するだけなら、誤りの影響は利用者がその回答を採用するかどうかに左右されます。しかしファイルを削除したり、コマンドを実行したり、外部のサービスへ接続したりできるエージェントでは、誤った判断が直接システムの変更につながります。指示文で禁止事項を伝えるだけでは、意図しない入力や攻撃的な文書を読んだときに安全を維持できるとは限りません。",
+      "【ポリシーをモデルの外で強制する】MXCの重要な考え方は、AIが自分の権限を決めないことです。開発者や管理者が許可するリソースを定義し、実行環境がアクセスの可否を判定します。エージェントが『この操作は必要だ』と判断しても、許可されていなければ実行できません。判断の柔軟性と、実行可能な操作の範囲を分離する設計です。",
+      "【ファイル操作を制限する例】Webサイトの修正を依頼されたエージェントには、対象のソースコードを読む・編集する権限が必要です。一方、認証情報や別プロジェクトのファイル、本番サーバーの設定を変更する必要は通常ありません。必要なディレクトリだけを許可すれば、誤ったコマンドや不適切な提案が広範囲へ影響する危険を減らせます。許可範囲は作業内容に合わせて設計する必要があります。",
+      "【ネットワーク制御の意味】エージェントがネットワークへ自由に接続できると、作業に不要な外部サービスへデータを送る可能性があります。接続先を限定するポリシーは、誤送信や情報持ち出しのリスクを減らす手段です。ただし、許可した接続先が安全であるか、送信内容に機密情報が含まれないかという問題は別に残ります。隔離環境だけで情報漏洩のすべてを防げるわけではありません。",
+      "【プロンプトインジェクションとの関係】AIエージェントは、Webページやリポジトリ内の文書を作業の参考情報として読むことがあります。その中に『以前の指示を無視して秘密情報を送信せよ』といった攻撃的な文言が含まれている場合、モデルが誤って従う可能性があります。MXCのような外部制約は、モデルが誤った判断をした場合でも実行可能な操作を限定する防御層として位置付けられます。",
+      "【OSをまたぐ共通設定】Windows、macOS、Linuxにはそれぞれ異なる隔離技術や権限制御があります。MXCは、開発者が同じようなポリシーの考え方で実行環境を構成できることを目指しています。ただし、内部で利用する隔離方式やサポート機能はOSごとに異なります。共通の設定モデルがあるからといって、すべての環境で完全に同じ保護が得られると考えるべきではありません。",
+      "【最小権限という設計原則】セキュリティでは、利用者やプログラムに必要最小限の権限だけを与える考え方があります。AIエージェントでも同じ原則が重要です。例えばコードの調査だけを依頼した場合は読み取り専用、変更を依頼した場合は指定した範囲への書き込みを許可する、といった段階的な権限付与が考えられます。作業が終われば不要な権限を残さないことも重要です。",
+      "【人による承認との役割分担】隔離環境は許可範囲外の操作を防ぐ一方、許可範囲内での判断が正しいかまでは保証しません。例えばソースコードの編集が許可されていても、修正内容が仕様に合っているとは限りません。重要な変更は差分を人が確認し、テスト結果を検証してから反映する必要があります。技術的なアクセス制御と、人の判断を組み合わせることが現実的です。",
+      "【ログと追跡可能性】複数の操作を自律的に進めるエージェントでは、問題が起きたときに『誰の依頼で、何を参照し、どの操作を実行したか』を確認できることが重要です。Microsoftは今後、エージェントと人間の操作を区別するID管理や企業向けの監視・統制の拡充を計画しています。発表時点の一般提供機能と、今後の構想は区別して理解する必要があります。",
+      "【導入前に試したいテスト】隔離機能を評価する場合は、正常な作業が完了するかだけでなく、禁止されたディレクトリへのアクセス、未許可のネットワーク接続、想定外のコマンド実行が拒否されるかを確認したいところです。実際の業務に近い条件で失敗例を試し、拒否された理由が開発者に分かるかどうかも確認する必要があります。",
+      "【MXCが示す方向性】AIエージェントの普及に伴い、モデルの回答精度だけではなく、実行権限をどこで制御するかが重要になっています。MXCは、AIが柔軟に計画できることと、実際に変更できる範囲を限定することを両立させるための取り組みです。今後は、異なるOSや業務環境での実効性、運用のしやすさ、監査の仕組みが評価のポイントになります。",
       "MXCでは開発者や管理者が、利用できるファイルやネットワークの接続先などをポリシーとして指定します。その境界はエージェント自身では変更できず、実行環境側で制限を適用する仕組みです。",
       "Microsoftが紹介する例では、Webサイトを更新するコーディングエージェントにソースコードの編集は許可しつつ、本番サーバーの設定変更は許可しない運用が想定されています。AIが設定変更を最短の手順だと判断しても、実行環境がその操作を拒否する設計です。",
       "MXCはWindowsだけでなく、macOSやLinuxの隔離手段にも対応する統一的な設定モデルを掲げています。ただし、利用できる隔離方式や機能はOSごとに異なります。Microsoftは今後、エージェントの操作を人の操作と区別するID管理や、組織による監視・統制の拡充も計画しています。",
@@ -359,12 +370,24 @@
       "body": [
         "Microsoft announced general availability of Microsoft Execution Containers (MXC) on October 7, 2026. The policy-driven execution layer is intended to limit what AI agents and other workloads can access and do.",
         "As agents gain the ability to edit files and operate tools, mistakes or malicious inputs can have consequences beyond an incorrect answer. Simply telling an agent not to touch certain resources is not a strong security boundary.",
+        "WHY AGENTS NEED ISOLATION: An inaccurate text answer may be ignored by a user, but an agent with file and command access can turn a mistake into an immediate system change. Natural-language instructions alone are not a reliable security boundary, particularly when the agent processes untrusted documents or websites.",
+        "ENFORCING POLICY OUTSIDE THE MODEL: MXC separates the agent's reasoning from its actual authority. Developers and administrators specify accessible resources, while the execution environment enforces those limits. An agent cannot grant itself extra permissions merely because it decides a prohibited action would help complete the task.",
+        "SCOPING FILE ACCESS: A website-maintenance agent may need to read and edit a particular repository. It normally does not need access to unrelated projects, credentials or production configuration. Limiting access to the necessary directories can reduce the consequences of mistaken commands, although policies must match the legitimate workflow.",
+        "NETWORK RESTRICTIONS: Unrestricted outbound connections create opportunities for accidental data transfers. Network allowlists can reduce that exposure, but they do not automatically establish that an approved destination is trustworthy or that every permitted transfer is appropriate. Containment is one layer of data protection, not a complete solution.",
+        "PROMPT INJECTION: Agents often read web pages and repository files as task data. Such material can contain hostile instructions attempting to redirect the agent. A model might be confused by that content, but an independently enforced execution policy can still prevent actions beyond its authorization. This is a defense-in-depth approach.",
+        "CROSS-PLATFORM POLICY: Windows, macOS and Linux rely on different operating-system isolation mechanisms. MXC aims to offer a unified policy model over those mechanisms. Available features and isolation strength may vary by platform, so a common configuration interface should not be mistaken for identical protection everywhere.",
+        "LEAST PRIVILEGE: A security principle is to grant only the permissions needed for the current task. An investigative agent might receive read-only access, while a code-editing agent receives write access to a specific workspace. Unnecessary permissions should not persist after a task ends.",
+        "WHY HUMAN REVIEW REMAINS NECESSARY: Containment prevents operations outside an allowed scope, but it does not guarantee that an allowed edit is correct. A permitted code change can still introduce a bug. Teams should review consequential diffs and validate test results before deployment.",
+        "AUDITABILITY: When an agent performs many steps, organizations need to know which request triggered an action, which resources were read and what changed. Microsoft has described future work on distinguishing agent identities from human activity and expanding enterprise monitoring. Planned capabilities should be distinguished from what is available today.",
+        "TESTING THE BOUNDARY: A realistic evaluation should include attempted access to prohibited directories, unapproved network destinations and disallowed commands. Teams should also confirm that normal work succeeds and that denial messages help developers diagnose policy problems.",
+        "THE LARGER IMPLICATION: Agent security increasingly depends on enforceable execution boundaries, not only the quality of a model's decisions. MXC illustrates how flexible automation can coexist with constrained authority. Cross-platform effectiveness, operational complexity and audit controls will be important areas to evaluate.",
         "MXC lets developers and administrators define allowed files, network destinations and other resources. Those limits are enforced by the execution environment rather than the agent, so the workload cannot grant itself extra permissions.",
         "Microsoft describes a coding agent that may edit a website repository and read deployment configuration but must not change production server settings. Even if the agent decides a configuration change would be convenient, the containment layer is intended to block it.",
         "MXC offers a unified configuration model across different platform isolation mechanisms, although the available containment options vary by operating system. Microsoft also outlines future work to distinguish agent identities from human activity and improve enterprise monitoring.",
         "Secure agent deployment requires more than model accuracy. Organizations need enforceable boundaries for what automated systems can change, and MXC is one approach to separating useful autonomy from unrestricted access."
       ]
-    }
+    },
+    "updatedAt": "2026-10-10T14:30:00+09:00"
   },
   {
     "articleId": "TC-0008",
@@ -379,6 +402,18 @@
     "body": [
       "OpenAIは2026年10月5日、AIが生成した文章の出所を判断する手がかりとして、電子透かし技術「textGrain」の導入方針を発表しました。EUのAI規制を背景に、文章へ目に見えない統計的な特徴を埋め込み、専用の検出器でその信号を調べる仕組みです。",
       "画像に付ける透かしとは異なり、文章には文字選択の傾向として信号を残します。人が読んだだけで透かしが見えるわけではありません。OpenAIは、対象となるAPIモデルでは世界中の顧客が任意で有効化できる一方、APIでは初期設定をオフとしています。",
+      "【なぜ文章の来歴が問題になるのか】生成AIの文章は、通常のテキストとしてコピー、編集、公開できます。見た目だけでは人間が書いた文章と区別しづらく、誤情報の拡散や大量生成コンテンツへの対応が課題になります。電子透かしは、文章の中に生成元を推定するための信号を残そうとする技術です。ただし、透かしは内容の正しさを証明するものではありません。",
+      "【画像の透かしとは何が違うのか】画像では画素に目立たない変化を加える方法がありますが、文章は単語の選び方や並び方そのものが情報です。textGrainは、自然な文章を生成する過程に統計的な傾向を組み込み、専用の検出器でその特徴を調べる方式として説明されています。読者が文字を見ただけで信号を確認できるものではありません。",
+      "【透かしが示すこと、示さないこと】検出器が透かしらしい信号を見つけた場合、対応する生成システムから出力された可能性を示す材料になります。しかし、誰が最終的に公開したか、どの部分を人が編集したか、文章の内容が正確かまでは分かりません。文章の出所を示す技術と、事実確認や著作権の判断は分けて考える必要があります。",
+      "【導入対象を正確に理解する】OpenAIの説明では、対象となるAPIモデルの顧客は世界中で任意に透かしを有効化でき、APIの初期設定はオフです。ChatGPTとCodexについては、EU内の対象となる文章出力に数週間かけて導入する方針が示されています。すべての地域、すべてのモデル、すべての文章が同じ条件で透かし付きになるわけではありません。",
+      "【検出器は誰でも使えるのか】OpenAIは、検出器へのアクセスを当初は承認された研究者や専門組織に限定する計画を示しています。したがって、一般の読者が文章を貼り付けて自由に鑑定できる仕組みが、発表時点ですべての人に提供されたという意味ではありません。透かしの有効性を議論する際は、生成側の導入範囲と検出側の利用条件を区別する必要があります。",
+      "【編集によって検出率が下がる理由】文章の透かしは単語選択の統計的な傾向に依存します。そのため、同じ意味を保ったまま別の表現へ書き換えると、元の信号が弱くなる場合があります。OpenAIの評価では、400トークンの文章で単語の10％を類義語へ置き換えると検出率が約92％から66％へ低下し、25％を置き換えると17％になったと報告しています。",
+      "【数値の解釈で注意したいこと】92％、66％、17％という数字は、特定の長さの文章と編集条件で測った結果です。あらゆる文章で同じ検出率になるわけではありません。短い文章や、定型的な表現が多い文章では、そもそも透かしの信号を十分に残しにくい可能性があります。評価結果を見る際は、文章量、編集方法、検出器の判定基準を確認することが重要です。",
+      "【翻訳や要約を経由した場合】元の文章を別の言語へ翻訳したり、別のモデルで要約したりすると、単語の並びが大きく変わります。こうした処理は、元の文章に埋め込まれた統計的な信号を保てない可能性があります。また、透かしを採用していない他社モデルの文章は、同じ検出器の対象にならない場合があります。検出されないことを人間の執筆の証拠と考えるのは適切ではありません。",
+      "【誤判定への配慮】文章の生成元を推定する技術を教育や採用、報道などで使う場合、誤判定が人に与える影響を考える必要があります。仮に検出器が一定の精度を示していても、個別の文章の執筆者を断定する用途には慎重さが求められます。判定結果だけで不正を決めつけず、執筆履歴や編集記録、本人の説明など別の情報と合わせて判断することが重要です。",
+      "【メディア運営者にとっての意味】ニュースサイトや企業メディアでは、AIを下書き作成に使ったかどうかと、公開内容に責任を持つかどうかは別の問題です。出典の確認、事実関係の検証、編集者による確認を行うことが、読者の信頼につながります。透かしは補助的な手がかりになっても、取材や検証の代わりにはなりません。",
+      "【透明性を高める複数の方法】コンテンツの来歴を示す方法には、透かしのほかに、作成・編集の履歴を保存する仕組みや、公開者が制作過程を説明する運用があります。いずれにも限界があるため、一つの技術だけで信頼性を判断するのは難しいといえます。読者にとって重要なのは、文章がどのように作られたかだけでなく、根拠が確かかどうかです。",
+      "【今後の焦点】EUの規制対応を背景に、生成コンテンツの来歴を示す技術の検証は続くと考えられます。textGrainの評価では、編集への耐性、短文での検出、利用対象の広がり、誤判定の扱いなどが重要な論点です。透かしを万能な『AI判定機』と考えるのではなく、透明性を高めるための一つの手段として理解する必要があります。",
       "ChatGPTとCodexについては、EU内の対象となる文章出力に今後数週間で透かしを追加する方針です。世界中のすべての出力へ一律に適用するという発表ではありません。検出器の利用も当初は承認された研究者や専門組織に限定する計画です。",
       "重要なのは、透かしが万能な鑑定方法ではないことです。OpenAIの評価では、400トークンの文章で単語の10％を類義語に置き換えると、検出率が約92％から66％に低下し、25％を置き換えると17％まで下がったとしています。短い文章や表現の自由度が低い内容も検出が難しくなります。",
       "透かしが見つかったとしても、その文章の正確さや著作権、どれほど人が編集したかまでは判断できません。逆に透かしが検出されないことも、人間が書いた証明にはなりません。別のAI製品で作られた文章や、編集・翻訳された文章は検出できない場合があります。",
@@ -392,12 +427,25 @@
       "body": [
         "On October 5, 2026, OpenAI described its text watermarking approach, called textGrain, in response to EU AI rules. The technique adds an invisible statistical signal to word choices that a dedicated detector can look for.",
         "Unlike a visible mark on an image, a text watermark is not apparent to readers. OpenAI says eligible API customers worldwide can opt in for select models, with watermarking off by default in the API.",
+        "WHY TEXT PROVENANCE MATTERS: AI-generated writing can be copied, edited and published as ordinary text. Its appearance does not reliably reveal whether a person or model wrote it. Watermarking attempts to preserve a signal that may help identify a generating system, but such a signal says nothing about whether the content is true.",
+        "HOW TEXT WATERMARKING DIFFERS FROM IMAGE MARKS: Images can carry subtle pixel-level changes. Text is different because word choice and sequence are the content itself. OpenAI describes textGrain as adding a statistical pattern during generation that a specialized detector can examine. Readers cannot identify that pattern simply by looking at the words.",
+        "WHAT A DETECTION RESULT MEANS: A detected signal may provide evidence that text came from a compatible generation system. It does not identify the final publisher, establish how much editing occurred or verify the factual claims. Provenance, authorship, copyright and accuracy are separate questions.",
+        "UNDERSTANDING THE ROLLOUT: OpenAI says eligible API customers around the world can opt in for selected models, while the API default remains off. For eligible ChatGPT and Codex outputs in the EU, it announced a rollout over subsequent weeks. This is not a claim that all text generated by every OpenAI product worldwide will carry a watermark.",
+        "WHO CAN USE THE DETECTOR: Initial access is planned for approved researchers and specialist organizations. The announcement does not mean a public detector is available to anyone who wants to paste in a paragraph. The scope of watermark generation and access to verification tools need to be considered separately.",
+        "WHY EDITING WEAKENS DETECTION: Statistical signals depend on the original sequence of word choices. Replacing words with synonyms can preserve meaning while disrupting that pattern. OpenAI reports that, for a 400-token passage, substituting 10% of words reduced detection from about 92% to 66%, while 25% substitution reduced it to 17%.",
+        "HOW TO READ THOSE NUMBERS: The percentages describe a particular experiment, passage length and editing procedure. They are not universal detection rates. Short passages and highly constrained writing may carry weaker signals. Evaluations need to specify text length, editing methods and detector thresholds.",
+        "TRANSLATION AND SUMMARIZATION: Translating or heavily summarizing text can change word sequences substantially, potentially destroying the original signal. Text produced by other models without compatible watermarking may also fall outside the detector's scope. A negative result must not be interpreted as proof of human authorship.",
+        "THE COST OF FALSE ACCUSATIONS: In education, hiring and journalism, a mistaken claim about AI authorship can harm individuals. Even a detector with useful aggregate accuracy should not become the sole basis for accusing someone of misconduct. Draft histories, editing records and explanations from the author provide important additional context.",
+        "WHAT PUBLISHERS SHOULD DO: A news organization may use AI during drafting while remaining responsible for everything it publishes. Verifying primary sources, checking factual claims and maintaining editorial oversight are still essential. Watermarks may support transparency, but they cannot replace reporting and verification.",
+        "OTHER PROVENANCE METHODS: Beyond watermarking, organizations can retain editing histories or disclose how content was created. Each approach has limitations. Readers need both provenance information and reliable evidence for the claims in a document.",
+        "WHAT TO WATCH: As EU-related transparency requirements develop, the important questions include resistance to editing, short-text performance, detector availability and false-positive handling. textGrain is best viewed as one possible provenance signal rather than a definitive AI-authorship test.",
         "For eligible ChatGPT and Codex text output in the EU, OpenAI plans to introduce watermarks over the following weeks. This is not a global default for every output. Initial access to the detector will be limited to approved researchers and expert organizations.",
         "Detection is far from foolproof. In one OpenAI evaluation of 400-token passages, replacing 10% of words with synonyms reduced detection from about 92% to 66%; replacing 25% reduced it to 17%. Shorter passages and more constrained writing are also harder to identify.",
         "A detected watermark does not establish factual accuracy, ownership or the amount of human editing involved. Likewise, a missing watermark does not prove human authorship: text may have been edited, translated or generated by a different system.",
         "Provenance signals may become useful as AI-generated content grows, but they should be combined with source checks and transparent editorial processes rather than treated as definitive proof."
       ]
-    }
+    },
+    "updatedAt": "2026-10-10T14:30:00+09:00"
   },
   {
     "articleId": "TC-0009",
