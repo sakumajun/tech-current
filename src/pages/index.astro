@@ -1,12 +1,89 @@
 ---
 import articles from '../../data/articles.json';
-const published = articles.filter(a => a.status === 'published');
+const published = articles.filter((a) => a.status === 'published').sort((a,b)=>String(b.publishedAt??'').localeCompare(String(a.publishedAt??'')));
+const lead = published[0];
+const latest = published.slice(0, 6);
+const topics = [
+  { name: '生成AI', label: 'GENERATIVE AI', className: 'ai', desc: '進化する生成AIの現在地' },
+  { name: 'AIツール', label: 'AI TOOLS', className: 'tools', desc: '仕事と暮らしに役立つツール' },
+  { name: 'ビジネス・DX', label: 'BUSINESS & DX', className: 'business', desc: '企業と社会の変化を読む' },
+  { name: 'テクノロジー', label: 'TECHNOLOGY', className: 'tech', desc: '未来をつくる新しい技術' }
+];
+const categories = ['ニュース','生成AI','AIツール','ビジネス・DX','テクノロジー','解説・ガイド','比較・レビュー'];
 ---
+<!doctype html>
 <html lang="ja">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>TECH CURRENT | テクノロジーの今を、読み解く。</title><meta name="description" content="世界のAI・デジタルの最新ニュースと解説を日本語で届けるTECH CURRENT"/></head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#071a38" />
+  <meta name="description" content="AI・デジタルのニュースと深い解説を、海外の一次情報をもとに日本語で届けるTECH CURRENT。" />
+  <title>TECH CURRENT | テクノロジーの今を、読み解く。</title>
+</head>
 <body>
-<header><div class="wrap"><h1>TECH <span>CURRENT</span></h1><p>テクノロジーの今を、読み解く。</p><nav>AIニュース　生成AI　AIツール　ビジネス・DX　テクノロジー　解説・ガイド</nav></div></header>
-<main class="wrap"><section class="hero"><small>AI & DIGITAL TECHNOLOGY MEDIA</small><h2>世界のテクノロジーを、<br/>日本語でわかりやすく。</h2><p>海外の一次情報を重視し、事実を確認したニュースと解説をお届けします。</p></section><h2>最新の記事</h2>{published.length === 0 ? <p>現在、公開記事を準備しています。</p> : <div class="cards">{published.map(a=><article><small>{a.category}</small><h3>{a.title}</h3><p>{a.description}</p></article>)}</div>}</main>
-<footer class="wrap">© TECH CURRENT</footer>
-</body></html>
-<style>:global(*){box-sizing:border-box}:global(body){margin:0;font-family:system-ui,'Noto Sans JP',sans-serif;color:#12213a;background:#f6f8fc}:global(.wrap){max-width:1180px;margin:auto;padding:0 24px}header{background:#0b1730;color:white;padding:22px 0}header h1{margin:0;font-size:27px;letter-spacing:.04em}header h1 span{color:#38bdf8}header p{font-size:12px;color:#bac7dc}nav{margin-top:20px;font-size:13px;color:#d5e2f3}.hero{background:#102b55;color:white;margin:30px 0;padding:54px 40px;border-radius:12px}.hero small{color:#7dd3fc}.hero h2{font-size:clamp(26px,4vw,44px);line-height:1.45}.hero p{color:#d1e4f5}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.cards article{padding:24px;background:white;border:1px solid #dce4ee;border-radius:8px}.cards small{color:#2563eb}main{min-height:70vh}footer{padding-top:45px;padding-bottom:45px;color:#64748b;font-size:12px}</style>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="TECH CURRENT ホーム"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>TECH<span class="brand-blue">CURRENT</span></span></a>
+      <nav class="main-nav" aria-label="カテゴリ">{categories.map(c => <a href={`/#${c === 'ニュース' ? 'latest' : 'topics'}`}>{c}</a>)}</nav>
+      <a class="header-pill" href="#latest">新着情報 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <div class="site-shell">
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="mesh"></div><div class="city"></div></div>
+        <div class="hero-content">
+          <span class="eyebrow">FEATURED / 注目のトピック</span>
+          {lead ? <>
+            <h1 id="hero-title">{lead.title}</h1><p>{lead.description}</p><div class="hero-meta">{lead.publishedAt?.slice(0,10)} <span>｜</span> {lead.category}</div>
+          </> : <>
+            <h1 id="hero-title">テクノロジーの今を、<br />読み解く。</h1><p>世界のAI・デジタルニュースを、<br />日本語でわかりやすく。</p><div class="hero-meta">海外の一次情報を重視したニュースメディア</div>
+          </>}
+        </div>
+        <div class="hero-dots" aria-hidden="true"><span class="active"></span><span></span><span></span></div>
+      </section>
+
+      <section class="topic-grid" id="topics" aria-label="注目カテゴリ">
+        {topics.map(topic => <a class="topic-card" href="#latest">
+          <div class={`topic-image ${topic.className}`}><span class="topic-symbol">{topic.className === 'ai' ? '✳' : topic.className === 'tools' ? '◇' : topic.className === 'business' ? '▥' : '⬡'}</span><span class="topic-en">{topic.label}</span></div>
+          <div class="topic-text"><strong>{topic.name}</strong><small>{topic.desc}</small></div>
+        </a>)}
+      </section>
+
+      <div class="news-columns">
+        <section class="latest panel" id="latest">
+          <div class="section-heading"><h2>最新ニュース</h2><span>THE LATEST</span></div>
+          {latest.length > 0 ? <div class="news-list">{latest.map((a,idx) => <article class="news-item">
+            <div class={`news-thumb tone-${idx%4}`} aria-hidden="true">{idx%2 === 0 ? '✳' : '⬡'}</div>
+            <div class="news-info"><span class="category-tag">{a.category ?? 'ニュース'}</span><h3>{a.title}</h3><p>{a.description}</p></div>
+            <time>{a.publishedAt?.slice(0,10)}</time>
+          </article>)}</div> : <div class="empty-state"><div class="empty-icon">✳</div><h3>ニュースを準備しています</h3><p>海外の公式情報を収集・確認し、記事を順次掲載します。</p></div>}
+        </section>
+        <aside class="editorial">
+          <section class="pickup-card"><span class="pickup-label">今週のピックアップ</span><div class="pickup-visual"><span class="pickup-orbit"></span><div><small>TECH CURRENT / EDITOR'S PICK</small><h2>AIとテクノロジーの<br />重要な動きを深掘り</h2><p>背景から影響まで、わかりやすく解説。</p></div></div></section>
+          <section class="ranking panel"><div class="section-heading"><h2>人気の記事</h2><span>POPULAR</span></div>{published.length ? published.slice(0,3).map((a,i)=><div class="ranking-item"><b>{i+1}</b><span>{a.title}</span></div>) : <p class="ranking-empty">記事公開後に表示します。</p>}</section>
+        </aside>
+      </div>
+    </main>
+    <aside class="right-sidebar">
+      <section class="sidebar-panel"><h2>TECH CURRENTについて</h2><div class="about-logo"><span class="mini-mark">▰</span> TECH<span>CURRENT</span></div><p>テクノロジーの今を、読み解く。</p><p>AI・デジタルの最新ニュースと解説を、海外の一次情報を重視して日本語で届けるメディアです。</p></section>
+      <section class="sidebar-panel"><h2>取り扱うテーマ</h2><div class="side-topics">{topics.map(t=><a href="#topics"><span class={`side-dot ${t.className}`}></span><div><strong>{t.name}</strong><small>{t.desc}</small></div><span>›</span></a>)}</div></section>
+      <section class="sidebar-panel side-note"><h2>編集方針</h2><ul><li>海外の一次情報を重視</li><li>ニュースと解説を両立</li><li>出典・公開日を明示</li><li>未確認情報は公開しない</li></ul></section>
+    </aside>
+  </div>
+  <footer><div class="footer-inner"><strong>TECH<span>CURRENT</span></strong><p>テクノロジーの今を、読み解く。</p><small>© {new Date().getFullYear()} TECH CURRENT</small></div></footer>
+</body>
+</html>
+<style>
+:global(*){box-sizing:border-box}:global(html){scroll-behavior:smooth}:global(body){margin:0;background:#f5f7fb;color:#13233d;font-family:Arial,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;font-size:14px}:global(a){color:inherit;text-decoration:none}
+.site-header{background:#fff;border-bottom:1px solid #e4e9f1;position:sticky;top:0;z-index:20}.header-inner{max-width:1450px;margin:auto;min-height:68px;padding:0 24px;display:flex;align-items:center;gap:30px}.brand{display:flex;align-items:center;gap:12px;white-space:nowrap;font-size:23px;font-weight:900;letter-spacing:-1.3px;color:#08192f}.brand-blue,.about-logo>span:last-child,footer strong span{color:#0d65e8}.brand-mark{width:27px;height:32px;position:relative;display:inline-block;transform:rotate(35deg)}.brand-mark i{position:absolute;background:#1164ed;width:10px;border-radius:4px;transform:skewY(-15deg)}.brand-mark i:first-child{height:31px;left:3px}.brand-mark i:last-child{height:19px;left:17px;top:0}.main-nav{display:flex;align-items:center;justify-content:center;gap:22px;flex:1}.main-nav a{font-size:12px;font-weight:700;white-space:nowrap}.main-nav a:hover{color:#1466ee}.header-pill{background:#061b3e;color:#fff;border-radius:24px;padding:10px 16px;font-size:12px;font-weight:700;white-space:nowrap}
+.site-shell{max-width:1450px;margin:auto;padding:20px 20px 45px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px}main{min-width:0}.hero{height:330px;position:relative;overflow:hidden;border-radius:8px;background:linear-gradient(115deg,#041126 8%,#072c69 55%,#0575df);color:white;box-shadow:0 6px 22px #102f6019}.hero-art,.mesh,.city{position:absolute;inset:0}.hero-art{background:radial-gradient(ellipse at 75% 45%,#126ffb80,transparent 47%),linear-gradient(115deg,#010b20,#05356e 65%,#0c58ab)}.orb{position:absolute;border-radius:50%;border:1px solid #69caff77;box-shadow:0 0 60px #078cff50}.orb-one{width:420px;height:420px;right:9%;top:-150px}.orb-two{width:230px;height:230px;right:0;top:60px}.mesh{background-image:linear-gradient(120deg,transparent 48%,#48a8ff29 49%,transparent 50%),linear-gradient(25deg,transparent 48%,#48a8ff29 49%,transparent 50%),radial-gradient(circle,#8fd9ff 1.3px,transparent 2.5px);background-size:130px 90px,180px 100px,76px 66px;opacity:.65;mask-image:linear-gradient(90deg,transparent 20%,#000 80%)}.city{inset:auto 0 0 33%;height:95px;background:repeating-linear-gradient(90deg,transparent 0 16px,#021a3a 16px 44px,transparent 44px 51px,#08264d 51px 67px);clip-path:polygon(0 80%,4% 80%,4% 30%,9% 30%,9% 55%,15% 55%,15% 8%,21% 8%,21% 55%,28% 55%,28% 35%,36% 35%,36% 68%,42% 68%,42% 14%,48% 14%,48% 50%,56% 50%,56% 0,62% 0,62% 48%,69% 48%,69% 22%,76% 22%,76% 52%,84% 52%,84% 6%,91% 6%,91% 70%,100% 70%,100% 100%,0 100%);opacity:.85}.hero-content{position:relative;z-index:1;padding:52px 52px;max-width:690px}.eyebrow{display:inline-block;background:#1165e9;padding:7px 12px;border-radius:5px;font-size:11px;font-weight:800}.hero h1{font-size:clamp(29px,3.6vw,44px);line-height:1.3;letter-spacing:-.035em;margin:20px 0 10px}.hero p{font-size:17px;font-weight:700;line-height:1.7;margin:0 0 18px}.hero-meta{font-size:11px;color:#c8ddf9}.hero-dots{position:absolute;bottom:15px;left:50%;display:flex;gap:6px}.hero-dots span{width:5px;height:5px;border-radius:50%;background:#8fa9d0}.hero-dots .active{width:16px;border-radius:5px;background:#fff}
+.topic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:13px 0 18px}.topic-card{background:#fff;border:1px solid #e0e7f1;border-radius:7px;overflow:hidden;transition:transform .2s,box-shadow .2s}.topic-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px #15345a18}.topic-image{height:108px;display:flex;align-items:center;justify-content:center;gap:14px;overflow:hidden;color:#fff}.topic-image.ai{background:radial-gradient(circle at 70% 50%,#176df0,#06182f 75%)}.topic-image.tools{background:linear-gradient(130deg,#d3e1ff,#3875ef)}.topic-image.business{background:linear-gradient(125deg,#bce7f4,#146fa6)}.topic-image.tech{background:linear-gradient(130deg,#0e2a70,#5d4be8 60%,#db5cc6)}.topic-symbol{font-size:54px;text-shadow:0 0 22px #ffffff80}.topic-en{font-size:11px;letter-spacing:.12em;font-weight:900;max-width:90px}.topic-text{padding:12px}.topic-text strong,.topic-text small{display:block}.topic-text strong{font-size:13px}.topic-text small{font-size:11px;color:#6b7b93;margin-top:5px;line-height:1.5}
+.news-columns{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(235px,1fr);gap:15px}.panel{background:#fff;border:1px solid #e3e8f0;border-radius:9px;padding:16px}.section-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #e7ebf1;padding-bottom:12px}.section-heading h2{font-size:18px;margin:0;font-weight:900}.section-heading>span{font-size:10px;color:#8492a6;letter-spacing:.08em}.news-item{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #e9edf3}.news-item:last-child{border-bottom:0}.news-thumb{width:100px;height:66px;flex-shrink:0;border-radius:5px;display:grid;place-items:center;color:#fff;font-size:30px;background:linear-gradient(130deg,#031834,#1462bb)}.tone-1{background:linear-gradient(135deg,#162754,#59a5df)}.tone-2{background:linear-gradient(135deg,#11414f,#5cc3b3)}.tone-3{background:linear-gradient(135deg,#3a246d,#7b7af5)}.news-info{min-width:0;flex:1}.category-tag{font-size:10px;font-weight:800;background:#1667ef;color:#fff;padding:3px 8px;border-radius:10px}.news-info h3{font-size:13px;line-height:1.55;margin:6px 0 0}.news-info p{font-size:11px;color:#7a8799;margin:4px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.news-item time{font-size:10px;color:#738197;white-space:nowrap}.empty-state{text-align:center;padding:65px 16px;color:#62748b}.empty-icon{font-size:44px;color:#2376e8}.empty-state h3{font-size:17px;color:#213a60}.empty-state p{line-height:1.8;font-size:12px}
+.editorial{display:flex;flex-direction:column;gap:14px}.pickup-card{border-radius:8px;overflow:hidden;background:#fff;border:1px solid #e3e8f0}.pickup-label{display:block;padding:10px 13px;background:#061b39;color:white;font-weight:800;font-size:12px}.pickup-visual{position:relative;min-height:220px;overflow:hidden;background:linear-gradient(135deg,#063c8d,#0c82e9 70%,#8ec8ff);color:#fff;display:flex;align-items:end;padding:20px}.pickup-visual:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,#ffffff70,transparent 22%),repeating-linear-gradient(140deg,transparent 0 30px,#ffffff19 31px 32px)}.pickup-visual>div{position:relative}.pickup-visual small{font-size:9px;letter-spacing:.1em}.pickup-visual h2{font-size:19px;line-height:1.55;margin:12px 0}.pickup-visual p{font-size:11px}.ranking-item{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #eef1f5;font-size:12px;font-weight:700;line-height:1.5}.ranking-item b{background:#071d43;color:white;border-radius:4px;padding:5px 9px}.ranking-empty{font-size:12px;color:#748298;padding:14px 0}
+.right-sidebar{display:flex;flex-direction:column;gap:15px}.sidebar-panel{background:#fff;border:1px solid #e3e8f0;border-radius:13px;padding:20px;box-shadow:0 4px 22px #14326008}.sidebar-panel h2{font-size:17px;margin:0 0 18px;font-weight:900}.sidebar-panel p{font-size:12px;line-height:1.8;margin:8px 0;color:#46566e}.about-logo{font-size:22px;font-weight:900;letter-spacing:-1px;margin:20px 0 16px;color:#071b36;white-space:nowrap}.mini-mark{color:#156af0;font-size:26px}.side-topics a{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid #e9edf3}.side-topics a:last-child{border-bottom:0}.side-dot{width:30px;height:30px;border-radius:9px;flex-shrink:0;background:#145fec}.side-dot.tools{background:#6b7cf7}.side-dot.business{background:#1699b5}.side-dot.tech{background:#8b55e8}.side-topics a>div{flex:1}.side-topics strong,.side-topics small{display:block}.side-topics strong{font-size:13px}.side-topics small{font-size:10px;color:#718097;margin-top:4px}.side-topics a>span:last-child{color:#94a3b8}.side-note{background:#f0f4fa}.side-note ul{list-style:none;margin:0;padding:0}.side-note li{padding:9px 0;font-size:12px}.side-note li:before{content:'✓';display:inline-grid;place-items:center;background:#10b981;color:white;border-radius:50%;width:17px;height:17px;margin-right:9px;font-size:10px}
+footer{border-top:1px solid #e0e6ee;background:#fff}.footer-inner{max-width:1450px;margin:auto;padding:28px 20px;color:#65748a}.footer-inner strong{font-size:20px;color:#081c38}.footer-inner p{font-size:12px}.footer-inner small{font-size:11px}
+@media(max-width:1200px){.site-shell{grid-template-columns:minmax(0,1fr) 260px;gap:14px}.main-nav{gap:11px}.main-nav a{font-size:11px}.header-inner{gap:15px}.brand{font-size:20px}.topic-image{height:85px}.topic-en{display:none}}
+@media(max-width:950px){.site-shell{grid-template-columns:1fr}.right-sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.side-note{grid-column:1/-1}.main-nav{overflow-x:auto;justify-content:flex-start}.header-pill{display:none}}
+@media(max-width:620px){.header-inner{padding:12px 15px;flex-wrap:wrap;gap:12px}.brand{font-size:20px}.main-nav{order:3;flex-basis:100%;padding:4px 0 2px;gap:18px}.site-shell{padding:12px 12px 30px}.hero{height:300px}.hero-content{padding:38px 25px}.hero h1{font-size:30px}.hero p{font-size:14px}.topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.topic-image{height:85px}.news-columns{grid-template-columns:1fr}.right-sidebar{grid-template-columns:1fr}.side-note{grid-column:auto}.news-thumb{width:75px;height:60px}.news-item time{display:none}.sidebar-panel{padding:16px}}
+</style>
