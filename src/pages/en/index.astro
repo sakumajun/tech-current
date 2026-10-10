@@ -9,7 +9,7 @@ const topics = [
   { name: 'Business & DX', label: 'BUSINESS & DX', className: 'business', desc: 'How technology transforms organizations', slug: 'business-dx' },
   { name: 'Technology', label: 'TECHNOLOGY', className: 'tech', desc: 'Innovations shaping the future', slug: 'technology' }
 ];
-const categories = ['News','Generative AI','AI Tools','Business & DX','Technology','Explainers','Reviews'];
+const categories = ['News','Generative AI','AI Tools','Business & DX','Technology'];
 ---
 <!doctype html>
 <html lang="en">
@@ -44,7 +44,7 @@ const categories = ['News','Generative AI','AI Tools','Business & DX','Technolog
       <a class="brand" href="/en/" aria-label="TECH CURRENT home"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>TECH<span class="brand-blue">CURRENT</span></span></a>
       <nav class="main-nav" aria-label="Categories">{categories.map(c => <a href={`/#${c === 'News' ? 'latest' : 'topics'}`}>{c}</a>)}</nav>
       <a class="header-pill" href="/" lang="ja" aria-label="日本語に切り替え">JP ↗</a>
-      <a class="header-pill" href="#latest">Latest news <span aria-hidden="true">↗</span></a>
+      
     </div>
   </header>
   <div class="site-shell">
