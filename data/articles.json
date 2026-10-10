@@ -664,5 +664,221 @@
         "Read the linked primary source for the full announcement and any subsequent availability updates."
       ]
     }
+  },
+  {
+    "articleId": "TC-0023",
+    "slug": "openai-ai-policy-window-2026",
+    "title": "OpenAIがAI安全規制の法整備を提言｜企業の自主対応だけでは足りない理由",
+    "description": "OpenAIは2026年9月9日、AI能力の急速な進歩を踏まえ、米国で能力に応じた義務的な安全規制が必要だとする立場を公表しました。企業による自主的な取り組みだけでなく、政府や産業界が共通の枠組みを整える必要があるという",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/ai-policy-window/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年9月9日、AI能力の急速な進歩を踏まえ、米国で能力に応じた義務的な安全規制が必要だとする立場を公表しました。企業による自主的な取り組みだけでなく、政府や産業界が共通の枠組みを整える必要があるという主張です。",
+      "OpenAIはカリフォルニア州の複数の法案への支持も表明しています。独立した安全性評価、AI監査の基準、若年層の保護、AIを悪用した生物学的脅威への対策などが対象です。",
+      "これはOpenAIが示した政策提言であり、提案内容がすでに法律として成立したという意味ではありません。安全性を高めるための規制と、研究開発を進める自由のバランスは今後も議論が必要です。"
+    ],
+    "en": {
+      "title": "OpenAI Calls for National AI Safety Requirements",
+      "description": "On September 9, 2026, OpenAI called for mandatory national AI safety requirements tied to model capabilities. The company argued that industry self-governance alone is insufficient as advanced systems",
+      "category": "Generative AI",
+      "sourceName": "OpenAI",
+      "body": [
+        "On September 9, 2026, OpenAI called for mandatory national AI safety requirements tied to model capabilities. The company argued that industry self-governance alone is insufficient as advanced systems become more powerful.",
+        "OpenAI also backed several California bills concerning independent safety assessments, AI auditor standards, protections for young people, and safeguards against AI-enabled biological threats.",
+        "These are policy positions and legislative proposals, not confirmation that the measures have become law. The challenge is to create enforceable safeguards while allowing beneficial research and deployment to continue."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0024",
+    "slug": "openai-ai-standards-next-phase",
+    "title": "OpenAIがAIの次段階に向けた標準化を提唱｜安全評価と国際協力が焦点",
+    "description": "OpenAIは2026年9月21日、AI技術がさらに高度化する段階に備えた標準づくりについて見解を示しました。自動化されたAI研究者の構築、科学的な成果の社会還元、個人が利用できる高度なAIの実現を重要な目標に掲げていま",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/building-standards-next-phase-ai/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年9月21日、AI技術がさらに高度化する段階に備えた標準づくりについて見解を示しました。自動化されたAI研究者の構築、科学的な成果の社会還元、個人が利用できる高度なAIの実現を重要な目標に掲げています。",
+      "AIの性能が向上するほど、評価方法や安全性に関する共通の考え方が必要になります。個々の企業が独自の基準だけで判断すると、利用者や導入企業がリスクを比較しにくくなるためです。",
+      "企業にとっては、導入前に評価結果の説明可能性や責任の分担を確認することが重要です。OpenAIの声明は標準化の方向性を示すものであり、具体的な国際標準がすべて確定したという発表ではありません。"
+    ],
+    "en": {
+      "title": "OpenAI Outlines Standards for the Next Phase of AI",
+      "description": "On September 21, 2026, OpenAI described its priorities for the next phase of AI progress, including automated AI research, scientific benefits and more capable personal AI.",
+      "category": "Business & DX",
+      "sourceName": "OpenAI",
+      "body": [
+        "On September 21, 2026, OpenAI described its priorities for the next phase of AI progress, including automated AI research, scientific benefits and more capable personal AI.",
+        "As systems become more powerful, shared methods for evaluation and safety become increasingly important. Without comparable standards, customers may struggle to assess risks across products and vendors.",
+        "The statement outlines a direction for standards and cooperation; it does not mean a complete set of international standards has already been adopted."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0025",
+    "slug": "google-ai-economy-atlas-2026",
+    "title": "Google「AI & Economy ATLAS」更新｜職業別のAI利用に大きな地域差",
+    "description": "Googleは2026年9月15日、AIの利用実態を調べる『AI & Economy ATLAS』のデータ可視化と研究結果を更新しました。職業や地域によってAIの使われ方が異なることを示しています。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月15日、AIの利用実態を調べる『AI & Economy ATLAS』のデータ可視化と研究結果を更新しました。職業や地域によってAIの使われ方が異なることを示しています。",
+      "Googleの分析によると、インドでは仕事に関連したAI利用のうち芸術・デザイン・メディア関連職が19％を占め、世界平均の1.6倍でした。一方、米国ではコンピューター・数学関連職が30％を占め、その他の世界の約2倍とされています。",
+      "数字はAI利用全体に占める職種別の構成比であり、その職業の人の19％や30％がAIを使っているという意味ではありません。企業は世界共通の利用像を想定せず、地域と職種の実態を踏まえて活用方法を考える必要があります。"
+    ],
+    "en": {
+      "title": "Google Updates AI & Economy ATLAS With New Workplace Data",
+      "description": "Google updated its AI & Economy ATLAS on September 15, 2026, with new visualizations and research on how different occupations use AI around the world.",
+      "category": "Business & DX",
+      "sourceName": "Google Blog",
+      "body": [
+        "Google updated its AI & Economy ATLAS on September 15, 2026, with new visualizations and research on how different occupations use AI around the world.",
+        "The company reports that arts, design and media occupations account for 19% of work-related AI use in India, 1.6 times the global average. In the United States, computer and mathematical occupations represent 30% of work-related AI use, twice the share elsewhere.",
+        "These figures describe the occupational composition of AI usage, not the percentage of workers in each occupation using AI. Regional and occupational context matters when interpreting adoption patterns."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0026",
+    "slug": "google-ai-language-coverage-2026",
+    "title": "GoogleのAIが300以上の言語に対応｜言語格差はどこまで縮まる？",
+    "description": "Googleは2026年9月15日、同社の技術と製品が300を超える言語で日常的なやり取りを支え、世界人口の86％にあたる70億人以上をカバーすると発表しました。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月15日、同社の技術と製品が300を超える言語で日常的なやり取りを支え、世界人口の86％にあたる70億人以上をカバーすると発表しました。",
+      "Google翻訳は2006年の開始時には少数の言語のみを扱っていましたが、現在は250以上の言語に対応しています。同社は単なる文章の翻訳を超え、地域固有の表現や文化的な文脈を理解するAIを目指すと説明しています。",
+      "対応言語が増えても、すべての方言や専門分野で同じ精度が得られるとは限りません。教育、行政、医療などの重要な用途では、現地の言語に詳しい人による確認が引き続き必要です。"
+    ],
+    "en": {
+      "title": "Google Says Its Products Support Interactions in More Than 300 Languages",
+      "description": "On September 15, 2026, Google said its technologies and products support everyday interactions in more than 300 languages, representing over seven billion people or 86% of the global population.",
+      "category": "Technology",
+      "sourceName": "Google Blog",
+      "body": [
+        "On September 15, 2026, Google said its technologies and products support everyday interactions in more than 300 languages, representing over seven billion people or 86% of the global population.",
+        "Google Translate itself supports more than 250 languages. The company says its research is moving beyond literal text translation toward models that better reflect how living languages are actually used.",
+        "Language coverage does not imply equal accuracy for every dialect or specialized subject. Human review remains important for high-stakes uses such as healthcare and public services."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0027",
+    "slug": "google-project-suncatcher-space-ai",
+    "title": "Google「Project Suncatcher」｜宇宙でAI計算基盤を動かす実験とは",
+    "description": "Googleは2026年9月24日、宇宙でAI計算基盤を稼働させる構想『Project Suncatcher』の技術的な課題を紹介しました。試作衛星を使い、AI用チップが宇宙環境に耐えられるかを検証する計画です。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月24日、宇宙でAI計算基盤を稼働させる構想『Project Suncatcher』の技術的な課題を紹介しました。試作衛星を使い、AI用チップが宇宙環境に耐えられるかを検証する計画です。",
+      "宇宙では放射線、打ち上げ時の激しい振動、真空中の冷却など、地上のデータセンターとは異なる課題があります。Googleはこれらの条件でハードウェアが動作するかを試すと説明しています。",
+      "これは実証段階の取り組みであり、宇宙データセンターが商用運用を始めたという発表ではありません。技術的な可能性とコスト、地上への通信など、解決すべき問題は多く残っています。"
+    ],
+    "en": {
+      "title": "Google Explores AI Computing in Space With Project Suncatcher",
+      "description": "On September 24, 2026, Google discussed the engineering challenges behind Project Suncatcher, a proposal to test AI computing hardware in space.",
+      "category": "Technology",
+      "sourceName": "Google Blog",
+      "body": [
+        "On September 24, 2026, Google discussed the engineering challenges behind Project Suncatcher, a proposal to test AI computing hardware in space.",
+        "A prototype satellite is intended to examine whether AI chips can withstand radiation, launch vibrations and the cooling challenges of operating in a vacuum.",
+        "The project is an early experiment, not an announcement of a commercial orbital data center. Technical feasibility, economics and communications remain important open questions."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0028",
+    "slug": "openai-devday-2026-agents",
+    "title": "OpenAI DevDay 2026を振り返る｜継続して働くAIエージェントに注目",
+    "description": "OpenAIは2026年9月29日、DevDay 2026で20件以上の発表を行ったと説明しました。ChatGPTやCodex、モデル、開発者向けの仕組みなどが対象です。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/devday-2026-recap/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年9月29日、DevDay 2026で20件以上の発表を行ったと説明しました。ChatGPTやCodex、モデル、開発者向けの仕組みなどが対象です。",
+      "特に注目されるのは、単発の質問に答えるだけでなく、継続的な責任を持って作業を進めるエージェントの方向性です。人とAIが共同で作業できる環境や、開発者が新しい体験を提供する仕組みも紹介されました。",
+      "イベントで発表された内容は、提供時期や利用条件が製品ごとに異なります。業務導入を検討する場合は、継続実行の権限、監査、成果物の確認方法を個別に評価する必要があります。"
+    ],
+    "en": {
+      "title": "OpenAI DevDay 2026 Highlights Ongoing AI Agents",
+      "description": "OpenAI said DevDay 2026, held on September 29, featured more than 20 announcements spanning ChatGPT, Codex, models and developer tools.",
+      "category": "AI Tools",
+      "sourceName": "OpenAI",
+      "body": [
+        "OpenAI said DevDay 2026, held on September 29, featured more than 20 announcements spanning ChatGPT, Codex, models and developer tools.",
+        "A central theme was agents that can take on ongoing responsibilities, alongside new ways for people and AI to collaborate and for developers to build native experiences.",
+        "Availability and rollout details differ by product. Organizations considering persistent agents should examine permissions, auditability and human review of consequential actions."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0029",
+    "slug": "openai-adversarial-distillation-2026",
+    "title": "OpenAIがAIモデルの推論抽出攻撃を報告｜情報漏洩との違いを解説",
+    "description": "OpenAIは2026年9月30日、同社モデルの保護された推論情報を取り出そうとする組織的な活動を検知し、阻止したと発表しました。7月初旬から確認された活動で、他のモデルの訓練や改良に出力を無断利用する『敵対的蒸留』に一",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+    "status": "published",
+    "body": [
+      "OpenAIは2026年9月30日、同社モデルの保護された推論情報を取り出そうとする組織的な活動を検知し、阻止したと発表しました。7月初旬から確認された活動で、他のモデルの訓練や改良に出力を無断利用する『敵対的蒸留』に一致すると説明しています。",
+      "今回の手口は、モデルとのやり取りを操作して本来は表示されない推論情報を出力させようとするものでした。OpenAIは、暗号化の破壊、データベース侵入、保存された利用者の会話への直接アクセスは確認されていないと明記しています。",
+      "AIのセキュリティ問題を考える際は、モデルの内部情報の抽出と、利用者データの漏洩を区別する必要があります。OpenAIは業界団体を通じて情報を共有し、防御の強化を進めるとしています。"
+    ],
+    "en": {
+      "title": "OpenAI Reports a Coordinated Model Distillation Campaign",
+      "description": "On September 30, 2026, OpenAI reported disrupting a coordinated attempt to extract protected reasoning from its models, describing the activity as consistent with adversarial distillation.",
+      "category": "Technology",
+      "sourceName": "OpenAI",
+      "body": [
+        "On September 30, 2026, OpenAI reported disrupting a coordinated attempt to extract protected reasoning from its models, describing the activity as consistent with adversarial distillation.",
+        "The operators manipulated model interactions to elicit information not intended for the final answer. OpenAI explicitly said they did not break encryption, compromise a database or gain direct access to stored user conversations.",
+        "The distinction matters: extracting model reasoning is not the same as breaching a customer database. OpenAI said it shared information with industry partners to strengthen defenses."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0030",
+    "slug": "google-ai-subscription-workspace-tools-2026",
+    "title": "Google AIプランに新機能｜Gmail音声操作やSheetsのミニアプリ作成",
+    "description": "Googleは2026年9月9日、Google AIの有料プラン向け新機能を案内しました。Gmail、Googleドキュメント、Keepで音声を使った作業を支援するほか、Google Sheetsで対話的なミニアプリを作",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T17:00:00+09:00",
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月9日、Google AIの有料プラン向け新機能を案内しました。Gmail、Googleドキュメント、Keepで音声を使った作業を支援するほか、Google Sheetsで対話的なミニアプリを作る機能などを紹介しています。",
+      "Google Picsによるデザイン制作や、Chrome・Googleフォトと連携するGemini Sparkの機能も挙げられています。ただし、各機能の対象プランや提供地域は異なります。",
+      "たとえばSheetsのミニアプリは、表計算データを操作するための画面を手軽に試せる点が魅力です。一方、外部共有する場合は権限やデータの扱いを確認し、実務に適した品質か検証する必要があります。"
+    ],
+    "en": {
+      "title": "Google Expands AI Plans With Voice Tools and Sheets Mini Apps",
+      "description": "On September 9, 2026, Google outlined new features for its paid AI plans, including voice-driven tasks in Gmail, Docs and Keep, and the ability to create interactive mini apps in Sheets.",
+      "category": "AI Tools",
+      "sourceName": "Google Blog",
+      "body": [
+        "On September 9, 2026, Google outlined new features for its paid AI plans, including voice-driven tasks in Gmail, Docs and Keep, and the ability to create interactive mini apps in Sheets.",
+        "The update also highlighted Google Pics for creative work and Gemini Spark connections with Chrome and Google Photos. Availability varies by subscription tier and region.",
+        "These tools may reduce routine work, but users should verify permissions and data handling before using generated mini apps or automated workflows with sensitive information."
+      ]
+    }
   }
 ]
