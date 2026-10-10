@@ -3590,5 +3590,58 @@
         "WHAT TO WATCH: The competitive question for enterprise agents is moving beyond fluent responses toward correct tool use, business-rule compliance, and defensible explanations. Continuous evaluation tied to real execution traces can help teams improve reliability after deployment."
       ]
     }
+  },
+  {
+    "articleId": "TC-0069",
+    "slug": "aws-six-week-ai-agent-training-non-engineers-wealthwise",
+    "title": "非エンジニアが6週間でAIエージェントを開発｜AWSの人材育成プログラムと成果を解説",
+    "description": "AWSが公開した6週間・週4時間のAIエージェント開発研修を解説。非技術職が5つのAIエージェントを備える金融プロトタイプを制作した事例、学習成果、企業で再現するためのポイントを整理します。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T17:55:00+09:00",
+    "sourceName": "AWS Artificial Intelligence Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/machine-learning/building-ai-builders-playbook-for-closing-the-ai-knowledge-capability-gap/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月7日、技術職ではないビジネス担当者がAIエージェントを自ら作れるようになるための6週間の育成プログラムを公開しました。座学や資格取得だけでは実務に結び付きにくいという課題に対し、実際に動くプロトタイプを作り、メンターの支援を受けながら改善する方式を採用しています。AI導入を現場へ広げたい企業にとって、教育設計の参考になる事例です。",
+      "【AIを知っていることと作れることの差】AWSが調査したビジネス担当者の90％はAIエージェントを作る実践経験を望んでいました。一方、Amazon Bedrock AgentCoreを調べたことがある人は80％いたものの、Strands Agents SDKやAWS Lambdaエージェントに触れた人は5人に1人未満でした。知識があることと、技術的な選択や失敗を経験していることは異なります。",
+      "【対象はエンジニアだけではない】プログラムは営業、ソリューションコンサルタント、業務分析、プログラム管理など、日常業務でAIを扱うものの本職としてコードを書かない人を想定しています。AIの仕組みを自ら試すことで、顧客への説明や業務改善の提案を、製品紹介から具体的な実現方法の議論へ進めることが狙いです。",
+      "【6週間・週4時間の設計】参加者は6週間にわたり、週およそ4時間を活動に充てました。AWSは、段階的なプログラムを完了した参加者が、集中的な2日間の形式より実践的なスキルを3倍多く保持したという自社データを紹介しています。ただし、評価対象や測定方法の詳細を踏まえずに、すべての企業で同じ効果が得られると考えるべきではありません。",
+      "【第1段階：業務課題からテーマを決める】参加者は3〜4人のチームを作り、自分たちが経験した現実の業務課題を題材にしました。作りたい機能を先に決めるのではなく、誰が何に困っていて、何を改善できれば成功なのかを定義します。業務上の目的が曖昧なままツールの使い方を学ぶより、判断基準を持って学習を進めやすくなります。",
+      "【第2段階：実際のツールを触る】学習ではエージェントの概念を説明するだけでなく、開発環境の設定やツール操作を行います。AWSは自然言語から開発を支援するKiro、基盤モデルを利用するAmazon Bedrock、エージェントを組み立てるStrands Agents SDK、外部機能へ接続するMCPサーバーやAWS Lambdaを採用しました。参加者の技能に合った道具を選ぶことが重要です。",
+      "【第3段階：最小構成を早く動かす】チームは完成度の高いシステムを最初から目指すのではなく、まず最小限の機能が一通り動く状態を作りました。AWSが紹介した優勝チームは2日目にエンドツーエンドの動作を実現し、その後も改良を続けました。初期段階で問題点を発見できれば、複雑な設計へ進む前に方向を修正できます。",
+      "【メンターは代わりに作らない】各チームには技術に詳しいメンターが付きましたが、メンターが開発を肩代わりする方式ではありません。参加者が環境設定や設計で行き詰まったときに助言し、自力で問題を解決できるよう支援します。短い定例会や相談時間を設け、疑問を放置しないことも重視されました。",
+      "【金融アドバイザーの試作品が優勝】異なる顧客対応職の4人が作った「WealthWise」は、資産分析、リスク評価、資金計画、市場情報、個別提案を担当する5つのAIエージェントを連携させた試作品です。Node.jsとPython Flaskの二層構成、Amazon Nova、Strands Agents SDK、4つのDynamoDBテーブル、ライブ市場データを使い、複雑な問い合わせに5秒未満で応答したとAWSは説明しています。",
+      "【試作品と金融サービスは区別する】WealthWiseは研修の成果を示すプロトタイプであり、規制に対応した投資助言サービスとして一般提供されたことを示すものではありません。実際の金融業務で使うには、情報の正確さ、顧客適合性、説明責任、個人情報保護、必要な法令対応を別途検証する必要があります。短い応答時間だけで安全性を判断できない点にも注意が必要です。",
+      "【成果は自己評価の変化として報告】参加者のうち、エージェントAIを強く理解している、または専門家レベルだと答えた割合は27％から82％へ上昇しました。AI活用機会を特定する準備が十分だと感じる割合も41％から85％へ上がっています。これは参加者の自己評価であり、第三者が測定した業務生産性の改善率とは区別して読む必要があります。",
+      "【ツール利用の広がり】AWSの報告では、Strands Agents SDKの利用経験は20％から80％、AgentCoreは39％から85％へ上昇しました。さらに参加者の52％が試作品の活用可能性がある具体的な顧客を挙げ、87％が30日以内に学んだ内容を顧客対応へ生かす見込みと答えています。学習が実際の行動へつながるかは、その後の追跡も必要です。",
+      "【組織へ展開するための条件】この取り組みでは、管理職が週4時間の活動を認めること、メンターを確保すること、実験用の環境を用意することが重要でした。通常業務の片手間で実施し、相談相手や利用権限がない状態では、学習が途中で止まる可能性があります。時間、予算、セキュリティ、評価基準を事前に設計する必要があります。",
+      "【評価はデモの見栄えだけにしない】最終発表では、事業への影響、技術的な完成度、再利用性と拡張性、新規性、説明のわかりやすさの5つの観点で評価しました。操作できるデモを作ることは重要ですが、それだけでは本番利用に耐えるとは限りません。開発後の保守、費用、権限、障害対応まで議論することが次の段階になります。",
+      "【企業が再現するなら】まず小規模な参加者を募り、現場課題を一つ選び、実験に使うデータを機密情報から分離します。初週に動く最小構成を作り、毎週の振り返りで失敗や改善点を記録します。最終週にはデモだけでなく、どの業務指標が改善する見込みか、何が未検証かを説明できる状態を目指します。研修後の利用実績を追跡することも重要です。",
+      "【AI人材育成の今後】生成AIの導入が進むほど、AIを使ったことがある人と、実際の業務に合わせて設計・検証できる人の差が重要になります。AWSの事例は、非エンジニアにも開発の基礎を体験してもらうことで、業務担当者と技術チームの会話を具体的にできる可能性を示しています。ただし成果は組織の支援体制に左右されるため、教育と運用の両面から取り組む必要があります。"
+    ],
+    "en": {
+      "title": "How Non-Engineers Built AI Agents in Six Weeks: AWS Training Program and Results",
+      "description": "AWS shares a six-week, four-hours-per-week AI agent building program for non-engineers, including the five-agent WealthWise prototype, self-reported learning outcomes and a practical replication playbook.",
+      "category": "Business & DX",
+      "sourceName": "AWS Artificial Intelligence Blog",
+      "body": [
+        "On October 7, 2026, AWS described a six-week program designed to help business professionals build working AI agents. Rather than relying on presentations and certifications alone, the program combines hands-on prototypes, mentoring, iterative development and live demonstrations. It offers a practical case study for organizations seeking broader AI capability.",
+        "THE GAP BETWEEN AWARENESS AND CAPABILITY: AWS reports that 90 percent of surveyed business professionals wanted hands-on agent-building experience. Although 80 percent had explored AgentCore, fewer than one in five had used Strands Agents SDK or built Lambda-based agents. Familiarity with a product is not the same as experience making technical decisions.",
+        "NOT JUST FOR ENGINEERS: Participants included customer-facing and operational roles such as account managers, solution consultants, analysts and program managers. The goal was not to turn every employee into a production software engineer, but to improve practical judgment about what AI systems can do and what it takes to build them.",
+        "SIX WEEKS, FOUR HOURS PER WEEK: The program allocated about four hours each week over six weeks. AWS says its program data indicated that phased learning retained three times more practical skills than intensive two-day formats. This is a reported internal comparison, not a universal guarantee across training environments.",
+        "PHASE ONE — START WITH A BUSINESS PROBLEM: Participants formed mixed-experience teams of three or four and chose problems grounded in their work. Defining the user, the pain point and a demonstrable outcome before choosing tools made technical training more purposeful.",
+        "PHASE TWO — LEARN IN REAL TOOLS: The program used Kiro for natural-language-assisted development, Amazon Bedrock for model access, Strands Agents SDK for orchestration, and MCP servers or AWS Lambda for integration. Participants configured environments and practiced with the actual building blocks rather than learning terminology in isolation.",
+        "PHASE THREE — BUILD A WORKING MVP EARLY: Teams were encouraged to make a minimal end-to-end flow work quickly and refine it. The winning team had a working flow by day two, giving it time to discover integration problems and iterate before the final presentation.",
+        "MENTORS UNBLOCK RATHER THAN TAKE OVER: Technical mentors helped teams resolve infrastructure and design issues without building the prototypes for them. Regular standups and office hours reduced isolation and helped participants recover from failures.",
+        "THE WINNING WEALTHWISE PROTOTYPE: Four customer-facing professionals built a five-agent financial advisory demonstration covering portfolio analysis, risk assessment, financial planning, market insights and personalized recommendations. It used Node.js, Python Flask, Amazon Nova, Strands, four DynamoDB tables and live market data. AWS reports sub-five-second responses for complex financial reasoning.",
+        "A PROTOTYPE IS NOT A REGULATED ADVISORY SERVICE: WealthWise was a learning demonstration, not evidence of a production-ready investment advisory product. Real financial deployments would need independent checks on data quality, suitability, privacy, explainability and regulatory obligations. Fast responses do not establish safety.",
+        "WHAT THE OUTCOME METRICS SHOW: Self-rated strong or expert understanding of agentic AI increased from 27 percent to 82 percent. The share feeling well or extremely prepared to identify AI opportunities rose from 41 percent to 85 percent. These are participant self-assessments, not independently measured productivity gains.",
+        "TOOL ADOPTION AND INTENT: Reported Strands SDK adoption rose from 20 percent to 80 percent, while AgentCore rose from 39 percent to 85 percent. In the cohort, 52 percent identified customers who could benefit from their work, and 87 percent expected to apply lessons within 30 days. Intent to apply a skill is not the same as verified long-term adoption.",
+        "WHAT ORGANIZATIONS MUST PROVIDE: Managers protected approximately four hours per week, mentors were available, and participants had suitable tools and environments. Without time, access, budget and a safe place to experiment, even motivated teams may struggle to complete working prototypes.",
+        "JUDGING MORE THAN A POLISHED DEMO: Final projects were evaluated for business impact, technical excellence, reusability and scalability, innovation, and presentation quality. A convincing demo is valuable evidence of learning, but production readiness also requires maintenance, cost, security and failure-handling plans.",
+        "HOW TO REPLICATE THE APPROACH: Recruit a small cohort, select a real problem, use non-sensitive test data, establish a working minimal flow, and iterate weekly. The final review should include measurable business hypotheses and unresolved risks, followed by tracking of actual adoption after training.",
+        "THE BROADER IMPLICATION: As generative AI spreads, organizations need employees who can evaluate feasibility and trade-offs, not merely discuss AI products. AWS's program suggests that hands-on building can improve collaboration between business and engineering teams, provided the organization supports experimentation and follows through after the course."
+      ]
+    }
   }
 ]
