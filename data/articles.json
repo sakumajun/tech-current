@@ -564,6 +564,18 @@
     "body": [
       "GoogleはI/O 2026で、検索に『情報エージェント』を導入する構想を発表しました。利用者が関心のある話題を登録すると、エージェントがウェブ上の情報を継続的に確認する仕組みです。",
       "Googleの説明では、ブログ、ニュースサイト、SNSなどに加え、対象に応じて最新のデータを参照し、変化をまとめて通知します。情報収集を一度きりの検索から継続的な調査へ変える試みです。",
+      "【一度の検索から継続的な情報収集へ】従来の検索では、利用者が必要なときに検索語を入力し、結果を確認することが基本でした。情報エージェントの構想では、関心のあるテーマを登録し、変化が生じたときに知らせる形へと体験が広がります。毎回同じ検索を繰り返す負担を減らせる可能性がありますが、何を重要な変化と判断するかが品質を左右します。",
+      "【どのような話題に向いているか】製品の発売時期、制度の改正、研究分野の新しい発表、地域イベントなど、情報が少しずつ更新されるテーマと相性がよいと考えられます。例えば新しい製品の発表を待っている場合、関連する公式ブログやニュースの更新をまとめて確認できれば便利です。ただし、これは継続監視型の検索機能から考えられる利用例であり、個々の通知条件がすべて提供されることを意味しません。",
+      "【検索対象が多いことの利点と難しさ】ブログ、ニュース、SNSなどを横断すると、異なる視点の情報に触れられる可能性があります。一方、同じ発表を引用した記事が大量に存在すると、独立した情報が多いように見えることもあります。情報源の数と、裏付けの強さは別の問題です。公式発表、現地の一次資料、第三者による検証を区別することが重要になります。",
+      "【『変化』の検出には基準が必要】記事の更新日時が変わっただけで重要な情報が増えたとは限りません。価格の変更、提供地域の追加、発売日の延期など、利用者の判断に影響する変更を見分ける必要があります。情報エージェントが役立つかどうかは、新着情報を大量に並べることよりも、何が以前と違うのかを分かりやすく説明できるかに左右されます。",
+      "【通知が増えすぎる問題】継続監視は便利ですが、細かな変化をすべて知らせると通知が多くなり、重要な情報が埋もれるおそれがあります。利用者がテーマの優先度、通知頻度、重要度の条件を調整できる設計が望まれます。発表時点でそうした細かな設定がすべて利用可能と確認できるわけではありませんが、継続監視型サービスのUXを考えるうえで重要な論点です。",
+      "【要約と原文の関係】エージェントが複数の情報を短く整理しても、要約には省略が伴います。例えば『サービス開始』という通知だけでは、利用可能な地域や対象ユーザーが限定されていることを見落とすかもしれません。元の情報源へアクセスできること、公開日と更新日が確認できること、条件や例外が示されることが重要です。",
+      "【誤情報が繰り返し流通するリスク】一つの誤った投稿が複数のサイトへ転載されると、検索結果では多数の情報源が同じ内容を示しているように見えます。AIがそれらを独立した裏付けと誤認すると、誤情報を強く断定する危険があります。信頼性を高めるには、引用の連鎖をたどり、元の発表や証拠へ戻ることが必要です。",
+      "【企業での活用を考える】競合製品の動向、業界の規制、技術標準の更新などを継続的に追う業務では、定期的な検索の手間を減らせる可能性があります。ただし、情報収集の自動化と経営判断の自動化は別です。重要な意思決定に使う場合は、担当者が元の資料を確認し、変更の影響を評価する工程が必要になります。",
+      "【プライバシーと関心情報】利用者が登録する監視テーマには、仕事上の計画や個人的な関心が含まれる場合があります。サービスを利用する際は、監視テーマや履歴がどのように保存・利用されるか、共有されるかを確認したいところです。検索の自動化が進むほど、利用者が自分の情報を管理できることが重要になります。",
+      "【情報を発信する側への影響】検索エージェントが記事の変更点を追うようになれば、サイト運営者にとっては正確な公開日、更新日、出典の表示が一段と重要になります。本文を大幅に書き換えた場合は、何を変更したかが分かる編集履歴も読者の役に立ちます。見出しだけを頻繁に変えるより、実質的な更新内容を明確にする方が情報の信頼性につながります。",
+      "【従来のニュース通知との違い】単純なキーワード通知は、指定語が登場した記事を知らせる仕組みです。情報エージェントの構想は、関心のあるテーマについて複数の情報を整理し、変化の意味を伝える方向にあります。ただし、実際の比較では、通知の正確さ、重複の少なさ、更新までの時間を検証する必要があります。",
+      "【今後の注目点】情報エージェントが普及すれば、検索は『今の答えを探す』行動から『変化を継続して把握する』行動へ広がります。重要なのは通知の量ではなく、変化の理由と根拠を確かめられることです。提供地域や具体的な設定機能は公式の最新情報を確認しながら、実際の利用体験を評価する必要があります。",
       "ただし、集約された情報が正確かどうかは元の資料で確認する必要があります。通知が便利になるほど、一次情報へのリンクや更新時刻の確認が大切になります。"
     ],
     "en": {
@@ -574,10 +586,23 @@
       "body": [
         "Google's Search information agents aim to track topics across the web and provide synthesized updates over time.",
         "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "FROM ONE-OFF SEARCH TO ONGOING RESEARCH: Conventional search requires users to return and repeat queries. An information agent aims to track a topic over time and surface changes. That could reduce repetitive work, but the quality of the experience depends on how the system decides which changes are meaningful.",
+        "SUITABLE USE CASES: Product launches, regulatory updates, research announcements and local events all evolve over time. Someone waiting for a product release might benefit from a summary of changes across official announcements and reporting. These are potential applications, not confirmation that every alert configuration is available.",
+        "BREADTH AND SOURCE QUALITY: Searching blogs, news sites and social platforms can expose different perspectives. Yet many articles may simply repeat the same original claim. The number of matching sources does not establish independent verification. Official records, firsthand evidence and secondary commentary should be distinguished.",
+        "DETECTING A MEANINGFUL CHANGE: A changed publication timestamp is not necessarily new information. Price adjustments, expanded availability and delayed release dates can matter more. A useful agent should explain what changed compared with the previous state, not merely present a long list of recently updated pages.",
+        "NOTIFICATION OVERLOAD: Continuous monitoring can generate too many alerts. Controls for topic priority, frequency and significance would help users focus on consequential updates. These are interaction-design considerations; they should not be mistaken for a verified list of product settings.",
+        "SUMMARIES NEED SOURCE LINKS: Condensing several documents can hide important exceptions. A notification that a service has launched may omit regional or account restrictions. Access to the original announcement, publication dates and qualifying details helps users check the conclusion.",
+        "REPEATED MISINFORMATION: One incorrect claim can be copied across many sites and appear independently corroborated. Automated summaries need to avoid treating a chain of reposts as multiple original sources. Tracing claims back to their evidence is a key part of reliable monitoring.",
+        "ENTERPRISE APPLICATIONS: Businesses may want to track competitors, regulations or technical standards. Automated collection can save analyst time, but it does not replace judgment about the implications of a change. High-impact decisions still require review of primary materials.",
+        "PRIVACY OF FOLLOWED TOPICS: Saved monitoring interests may reveal professional plans or personal concerns. Users should understand how those interests and their histories are stored, used and shared. Control over this information becomes more important as search grows more proactive.",
+        "IMPLICATIONS FOR PUBLISHERS: Sites should make publication dates, update dates and source references clear. When an article changes substantially, an explanation of the revision helps both readers and downstream information services. Meaningful corrections are more valuable than superficial headline changes.",
+        "DIFFERENCE FROM KEYWORD ALERTS: Traditional alerts often notify users when a specified term appears. Information agents aim to synthesize developments and explain their significance. Practical evaluation should focus on relevance, duplication, accuracy and time to notification.",
+        "WHAT TO WATCH: Search may increasingly become a service that tracks change rather than answering only the question asked today. The essential measures will be evidence quality, clear explanations and user control. Actual rollout conditions and settings should be checked against Google's current documentation.",
         "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
         "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
       ]
-    }
+    },
+    "updatedAt": "2026-10-10T14:30:00+09:00"
   },
   {
     "articleId": "TC-0012",
@@ -592,6 +617,18 @@
     "body": [
       "GoogleはI/O 2026で、AIを活用した買い物支援機能『Universal Cart』を発表しました。検索やGeminiなど、複数のGoogleサービスで見つけた商品をまとめて管理する構想です。",
       "価格の変化や在庫状況を調べたり、商品同士の互換性について注意を促したりする機能が紹介されています。購入の判断に必要な情報を、サービスを行き来せずに確認できる体験を目指しています。",
+      "【買い物の情報が分散している問題】オンラインで商品を選ぶとき、利用者は検索結果、販売店のページ、レビュー、価格比較サービスなどを行き来します。候補が増えると、どの商品をどこで見つけたか、送料を含む総額はいくらか、購入可能かを整理するだけでも手間がかかります。Universal Cartの構想は、複数のGoogleサービスで見つけた商品をまとめて管理することで、この負担を減らそうとするものです。",
+      "【カートを横断することの意味】通常のショッピングカートは、一つの販売店の中で購入予定の商品を保存する仕組みです。複数サービスを横断するカートでは、商品を探す段階と、実際にどの店から購入するかを判断する段階をつなぐ体験が想定されます。ただし、商品を一覧にまとめられることと、すべての販売店で同じ手順で決済できることは別です。",
+      "【価格比較で確認したい条件】同じ商品名でも、容量、色、型番、保証内容、セット品の有無が異なる場合があります。単純に表示価格だけを比較すると、実際には異なる条件の商品を比べてしまう可能性があります。AIによる買い物支援では、商品が同一かどうか、送料や税金を含めた金額かどうかを明確にする必要があります。",
+      "【在庫情報の鮮度】在庫は購入が集中すると短時間で変わります。検索時点では在庫ありでも、購入画面へ進む頃には売り切れている場合があります。AIが在庫を表示する場合は、確認した時刻や販売店の情報を示すことが望まれます。購入可能かどうかの最終判断は、販売店の注文画面で確認する必要があります。",
+      "【互換性を確認する難しさ】周辺機器や交換部品では、商品が似ていても対応する機種が異なることがあります。例えば充電器、パソコン用メモリ、家電の交換部品などは、型番や規格を正確に照合する必要があります。AIが互換性について注意を促す機能は有用ですが、誤った組み合わせを推奨する危険もあるため、メーカーの仕様情報を確認することが重要です。",
+      "【価格変動の通知をどう使うか】値下げの情報が届けば、購入時期を判断する材料になります。ただし、値引き率の表示は比較対象の価格によって印象が変わります。過去の販売価格、送料、ポイント還元などを考慮しなければ、実際にお得かどうかは分かりません。価格通知は判断を支援するものであり、必ず購入を促すものではない設計が望まれます。",
+      "【複数サービス間の体験設計】検索で見つけた商品をGeminiなど別のサービスでも確認できるなら、候補の管理がしやすくなる可能性があります。一方、どこで追加した商品なのか、誰が販売するのか、どの条件が最新なのかが分からなくなると、かえって混乱します。商品情報の出典と更新時点を分かりやすく示すことが重要です。",
+      "【購入前の最終確認】カートに商品をまとめた後でも、販売店、商品型番、数量、配送先、送料、返品条件などを確認する必要があります。特に高額商品では、保証内容や修理対応の条件も判断材料です。AIが候補を整理してくれても、最終的な注文内容を利用者が理解し、確認できることが欠かせません。",
+      "【販売店にとっての変化】買い物支援AIが商品情報を集約するようになれば、商品名、型番、価格、在庫、配送条件などのデータ品質がより重要になります。情報が古いと、利用者に誤った候補として表示される可能性があります。販売店は、検索結果に載ることだけでなく、購入判断に必要な情報を正確に提供する必要があります。",
+      "【広告と推薦の透明性】AIが商品を並べる場合、どの条件で順序を決めているのかが利用者には見えにくくなります。価格、人気、互換性、販売条件などの違いを説明できることが重要です。広告や販売上の提携が推薦に関係する場合は、利用者が区別できる表示が望まれます。これは買い物支援サービス一般の透明性に関する論点です。",
+      "【個人情報と決済の安全性】買い物の履歴や検討中の商品には、個人の関心や生活状況が表れることがあります。決済や配送先の情報を扱う場合は、どのサービスがデータを保持し、どの操作に同意したのかを明確にする必要があります。AIが購入を支援することと、無条件に注文を確定してよいことは同じではありません。",
+      "【今後の注目点】Universal Cartの構想は、商品を探す、比較する、購入を決めるという工程をつなげる方向を示しています。実際の価値は、対応する販売店や地域、価格・在庫情報の更新頻度、決済までの手順によって変わります。便利さだけでなく、情報の正確さと利用者による最終確認を両立できるかが重要です。",
       "企業にとっては商品データの正確さがより重要になります。一方、購入前には価格、販売条件、返品規定を販売店の表示で確認する姿勢が欠かせません。"
     ],
     "en": {
@@ -602,10 +639,23 @@
       "body": [
         "Universal Cart aims to help shoppers track products, prices and availability across Google's services.",
         "At Google I/O 2026, the company highlighted this development as part of its broader effort to make AI products more useful across everyday tasks and software workflows. The official announcement describes the intended capabilities, while actual availability and supported features can vary by product and region.",
+        "THE FRAGMENTED SHOPPING JOURNEY: Online shoppers move among search results, retailer pages, reviews and price-comparison tools. Tracking products, shipping costs and availability across those sources takes effort. Universal Cart aims to reduce that fragmentation by organizing products discovered across Google's services.",
+        "WHAT A CROSS-SERVICE CART MEANS: A conventional shopping cart belongs to one retailer. A cart spanning services could connect product discovery with the decision about where to buy. However, collecting products in one view does not necessarily mean every merchant supports identical checkout or payment workflows.",
+        "COMPARING PRICES CORRECTLY: Similar product names may refer to different sizes, colors, model numbers or warranty packages. Comparing displayed prices without matching specifications can be misleading. A useful shopping assistant should make product identity and the treatment of shipping and taxes clear.",
+        "INVENTORY FRESHNESS: Stock can change quickly, especially during popular launches. An item shown as available during discovery may be sold out by checkout. Inventory timestamps and retailer attribution would help users interpret such information. The merchant's order page remains the final place to verify availability.",
+        "COMPATIBILITY IS COMPLICATED: Chargers, computer components and replacement parts often depend on precise specifications. An assistant may help identify compatibility questions, but it can also recommend the wrong combination. Manufacturer specifications remain an important source of confirmation.",
+        "INTERPRETING PRICE ALERTS: A price reduction can inform purchase timing, but a discount percentage depends on the comparison price. Shipping, historical pricing and loyalty rewards can change the total value. Alerts should support an informed decision rather than automatically encourage buying.",
+        "CONSISTENCY ACROSS SERVICES: If a product saved in Search can be considered in another Google experience, shoppers may spend less time reconstructing shortlists. Yet they need to know where the product was found, who sells it and which details are current. Source attribution and timestamps are essential.",
+        "THE FINAL PURCHASE CHECK: Before ordering, users should confirm merchant identity, model number, quantity, shipping address, delivery cost and return policy. Warranties and repair terms also matter for expensive goods. AI-assisted organization does not remove the need for informed checkout confirmation.",
+        "IMPLICATIONS FOR RETAILERS: Aggregated shopping experiences increase the importance of accurate product feeds, including names, model numbers, stock, prices and delivery conditions. Outdated information can create poor recommendations and disappointed customers.",
+        "TRANSPARENCY OF RECOMMENDATIONS: Shoppers may not know why an AI assistant ranks one product above another. Clear explanations of price, compatibility and merchant conditions can help. Any advertising or commercial influence should be distinguishable from neutral comparison. This is a general transparency concern, not a claim about a specific Universal Cart ranking policy.",
+        "PAYMENT AND PRIVACY: Shopping histories reveal personal interests and sometimes sensitive circumstances. Checkout introduces addresses and payment details. Users should understand which service stores their information and which actions they have approved. Assistance with purchasing is not the same as authorization to place an order.",
+        "WHAT TO WATCH: Universal Cart points toward a more connected journey from discovery to comparison and purchase. Real value will depend on retailer coverage, regional availability, data freshness and checkout design. Convenience must be balanced with accurate information and user control.",
         "The practical significance is not just a new feature but a shift in how people interact with digital services. Users and organizations should evaluate accuracy, permissions, privacy and the ability to verify results before relying on automated decisions.",
         "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
       ]
-    }
+    },
+    "updatedAt": "2026-10-10T14:30:00+09:00"
   },
   {
     "articleId": "TC-0013",
