@@ -1427,5 +1427,179 @@
         "The approach can make reviews more focused, but teams still need to manage dependencies carefully. The feature is available across github.com plans, with Enterprise Server support planned for a future release."
       ]
     }
+  },
+  {
+    "articleId": "TC-0050",
+    "slug": "nvidia-isaac-ros-5-agentic-robotics",
+    "title": "NVIDIA「Isaac ROS 5.0」公開｜AIエージェントと開発するロボティクス基盤",
+    "description": "NVIDIAは2026年9月22日、ロボット開発向けのGPU高速化パッケージ群「Isaac ROS 5.0」を公開しました。オープンソースのRobot Operating System（ROS）を基盤に、AIエージェントを利用した",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:30:00+09:00",
+    "sourceName": "NVIDIA Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/",
+    "status": "published",
+    "body": [
+      "NVIDIAは2026年9月22日、ロボット開発向けのGPU高速化パッケージ群「Isaac ROS 5.0」を公開しました。オープンソースのRobot Operating System（ROS）を基盤に、AIエージェントを利用した開発手順とNVIDIA Jetsonへの展開を強化しています。",
+      "ROSはロボットのセンサー、制御、認識などを接続する共通のソフトウェア基盤です。Isaac ROSはそこにGPUを活用した処理を加え、周囲を認識して動作するアプリケーションの開発を支援します。",
+      "今回の焦点は、開発者だけでなくAIエージェントもロボット開発の工程に参加できるようにする点です。コード生成だけでなく、構成の変更や検証の進め方を含む開発体験が変わる可能性があります。",
+      "ただし、ソフトウェア開発を高速化できても、現実のロボットが安全に動作することを保証するものではありません。実機テスト、センサーの誤認識対策、停止機構などの安全設計は引き続き欠かせません。"
+    ],
+    "en": {
+      "title": "NVIDIA Isaac ROS 5.0 Brings Agentic Workflows to Robotics",
+      "description": "NVIDIA released Isaac ROS 5.0 on September 22, 2026. The GPU-accelerated package collection builds on the open-source Robot Operating System and expands agentic workflows and deployment options for NVIDIA ",
+      "category": "Technology",
+      "sourceName": "NVIDIA Blog",
+      "body": [
+        "NVIDIA released Isaac ROS 5.0 on September 22, 2026. The GPU-accelerated package collection builds on the open-source Robot Operating System and expands agentic workflows and deployment options for NVIDIA Jetson platforms.",
+        "ROS provides common software building blocks for sensing, perception and control. Isaac ROS adds GPU-accelerated capabilities to support applications that perceive and act in dynamic environments.",
+        "The release aims to help human developers and AI agents work together on robotics applications. That could change how teams configure, develop and test software, beyond conventional code generation.",
+        "Faster development does not guarantee safe behavior in the physical world. Real-world testing, sensor validation and emergency stop mechanisms remain essential."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0051",
+    "slug": "nvidia-skild-s1-video-robot-learning",
+    "title": "ロボットが1本の動画から新しい作業を学習｜Skild AIとNVIDIAの取り組み",
+    "description": "NVIDIAは2026年9月10日、Skild AIのロボット基盤モデル「S1」を紹介しました。S1は新しい作業を示した1本の動画を入力として、個別の追加学習なしに作業を理解し実行することを目指すモデルです。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:30:00+09:00",
+    "sourceName": "NVIDIA Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/",
+    "status": "published",
+    "body": [
+      "NVIDIAは2026年9月10日、Skild AIのロボット基盤モデル「S1」を紹介しました。S1は新しい作業を示した1本の動画を入力として、個別の追加学習なしに作業を理解し実行することを目指すモデルです。",
+      "従来の産業用ロボットは、作業手順や製造ラインの変更に合わせた再プログラミングが必要になることがあります。動画を使って作業を伝えられれば、変更への対応時間を短縮できる可能性があります。",
+      "NVIDIAによると、Skild AIは合成データ生成、モデル学習、シミュレーション、実機展開まで同社のAI基盤を活用しています。動画を見せるだけであらゆる作業が確実に実行できるという意味ではありません。",
+      "製造現場に導入する場合は、動画で示されていない例外処理や作業環境の変化にどう対応するかが課題です。成功率や安全性は対象のロボットと作業条件ごとに評価する必要があります。"
+    ],
+    "en": {
+      "title": "Skild AI Uses NVIDIA Technology to Teach Robots From a Single Video",
+      "description": "NVIDIA highlighted Skild AI's S1 robot foundation model on September 10, 2026. S1 is designed to learn an unfamiliar task from a single video demonstration without task-specific retraining.",
+      "category": "Technology",
+      "sourceName": "NVIDIA Blog",
+      "body": [
+        "NVIDIA highlighted Skild AI's S1 robot foundation model on September 10, 2026. S1 is designed to learn an unfamiliar task from a single video demonstration without task-specific retraining.",
+        "Industrial robots often require significant reprogramming when workflows or production lines change. Video-based instruction could reduce the effort needed to adapt to new tasks.",
+        "According to NVIDIA, Skild AI uses its infrastructure for synthetic data, training, simulation and deployment. The announcement does not mean every robot can reliably execute any task after watching one video.",
+        "Real-world adoption still depends on handling exceptions, changing environments and safety requirements. Performance should be assessed for each robot and operational setting."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0052",
+    "slug": "nvidia-dgx-spark-64gb-local-ai",
+    "title": "NVIDIA「DGX Spark」64GBモデル発表｜クラウドに頼らないローカルAI環境",
+    "description": "NVIDIAは2026年10月2日、小型AI開発システム「DGX Spark」に64GBユニファイドメモリの構成を追加すると発表しました。Acer、ASUS、Dell、Gigabyte、HP、MSIなどのパートナーから、10月23",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:30:00+09:00",
+    "sourceName": "NVIDIA Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+    "status": "published",
+    "body": [
+      "NVIDIAは2026年10月2日、小型AI開発システム「DGX Spark」に64GBユニファイドメモリの構成を追加すると発表しました。Acer、ASUS、Dell、Gigabyte、HP、MSIなどのパートナーから、10月23日以降の提供が予定されています。",
+      "ユニファイドメモリはCPUとGPUが共有するメモリで、モデルのサイズや実行方法に関わります。新構成は、クラウドへ毎回処理を送らず、手元の機器でAIモデルやエージェントを試したい開発者を対象としています。",
+      "NVIDIAは「Sync Cluster Assistant」を使い、2台のDGX Sparkを組み合わせた処理にも言及しています。単体で収まらない作業を複数の機器へ広げる選択肢です。",
+      "ローカル実行はデータの扱いを制御しやすくする一方、モデルの性能、消費電力、ソフトウェア互換性、機器費用を比較する必要があります。すべてのクラウドAIサービスを置き換える製品というわけではありません。"
+    ],
+    "en": {
+      "title": "NVIDIA Announces a 64GB DGX Spark Configuration for Local AI",
+      "description": "On October 2, 2026, NVIDIA announced a 64GB unified-memory configuration of DGX Spark. Availability through partners including Acer, ASUS, Dell, Gigabyte, HP and MSI is scheduled to begin October 23.",
+      "category": "Technology",
+      "sourceName": "NVIDIA Blog",
+      "body": [
+        "On October 2, 2026, NVIDIA announced a 64GB unified-memory configuration of DGX Spark. Availability through partners including Acer, ASUS, Dell, Gigabyte, HP and MSI is scheduled to begin October 23.",
+        "Unified memory affects the size and type of AI workloads that can run on a device. The new configuration targets developers who want to test local models and agents without sending every workload to a cloud service.",
+        "NVIDIA also describes using Sync Cluster Assistant to connect two DGX Spark systems, creating an option for workloads that benefit from additional capacity.",
+        "Local execution can offer more control over data, but teams still need to compare model capability, power consumption, compatibility and total cost. It is not a universal replacement for cloud AI."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0053",
+    "slug": "nvidia-microsoft-rtx-spark-windows-ai-agents",
+    "title": "NVIDIAとMicrosoftがWindows向けローカルAIを強化｜RTX SparkとDGX Station",
+    "description": "NVIDIAは2026年10月7日、Microsoftとの協業によるWindows向けAIエージェントの取り組みを発表しました。Windows AIとSurfaceのイベントで、両社はハードウェアとソフトウェアを組み合わせたローカ",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T19:30:00+09:00",
+    "sourceName": "NVIDIA Blog",
+    "sourceUrl": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+    "status": "published",
+    "body": [
+      "NVIDIAは2026年10月7日、Microsoftとの協業によるWindows向けAIエージェントの取り組みを発表しました。Windows AIとSurfaceのイベントで、両社はハードウェアとソフトウェアを組み合わせたローカルAI環境の方向性を示しています。",
+      "発表にはRTX Sparkの予約開始と、Windows向けDGX Stationのプレビューが含まれます。デスクトップ上でAIモデルやエージェントを動かす選択肢を広げる取り組みです。",
+      "企業にとっては、データをどこで処理するか、どの程度の計算資源が必要か、既存のWindows環境とどう統合するかが判断材料になります。ローカルAIの導入は、クラウド利用の有無だけでなく運用管理にも関係します。",
+      "製品の提供時期や仕様は構成によって異なります。導入検討では、予約やプレビューの段階と一般提供を区別し、実際のアプリケーション要件を確認する必要があります。"
+    ],
+    "en": {
+      "title": "NVIDIA and Microsoft Expand Local AI Options for Windows PCs",
+      "description": "On October 7, 2026, NVIDIA outlined its collaboration with Microsoft to bring more AI agent capabilities to Windows PCs. The announcement was made at a Windows AI and Surface event.",
+      "category": "Business & DX",
+      "sourceName": "NVIDIA Blog",
+      "body": [
+        "On October 7, 2026, NVIDIA outlined its collaboration with Microsoft to bring more AI agent capabilities to Windows PCs. The announcement was made at a Windows AI and Surface event.",
+        "It includes the opening of RTX Spark preorders and a preview of DGX Station for Windows. Both are part of an effort to broaden options for running models and agents close to users.",
+        "For enterprises, important questions include where data is processed, how much compute is needed and how the systems integrate with existing Windows management and security practices.",
+        "Preorders and previews are not the same as broad product availability. Buyers should check final specifications, deployment requirements and support conditions before committing."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0054",
+    "slug": "aws-well-architected-agent-cloud-optimization",
+    "title": "AWS「Well-Architected Agent」公開プレビュー｜クラウドのコストと安全性をAIが分析",
+    "description": "AWSは2026年10月1日、クラウド環境の構成をAIで分析する「AWS Well-Architected Agent」の公開プレビューを発表しました。コスト、セキュリティ、性能、耐障害性などの観点から改善案を提示するサービスです",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T19:30:00+09:00",
+    "sourceName": "AWS Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/aws/announcing-aws-well-architected-agent-an-ai-powered-intelligence-to-optimize-your-cloud-environment-preview/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月1日、クラウド環境の構成をAIで分析する「AWS Well-Architected Agent」の公開プレビューを発表しました。コスト、セキュリティ、性能、耐障害性などの観点から改善案を提示するサービスです。",
+      "従来のクラウド構成レビューでは、担当者が設定や利用状況を確認し、ベストプラクティスと照らし合わせる必要がありました。このエージェントはリソース構成、利用指標、アプリケーション間の関係などをまとめて分析します。",
+      "AWSによると、65以上のAWSサービスを対象としたベストプラクティスを参照し、業務目標に合わせた改善案を提示します。一般的なチェックリストではなく、実際の環境を踏まえた助言を目指しています。",
+      "ただし、推奨された変更をそのまま適用してよいとは限りません。コスト削減と可用性のトレードオフ、設定変更の影響、権限管理などを人が確認する必要があります。公開プレビューのため、利用条件や機能は変わる可能性があります。"
+    ],
+    "en": {
+      "title": "AWS Well-Architected Agent Uses AI to Review Cloud Environments",
+      "description": "AWS announced a public preview of Well-Architected Agent on October 1, 2026. The AI-powered service analyzes cloud environments and recommends improvements across cost, security, performance and resilience",
+      "category": "AI Tools",
+      "sourceName": "AWS Blog",
+      "body": [
+        "AWS announced a public preview of Well-Architected Agent on October 1, 2026. The AI-powered service analyzes cloud environments and recommends improvements across cost, security, performance and resilience.",
+        "Traditional architecture reviews require teams to inspect configurations and usage patterns against best practices. The agent combines resource settings, utilization data and application relationships to provide contextual guidance.",
+        "AWS says the agent evaluates environments against best practices covering more than 65 AWS services and takes business goals into account when suggesting changes.",
+        "Recommendations still require review. Cost, availability, security and operational constraints can conflict, and a proposed fix may have side effects. Features and access conditions may change during the public preview."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0055",
+    "slug": "aws-strands-box-dogwood-agent-sandbox",
+    "title": "AWS「Strands Box」公開｜AIエージェントの操作をポリシーで制御するサンドボックス",
+    "description": "AWSは2026年10月7日、AIエージェントの実行環境を制限するオープンソースの取り組み「Strands Box」を紹介しました。エージェントがファイルを読み、コマンドを実行し、APIへ接続する際の権限を管理することを目的として",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T19:30:00+09:00",
+    "sourceName": "AWS Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/opensource/introducing-strands-box-ai-agent-sandboxes-powered-by-dogwood/",
+    "status": "published",
+    "body": [
+      "AWSは2026年10月7日、AIエージェントの実行環境を制限するオープンソースの取り組み「Strands Box」を紹介しました。エージェントがファイルを読み、コマンドを実行し、APIへ接続する際の権限を管理することを目的としています。",
+      "AIエージェントは作業を自動化できる反面、許可していないディレクトリを操作したり、認証情報へアクセスしたりする危険があります。通常のサンドボックスはアクセスできる範囲を制限しますが、運用上は『いつ、どの操作を許すか』も重要です。",
+      "Strands BoxはDogwoodによるポリシー制御を活用します。例えば障害調査中はログの閲覧を許しても、本番環境の設定変更は許さないといった、状況に応じた権限設計が考えられます。",
+      "こうした制御は、エージェントが意図しない操作をするリスクを下げる手段です。ただし、ポリシーの設定ミスや外部サービス側の権限まで自動的に解消するわけではありません。監査ログ、最小権限、承認フローと組み合わせる必要があります。"
+    ],
+    "en": {
+      "title": "AWS Introduces Strands Box for Policy-Controlled AI Agent Sandboxes",
+      "description": "On October 7, 2026, AWS introduced Strands Box, an open-source approach to sandboxing AI agents. It focuses on controlling what agents may access and do when reading files, running commands or calling APIs",
+      "category": "Technology",
+      "sourceName": "AWS Blog",
+      "body": [
+        "On October 7, 2026, AWS introduced Strands Box, an open-source approach to sandboxing AI agents. It focuses on controlling what agents may access and do when reading files, running commands or calling APIs.",
+        "Agents can automate useful work but may also attempt operations outside their intended scope. Restricting access is one layer of protection; operational teams also need policies governing when particular actions are allowed.",
+        "Strands Box uses Dogwood policies to express these constraints. An incident-response agent, for example, might be permitted to inspect logs without being allowed to change production infrastructure.",
+        "Policy-based sandboxes reduce risk but do not eliminate misconfiguration or excessive privileges in external systems. Audit logs, least-privilege access and approval processes remain important."
+      ]
+    }
   }
 ]
