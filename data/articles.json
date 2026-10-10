@@ -490,5 +490,179 @@
         "For the latest rollout details and limitations, consult the original Google announcement linked in this article."
       ]
     }
+  },
+  {
+    "articleId": "TC-0017",
+    "slug": "microsoft-copilot-home-code-autopilot",
+    "title": "Microsoft Copilot刷新｜Home・Code・Autopilotで仕事はどう変わる？",
+    "description": "Microsoftは2026年9月25日、Copilotの新機能としてHome、Code、Autopilotを発表しました。HomeはChatとCoworkをまとめ、Officeの",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T16:00:00+09:00",
+    "sourceName": "Official company announcement",
+    "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+    "status": "published",
+    "body": [
+      "Microsoftは2026年9月25日、Copilotの新機能としてHome、Code、Autopilotを発表しました。HomeはChatとCoworkをまとめ、Officeの機能を統合する仕事の入口です。",
+      "CodeはGitHub Copilotの技術を基盤にした開発支援機能です。Autopilotは利用者が離れている間も作業を続ける継続的なエージェントとして紹介されています。",
+      "HomeとCodeはFrontierプログラムで順次展開、Autopilotはプライベートプレビューの拡大が予定されています。全ユーザーへの即時提供ではない点に注意が必要です。",
+      "TECH CURRENTでは、発表内容と実際の提供状況を区別しながら、利用者や企業への影響を引き続き確認していきます。"
+    ],
+    "en": {
+      "title": "Microsoft Introduces Copilot Home, Code and Autopilot",
+      "description": "Microsoft Introduces Copilot Home, Code and Autopilot. A look at the official announcement, practical implications and limits.",
+      "category": "AI Tools",
+      "sourceName": "Official company announcement",
+      "body": [
+        "Microsoft Introduces Copilot Home, Code and Autopilot. A look at the official announcement, practical implications and limits.",
+        "The official announcement describes a development that may affect how people and organizations use digital tools. Details of rollout and availability should be checked against the original source.",
+        "The practical impact depends on the use case. Organizations should assess data quality, permissions, costs and the ability to verify outputs rather than treating a product announcement as proof of results.",
+        "Read the linked primary source for the full announcement and any subsequent availability updates."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0018",
+    "slug": "microsoft-fabric-iq-copilot-business-data",
+    "title": "Microsoft Fabric IQとCopilotが連携｜社内データに根拠を持つAIへ",
+    "description": "Microsoftは2026年9月28日、Microsoft FabricとAzure Databasesの新機能を発表しました。Fabric IQは管理された業務の文脈をCopi",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T16:00:00+09:00",
+    "sourceName": "Official company announcement",
+    "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/28/new-microsoft-data-innovations-unlock-what-only-your-business-knows/",
+    "status": "published",
+    "body": [
+      "Microsoftは2026年9月28日、Microsoft FabricとAzure Databasesの新機能を発表しました。Fabric IQは管理された業務の文脈をCopilotへ提供する仕組みです。",
+      "Power BIのセマンティックモデルや指標、業務定義を利用し、組織が共通認識として扱うデータに基づく回答を目指します。Fabric IQを利用するCopilot ChatとCoworkは一般提供が始まったとしています。",
+      "社内データをAIに接続する際には、アクセス権、指標の定義、更新頻度が重要です。AIの回答をそのまま確定情報とせず、元データを確認できる設計が求められます。",
+      "TECH CURRENTでは、発表内容と実際の提供状況を区別しながら、利用者や企業への影響を引き続き確認していきます。"
+    ],
+    "en": {
+      "title": "Microsoft Connects Fabric IQ to Copilot for Grounded Business Answers",
+      "description": "Microsoft Connects Fabric IQ to Copilot for Grounded Business Answers. A look at the official announcement, practical implications and limits.",
+      "category": "Business & DX",
+      "sourceName": "Official company announcement",
+      "body": [
+        "Microsoft Connects Fabric IQ to Copilot for Grounded Business Answers. A look at the official announcement, practical implications and limits.",
+        "The official announcement describes a development that may affect how people and organizations use digital tools. Details of rollout and availability should be checked against the original source.",
+        "The practical impact depends on the use case. Organizations should assess data quality, permissions, costs and the ability to verify outputs rather than treating a product announcement as proof of results.",
+        "Read the linked primary source for the full announcement and any subsequent availability updates."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0019",
+    "slug": "google-beam-japan-expansion",
+    "title": "Google Beamが日本に展開｜遠隔会議はどこまで対面に近づく？",
+    "description": "Googleは2026年9月23日、遠隔でも対面に近い会話を目指すGoogle Beamの展開拡大を発表しました。日本を含む6か国で顧客向け機器の出荷を進めています。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T16:00:00+09:00",
+    "sourceName": "Official company announcement",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月23日、遠隔でも対面に近い会話を目指すGoogle Beamの展開拡大を発表しました。日本を含む6か国で顧客向け機器の出荷を進めています。",
+      "企業の採用面接や拠点間会議などでの利用を紹介し、米国の一部共有オフィスでは機器を体験できるネットワークも発表しました。",
+      "日本での導入条件や価格は個別に確認する必要があります。出張を置き換える価値を考える際は、会議体験だけでなく設備費用や運用負担も判断材料になります。",
+      "TECH CURRENTでは、発表内容と実際の提供状況を区別しながら、利用者や企業への影響を引き続き確認していきます。"
+    ],
+    "en": {
+      "title": "Google Beam Expands to Japan and Other Markets",
+      "description": "Google Beam Expands to Japan and Other Markets. A look at the official announcement, practical implications and limits.",
+      "category": "Technology",
+      "sourceName": "Official company announcement",
+      "body": [
+        "Google Beam Expands to Japan and Other Markets. A look at the official announcement, practical implications and limits.",
+        "The official announcement describes a development that may affect how people and organizations use digital tools. Details of rollout and availability should be checked against the original source.",
+        "The practical impact depends on the use case. Organizations should assess data quality, permissions, costs and the ability to verify outputs rather than treating a product announcement as proof of results.",
+        "Read the linked primary source for the full announcement and any subsequent availability updates."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0020",
+    "slug": "microsoft-global-ai-diffusion-2026",
+    "title": "世界のAI利用率18.8％｜Microsoft調査が示す普及の地域差",
+    "description": "Microsoftは2026年9月21日、Global AI Diffusion Reportを更新し、同年6月時点で世界の生産年齢人口の18.8％がAIを利用していると推計しまし",
+    "category": "ニュース",
+    "publishedAt": "2026-10-10T16:00:00+09:00",
+    "sourceName": "Official company announcement",
+    "sourceUrl": "https://blogs.microsoft.com/on-the-issues/2026/09/21/the-continued-state-of-global-ai-diffusion-in-2026/",
+    "status": "published",
+    "body": [
+      "Microsoftは2026年9月21日、Global AI Diffusion Reportを更新し、同年6月時点で世界の生産年齢人口の18.8％がAIを利用していると推計しました。",
+      "国・地域別ではアラブ首長国連邦が73.3％、シンガポールが64.3％と高く、韓国は前四半期から3.5ポイント増加したと報告しています。",
+      "これはMicrosoftの推計値であり、全人口を直接調査した数字ではありません。地域ごとのデジタル環境の違いを考える際の参考指標として読むことが大切です。",
+      "TECH CURRENTでは、発表内容と実際の提供状況を区別しながら、利用者や企業への影響を引き続き確認していきます。"
+    ],
+    "en": {
+      "title": "Microsoft Estimates Global AI Usage at 18.8 Percent",
+      "description": "Microsoft Estimates Global AI Usage at 18.8 Percent. A look at the official announcement, practical implications and limits.",
+      "category": "News",
+      "sourceName": "Official company announcement",
+      "body": [
+        "Microsoft Estimates Global AI Usage at 18.8 Percent. A look at the official announcement, practical implications and limits.",
+        "The official announcement describes a development that may affect how people and organizations use digital tools. Details of rollout and availability should be checked against the original source.",
+        "The practical impact depends on the use case. Organizations should assess data quality, permissions, costs and the ability to verify outputs rather than treating a product announcement as proof of results.",
+        "Read the linked primary source for the full announcement and any subsequent availability updates."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0021",
+    "slug": "google-flu-forecast-cdc-2026",
+    "title": "Googleのインフルエンザ予測AI、CDC評価で首位に",
+    "description": "Google Researchは2026年9月30日、米国CDCのインフルエンザ入院予測評価で、同社のAIモデルが39の対象モデルの中で最も高い評価を得たと発表しました。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T16:00:00+09:00",
+    "sourceName": "Official company announcement",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-science-ai-flu-forecasts/",
+    "status": "published",
+    "body": [
+      "Google Researchは2026年9月30日、米国CDCのインフルエンザ入院予測評価で、同社のAIモデルが39の対象モデルの中で最も高い評価を得たと発表しました。",
+      "CDCのFluSightは複数の機関から予測を集め、州単位の入院需要の見通しに役立てています。Googleはモデルの改善に科学研究向けAIツールを利用したと説明しています。",
+      "評価は特定のシーズンと指標に基づくものです。将来の流行を常に正確に予測できることや、個人の診断に利用できることを意味しません。",
+      "TECH CURRENTでは、発表内容と実際の提供状況を区別しながら、利用者や企業への影響を引き続き確認していきます。"
+    ],
+    "en": {
+      "title": "Google AI Tops CDC Flu Forecasting Evaluation",
+      "description": "Google AI Tops CDC Flu Forecasting Evaluation. A look at the official announcement, practical implications and limits.",
+      "category": "Technology",
+      "sourceName": "Official company announcement",
+      "body": [
+        "Google AI Tops CDC Flu Forecasting Evaluation. A look at the official announcement, practical implications and limits.",
+        "The official announcement describes a development that may affect how people and organizations use digital tools. Details of rollout and availability should be checked against the original source.",
+        "The practical impact depends on the use case. Organizations should assess data quality, permissions, costs and the ability to verify outputs rather than treating a product announcement as proof of results.",
+        "Read the linked primary source for the full announcement and any subsequent availability updates."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0022",
+    "slug": "google-devfest-2026-agentic-developers",
+    "title": "DevFest 2026開催｜AIエージェントの開発と安全性を学ぶ",
+    "description": "Googleは2026年9月14日、開発者向けイベントDevFest 2026を案内しました。開催期間は10月1日から12月31日までで、世界各地のGoogle Developer",
+    "category": "ニュース",
+    "publishedAt": "2026-10-10T16:00:00+09:00",
+    "sourceName": "Official company announcement",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月14日、開発者向けイベントDevFest 2026を案内しました。開催期間は10月1日から12月31日までで、世界各地のGoogle Developer Groupsが運営します。",
+      "今年のテーマは『Build, Secure, Scale: Developers and Builders in the Agentic Era』です。Gemini、Google AI Studio、Firebase、Androidなどを扱うワークショップやハンズオンが紹介されています。",
+      "地域によってイベント内容や参加条件は異なります。参加を検討する場合は、公式のイベント案内から会場と日程を確認してください。",
+      "TECH CURRENTでは、発表内容と実際の提供状況を区別しながら、利用者や企業への影響を引き続き確認していきます。"
+    ],
+    "en": {
+      "title": "Google DevFest 2026 Focuses on Secure AI Agent Development",
+      "description": "Google DevFest 2026 Focuses on Secure AI Agent Development. A look at the official announcement, practical implications and limits.",
+      "category": "News",
+      "sourceName": "Official company announcement",
+      "body": [
+        "Google DevFest 2026 Focuses on Secure AI Agent Development. A look at the official announcement, practical implications and limits.",
+        "The official announcement describes a development that may affect how people and organizations use digital tools. Details of rollout and availability should be checked against the original source.",
+        "The practical impact depends on the use case. Organizations should assess data quality, permissions, costs and the ability to verify outputs rather than treating a product announcement as proof of results.",
+        "Read the linked primary source for the full announcement and any subsequent availability updates."
+      ]
+    }
   }
 ]
