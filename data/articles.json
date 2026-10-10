@@ -1004,5 +1004,196 @@
         "The lesson for research organizations is to redesign the entire workflow, not merely speed up individual steps. Better experimentation and verification capacity may be needed to realize the benefits of AI-assisted research."
       ]
     }
+  },
+  {
+    "articleId": "TC-0035",
+    "slug": "github-copilot-content-exclusion-cli-app-2026",
+    "title": "GitHub Copilotの機密コード除外がCLIとアプリに対応｜AI開発の情報管理",
+    "description": "GitHubは2026年9月2日、CopilotアプリとCopilot CLIでコンテンツ除外ポリシーへの対応が一般提供になったと発表しました。企業・組織・リポジトリの管理者が設定した除外ファイルを、Copilotがコンテキ",
+    "category": "AIツール",
+    "publishedAt": "2026-10-10T18:30:00+09:00",
+    "sourceName": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年9月2日、CopilotアプリとCopilot CLIでコンテンツ除外ポリシーへの対応が一般提供になったと発表しました。企業・組織・リポジトリの管理者が設定した除外ファイルを、Copilotがコンテキストとして使わないようにする仕組みです。",
+      "AIにコードを読ませる開発フローでは、機密情報や特定のソースコードを意図せず参照させないことが重要です。今回の対応によって、エージェントを利用する場面でも既存の除外設定を適用できます。",
+      "対象はCopilot BusinessとCopilot Enterpriseです。すべてのデータ流出リスクを防ぐ万能な仕組みではなく、アクセス権やシークレット管理などの対策と組み合わせる必要があります。"
+    ],
+    "en": {
+      "title": "GitHub Copilot App and CLI Now Respect Content Exclusions",
+      "description": "On September 2, 2026, GitHub made content exclusions generally available in the Copilot app and Copilot CLI. Exclusion policies set by enterprise, organization and repository administrators are respected when the tools s",
+      "category": "AI Tools",
+      "sourceName": "GitHub Changelog",
+      "body": [
+        "On September 2, 2026, GitHub made content exclusions generally available in the Copilot app and Copilot CLI. Exclusion policies set by enterprise, organization and repository administrators are respected when the tools select context.",
+        "This matters because AI coding agents may examine many files while working on a task. Preventing selected files from being used as context helps teams apply existing governance policies to agent workflows.",
+        "The capability is available to Copilot Business and Enterprise customers. Content exclusion is one layer of protection, not a substitute for access controls, secret management and security reviews."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0036",
+    "slug": "github-copilot-enterprise-feature-default-policy",
+    "title": "GitHub Copilotの新機能を管理者が一括制御｜10月22日から適用予定",
+    "description": "GitHubは2026年9月24日、Copilot BusinessとEnterprise向けに、一般提供された新機能の初期状態を管理するグローバルポリシーを発表しました。企業がAI機能の利用を統一的に制御しやすくするための",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T18:30:00+09:00",
+    "sourceName": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年9月24日、Copilot BusinessとEnterprise向けに、一般提供された新機能の初期状態を管理するグローバルポリシーを発表しました。企業がAI機能の利用を統一的に制御しやすくするための変更です。",
+      "管理者は『有効』『無効』『組織に判断を委ねる』の3つから選べます。ポリシーは2026年10月22日から適用される予定で、明示的に設定済みの機能の判断は維持されます。プレビュー機能は引き続きオプトインです。",
+      "AIツールの機能追加が速い環境では、新機能が自動的に利用可能になるかどうかはガバナンス上の重要な論点です。導入企業は管理画面の設定を確認し、自社の承認プロセスに合う初期状態を選ぶ必要があります。"
+    ],
+    "en": {
+      "title": "GitHub Adds a Default Policy for Copilot Enterprise Features",
+      "description": "On September 24, 2026, GitHub announced a global default policy for generally available Copilot features in Business and Enterprise settings.",
+      "category": "Business & DX",
+      "sourceName": "GitHub Changelog",
+      "body": [
+        "On September 24, 2026, GitHub announced a global default policy for generally available Copilot features in Business and Enterprise settings.",
+        "Administrators can choose Enabled, Disabled or Let organizations decide. The policy is scheduled to take effect on October 22, 2026. Explicit feature decisions are preserved, and preview features remain opt-in.",
+        "As AI tools change rapidly, default feature access becomes a governance decision. Enterprises should review their policies before enforcement begins and align settings with their internal approval processes."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0037",
+    "slug": "github-copilot-agent-observability-opentelemetry",
+    "title": "GitHub CopilotエージェントがOpenTelemetryに対応｜実行状況を可視化",
+    "description": "GitHubは2026年9月22日、GitHub CopilotアプリがOpenTelemetryの設定に対応したと発表しました。OpenTelemetryはシステムの動作状況を計測するためのオープンソースの仕組みです。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T18:30:00+09:00",
+    "sourceName": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年9月22日、GitHub CopilotアプリがOpenTelemetryの設定に対応したと発表しました。OpenTelemetryはシステムの動作状況を計測するためのオープンソースの仕組みです。",
+      "企業の管理者はエージェントのセッション、モデルへのリクエスト、ツールの利用などの実行情報を、既存の監視ツールへ送信できます。予期しない動作を調べたり、運用状況を横断的に確認したりする用途が想定されます。",
+      "GitHubによると、プロンプトや応答の内容は標準では送信対象から除外されます。ただし、収集設定によって扱うデータが変わるため、監視の導入前にプライバシーとアクセス制御を確認する必要があります。"
+    ],
+    "en": {
+      "title": "GitHub Copilot App Supports OpenTelemetry for Agent Monitoring",
+      "description": "On September 22, 2026, GitHub announced OpenTelemetry support in the GitHub Copilot app. OpenTelemetry is an open-source framework for collecting observability data.",
+      "category": "Technology",
+      "sourceName": "GitHub Changelog",
+      "body": [
+        "On September 22, 2026, GitHub announced OpenTelemetry support in the GitHub Copilot app. OpenTelemetry is an open-source framework for collecting observability data.",
+        "Enterprise administrators can export information about agent sessions, model requests and tool interactions to compatible monitoring systems. This can help teams investigate unexpected behavior and manage operations centrally.",
+        "Prompt and response content is excluded by default, according to GitHub. Organizations should still review collection settings, access controls and data retention before enabling monitoring."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0038",
+    "slug": "github-copilot-agentic-autofix-memory",
+    "title": "GitHubの脆弱性自動修正がCopilot Memoryを活用｜修正パターンを再利用",
+    "description": "GitHubは2026年9月25日、Agentic AutofixがCopilot Memoryを利用できるようになったと発表しました。利用者が機能を有効にしている場合、脆弱性の修正時に過去の記憶を参照し、修正パターンを保存",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-10T18:30:00+09:00",
+    "sourceName": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年9月25日、Agentic AutofixがCopilot Memoryを利用できるようになったと発表しました。利用者が機能を有効にしている場合、脆弱性の修正時に過去の記憶を参照し、修正パターンを保存します。",
+      "保存したパターンは、同じリポジトリでの別のセキュリティ警告への対応や、Copilotのコードレビュー、クラウドエージェントによる開発支援に役立つ可能性があります。",
+      "Agentic AutofixとCopilot Memoryはいずれもパブリックプレビューです。修正の自動化が進んでも、変更内容が意図した挙動を保つか、テストや人のレビューで確認する必要があります。"
+    ],
+    "en": {
+      "title": "GitHub Agentic Autofix Now Uses Copilot Memory",
+      "description": "On September 25, 2026, GitHub announced that Agentic Autofix can use Copilot Memory when customers enable it. The feature consults stored context when addressing security alerts and saves successful fix patterns for late",
+      "category": "Technology",
+      "sourceName": "GitHub Changelog",
+      "body": [
+        "On September 25, 2026, GitHub announced that Agentic Autofix can use Copilot Memory when customers enable it. The feature consults stored context when addressing security alerts and saves successful fix patterns for later use.",
+        "The memories may help future fixes and other Copilot experiences, such as code review and cloud agents, understand repository-specific development practices.",
+        "Both Agentic Autofix and Copilot Memory are in public preview. Automated security fixes still require testing and human review to ensure they do not introduce regressions."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0039",
+    "slug": "google-japan-local-ai-municipalities-project",
+    "title": "Googleが全国自治体の生成AI活用事例を公開｜地域課題を解決する「ローカルAI」",
+    "description": "Google Japanは2026年9月29日、自治体と進めてきた『ローカル AI プロジェクト』の試作や実装事例をまとめたウェブサイトを公開しました。地域課題に生成AIを応用する取り組みを紹介しています。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-10T18:30:00+09:00",
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/intl/ja-jp/company-news/outreach-initiatives/ailocalproject/",
+    "status": "published",
+    "body": [
+      "Google Japanは2026年9月29日、自治体と進めてきた『ローカル AI プロジェクト』の試作や実装事例をまとめたウェブサイトを公開しました。地域課題に生成AIを応用する取り組みを紹介しています。",
+      "同プロジェクトは2024年6月から東京大学の松尾・岩澤研究室と協力して進められています。全国の自治体を対象に、地域の課題に応じた生成AIモデルのプロトタイプ開発や実証実験を実施してきました。",
+      "人口減少や高齢化などの課題に対してAIが役立つ場面はありますが、地域ごとに必要な情報や運用体制は異なります。実証実験での成果と、継続的に住民へ提供できるサービスは分けて評価する必要があります。"
+    ],
+    "en": {
+      "title": "Google Japan Shares Local AI Projects With Municipalities",
+      "description": "On September 29, 2026, Google Japan published a collection of prototypes and implementations from its Local AI Project, which explores the use of generative AI to address regional challenges.",
+      "category": "Business & DX",
+      "sourceName": "Google Blog",
+      "body": [
+        "On September 29, 2026, Google Japan published a collection of prototypes and implementations from its Local AI Project, which explores the use of generative AI to address regional challenges.",
+        "The initiative began in June 2024 in collaboration with the University of Tokyo's Matsuo-Iwasawa Laboratory and involves municipalities across Japan.",
+        "AI may help address challenges related to aging populations and declining workforces, but each municipality has different data, needs and operational constraints. A successful prototype is not the same as a sustainable public service."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0040",
+    "slug": "google-gemini-38-flash-cybersecurity-model",
+    "title": "Google「Gemini 3.8 Flash Cyber」発表｜脆弱性検出と自動修正を強化",
+    "description": "Googleは2026年9月3日、Gemini 3.8 Flashと、サイバーセキュリティ向けのGemini 3.8 Flash Cyberを発表しました。通常版は推論やコーディング、エージェントの多段階タスクを重視したモデ",
+    "category": "生成AI",
+    "publishedAt": "2026-10-10T18:30:00+09:00",
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/intl/ja-jp/company-news/technology/gemini-38-flash-38-flash-cyber/",
+    "status": "published",
+    "body": [
+      "Googleは2026年9月3日、Gemini 3.8 Flashと、サイバーセキュリティ向けのGemini 3.8 Flash Cyberを発表しました。通常版は推論やコーディング、エージェントの多段階タスクを重視したモデルです。",
+      "Googleによると、Gemini 3.8 Flashの初期提供価格は入力100万トークンあたり0.75ドル、出力100万トークンあたり3.75ドルです。価格や提供条件は今後変更される可能性があります。",
+      "Flash Cyberは脆弱性検出や自動パッチ適用を対象とするモデルで、Fairwind Programを通じてパートナーへ提供されます。通常の利用者が誰でも利用できるという発表ではありません。",
+      "セキュリティ対策でAIを使う場合、検出精度だけでなく、誤検知、修正の副作用、権限の制御が重要です。自動修正はテストと承認の仕組みを備えて運用する必要があります。"
+    ],
+    "en": {
+      "title": "Google Unveils Gemini 3.8 Flash and Flash Cyber",
+      "description": "On September 3, 2026, Google introduced Gemini 3.8 Flash and Gemini 3.8 Flash Cyber. The standard model focuses on reasoning, coding and multi-step agent tasks.",
+      "category": "Generative AI",
+      "sourceName": "Google Blog",
+      "body": [
+        "On September 3, 2026, Google introduced Gemini 3.8 Flash and Gemini 3.8 Flash Cyber. The standard model focuses on reasoning, coding and multi-step agent tasks.",
+        "Google listed initial pricing for Gemini 3.8 Flash at $0.75 per million input tokens and $3.75 per million output tokens. Prices and availability may change.",
+        "Flash Cyber targets vulnerability detection and automated patching and is being offered to partners through the Fairwind Program, rather than being announced as universally available.",
+        "Security automation needs more than benchmark performance. Teams should evaluate false positives, patch regressions, permission boundaries and approval processes."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0041",
+    "slug": "github-copilot-model-deprecation-october-2026",
+    "title": "GitHub Copilotの旧AIモデル、10月19日に提供終了予定｜移行対象を確認",
+    "description": "GitHubは2026年9月18日、GitHub Copilotで利用できる一部のAIモデルを10月19日に廃止する予定だと発表しました。Copilot Chat、コード補完、エージェントモードなどが対象です。",
+    "category": "ニュース",
+    "publishedAt": "2026-10-10T18:30:00+09:00",
+    "sourceName": "GitHub Changelog",
+    "sourceUrl": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+    "status": "published",
+    "body": [
+      "GitHubは2026年9月18日、GitHub Copilotで利用できる一部のAIモデルを10月19日に廃止する予定だと発表しました。Copilot Chat、コード補完、エージェントモードなどが対象です。",
+      "対象にはGemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini、Grok 4.5が含まれます。GitHubは代替モデルとしてGemini 3.8 FlashやGPT-5.6系、Grok 4.6などを案内しています。",
+      "組織のポリシー設定によっては、代替モデルを管理者が有効にする必要があります。モデル名を固定したワークフローやチーム内の手順書がある場合は、廃止日より前に確認しておくと安心です。"
+    ],
+    "en": {
+      "title": "GitHub Copilot to Retire Selected AI Models on October 19",
+      "description": "On September 18, 2026, GitHub announced that several AI models would be deprecated across Copilot experiences on October 19. The change affects chat, code completion and agent workflows.",
+      "category": "News",
+      "sourceName": "GitHub Changelog",
+      "body": [
+        "On September 18, 2026, GitHub announced that several AI models would be deprecated across Copilot experiences on October 19. The change affects chat, code completion and agent workflows.",
+        "Models listed include Gemini 3.7 Flash, GPT-5.5, GPT-5.4, GPT-5.4 mini, GPT-5 mini and Grok 4.5. GitHub suggests newer alternatives including Gemini 3.8 Flash, GPT-5.6 variants and Grok 4.6.",
+        "Enterprise administrators may need to enable replacement models depending on their policies. Teams using fixed model names in workflows or documentation should review their settings before the scheduled retirement."
+      ]
+    }
   }
 ]
