@@ -3821,7 +3821,13 @@
       "【セキュリティ審査】社内リポジトリに接続する前に、コードやプロンプトの保存・利用条件、アクセス権限、監査ログ、外部サービスとの通信を確認します。企業によっては機密情報や顧客データがコードに含まれるため、テスト用のリポジトリから導入する方法が適しています。",
       "【費用比較の落とし穴】単純な利用者当たり料金だけでは総コストを比較できません。エージェントが実行する作業量、利用上限、管理者機能、サポート、教育にかかる時間も考慮する必要があります。既存ツールとの重複契約が生じないかも確認したい項目です。",
       "【移行後の評価】移行の成否はAIの回答速度だけでなく、開発者の作業時間、レビュー工数、テスト失敗率、修正のやり直しなどで評価します。エージェントが大量の変更を提案しても、確認作業が増えれば生産性が改善したとは限りません。",
-      "【管理者向けチェックリスト】契約更新日、利用者一覧、対象IDE、CLIの必要性、ソースコードの扱い、認証方法、承認権限、費用上限、障害時の代替手段を一枚の移行表にまとめます。社内告知では、何が変わり、いつまで従来環境を使えるのかを明確にすることが重要です。"
+      "【管理者向けチェックリスト】契約更新日、利用者一覧、対象IDE、CLIの必要性、ソースコードの扱い、認証方法、承認権限、費用上限、障害時の代替手段を一枚の移行表にまとめます。社内告知では、何が変わり、いつまで従来環境を使えるのかを明確にすることが重要です。",
+      "【チーム別の移行計画】一つの企業でも、アプリケーション開発、インフラ管理、データ分析ではAI支援に求める機能が異なります。全員を一斉に切り替えるより、代表的なチームで試験運用し、障害や権限上の問題を確認してから段階的に広げる方法が適しています。試験中は従来環境へ戻せるようにしておくと、開発スケジュールへの影響を抑えられます。",
+      "【プロンプトと社内資産】開発者がAIへ入力する情報には、公開前の機能仕様、設計方針、障害調査の内容が含まれる場合があります。移行先のデータ取り扱い条件を確認し、入力を禁止する情報の範囲を定めることが重要です。社内のコーディング規約やテスト基準も、エージェントへ渡す指示として整理しておくと品質を揃えやすくなります。",
+      "【レビュー体制の再設計】エージェントが複数ファイルを一度に変更すると、従来より差分が大きくなることがあります。変更の目的、対象ファイル、テスト結果を要約してレビューへ渡す仕組みを作り、承認なしで本番へ反映しない運用を維持します。特に認証、決済、権限に関する変更は追加の確認が必要です。",
+      "【ベンダー依存を減らす】AIツールを変更すると、独自の指示ファイルやワークフローを作り直す必要が生じる場合があります。重要な仕様や評価基準を特定製品だけに保存せず、社内リポジトリで管理することが望まれます。複数のツールで同じ課題を試し、乗り換え可能性を確かめておくと長期的な選択肢が広がります。",
+      "【開発者教育】新しいAI開発環境では、良い指示を作ることだけでなく、作業範囲を制限し、生成された変更を検証する技能が必要になります。チーム内で成功例と失敗例を共有し、レビュー時に確認する観点を標準化します。利用率の高さだけを成果指標にしないことも重要です。",
+      "【結論】今回の販売終了は、単なる製品名の変更ではなく、開発支援の使い方を見直す契機です。契約期限の確認、移行先の機能検証、情報管理、レビュー体制を並行して進めることで、開発現場への負担を抑えながら新しい環境を評価できます。"
     ],
     "en": {
       "title": "Gemini Code Assist Sales End: Renewal Deadlines and Antigravity Migration",
@@ -3840,7 +3846,13 @@
         "SECURITY REVIEW: Before connecting proprietary repositories, examine data handling, retention, access permissions, audit records and third-party integrations. A non-sensitive pilot repository helps teams validate behavior without exposing production secrets or customer data.",
         "COST COMPARISON: Seat price alone is an incomplete measure. Usage limits, agent activity, administration, support and staff training can affect total cost. Organizations should also identify periods in which old and new subscriptions overlap.",
         "POST-MIGRATION METRICS: Track review effort, task completion time, test failures and rework rather than measuring response speed alone. An agent that generates many changes may still reduce productivity if developers spend more time validating them.",
-        "ADMINISTRATOR CHECKLIST: Consolidate renewal dates, user lists, supported IDEs, CLI needs, source-code policies, authentication, approval authority, budgets and fallback procedures. Internal communications should explain what changes and how long the old workflow remains available."
+        "ADMINISTRATOR CHECKLIST: Consolidate renewal dates, user lists, supported IDEs, CLI needs, source-code policies, authentication, approval authority, budgets and fallback procedures. Internal communications should explain what changes and how long the old workflow remains available.",
+        "TEAM-BY-TEAM ROLLOUT: Application developers, infrastructure engineers and data analysts have different requirements. A phased pilot with representative teams is safer than a company-wide cutover. Keeping a fallback path during evaluation can reduce disruption to delivery schedules.",
+        "PROMPTS AND INTERNAL ASSETS: Developer prompts may reveal unreleased product plans, architectural decisions or incident details. Teams should review data handling and define prohibited inputs. Shared coding conventions and testing requirements can be expressed as agent instructions to improve consistency.",
+        "REVIEW PROCESS: Agent-generated changes can span many files. Reviewers need a concise statement of intent, a diff and test evidence. Production merges should remain subject to approval, with additional scrutiny for authentication, payments and access control.",
+        "REDUCING LOCK-IN: Proprietary instructions and workflows can make future switching expensive. Keep essential specifications and evaluation criteria in organization-controlled repositories where possible. Comparing the same tasks across tools helps establish portability.",
+        "DEVELOPER TRAINING: Effective use requires more than prompt writing. Developers must constrain scope, validate changes and recognize unreliable output. Sharing failures as well as successes can improve team practices. Adoption rate alone is not a measure of productivity.",
+        "BOTTOM LINE: The subscription change is an opportunity to reconsider development workflows. Contract planning, feature validation, information governance and code review should advance together rather than as disconnected tasks."
       ]
     }
   },
@@ -3866,7 +3878,13 @@
       "【発見から修正までの工程】検査結果は候補にすぎず、まず再現性と影響範囲を調べます。次に優先順位を決め、修正案を作り、互換性を検証して公開します。AIが一部を支援しても、最終判断と利用者への告知は開発・運用担当者が担う必要があります。",
       "【誤検知のコスト】誤った指摘が大量に届くと、維持管理者は重要な問題に集中できなくなります。AIを活用する取り組みでは、検出件数に加え、真の問題だった割合や修正までの時間を測ることが重要です。報告内容を必要以上に公開すると悪用の機会を増やすため、通知方法にも配慮が必要です。",
       "【日本の組織への示唆】電力、製造、物流、鉄道などの分野では、情報システム部門と現場の設備管理部門が協力してリスクを評価する必要があります。AIによる検査を導入する場合も、対象資産の棚卸し、ネットワーク分離、変更承認、復旧手順と組み合わせることが重要です。",
-      "【成果を判断する視点】重要インフラの安全性は、単一のツールだけで決まりません。どの分野で導入が進み、発見された問題がどの程度修正され、運用に支障を出さず改善できたかを追うことで、取り組みの実効性を判断できます。"
+      "【成果を判断する視点】重要インフラの安全性は、単一のツールだけで決まりません。どの分野で導入が進み、発見された問題がどの程度修正され、運用に支障を出さず改善できたかを追うことで、取り組みの実効性を判断できます。",
+      "【設備の棚卸しが出発点】防御の対象を把握できなければ、AIによる検査を効果的に活用できません。制御装置、管理用PC、ネットワーク機器、ソフトウェアのバージョン、保守担当者を整理し、重要な設備と外部につながる箇所を特定します。台帳の整備は地味ですが、対策の優先順位を決めるために欠かせません。",
+      "【運用を止めない検証】本番設備へ直接スキャンを行うと、古い機器が予期せず停止するおそれがあります。実機への影響を評価し、必要に応じて複製環境や保守時間帯で確認します。AIを使う場合も、安全性を確認した検査手順を優先し、現場責任者の承認を得ることが重要です。",
+      "【供給網のリスク】重要インフラは自社開発のソフトウェアだけで動いているわけではありません。装置メーカー、保守会社、クラウド事業者、OSS開発者が複雑に関係しています。問題が見つかったときに誰が修正し、どのように通知するかを契約と運用手順で明確にしておく必要があります。",
+      "【維持管理者の負担】OSSの開発者は少人数やボランティアで活動していることがあります。大量の自動報告を送り付けるだけでは改善につながりません。再現条件を整理し、修正可能な情報を適切な窓口へ届けることが、実際の安全性向上に結び付きます。",
+      "【経営層の役割】重要設備の更新や保守には予算と停止時間の調整が必要です。技術部門だけに任せず、経営層がリスクを理解し、対策に必要な資源を確保することが求められます。検査の実施数だけでなく、重大なリスクがどれだけ解消されたかを確認します。",
+      "【今後の注目点】Anthropicの取り組みがどの程度の範囲で使われるか、実際に修正された問題がどれほどあるかは継続的な確認が必要です。参加組織の事例や運用上の成果が公表されれば、AIを防御に使う際の実践的な知見になります。"
     ],
     "en": {
       "title": "Anthropic Launches Cyber Mission for Critical Infrastructure and Open Source",
@@ -3885,7 +3903,13 @@
         "FROM FINDING TO FIX: A flagged issue must be reproduced, scoped, prioritized, fixed and tested for compatibility. AI can assist parts of this workflow, but maintainers and operators remain responsible for validating changes and communicating updates.",
         "FALSE POSITIVES AND DISCLOSURE: High volumes of inaccurate findings can overwhelm maintainers. Useful metrics include confirmed issues and time to remediation, not raw alert counts. Coordinated disclosure also matters so that a report does not unnecessarily expose users before a fix is ready.",
         "IMPLICATIONS FOR JAPAN: Energy, manufacturing, logistics and rail operators need coordination between IT security teams and plant or facility managers. AI-assisted analysis should complement asset inventories, network segmentation, change approval and recovery planning.",
-        "HOW TO JUDGE SUCCESS: The strongest evidence will be validated fixes, resilient operations and reduced exposure over time. Adoption announcements alone cannot establish that infrastructure is materially safer."
+        "HOW TO JUDGE SUCCESS: The strongest evidence will be validated fixes, resilient operations and reduced exposure over time. Adoption announcements alone cannot establish that infrastructure is materially safer.",
+        "START WITH AN ASSET INVENTORY: Security tools are less useful when operators do not know what they own. Inventory controllers, workstations, network devices, software versions and maintenance responsibilities. Identifying critical assets and external connections is a prerequisite for prioritizing work.",
+        "NON-DISRUPTIVE VALIDATION: Direct scanning can destabilize legacy equipment. Operators should evaluate test impact and use replicas or maintenance windows when appropriate. AI-assisted assessments still require approved procedures and coordination with facility owners.",
+        "SUPPLY-CHAIN RISK: Infrastructure depends on equipment vendors, maintenance firms, cloud services and open-source components. Organizations need clear agreements about who investigates findings, prepares fixes and communicates affected versions.",
+        "MAINTAINER WORKLOAD: Some widely used projects are maintained by small or volunteer teams. Automated reports should be actionable and delivered through appropriate channels. More notifications are not necessarily more security.",
+        "LEADERSHIP RESPONSIBILITY: Remediation requires funding, maintenance windows and coordination. Executives should understand the risk and resource requirements, and review reductions in critical exposure rather than the number of scans performed.",
+        "WHAT TO WATCH: The program's real-world value will become clearer through participation, verified remediation and operational outcomes. Published case studies could help other organizations evaluate defensive AI responsibly."
       ]
     }
   },
@@ -3911,7 +3935,13 @@
       "【AI生成判定だけでは不十分】文章がAIで書かれたかどうかを推定するツールには限界があります。人間が書いた偽情報も、AIで下書きした正確な記事も存在します。信頼性の評価では、執筆手段よりも情報源、証拠、訂正への対応を重視すべきです。",
       "【編集部が確認する手順】初めて寄稿する筆者については、公式ドメインの連絡先、過去の実績、引用資料の原典を確認します。主張の根拠がスクリーンショットや匿名の流出資料だけの場合、独立した裏付けを求めます。利益相反やスポンサーとの関係も確認対象です。",
       "【訂正と透明性】問題が判明した場合は、記事を静かに削除するだけではなく、訂正内容や判断の経緯を読者に説明することが望まれます。AIを利用した記事制作でも、編集責任者が事実確認と出典の管理を担う仕組みが重要です。",
-      "【読者ができること】センセーショナルな見出しほど、発信日、著者、一次情報へのリンクを確認します。検索で同じ主張が多数見つかっても、それらが互いを引用しているだけなら裏付けにはなりません。情報を共有する前に元の資料までさかのぼる習慣が役立ちます。"
+      "【読者ができること】センセーショナルな見出しほど、発信日、著者、一次情報へのリンクを確認します。検索で同じ主張が多数見つかっても、それらが互いを引用しているだけなら裏付けにはなりません。情報を共有する前に元の資料までさかのぼる習慣が役立ちます。",
+      "【偽装された権威の効果】記事が専門家や研究機関の名前で発信されると、内容の裏付けが十分でなくても信頼されやすくなります。読者は肩書きだけで判断せず、所属組織の公式サイトで本人の存在や発言を確認する必要があります。編集部もプロフィールの文章をそのまま信用しないことが重要です。",
+      "【記事の量産と編集コスト】生成AIは、文章の言い換えや翻訳を短時間で行えます。偽装工作では同じ主張を地域や媒体に合わせて調整し、複数の投稿先へ届けやすくなります。編集側は量だけでなく、類似した論点や出典の使い回しにも注意する必要があります。",
+      "【一次資料の重要性】公的統計、企業発表、裁判資料、研究論文など、検証可能な原典があれば主張を確かめやすくなります。一方、出所が不明な文書画像や匿名投稿だけでは、内容が事実か判断できません。資料の作成日時と公開経路も確認すべきです。",
+      "【独立した確認の考え方】同じ発表文を十の媒体が転載しても、情報源は一つです。裏付けを得るには、異なる立場の当事者や独立した資料を確認する必要があります。記事内の引用元が互いに循環していないかを調べることも有効です。",
+      "【生成AIを使う編集部の責任】AIで記事を下書きすることと、AIが示した内容を事実として掲載することは異なります。編集者は出典を実際に開いて確認し、存在しない引用や日付を排除する必要があります。制作効率を高めるほど、公開前の検証手順を標準化する重要性が増します。",
+      "【まとめ】今回の調査が示すのは、AIによる偽情報の危険性だけではありません。メディアの信頼は文章の自然さではなく、発信者の透明性、根拠の検証、誤りを訂正する姿勢によって支えられます。"
     ],
     "en": {
       "title": "OpenAI Reports AI-Assisted False-Front Influence Operations",
@@ -3930,7 +3960,13 @@
         "WHY AI DETECTORS ARE NOT ENOUGH: Detection tools cannot reliably establish whether a claim is true or a contributor is genuine. Human-written misinformation and accurately edited AI-assisted reporting both exist. Source verification and editorial accountability are more meaningful safeguards.",
         "EDITORIAL CHECKS: For unfamiliar contributors, verify institutional contact details, prior work and original documents. Claims resting only on screenshots or anonymous leaks deserve independent corroboration. Financial and organizational conflicts should also be disclosed.",
         "CORRECTIONS AND TRANSPARENCY: When a problem emerges, publishers should document corrections and explain the editorial decision where appropriate. Using AI in production does not remove responsibility for fact-checking and provenance.",
-        "READER CHECKLIST: Check publication dates, authorship and links to original evidence, especially for sensational claims. Multiple matching headlines may reflect syndication or citation loops rather than independent confirmation."
+        "READER CHECKLIST: Check publication dates, authorship and links to original evidence, especially for sensational claims. Multiple matching headlines may reflect syndication or citation loops rather than independent confirmation.",
+        "THE APPEARANCE OF AUTHORITY: A claimed academic or institutional affiliation can make weak evidence seem credible. Publishers and readers should verify identities through official organizational channels instead of accepting biographical claims at face value.",
+        "SCALE AND EDITORIAL COST: Generative AI can quickly rephrase or translate material for different audiences. Deceptive campaigns may tailor similar claims to multiple publications. Editors should watch for recycled evidence and coordinated narratives rather than relying only on text similarity.",
+        "PRIMARY EVIDENCE: Official statistics, company disclosures, court documents and research papers are easier to verify than anonymous screenshots. Provenance, creation dates and publication channels matter as much as the text of a purported document.",
+        "INDEPENDENT CORROBORATION: Ten outlets repeating one press release do not constitute ten independent sources. Strong verification relies on separate evidence or independently informed witnesses. Citation loops should be identified.",
+        "RESPONSIBILITY WHEN USING AI: AI-assisted drafting is different from accepting generated claims as verified facts. Editors must inspect original sources, reject invented quotations and check dates. Efficiency gains should be paired with explicit pre-publication checks.",
+        "TAKEAWAY: The issue is not merely whether AI can generate convincing misinformation. Credible journalism depends on transparent authorship, verifiable evidence and willingness to correct mistakes."
       ]
     }
   },
@@ -3956,7 +3992,13 @@
       "【自然言語からSQLへ】『先月の地域別売上を比較したい』という指示からSQLの草案を作れるとしても、売上の定義や集計対象は企業ごとに異なります。列名の意味、欠損値、重複行、時刻の扱いを人が確認しなければ、正しく実行されたSQLでも誤った結論に至る可能性があります。",
       "【読み取りと書き込みを分離】初期導入では読み取り専用の資格情報を使い、更新や削除の操作は承認を必須とする設計が考えられます。操作履歴を保存し、誰がどのエージェント経由で何を実行したかを追えるようにします。",
       "【品質を測る指標】デモでは簡単なクエリが成功しても、本番では権限不足やデータの不整合が起こります。成功率、再試行回数、誤ったクエリの割合、手作業による修正時間を測り、導入効果を評価する必要があります。",
-      "【導入対象の選び方】最初は既知のデータセットを使った分析補助から始め、十分に検証してからパイプラインの変更へ範囲を広げる方法が適しています。権限と監視を先に整備することで、便利さを保ちながら予期しない変更を防ぎやすくなります。"
+      "【導入対象の選び方】最初は既知のデータセットを使った分析補助から始め、十分に検証してからパイプラインの変更へ範囲を広げる方法が適しています。権限と監視を先に整備することで、便利さを保ちながら予期しない変更を防ぎやすくなります。",
+      "【ツール接続の基本構造】エージェントは利用者の指示を受け、必要なツールを選んで呼び出します。MCPサーバー側が操作を公開し、クラウドサービスが認証と権限に従って処理します。開発者はこの境界を理解し、モデルの提案と実際に許可される操作を分離する必要があります。",
+      "【データカタログの価値】テーブル名だけでは業務上の意味が伝わらないことがあります。売上の確定日、返品の扱い、個人情報を含む列などを整理したデータカタログがあれば、AIが参照する文脈を改善できます。接続機能の導入と並行してメタデータの品質を整えることが重要です。",
+      "【本番環境への適用前に】AIが作ったクエリやパイプラインをそのまま本番へ適用すると、意図しない更新や高額な処理が発生する可能性があります。変更差分を確認し、検証環境で実行し、必要な承認を得てから適用する手順が重要です。",
+      "【エラー時の挙動】外部サービスが応答しない場合、エージェントが同じ操作を繰り返す可能性があります。書き込み処理では重複登録が起きないように設計し、再試行の回数と費用に上限を設けます。失敗を利用者へ明確に伝えることも重要です。",
+      "【複数ツールの使い分け】IDEやCLIが複数対応していても、すべての環境で同じ操作性とは限りません。チームが日常的に使う環境で、認証、補完、ツール呼び出し、ログ確認まで試す必要があります。デモ用の簡単なタスクだけで判断しないことが大切です。",
+      "【導入後の運用】接続先のAPIやツール仕様が変わると、以前は成功した作業が失敗する場合があります。定期的な回帰テスト、アクセス権の見直し、操作ログの点検を行い、エージェント連携を通常のソフトウェア運用として管理します。"
     ],
     "en": {
       "title": "Google Data Agent Kit Goes GA for MCP-Based Coding Agents",
@@ -3975,7 +4017,13 @@
         "FROM LANGUAGE TO SQL: A request such as comparing monthly sales by region still depends on business definitions. Column semantics, nulls, duplicate records and time zones need review. Syntactically valid SQL can produce misleading analysis.",
         "SEPARATE READ AND WRITE ACCESS: A conservative pilot uses read-only credentials. Data modifications and destructive operations should require explicit approval, with logs showing which user and agent initiated each action.",
         "EVALUATING QUALITY: Production workloads involve permissions, imperfect data and transient failures. Teams should track task success, retries, incorrect queries and human correction time rather than relying on a smooth demonstration.",
-        "PILOT STRATEGY: Begin with well-understood datasets and analysis assistance, then expand to pipeline changes only after controls are proven. Permissions and monitoring should precede broader autonomy."
+        "PILOT STRATEGY: Begin with well-understood datasets and analysis assistance, then expand to pipeline changes only after controls are proven. Permissions and monitoring should precede broader autonomy.",
+        "HOW TOOL CONNECTIONS WORK: An agent receives a request and selects tools exposed through an MCP server. The connected cloud service processes authorized operations. Developers should keep a clear boundary between model suggestions and operations the user is permitted to execute.",
+        "VALUE OF A DATA CATALOG: Table names rarely explain all business semantics. Documentation about revenue recognition, returns and sensitive columns can improve the context available to an agent. Tool integration should be accompanied by better metadata quality.",
+        "BEFORE PRODUCTION EXECUTION: Generated queries and pipelines can introduce unwanted modifications or expensive scans. Review diffs, test in staging and obtain approval before applying consequential changes.",
+        "FAILURE HANDLING: Agents may retry operations after timeouts. Write operations need protection against duplication, with limits on retries and cost. Users should be informed when an action has not completed reliably.",
+        "COMPARING AGENT CLIENTS: Compatibility with multiple IDEs and CLIs does not imply identical user experiences. Teams should test authentication, tool invocation, logging and error recovery in their actual environment.",
+        "ONGOING OPERATIONS: API and tool changes can break previously reliable workflows. Regression tests, permission reviews and audit-log checks should be part of normal maintenance for agent integrations."
       ]
     }
   },
@@ -4001,7 +4049,13 @@
       "【Gemini 3.5 Flashの選択】利用できるモデルが増えると、応答速度や費用に応じた選択が可能になります。一方、モデルの更新によって生成するSQLや説明が変わる可能性もあります。代表的な業務データで回帰テストを実施し、品質の変化を確認します。",
       "【本番データへのアクセス】開発段階では匿名化したサンプルを用い、本番環境では最小権限を適用します。AIが作成したクエリによる大量スキャンや予期しない費用にも備え、予算上限と監視アラートを設定することが望まれます。",
       "【監査と説明責任】誰が何を依頼し、どのクエリが実行され、どの結果を利用したかを追跡できる仕組みが必要です。金融や医療など規制の厳しい業務では、結果の再現性や承認履歴も重要になります。",
-      "【国内企業の判断軸】東京リージョン対応は導入を検討する材料ですが、採用の決め手は業務適合性と統制の両立です。既存のBigQuery運用にどれほど組み込みやすいか、試験運用で評価することが重要です。"
+      "【国内企業の判断軸】東京リージョン対応は導入を検討する材料ですが、採用の決め手は業務適合性と統制の両立です。既存のBigQuery運用にどれほど組み込みやすいか、試験運用で評価することが重要です。",
+      "【日本企業の利用場面】小売業の需要分析、製造業の品質管理、金融機関の業務データ集計など、BigQueryを利用する場面は多岐にわたります。AI支援によってSQL作成の負担が減る可能性がありますが、業務ごとの集計定義と承認ルールを守る必要があります。",
+      "【費用の予測】BigQueryでは処理するデータ量や利用形態によって費用が変わります。AIが作ったクエリが必要以上に大きな範囲を走査すると、想定外の費用につながることがあります。実行前の見積もりや処理量の上限を設けることが有効です。",
+      "【検証用データの設計】テストでは小さなデータセットで正しい結果が出ても、実際のデータには重複、欠損、遅延が含まれます。例外的なケースを含む検証用データを用意し、AIが生成した処理を既存の正解データと比較することが重要です。",
+      "【権限を最小化する】分析担当者が閲覧できる範囲と、AIエージェントが操作できる範囲を一致させる必要があります。特に個人情報を含むデータセットや、本番テーブルの更新権限は慎重に管理します。利用者の権限を超えて情報が取得できない設計が重要です。",
+      "【データ所在地の確認手順】国内処理が必要な場合は、対象機能の提供リージョン、入力と出力の処理場所、ログの保存条件、サポート時のアクセスを確認します。公開資料だけで判断が難しい場合は、クラウド事業者へ条件を確認する必要があります。",
+      "【段階的な導入】まず既存のSQLを説明する用途や読み取り専用の分析支援から始め、品質を確認してからパイプラインの生成や変更へ広げる方法が考えられます。便利さを急ぐより、再現性と安全性を確保することが長期的な運用につながります。"
     ],
     "en": {
       "title": "BigQuery Data Engineering Agent Adds Tokyo Region Support",
@@ -4020,7 +4074,13 @@
         "MODEL SELECTION: Additional model support creates options for latency and cost, but generated queries may change when models are updated. Regression tests on representative workloads help reveal differences in output quality.",
         "PRODUCTION ACCESS: Use de-identified samples during early development and least-privilege permissions in production. Query cost controls and alerts can help prevent unexpected large scans.",
         "AUDITABILITY: Teams should be able to trace the request, generated query, execution and downstream use of results. Regulated workflows may require reproducibility and documented approvals.",
-        "DECISION CRITERIA IN JAPAN: Tokyo support is relevant, but deployment decisions should balance functionality, governance and fit with existing BigQuery operations. A measured pilot is preferable to assuming regional availability resolves every requirement."
+        "DECISION CRITERIA IN JAPAN: Tokyo support is relevant, but deployment decisions should balance functionality, governance and fit with existing BigQuery operations. A measured pilot is preferable to assuming regional availability resolves every requirement.",
+        "USE CASES IN JAPAN: Retail forecasting, manufacturing quality analysis and financial reporting all involve data engineering. AI can assist query authoring, but business definitions and approval rules remain domain-specific.",
+        "COST GOVERNANCE: Query costs depend on workload and service configuration. An automatically generated query can scan more data than expected. Estimates, budgets and processing limits can help control exposure.",
+        "TEST DATA DESIGN: Small clean samples may conceal failures caused by missing records, duplicates and late-arriving data. Representative test cases and known-good outputs are necessary for meaningful evaluation.",
+        "LEAST PRIVILEGE: An agent should not gain broader data access than the authorized user. Sensitive datasets and production write permissions require particular care. Identity and access controls must apply to tool-mediated actions.",
+        "VERIFYING RESIDENCY: Review supported regions, processing locations for inputs and outputs, log retention and support access. If documentation does not resolve a regulatory requirement, seek clarification from the provider.",
+        "PHASED ADOPTION: Start with explaining existing SQL or read-only analysis, then consider pipeline generation after quality and controls are demonstrated. Reproducibility and safe operations matter more than rapid expansion."
       ]
     }
   },
