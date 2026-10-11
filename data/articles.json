@@ -4368,5 +4368,301 @@
         "WHAT TO WATCH: Broader adoption will depend on accurate data, traveler trust and a reliable handoff to official booking. Radisson's early result is noteworthy but needs longer-term evaluation."
       ]
     }
+  },
+  {
+    "articleId": "TC-0083",
+    "slug": "deno-joins-cloudflare-workerd-celld",
+    "title": "Deno開発チームがCloudflareに参加｜workerdとcelld統合でWorkersの自社運用を推進",
+    "description": "Deno開発チームがCloudflareに参加。workerdとcelldの統合、Workers・Durable Objectsのセルフホスト構想、既存開発者への影響を解説。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "Cloudflare Blog",
+    "sourceUrl": "https://blog.cloudflare.com/deno-joins-cloudflare/",
+    "status": "published",
+    "body": [
+      "【何が発表されたのか】Cloudflareは2026年10月9日、JavaScript・TypeScript実行環境Denoの開発チームが同社に参加すると発表しました。Node.jsとDenoの創設者Ryan Dahl氏と、CloudflareのKenton Varda氏が今後の構想を説明しています。主眼はDenoをただCloudflare上で動かすことではなく、実行基盤の共通化によって開発者が同じ仕組みをより多くの環境で使えるようにすることです。",
+      "【workerdとcelldを統合】Cloudflare Workersのオープンソース実行環境であるworkerdと、Deno側が開発するcelldの取り組みを統合する方針が示されました。両者の技術を組み合わせることで、Cloudflareのプラットフォームで使われる実行モデルを、開発者が管理するインフラへ広げることを目指します。",
+      "【WorkersとDurable Objects】WorkersはHTTPリクエストなどに応じてコードを実行する仕組みです。Durable Objectsは状態を持つ処理を扱い、チャットや協調作業、セッション管理などに利用できます。両者をクラウド外でも運用しやすくする構想は、アプリケーションの配置場所を選びたい開発者に関係します。",
+      "【Denoが直ちに終了するわけではない】開発チームの参加は、既存Denoアプリケーションの即時停止や強制移行を意味しません。利用者は今後の互換性、配布形態、ライブラリやCLIの開発方針を公式情報で追う必要があります。移行が必要かどうかは個々の製品・バージョンの発表を待つべきです。",
+      "【セルフホストの意味】クラウド事業者が管理する環境に加え、自社設備や別のクラウドで同様のプログラミングモデルを利用できれば、規制、遅延、費用などの条件に応じて配置を選びやすくなります。ただし運用の自由度が高まるほど、更新、監視、セキュリティ、障害対応を誰が担うかを明確にする必要があります。",
+      "【JavaScript開発への影響】Node.js、Deno、Workersには実行環境やAPIの違いがあります。開発者が注目すべき点は、互換性がどこまで向上するか、既存パッケージが使えるか、ローカルと本番の挙動が一致するかです。発表段階ではすべての差異が解消されたと考えるべきではありません。",
+      "【企業の確認項目】現時点で利用するランタイム、依存パッケージ、認証方法、永続データ、ログ、デプロイ手順を整理しておくと、将来の選択肢を比較しやすくなります。新しい実行基盤の採用は、機能の魅力だけでなく運用負担と移行コストを含めて判断します。",
+      "【今後の焦点】統合プロジェクトの公開範囲、互換性、リリース計画、セルフホスト時のDurable Objectsの扱いが重要です。Cloudflareが掲げる方向性は開発基盤の柔軟化ですが、実際の採用判断には技術仕様と運用実績の確認が必要になります。"
+    ],
+    "en": {
+      "title": "Deno Joins Cloudflare: What the workerd and celld Merger Means for Developers",
+      "description": "The Deno team is joining Cloudflare, bringing workerd and celld development together to simplify self-hosting Workers and Durable Objects.",
+      "category": "Technology",
+      "sourceName": "Cloudflare Blog",
+      "body": [
+        "Cloudflare announced on October 9, 2026 that the Deno team is joining the company. Ryan Dahl, creator of Node.js and Deno, and Cloudflare's Kenton Varda outlined a plan to bring the workerd and celld efforts together.",
+        "The goal is to simplify self-hosting the primitives used by Cloudflare Workers and Durable Objects, allowing developers to use similar programming models in more deployment environments.",
+        "Workers run code in response to events such as HTTP requests. Durable Objects provide stateful coordination for workloads such as sessions and collaborative applications. Bringing these primitives to self-managed infrastructure could widen deployment choices.",
+        "The announcement does not mean that existing Deno applications are being shut down or that users must immediately migrate. Compatibility, tooling and distribution details should be followed through subsequent technical releases.",
+        "Self-hosting can provide flexibility around locality, costs and control, but it also shifts responsibility for patching, monitoring, availability and security toward operators.",
+        "JavaScript developers should evaluate package compatibility, runtime APIs and consistency between local and production behavior rather than assuming all differences have disappeared.",
+        "Organizations can prepare by documenting dependencies, authentication, state storage, logging and deployment procedures. Adoption decisions should balance portability against migration and operational costs.",
+        "The important next milestones are concrete releases, compatibility guarantees and evidence of reliable stateful operation outside Cloudflare's managed platform."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0084",
+    "slug": "cloudflare-clef-omni-audio-video-decision-model",
+    "title": "Cloudflare「Clef-omni」発表｜音声・動画・画像・テキストを扱う判断特化型AI",
+    "description": "Cloudflareがマルチモーダル判断モデルClef-omniを発表。音声・動画・画像・文章の分類、Clef高速化、Clef-flash値下げの意味を解説。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "Cloudflare Blog",
+    "sourceUrl": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
+    "status": "published",
+    "body": [
+      "【発表の概要】Cloudflareは2026年10月9日、音声、動画、画像、テキストを扱う判断特化型モデル「Clef-omni」を発表しました。前週に登場したClefとClef-flashを拡張するもので、長文の文章生成ではなく、入力内容をもとに分類や判定を行う用途に重点を置いています。",
+      "【判断モデルとは】一般的な生成AIが説明文やコードを作るのに対し、判断モデルは与えられた情報が特定の条件に該当するかを評価します。例えば動画に禁止対象の内容が含まれるか、問い合わせをどの部門へ振り分けるかなど、結果を次の処理へ渡す用途が考えられます。",
+      "【マルチモーダルの意義】従来は音声を文字起こしし、動画を静止画へ分割するなど複数の前処理を組み合わせることがありました。Clef-omniは複数の情報形式を一つの処理系で扱うため、声の調子や映像の変化など、文字だけでは捉えにくい情報を利用できる可能性があります。",
+      "【公表された速度の例】Cloudflareは音声付き21秒の動画を約1.5秒で評価した例を紹介しています。ただし、これは公表された条件での例であり、すべての動画や環境で同じ速度が得られる保証ではありません。入力の長さ、処理条件、負荷によって性能は変わります。",
+      "【既存モデルも改善】CloudflareはClefの推論速度を最大約2倍に改善したと説明し、軽量モデルClef-flashの価格も引き下げました。大量の入力を繰り返し評価するシステムでは、一件当たりの処理時間と費用が全体の運用コストに直結します。",
+      "【活用できる場面】動画コンテンツの分類、問い合わせの優先順位付け、業務記録の整理などが候補になります。ただし設備の異常検知や安全判断に使う場合は、モデルの結果だけで機械を停止・稼働させず、業務に応じた追加の検証と制御が必要です。",
+      "【誤判定と偏り】分類モデルには誤検知と見逃しがあります。評価時には正解率だけでなく、誤って対象と判定する割合と、対象を見逃す割合を分けて確認します。音声の言語、映像の明るさ、利用環境の違いによって精度が変わる可能性にも注意が必要です。",
+      "【今後の焦点】Clef-omniの価値はデモの速さだけでなく、実際の業務データでの精度、費用、監査可能性によって決まります。Cloudflareのモデル群は、AIを『答えを生成する道具』から『次の処理を判断する部品』へ広げる動きを示しています。"
+    ],
+    "en": {
+      "title": "Cloudflare Introduces Clef-omni for Audio, Video, Image and Text Decisions",
+      "description": "Clef-omni expands Cloudflare's decision-model family to native audio and video processing alongside images and text.",
+      "category": "Generative AI",
+      "sourceName": "Cloudflare Blog",
+      "body": [
+        "Cloudflare introduced Clef-omni on October 9, 2026, extending its Clef family of decision models to audio and video alongside text and images.",
+        "Decision models emphasize classification and structured judgments rather than producing long-form text. Potential tasks include content categorization, routing requests and checking whether inputs meet defined conditions.",
+        "Native multimodal processing may reduce the need to transcribe audio or split video into frames before making a decision, though implementation details and performance vary by workload.",
+        "Cloudflare highlighted an example in which a 21-second video with audio was evaluated in roughly 1.5 seconds. This is an illustrative result, not a universal latency guarantee.",
+        "The company also reported up to a twofold improvement in Clef inference speed and lower pricing for Clef-flash, changes that can matter for high-volume decision pipelines.",
+        "Practical uses include video classification and workflow routing. Safety-critical decisions require additional safeguards and should not rely on a model output alone.",
+        "Evaluation must account for false positives, false negatives, language differences and variations in video quality. Aggregate accuracy may hide important failure modes.",
+        "The broader significance is the emergence of specialized AI components that decide what action a system should take, rather than merely generating a response."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0085",
+    "slug": "mistral-large-4-one-trillion-multimodal-open-weights-preview",
+    "title": "Mistral Large 4発表｜1兆パラメータ級マルチモーダルAIの公開プレビュー開始",
+    "description": "Mistral AIがLarge 4を公開プレビュー。約1.05兆パラメータ、MoE構造、100万トークンの文脈、オープンウェイト公開予定を解説。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "Mistral AI",
+    "sourceUrl": "https://mistral.ai/news/mistral-large-4/",
+    "status": "published",
+    "body": [
+      "【欧州発の大型モデル】フランスのMistral AIは2026年10月6日、Mistral Large 4の公開プレビューを開始しました。約1.05兆パラメータのマルチモーダルモデルで、コーディング、エージェント処理、文書や画像の理解、企業向け業務を重視しています。",
+      "【総パラメータと稼働パラメータ】Mistral Large 4はMixture-of-Experts（MoE）構造を採用します。総パラメータ数は約1.05兆ですが、一回の推論ですべてが同時に利用されるわけではありません。Mistralの発表では約490億の稼働パラメータが説明されています。総数だけでモデルの速度や費用を比較しないことが重要です。",
+      "【マルチモーダル対応】文章に加え、画像を含む情報を扱える設計です。複数形式の入力を組み合わせることで、文書理解や業務の調査、コードに関連する視覚情報の分析などが考えられます。個別の入力形式と制限はモデル仕様を確認する必要があります。",
+      "【長い文脈】モデル資料では最大100万トークンのコンテキスト長が示されています。大量の文書やコードを一度に参照する用途で注目されますが、長い入力を与えれば必ず正確になるわけではありません。必要な情報の検索と回答検証は引き続き重要です。",
+      "【公開プレビューと重みの配布】発表時点でMistral StudioからAPIを試せます。一方、モデルの重みは10月末の公開予定と説明されており、プレビュー提供と重みの一般公開は区別する必要があります。オープンウェイトであってもライセンスや運用コストを確認することが必要です。",
+      "【企業利用の検討】機密情報を扱う組織では、API利用と自社環境での推論を比較することになります。必要なGPU、応答速度、モデルの更新、監査、データ保護を総合的に評価しなければなりません。モデルが大きいこと自体が業務への適合を保証するものではありません。",
+      "【性能の読み方】公式発表はコーディングや専門業務での競争力を強調しています。ただしベンチマークは出題内容や測定方法によって結果が変わります。導入時には自社の代表的な課題を用い、正確性、失敗率、処理時間、費用を比較することが望まれます。",
+      "【今後の焦点】10月末に予定される重みの公開、ライセンス条件、推論環境の選択肢が注目点です。米国企業に集中しがちな大規模AI市場で、欧州のモデル開発企業がどこまで存在感を高めるかを示す重要な動きです。"
+    ],
+    "en": {
+      "title": "Mistral Large 4 Enters Public Preview with a Trillion-Parameter MoE Design",
+      "description": "Mistral Large 4 is a multimodal mixture-of-experts model with about 1.05 trillion total parameters and an API preview ahead of planned weight release.",
+      "category": "Generative AI",
+      "sourceName": "Mistral AI",
+      "body": [
+        "Mistral AI launched a public preview of Mistral Large 4 on October 6, 2026. The French company's new multimodal model targets coding, agentic workflows and enterprise tasks.",
+        "The model uses a mixture-of-experts architecture with roughly 1.05 trillion total parameters. About 49 billion parameters are active for an inference step according to the launch announcement. Total parameter count should not be confused with compute used per token.",
+        "Mistral Large 4 handles multimodal inputs, including text and images, for applications such as document understanding and technical analysis. Specific supported formats should be checked in current model documentation.",
+        "Documentation lists a context window of up to one million tokens. Large context capacity is useful but does not guarantee reliable retrieval or reasoning over every long document.",
+        "The API is available in public preview through Mistral Studio. The company said model weights would be released toward the end of October; the preview and planned open-weight distribution are distinct milestones.",
+        "Enterprises should compare hosted API use with self-managed inference, taking into account GPU requirements, latency, security, auditing and licensing.",
+        "Vendor benchmarks are useful reference points, but organizations need evaluations on their own tasks and data, including failure rates and costs.",
+        "The upcoming weight release and deployment ecosystem will be important tests of how competitive a European open-weight frontier model can become."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0086",
+    "slug": "bedrock-openai-reasoning-summaries-responses-api",
+    "title": "Amazon BedrockがOpenAIモデルの推論要約に対応｜Responses APIで評価とデバッグを支援",
+    "description": "Amazon BedrockがOpenAIモデルのreasoning.summaryに対応。内部推論そのものではなく要約を取得する仕組みと企業での利用上の注意点を解説。",
+    "category": "AIツール",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "AWS",
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-bedrock-reasoning-summaries-openai/",
+    "status": "published",
+    "body": [
+      "【機能追加の概要】AWSは2026年10月9日、Amazon Bedrock上のOpenAIモデルについて、Responses APIから推論の要約を取得できるようになったと発表しました。アプリケーション開発者がモデルの回答を評価し、複雑な処理の問題点を調べる際に利用できます。",
+      "【reasoning.summaryとは】APIでreasoning.summaryパラメータを指定すると、回答とともにモデルが生成した推論の要約を受け取れます。要約はreasoning出力項目のsummary配列に含まれます。アプリケーションはこの情報を表示したり、評価用のログとして利用したりできます。",
+      "【内部の思考を完全公開するわけではない】要約はモデルが生成した説明であり、内部で行われた処理の完全な記録ではありません。要約に書かれた内容だけを根拠に、回答が正しい、あるいは安全だと判断することはできません。",
+      "【開発での利用場面】コード生成の失敗、計算結果の食い違い、複数段階の業務処理での判断のずれを調べる際、要約は手掛かりになります。入力、出力、ツール実行結果、正解データと合わせて確認することで、問題を切り分けやすくなります。",
+      "【対応する範囲】AWSの発表では、Amazon Bedrockで提供するOpenAIモデルについて、利用可能なリージョンで本機能を利用できると説明しています。リージョン内推論や複数リージョンをまたぐ推論プロファイルにも対応します。個別のモデルの提供状況は確認が必要です。",
+      "【企業の説明責任】金融や医療などの業務でAIの出力を使う場合、要約は説明の補助になります。ただし重要な判断には、元データ、適用したルール、人による確認の記録が必要です。推論要約だけでは監査証跡を十分に代替できません。",
+      "【ログと個人情報】要約には入力内容に関する情報が含まれる可能性があります。保存する場合はアクセス権限、保持期間、機密情報のマスキングを検討し、必要以上に記録しない設計が重要です。",
+      "【今後の焦点】モデルの評価を支える情報が増える一方、その説明の正確さをどう検証するかが課題です。推論要約を品質評価の一要素として位置付け、独立したテストや人のレビューと組み合わせることが求められます。"
+    ],
+    "en": {
+      "title": "Amazon Bedrock Adds Reasoning Summaries for OpenAI Models",
+      "description": "Amazon Bedrock now supports reasoning.summary for OpenAI models through the Responses API, offering human-readable summaries for debugging and evaluation.",
+      "category": "AI Tools",
+      "sourceName": "AWS",
+      "body": [
+        "AWS announced on October 9, 2026 that Amazon Bedrock supports the reasoning.summary parameter for OpenAI models through the Responses API.",
+        "Developers can request a human-readable summary of a model's reasoning alongside its answer. The summary is returned in the summary array of a reasoning output item.",
+        "This feature does not reveal a complete internal chain of thought. A generated summary is an explanatory artifact, not a definitive audit record or proof that an answer is correct.",
+        "Summaries may help developers investigate failures in coding, analysis and multi-step tasks. They are most useful when compared with prompts, tool results and independent reference answers.",
+        "AWS says the feature is available where its OpenAI GPT models are offered, including supported regional and cross-region inference arrangements. Availability should be checked for the intended model and region.",
+        "Regulated organizations may use summaries as one part of an explanation, but consequential decisions still require evidence, applicable rules and human review.",
+        "Logging these summaries raises privacy and retention questions. Sensitive content should be protected through access controls and minimization.",
+        "The feature is a useful addition to AI observability, provided developers do not mistake plausible explanations for verified reasoning."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0087",
+    "slug": "twelvelabs-pegasus-1-5-amazon-bedrock-video-understanding",
+    "title": "動画解析AI「TwelveLabs Pegasus 1.5」がAmazon Bedrockに登場｜時刻付きの映像分析を実現",
+    "description": "Amazon BedrockがTwelveLabs Pegasus 1.5に対応。映像・音声・画面文字を一度に解析し、時刻付きメタデータを生成する仕組みを紹介。",
+    "category": "生成AI",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "AWS",
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2026/10/twelve-labs-pegasus-1-5-aws/",
+    "status": "published",
+    "body": [
+      "【発表の概要】AWSは2026年10月9日、動画解析モデルTwelveLabs Pegasus 1.5をAmazon Bedrockで利用できるようにしたと発表しました。動画を単に要約するだけでなく、何がいつ起きたかを時刻付きの構造化データとして取り出すことを目指すモデルです。",
+      "【映像を検索可能な情報へ】長時間の動画から特定の場面を探すには、従来は人が視聴したり、事前に検索用インデックスを作成したりする必要がありました。Pegasus 1.5は動画全体を読み取り、指定した観点に沿って場面や出来事を抽出します。",
+      "【映像・音声・画面上の文字】モデルは映っている物体や動作だけでなく、音声や画面内の文字も一度の処理で分析します。発言者の交代、スポーツのプレー、ブランドの登場などを、時間情報とともに整理できると説明されています。",
+      "【インデックス構築なしの解析】AWSは、あらかじめ動画の取り込みパイプラインや検索インデックスを構築せずに解析できる点を特徴として挙げています。ただし大量の動画を継続処理する場合は、保存、検索、再利用の設計が別途必要になります。",
+      "【メディア業界での活用】放送局や映像制作会社では、過去の素材から特定の発言やシーンを探す作業に時間がかかります。時刻付きメタデータがあれば、編集担当者が候補の映像を効率的に確認できる可能性があります。",
+      "【スポーツと広告】スポーツでは特定のプレー、広告ではブランドが映った場面などを探す用途が考えられます。ただし人物の識別や権利処理に関する要件は別問題であり、AIの出力をそのまま事実や権利情報として扱うべきではありません。",
+      "【提供地域の確認】AWSは米国およびグローバルのクロスリージョン推論プロファイルから利用できると案内しています。データ所在地に制約のある企業は、動画の送信先、保存条件、関連する法令や契約を確認する必要があります。",
+      "【品質評価の視点】動画解析には見逃しや時刻のずれが生じる可能性があります。代表的な素材で正解データを用意し、検出率、時刻の精度、処理費用を比較することが導入判断につながります。"
+    ],
+    "en": {
+      "title": "TwelveLabs Pegasus 1.5 Arrives on Amazon Bedrock for Video Understanding",
+      "description": "Amazon Bedrock now supports TwelveLabs Pegasus 1.5, which converts video into structured, time-coded descriptions without a separate indexing pipeline.",
+      "category": "Generative AI",
+      "sourceName": "AWS",
+      "body": [
+        "AWS made TwelveLabs Pegasus 1.5 available on Amazon Bedrock on October 9, 2026. The video-to-text model generates structured metadata with timestamps.",
+        "Rather than only producing a general summary, Pegasus 1.5 is designed to identify when specified events occur in footage.",
+        "The model analyzes visual content, audio and on-screen text in a single pass. Example targets include editorial segments, speaker changes, sports plays and brand appearances.",
+        "AWS emphasizes that a separate pre-indexing or ingestion pipeline is not required before analysis. Large-scale production systems may still need their own storage and retrieval architecture.",
+        "Media teams could use time-coded metadata to find relevant footage more efficiently. Human editors still need to verify candidate clips.",
+        "Sports and advertising analytics are additional potential uses, but identity, copyright and usage rights are separate issues that a model output cannot resolve.",
+        "AWS lists US and Global cross-region inference profiles for access. Data residency and contractual restrictions should be reviewed before sending sensitive footage.",
+        "Organizations should benchmark detection accuracy, timestamp precision and cost using representative video rather than relying on a single demonstration."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0088",
+    "slug": "amazon-quick-brand-templates-ai-presentation-governance",
+    "title": "Amazon Quickにブランドテンプレート機能｜AI生成資料のロゴ・配色・レイアウトを統一",
+    "description": "AWSがAmazon Quickのブランドテンプレート機能を発表。PowerPoint・Wordからデザインルールを抽出し、組織で承認・共有する仕組みを解説。",
+    "category": "ビジネス・DX",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "AWS",
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-quick-brand-templates-on-brand-presentations-documents/",
+    "status": "published",
+    "body": [
+      "【発表の概要】AWSは2026年10月9日、Amazon Quickで企業のブランドルールに沿ったプレゼンテーションや文書を作成するためのブランドテンプレート機能を発表しました。生成AIによる資料作成が広がる中で、組織として見た目の一貫性を維持することを目的としています。",
+      "【既存テンプレートを読み込む】ブランド管理者はPowerPointやWordのテンプレートをアップロードできます。SharePointなど接続済みのファイルストアから取得する方法も案内されています。Quickは配色、フォント、ロゴ、レイアウト、ブランドルールを抽出します。",
+      "【AIが抽出した内容を確認】テンプレートを読み込んだ後、管理者は抽出されたルールを確認・編集してから組織全体へ公開します。AIによる自動認識に任せきりにせず、人が最終的な基準を管理する構成です。",
+      "【生成時にもルールを適用】利用者が資料を作成する際、Quickは管理者が設定したガイドに基づき適切なテンプレートを選びます。ブランドルールに反する要求には理由を説明し、代替案を示す機能も紹介されています。利用者自身が別のテンプレートを選ぶこともできます。",
+      "【デザインマネジメントとの関係】企業のデザインガイドラインは、ロゴの余白、色の組み合わせ、文字サイズなどを通じてブランドを一貫して伝えるためのものです。生成AIが資料を大量に作る環境では、個別の修正よりもルールを最初に適用する設計が重要になります。",
+      "【権限管理】誰でもブランド基準を変更できると、資料ごとに異なるルールが生まれます。Amazon Quickでは、ブランドテンプレートの作成・公開権限を管理者が設定できます。広報、マーケティング、デザイン部門の責任分担を明確にすることが重要です。",
+      "【限界と確認事項】配色やロゴが正しくても、資料の内容や情報の正確性が保証されるわけではありません。グラフの数値、文章の表現、アクセシビリティ、著作権、機密情報の扱いについては別途確認が必要です。",
+      "【導入の進め方】まず代表的なテンプレートを登録し、実際の業務資料を生成して見た目と使いやすさを評価します。部門ごとの例外ルールや更新手順も決め、デザインガイドラインの運用を継続的に改善することが望まれます。"
+    ],
+    "en": {
+      "title": "Amazon Quick Adds Brand Templates for AI-Generated Presentations and Documents",
+      "description": "Amazon Quick now lets organizations extract and manage visual identity rules from PowerPoint and Word templates.",
+      "category": "Business & DX",
+      "sourceName": "AWS",
+      "body": [
+        "AWS announced brand templates for Amazon Quick on October 9, 2026, aiming to keep AI-generated presentations and documents consistent with an organization's visual identity.",
+        "Brand managers can upload PowerPoint or Word templates or retrieve them from connected storage such as SharePoint. Quick extracts colors, fonts, logos, layouts and related rules.",
+        "Administrators review and edit the extracted rules before publishing a template for organization-wide use. Human approval remains part of the process.",
+        "During document generation, Quick selects a suitable template based on administrator guidance. When a request conflicts with a rule, the system can explain the conflict and propose an alternative. Users may choose another template.",
+        "Brand guidelines govern visual consistency across departments. Applying them during AI generation can reduce the effort of correcting individual documents after creation.",
+        "Custom permissions determine who can create and publish templates. Design, marketing and communications teams should establish clear ownership.",
+        "Visual consistency does not guarantee factual accuracy or accessible design. Figures, text, copyright and confidential content still require review.",
+        "Organizations can pilot the feature with representative documents and define how exceptions and guideline updates are handled over time."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0089",
+    "slug": "cloudflare-workers-durable-objects-on-demand-cpu-memory-profiling",
+    "title": "Cloudflare WorkersにCPU・メモリ分析機能｜本番環境のボトルネックをフレームグラフで可視化",
+    "description": "CloudflareがWorkersとDurable ObjectsにオンデマンドのCPU・メモリプロファイリングを追加。本番環境での性能分析と制限を解説。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "Cloudflare Blog",
+    "sourceUrl": "https://blog.cloudflare.com/workers-on-demand-profiling/",
+    "status": "published",
+    "body": [
+      "【発表の概要】Cloudflareは2026年10月9日、WorkersとDurable Objectsで稼働中のコードについて、CPU使用状況とメモリ割り当てを調べるオンデマンドのプロファイリング機能を発表しました。従来のログや集計メトリクスでは分かりにくい、具体的な関数単位の負荷を調査できます。",
+      "【フレームグラフとは】フレームグラフは関数の呼び出し関係と処理負荷を視覚化したものです。幅の広い部分はCPU時間やメモリ割り当ての多い処理を表します。開発者はボトルネックを探し、コード変更前後の状態を比較できます。",
+      "【本番環境で測定】ローカル開発環境と本番では、リクエスト数やデータ量が異なります。今回の機能は稼働中のWorkerを対象に測定できるため、実際の利用状況に近いデータを確認できます。CloudflareのダッシュボードやCLIから利用できます。",
+      "【利用手順】CloudflareダッシュボードではWorkersのObservability画面からフレームグラフを選び、CPUまたはメモリのプロファイルを取得します。対象バージョンや測定時間を選択し、結果を画面で確認したりファイルへ出力したりできます。",
+      "【トラフィックが必要】本番の実行状態を調べるため、アクセスが少ないWorkerでは十分なデータを取得できない場合があります。測定のために新しい実行環境を無理に立ち上げる方式ではないことが制約の一つです。",
+      "【メモリ分析の注意】メモリプロファイルは測定期間中の割り当てを中心に示します。起動時だけ大量のメモリを使う問題などは、測定タイミングによって捉えられない場合があります。Cloudflareは将来の継続的なプロファイリングも検討しています。",
+      "【実際の改善事例】Cloudflareは社内のWorkerで、不要な処理やメモリ使用を調べて改善した事例を紹介しています。重要なのは負荷の高い関数を見つけるだけでなく、変更後に応答時間やエラー率が改善したかを検証することです。",
+      "【開発チームへの示唆】性能問題は勘だけで修正すると効果が出ない場合があります。測定、仮説、修正、再測定の手順を定着させれば、サーバーレス環境でも継続的な性能改善を進めやすくなります。"
+    ],
+    "en": {
+      "title": "Cloudflare Workers Adds On-Demand CPU and Memory Profiling",
+      "description": "Cloudflare now supports on-demand CPU and memory profiling with flamegraphs for live Workers and Durable Objects.",
+      "category": "Technology",
+      "sourceName": "Cloudflare Blog",
+      "body": [
+        "Cloudflare announced on-demand CPU and memory profiling for Workers and Durable Objects on October 9, 2026. The feature reveals function-level resource usage in running applications.",
+        "Flamegraphs visualize call stacks and resource consumption. Wider sections indicate functions associated with greater CPU time or memory allocation, helping developers locate bottlenecks.",
+        "Production profiling matters because local development environments often differ from real traffic patterns. Developers can initiate profiles through the Cloudflare dashboard or CLI.",
+        "In the dashboard, the Observability interface provides options to select a Worker version, profiling type and capture duration. Results can be inspected or downloaded.",
+        "Profiling relies on a live execution environment, so low-traffic Workers may not provide sufficient samples. It does not automatically launch a new isolate solely for measurement.",
+        "Memory profiling focuses on allocations during the capture window. Problems limited to startup may be missed. Cloudflare has described continuous profiling as a future direction.",
+        "Cloudflare published internal examples of using profiles to identify unnecessary work and memory overhead. Any optimization should be validated against latency, errors and resource use after deployment.",
+        "Teams can improve reliability through a repeatable cycle of measurement, hypothesis, code change and verification rather than optimizing by intuition alone."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0090",
+    "slug": "aws-security-hub-export-findings-s3-csv-json-ocsf",
+    "title": "AWS Security HubがCSV・JSON出力に対応｜検出結果をS3へ保存して監査・分析を効率化",
+    "description": "AWS Security Hubがセキュリティ検出結果のS3出力に対応。CSVとOCSF形式JSONの用途、監査とアクセス管理の注意点を解説。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-12T07:34:00+09:00",
+    "sourceName": "AWS",
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2026/10/security-hub-exports-s3-csv-json/",
+    "status": "published",
+    "body": [
+      "【発表の概要】AWSは2026年10月9日、AWS Security Hubのセキュリティ検出結果をAmazon S3へCSVまたはJSON形式で出力できる機能を発表しました。監査や報告のためにコンソール外でデータを扱う際、専用の抽出プログラムを作らずに利用できます。",
+      "【対象となる検出結果】Security HubのThreats、Exposure、Vulnerabilities、Posture Management、Sensitive Data、All Findingsなど、各検出結果ページから出力を開始できます。対象には脅威、脆弱性、設定上の問題などが含まれます。",
+      "【CSV形式の用途】CSVは表計算ソフトで開きやすく、担当者による確認や報告資料の作成に向いています。ただし検出結果に機密性の高い情報が含まれる場合があるため、共有先や保存期間を管理する必要があります。",
+      "【JSONとOCSF】JSON形式はOpen Cybersecurity Schema Framework（OCSF）に対応します。共通の構造を利用することで、別の分析システムへ取り込む際の変換作業を減らせる可能性があります。ただし受け取り側のスキーマ対応は確認が必要です。",
+      "【S3へ出力する流れ】管理者はSecurity Hubの検出結果ページから必要な範囲を選び、自社アカウントのS3バケットへ出力します。保存先のアクセス制御、暗号化、ライフサイクル管理などは、組織の運用方針に合わせて設定します。",
+      "【監査での利点】監査担当者が確認した時点の検出結果を保存し、対応状況の説明資料として利用しやすくなります。一方、出力したファイルはその後の状態変化を自動的に反映するものではありません。取得日時と対象範囲を記録することが重要です。",
+      "【対応リージョン】AWSはSecurity Hubを利用できるすべてのリージョンで機能を提供すると説明しています。実際の利用では、アカウント設定、権限、保存先バケットの条件を確認する必要があります。",
+      "【今後の運用】定期的な分析が必要な組織は、出力データの取り込み、権限管理、保存期間、監査証跡を整理します。今回の更新は新たな脅威検知技術ではなく、既存の検出結果を業務で扱いやすくする改善です。"
+    ],
+    "en": {
+      "title": "AWS Security Hub Adds CSV and JSON Findings Export to Amazon S3",
+      "description": "AWS Security Hub can now export findings to Amazon S3 in CSV or OCSF JSON for audit reporting and security analysis.",
+      "category": "Technology",
+      "sourceName": "AWS",
+      "body": [
+        "AWS announced on October 9, 2026 that Security Hub findings can be exported to Amazon S3 as CSV or JSON using the Open Cybersecurity Schema Framework.",
+        "Exports can be initiated from findings pages including Threats, Exposure, Vulnerabilities, Posture Management, Sensitive Data and All Findings.",
+        "CSV supports manual review and spreadsheet-based reporting. Exported security data may be sensitive and should have appropriate sharing and retention controls.",
+        "OCSF JSON provides a structured format that may simplify ingestion by downstream analytics systems, although schema compatibility should still be tested.",
+        "Administrators can export selected findings to an S3 bucket in their account. Access permissions, encryption and lifecycle settings remain important.",
+        "An exported snapshot can support audit evidence, but it does not automatically reflect later changes in the underlying findings. Record the capture date and scope.",
+        "AWS says the feature is available in all regions where Security Hub is supported, subject to normal account and permission requirements.",
+        "This release improves reporting and analysis workflows rather than introducing a new detection engine."
+      ]
+    }
   }
 ]
