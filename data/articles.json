@@ -4664,5 +4664,71 @@
         "This release improves reporting and analysis workflows rather than introducing a new detection engine."
       ]
     }
+  },
+  {
+    "articleId": "TC-0091",
+    "slug": "microsoft-maia-300-ai-inference-chip-2026",
+    "title": "MicrosoftがAI推論チップ「Maia 300」発表｜2027年から本格導入、電力効率を改善",
+    "description": "Microsoftが独自AI推論システムMaia 300を発表。96基搭載ラックやHBM4、2027年の導入計画を解説。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-13T07:22:00+09:00",
+    "sourceName": "Microsoft Official Blog",
+    "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
+    "status": "published",
+    "body": [
+      "Microsoftは2026年10月12日、独自AI推論アクセラレーター「Azure Maia 300」を発表した。2027年から本番環境への導入を開始し、Maiaファミリーを数ギガワット規模へ拡大する計画だ。現時点では導入計画であり、一般向けサービスでの全面稼働を意味するものではない。",
+      "Maia 300は長文コンテキストを使う推論、対話の低遅延化、複数段階の作業を行うAIエージェント向けに設計された。モデルの計算だけでなく、メモリとネットワークを含めたシステム全体の効率化を目指す。",
+      "Microsoftによると、1ラックに96基のアクセラレーターを搭載し、消費電力は167kW。フル構成でのラック単位のトークン処理量はMaia 200の最大7倍としている。数値は同社の説明に基づき、独立した第三者検証ではない。",
+      "8基のHBM4スタックにより、アクセラレーター当たり最大18TB/sのメモリ帯域幅を備える。チップレット方式で演算、メモリ制御、入出力を分離し、データ移動のコストを抑える。",
+      "Microsoftは主要GPUベースのシステムと比較し、電力1MW当たりのトークン処理量が40％高くなると予測する。ただし比較対象の構成やワークロード次第で実測結果は変わるため、一般的な性能差として断定できない。",
+      "CopilotやMicrosoft Foundryなど、大規模AIサービスの提供コストを左右する推論基盤の内製化が進む。今後は2027年の実運用開始と、実際の効率・供給規模を確認する必要がある。"
+    ],
+    "en": {
+      "title": "Microsoft Announces Maia 300 AI Inference Chip for 2027 Deployment",
+      "description": "Microsoftが独自AI推論システムMaia 300を発表。96基搭載ラックやHBM4、2027年の導入計画を解説。",
+      "category": "Technology",
+      "sourceName": "Microsoft Official Blog",
+      "body": [
+        "Microsoft announced Azure Maia 300 on October 12, 2026. Production deployments are planned for 2027, with a multi-gigawatt expansion of the Maia family.",
+        "The accelerator targets long-context inference, low-latency conversation and multi-step agent workloads. Its design optimizes compute, memory and networking together.",
+        "A full rack contains 96 accelerators in a 167-kW power envelope. Microsoft claims up to seven times the rack-scale token throughput of Maia 200; these are company figures.",
+        "Eight HBM4 stacks deliver up to 18 TB/s of memory bandwidth per accelerator. A chiplet design separates compute, memory control and I/O functions.",
+        "Microsoft expects 40 percent more tokens per megawatt than leading GPU-based systems, but results depend on the comparison configuration and workloads.",
+        "The announcement points to greater in-house AI infrastructure for services such as Copilot and Microsoft Foundry. Actual deployment and efficiency should be assessed in 2027."
+      ]
+    }
+  },
+  {
+    "articleId": "TC-0092",
+    "slug": "amd-helion-agentic-ai-rack-2026",
+    "title": "AMDがAIエージェント向けラック「Helion」発表｜最大3万2768 CPUコア構成を提示",
+    "description": "AMDがAIエージェントの実行と推論を分離するHelionを発表。CPU専用とGPU統合構成、提供計画を整理。",
+    "category": "テクノロジー",
+    "publishedAt": "2026-10-13T07:22:00+09:00",
+    "sourceName": "AMD",
+    "sourceUrl": "https://www.amd.com/en/newsroom/press-releases/2026-10-12-amd-introduces-helion.html",
+    "status": "published",
+    "body": [
+      "AMDは2026年10月12日、AIエージェント向けラックスケール基盤「Helion」を発表した。複数の処理を連続実行するエージェントに必要なCPU処理と、AIモデルの推論処理を分けて設計する考え方を示した。",
+      "AIエージェントはモデルに問い合わせるだけでなく、コード実行、外部ツールの操作、タスク管理などを行う。これらの処理はGPUだけでなくCPU資源も消費するため、システム全体の構成が重要になる。",
+      "AMDが示したCPU専用ラックの構成例では、第6世代EPYCプロセッサを利用し、最大3万2768 CPUコアを搭載できる設計となる。これは構成上の上限例であり、すべての導入環境が同じ規模になるわけではない。",
+      "もう一つの統合構成ではEPYC CPUとInstinct MI350P GPUを組み合わせ、企業がAIエージェント実行とモデル推論を同じラック内に集約できる設計を想定する。",
+      "AMDはOpen Compute Projectへの仕様提供を計画している。パートナーとの開発を進め、2026年11月からの提供を目指すとしているが、実際の提供状況は今後確認が必要だ。",
+      "企業にとっての焦点は単純なGPU性能だけではない。エージェントの同時実行数、電力効率、運用コスト、推論システムとの連携を総合的に評価することが重要になる。"
+    ],
+    "en": {
+      "title": "AMD Unveils Helion Agentic AI Rack Design",
+      "description": "AMDがAIエージェントの実行と推論を分離するHelionを発表。CPU専用とGPU統合構成、提供計画を整理。",
+      "category": "Technology",
+      "sourceName": "AMD",
+      "body": [
+        "AMD introduced Helion on October 12, 2026, as a rack-scale design for agentic AI infrastructure, separating agent execution from model inference where appropriate.",
+        "AI agents run tools, execute code and coordinate workflows in addition to querying models. These operations can place substantial demand on CPUs.",
+        "One example CPU-only rack using sixth-generation EPYC processors supports up to 32,768 CPU cores. This is a design configuration, not a claim about every deployment.",
+        "An integrated configuration combines EPYC CPUs and Instinct MI350P GPUs, aiming to serve enterprises that prefer agent execution and inference in one rack.",
+        "AMD plans to contribute the specification to the Open Compute Project and targets availability from November 2026, subject to partner development.",
+        "Buyers should evaluate concurrent agents, power use, operating costs and connectivity to inference infrastructure rather than GPU performance alone."
+      ]
+    }
   }
 ]
